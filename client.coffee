@@ -146,7 +146,7 @@ Each round consists of 2 phases: Playing and Voting.
 The game is paused when you run out of either white or black cards. If you want to pause the game at any other moment, simply don't draw new black cards again.
 
 ## Inspiration
-The game is based on the game 'Cards against Humanity', and uses its original set of cards (with some changes), which have been made available to use under the Creative Commons license.
+The game is based on the game 'Cards against Humanity', and uses its original set of cards (with some changes, with thanks to /Pretend You're Xyzzy/), which have been made available to use under the [http://creativecommons.org/licenses/by-nc-sa/3.0/](Attribution-NonCommercial-ShareAlike 3.0 Creative Commons license).
 
 Do you have ideas for more cards? Please suggest them in the support Happening!
 """
@@ -411,6 +411,9 @@ selectMemberModal = (value, handleChange) !->
 	, if value.get() then ['cancel', "Cancel", 'clear', "Clear"] else ['cancel', "Cancel"]
 
 exports.renderSettings = !->
+	Dom.div !->
+		Dom.text tr("Disclaimer: If you or anyone else in this group is offended by <b>anything</b> at all (seriously), then don't install this Group App. This Group App is definitely not suitable for children, families, sensitive people or humanity in general.")
+
 	if Db.shared
 		if Plugin.userIsAdmin()
 			Dom.h3 !->
