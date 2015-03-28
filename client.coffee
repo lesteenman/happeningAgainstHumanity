@@ -7,6 +7,9 @@ Plugin = require 'plugin'
 Server = require 'server'
 Time = require 'time'
 Ui = require 'ui'
+Markdown = require 'markdown'
+# White = require 'white'
+# Black = require 'black'
 {tr} = require 'i18n'
 
 handsize = 10
@@ -29,14 +32,15 @@ exports.render = !->
 	else if phase is 'draw'
 		renderDrawQuestionButton()
 	
-	Ui.bigButton !->
-		Dom.text tr('Show Last Rounds')
-		Dom.onTap !->
-			showWinnerListModal()
+	if Object.keys(Db.shared.get 'winners').length
+		Ui.bigButton !->
+			Dom.text tr('Show Last Rounds')
+			Dom.onTap !->
+				showWinnerListModal()
 
 renderInfoBar = !->
 	Dom.div !->
-		buttonWidth = 100 / 3
+		buttonWidth = Math.floor(100 / 3)
 		Dom.style
 			height: '45px'
 			color: '#666'
@@ -51,7 +55,6 @@ renderInfoBar = !->
 				width: buttonWidth + '%'
 				fontWeight: 'bold'
 				fontSize: '2.2em'
-				verticalAlign: 'top'
 				margin: '3px 0px'
 				height: '39px'
 			Dom.text '?'
@@ -61,14 +64,14 @@ renderInfoBar = !->
 		questionsLeft = (Db.shared.get 'questiondeck').length
 		answersLeft = (Db.shared.get 'answerdeck').length
 		scores = Db.shared.get 'score'
-		if !scores
-			position = undefined
-		else
+		if Object.keys(scores).length
 			myscore = scores[Plugin.userId()]
 			position = 1
 			for u, s of scores
 				if s != Plugin.userId() and s > myscore
 					position++
+		else
+			position = undefined
 
 
 		Dom.div !->
@@ -79,32 +82,27 @@ renderInfoBar = !->
 				fontSize: '1em'
 				margin: '3px 0px'
 				height: '39px'
-			Dom.text tr('Cards Left')
+			Dom.text tr('Time Left')
 			Dom.div !->
 				Dom.style
 					color: '#888'
 					fontWeight: 'normal'
-				Dom.text questionsLeft + '/' + answersLeft
+				Time.deltaText(Db.shared.get('phase_end'), 'short')
 			Dom.onTap !->
-				Modal.show '', !->
-					Dom.div !-> Dom.text tr('Black (Question) cards left: %1', questionsLeft)
-					Dom.div !-> Dom.text tr('White (Answer) cards left: %1', answersLeft)
+				numplayers = (Db.shared.get 'waitingfor').length
+				waitingtext = if (Db.shared.get 'phase') == 'play' then tr('played their cards') else tr('voted')
+				Modal.show 'Waiting For', !->
 					Dom.div !->
-						Dom.text tr('Once you run out of cards, the game will pause until more cards are added to the game.')
-
-		# Dom.div !->
-		# 	Dom.style
-		# 		display: 'inline-block'
-		# 		width: buttonWidth + '%'
-		# 		fontWeight: 'bold'
-		# 		fontSize: '1em'
-		# 		marginTop: '4px'
-		# 	Dom.text tr('Round')
-		# 	Dom.div !->
-		# 		Dom.style
-		# 			color: '#888'
-		# 			fontWeight: 'normal'
-		# 		Dom.text Db.shared.get 'round'
+						Dom.text tr('The game will continue ')
+						Time.deltaText(Db.shared.get 'phase_end')
+						Dom.text tr(', or when everyone %1.', waitingtext)
+					Dom.div !->
+						Dom.style marginTop: '15px'
+						Dom.text tr('Still waiting for %1 Players:', numplayers)
+					Dom.ul !->
+						for userId in Db.shared.get 'waitingfor'
+							Dom.li !->
+								Dom.text Plugin.userName userId
 
 		Dom.div !->
 			Dom.style
@@ -127,7 +125,7 @@ renderInfoBar = !->
 
 showHelpPage = !->
 	Page.nav !->
-		require('markdown').render """
+		Markdown.render """
 ## Happening against Humanity
 Happening against Humanity is a politically very incorrect game that is not suited for children, families, or people who are offended by anything. At all. It is, however, a very fun game to play with some friends who don't care too much about any of that!
 
@@ -168,9 +166,7 @@ showWinnerListModal = !->
 			Dom.h1 tr('Previous Winners')
 			for round, winner of Db.shared.get 'winners'
 				Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
-				renderCard true, winner.q.text, null, winner.q.play
-				for i,answer of winner.a
-					renderCard false, answer
+				renderQuestion winner.q.text, null, winner.q.play, winner.a
 
 popWinnerModal = !->
 	round = Db.personal.get('showwinners').shift()
@@ -180,11 +176,8 @@ popWinnerModal = !->
 	player = winner.p
 
 	Modal.show tr('Winner of round %1: %2', round, Plugin.userName(player)), !->
-		Dom.h2 tr('Question')
-		renderCard true, question.text, null, question.play
-		Dom.h2 tr('Answer')
-		for i,card of answer
-			renderCard false, card
+		log 'question, answer', question, answer
+		renderQuestion question.text, null, question.play, answer
 	, !->
 		Server.call 'popShowWinner'
 
@@ -207,13 +200,12 @@ showCardModal = (title, black, card, cb) !->
 playRender = !->
 	gamemaster = Db.shared.get 'gamemaster'
 	question = Db.shared.get 'question'
+	myanswers = Db.personal.get 'playedcards'
 
 
 	Dom.h1 tr('Question:')
-	renderCard true, question.text, null, question.play
-
+	renderQuestion question.text, null, question.play, myanswers
 	renderCardSelect()
-	renderWaitingFor tr tr('votes start when')
 
 voteRender = !->
 	vote = Db.personal.get('vote')
@@ -222,7 +214,7 @@ voteRender = !->
 	
 	Dom.h2 'Question'
 	question = Db.shared.get 'question'
-	renderCard true, question.text, null, question.play
+	renderQuestion question.text, null, question.play, vote
 
 	Dom.h2 tr('You Played:')
 	for p in [0..question.play-1]
@@ -238,15 +230,6 @@ voteRender = !->
 				log 'Comparing with vote', cards, vote
 				Dom.div !->
 					selected = JSON.stringify(cards) == JSON.stringify(vote)
-					# if selected
-					# 	Dom.div !->
-					# 		Dom.style
-					# 			display: 'inline-block'
-					# 			padding: '0 10px'
-					# 			textAlign: 'left'
-					# 			fontSize: '150%'
-					# 			color: Plugin.colors().highlight
-					# 		Dom.text "✓"
 					Dom.style
 						display: 'inline-block'
 						width: '100%'
@@ -256,24 +239,6 @@ voteRender = !->
 						renderCard false, card, !->
 							log 'Chose', cards, 'as winning card'
 							Server.sync 'vote', cards
-
-	renderWaitingFor tr 'round ends'
-
-renderWaitingFor = (title) !->
-	waitingfor = Db.shared.get 'waitingfor'
-	numplayers = waitingfor.length
-
-	Dom.h3 title
-	Dom.div !->
-		Time.deltaText Db.shared.get 'phase_end'
-		Dom.text tr(' or when everyone played (%1 %2 not played yet).', numplayers, if numplayers == 1 then 'has' else 'have')
-
-	# Dom.div !->
-	# 	Dom.text 'Waiting for ' + numplayers + ' Players'
-		# for userId in Db.shared.get 'waitingfor'
-		# 	Dom.div !->
-		# 		Dom.text Plugin.userName userId
-
 
 renderCardSelect = !->
 	hand = Db.personal.ref 'hand'
@@ -290,20 +255,42 @@ renderCardSelect = !->
 					Server.sync 'playcard', p, card, !->
 						playedcards.set(p, card)
 
-renderCard = (black, text, handler, play) !->
+renderQuestion = (text, handler, play, answers) !->
+	i = 0
+	if answers
+		text = text.replace(/(__+)/g, !->
+			if answers[i]
+				ans = answers[i++]
+				ans = (ans[0]).toLowerCase() + ans.substring(1, ans.length - 1)
+				# Remove the dot at the end
+				if ans[ans.length-1] == '.'
+					ans = ans.substring(0, ans.length - 1)
+				return '*' + ans + '*'
+			else
+				return '____'
+		)
+
+		while answers[i]
+			text = text + '\r\n\r\n*' + answers[i++] + '*'
+
+	text = text.replace(/_/g, '\\_')
+
+	renderCard true, text, handler, play, false
+
+renderCard = (black, text, handler, play, compact) !->
 	backgroundcolor = if black then 'black' else 'white'
 	textcolor = if black then 'white' else 'black'
 	Dom.div !->
-		Dom.text text || tr('tap to select card')
+		Markdown.render text || tr('tap to select card')
 		Dom.style
 			position: 'relative'
 			fontStyle: if not text then 'italic' else ''
 			textAlign: if text then 'left' else 'center'
 			backgroundColor: backgroundcolor
 			color: textcolor
-			margin: '5px auto 0 auto'
+			margin: '20px auto 0 auto'
 			boxShadow: '4px 0px #bbb'
-			padding: '10%'
+			padding: if compact then '6%' else '10%'
 			borderRadius: '15px 15px 0 0'
 			borderColor: 'black'
 			borderWidth: '10px'
@@ -364,7 +351,7 @@ cardselectModal = (selected, cards, handlepick) !->
 						Dom.style
 							paddingBottom: '0'
 							textAlign: 'left'
-						renderCard false, card
+						renderCard false, card, null, null, true
 
 						if not isselected
 							Dom.onTap !->
