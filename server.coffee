@@ -1,9 +1,8 @@
 Db = require 'db'
 Event = require 'event'
-# Photo = require 'photo'
 Plugin = require 'plugin'
 Timer = require 'timer'
-# {tr} = require 'i18n'
+{tr} = require 'i18n'
 
 handsize = 10
 maxWinnerStackLength = 3
@@ -25,7 +24,7 @@ exports.onConfig = onConfig = (config) !->
 # exports.onUpgrade = !->
 
 exports.getTitle = ->
-	"Happening against Humanity"
+	tr("Happening against Humanity")
 
 ### Admin-panel functions, just for testing ###
 
@@ -50,13 +49,13 @@ exports.client_closevotes = !->
 exports.remindPlay = !->
 	Event.create
 		unit: 'game'
-		text: 'Do not forget to play a card!'
+		text: tr('Do not forget to play a card!')
 		include: Db.shared.get('waitingfor')
 
 exports.remindVote = !->
 	Event.create
 		unit: 'game'
-		text: 'Do not forget to vote for the best card!'
+		text: tr('Do not forget to vote for the best card!')
 		include: Db.shared.get('waitingfor')
 
 ### Phase-switch functions ###
@@ -85,7 +84,7 @@ exports.startgame = !->
 	
 	Event.create
 		unit: 'game'
-		text: "A new game of 'Happening against Humanity' was started!"
+		text: tr("A new game of 'Happening against Humanity' was started!")
 		include: ['all']
 	nextround()
 
@@ -125,7 +124,7 @@ startround = !->
 
 	Event.create
 		unit: 'game'
-		text: 'Next Question: "'+question.text+'"'
+		text: tr('Next Question: "')+question.text+'"'
 		include: ['all']
 
 exports.closeround = !->
@@ -148,7 +147,7 @@ exports.closeround = !->
 	if playedcards.length == 0
 		Event.create
 			unit: 'game'
-			text: 'The round has ended, but nobody played a card. No winner!'
+			text: tr('The round has ended, but nobody played a card. No winner!')
 			include: ['all']
 
 		nextround()
@@ -165,7 +164,7 @@ exports.closeround = !->
 
 	Event.create
 		unit: 'game'
-		text: 'All players have played their cards, it is time to vote for the winner!'
+		text: tr('All players have played their cards, it is time to vote for the winner!')
 		include: ['all']
 
 exports.closevotes = !->
@@ -191,6 +190,8 @@ exports.closevotes = !->
 			log 'No winner yet, choosing first!', vote
 			wincards = vote
 
+		# TODO: This is actually not really random, since the player with the highest
+		# userId has a much higher chance to win than the others with the same score.
 		if count == maxcount
 			if Math.random() > 0.5
 				wincards = vote
@@ -215,7 +216,7 @@ exports.closevotes = !->
 	if winner == 0
 		Event.create
 			unit: 'game'
-			text: 'The votes have closed, but nobody cast a vote. No winner!'
+			text: tr('The votes have closed, but nobody cast a vote. No winner!')
 			include: ['all']
 	
 	log 'Winner:', winner
@@ -243,7 +244,7 @@ exports.closevotes = !->
 
 	Event.create
 		unit: 'game'
-		text: 'The round has ended, and ' + Plugin.userName(winner) + ' won!'
+		text: tr('The round has ended, and %1 won!', Plugin.userName(winner))
 		include: ['all']
 
 	nextround()
