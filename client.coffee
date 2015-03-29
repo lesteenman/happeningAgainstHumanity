@@ -291,17 +291,17 @@ renderCard = (black, text, handler, play, compact) !->
 			color: textcolor
 			margin: '20px auto 0 auto'
 			boxShadow: '4px 0px #bbb'
-			padding: if compact then '0em 1em' else '1em 2em'
+			padding: if compact then '0em 0.5em' else '0.5em 1.5em'
 			borderRadius: '15px 15px 0 0'
 			borderColor: 'black'
 			borderWidth: '10px'
 			borderStyle: 'solid'
 			borderBottom: 'none'
-			fontSize: '1.5em'
+			fontSize: if Dom.viewport.get('width') > 480 then '1.5em' else '1.2em'
 			fontWeight: 'bold'
-			minWidth: '280px'
+			minWidth: '255px'
 			width: '80%'
-			maxWidth: '80%'
+			maxWidth: '480px'
 			boxSizing: 'border-box'
 		if play > 1
 			Dom.div !->
@@ -338,7 +338,8 @@ cardselectModal = (selected, cards, handlepick) !->
 								isselected = true
 
 						Dom.style
-							paddingBottom: '0'
+							backgroundColor: if isselected then 'lightblue'
+							padding: '5px 10px 0 10px'
 							textAlign: 'left'
 						renderCard false, card, null, null, true
 
