@@ -195,20 +195,20 @@ renderDrawQuestionButton = !->
 			Server.call 'drawquestion'
 
 playRender = !->
-	gamemaster = Db.shared.get 'gamemaster'
 	question = Db.shared.get 'question'
 	myanswers = Db.personal.get 'playedcards'
-
+	Dom.h1 tr('Play your card%1', if question.play > 1 then 's' else '')
 
 	Dom.h1 tr('Question:')
 	renderQuestion question.text, null, question.play, myanswers
 	renderCardSelect()
 
 voteRender = !->
+	question = Db.shared.get 'question'
 	vote = Db.personal.get('vote')
 	
+	Dom.h1 tr('Vote for the best card%1', if question.play > 1 then 's' else '')
 	Dom.h2 'Question'
-	question = Db.shared.get 'question'
 	renderQuestion question.text, null, question.play, vote
 
 	if Db.personal.get('playedcards')

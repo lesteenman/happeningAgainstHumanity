@@ -90,6 +90,8 @@ exports.startgame = !->
 
 # Initializes a new round
 nextround = !->
+	Timer.cancel()
+
 	Db.shared.set 'round', Db.shared.get('round') + 1
 	Db.shared.set 'phase', 'draw'
 	Db.shared.set 'waitingfor', []
@@ -110,6 +112,8 @@ nextround = !->
 
 # Triggered by drawQuestion
 startround = !->
+	Timer.cancel()
+
 	question = Db.shared.get 'question'
 	if not question
 		Db.shared.set 'phase', 'paused'
@@ -128,6 +132,8 @@ startround = !->
 		include: ['all']
 
 exports.closeround = !->
+	Timer.cancel()
+
 	log 'closeround'
 	Db.shared.set 'phase', 'vote'
 	play = (Db.shared.get 'question', 'play')
@@ -304,6 +310,21 @@ exports.client_playcard = (p, card) !->
 				waitingfor.push userId
 
 	Db.shared.set 'waitingfor', waitingfor
+	if waitingfor.length == 0
+		# Don't close immediately to give people a chance to change their mind.
+		closedelay = 15
+		Timer.set (closedelay * 1000), 'tryCloseround'
+
+# Checks if everyone still played their cards and then closes the round
+exports.tryCloseround = !->
+	waitingfor = []
+
+	for userId in Plugin.userIds()
+		for i in [0..Db.shared.get('question', 'play')-1]
+			if userId in waitingfor then continue
+			if not Db.personal(userId).get 'playedcards', i
+				waitingfor.push userId
+
 	if waitingfor.length == 0
 		exports.closeround()
 
