@@ -317,13 +317,9 @@ exports.client_playcard = (p, card) !->
 
 # Checks if everyone still played their cards and then closes the round
 exports.tryCloseround = !->
-	waitingfor = []
-
-	for userId in Plugin.userIds()
-		for i in [0..Db.shared.get('question', 'play')-1]
-			if userId in waitingfor then continue
-			if not Db.personal(userId).get 'playedcards', i
-				waitingfor.push userId
+	# If someone cancelled a card (not even possible at the moment), then the play
+	# function would have updated this DB field as well, so simply check that.
+	waitingfor = Db.shared.get 'waitingfor'
 
 	if waitingfor.length == 0
 		exports.closeround()
