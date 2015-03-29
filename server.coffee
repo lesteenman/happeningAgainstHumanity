@@ -345,8 +345,7 @@ drawQuestionCard = !->
 	cardId = deck[r]
 	card = questionCards[cardId]
 
-	i = deck.indexOf r
-	deck.splice(i, 1)
+	deck.splice(r, 1)
 	Db.shared.set 'questiondeck', deck
 	return card
 
@@ -359,8 +358,7 @@ drawAnswerCard = !->
 	cardId = deck[r]
 	card = answerCards[cardId]
 
-	i = deck.indexOf r
-	deck.splice(i, 1)
+	deck.splice(r, 1)
 	Db.shared.set 'answerdeck', deck
 	return card
 
