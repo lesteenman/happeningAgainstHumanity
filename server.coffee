@@ -130,11 +130,14 @@ startround = !->
 exports.closeround = !->
 	log 'closeround'
 	Db.shared.set 'phase', 'vote'
+	play = (Db.shared.get 'question', 'play')
 	playedcards = []
 	waitingfor = []
 	for userId in Plugin.userIds()
 		waitingfor.push userId
-		if cards = Db.personal(userId).get 'playedcards'
+		cards = Db.personal(userId).get('playedcards')
+		log 'cards', cards
+		if cards and Object.keys(cards).length == play
 			log 'User $1s Played Cards: $2', userId, JSON.stringify(cards)
 			hand = Db.personal(userId).get 'hand'
 			for c,card of cards
@@ -145,6 +148,8 @@ exports.closeround = !->
 			playedcards.push cards
 
 	if playedcards.length == 0
+		for userId in Plugin.userIds()
+			Db.personal(userId).set 'playedcards', null
 		Event.create
 			unit: 'game'
 			text: tr('The round has ended, but nobody played a card. No winner!')
@@ -303,22 +308,25 @@ exports.client_playcard = (p, card) !->
 		exports.closeround()
 
 # returns 'false' if no cards remaining.
-exports.client_drawcard = (cb) !->
+exports.client_drawcards = (cb) !->
 	hand = Db.personal(Plugin.userId()).get 'hand'
 	if hand.length >= handsize
 		return false
 
 	# Small 'hack' to be able to remove cards from the deck during a game.
-	newcard = ''
-	while newcard == ''
-		newcard = drawAnswerCard()
+	newcards = []
+	while hand.length < handsize
+		newcard = ''
+		while newcard == ''
+			newcard = drawAnswerCard()
 
-	if newcard
-		hand.push newcard
-		Db.personal(Plugin.userId()).set 'hand', hand
-		log 'Player '+Plugin.userId()+' drew card:', newcard
+		if newcard
+			hand.push newcard
+			Db.personal(Plugin.userId()).set 'hand', hand
+			log 'Player '+Plugin.userId()+' drew card:', newcard
+			newcards.push newcard
 
-	cb.reply newcard
+	cb.reply newcards
 
 exports.client_vote = (wincards) !->
 	Db.personal(Plugin.userId()).set 'vote', wincards

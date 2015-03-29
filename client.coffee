@@ -182,8 +182,10 @@ popWinnerModal = !->
 		Server.call 'popShowWinner'
 
 drawNewAnswerCards = !->
-	Server.call 'drawcard', (card) !->
-		showCardModal tr('New Card'), false, card, false
+	Server.call 'drawcards', (cards) !->
+		Modal.show tr('Your new White Card%1', if cards.length > 1 then 's' else ''), !->
+			for c in cards
+				renderCard false, c
 
 renderDrawQuestionButton = !->
 	Dom.text tr('Click the button below to start a new round!')
@@ -191,11 +193,6 @@ renderDrawQuestionButton = !->
 		Dom.text tr('Draw Question')
 		Dom.onTap !->
 			Server.call 'drawquestion'
-
-showCardModal = (title, black, card, cb) !->
-	Modal.show title, !->
-		renderCard black, card
-	, cb
 
 playRender = !->
 	gamemaster = Db.shared.get 'gamemaster'
@@ -214,9 +211,10 @@ voteRender = !->
 	question = Db.shared.get 'question'
 	renderQuestion question.text, null, question.play, vote
 
-	Dom.h2 tr('You Played:')
-	for p in [0..question.play-1]
-		renderCard false, Db.personal.get('playedcards', p)
+	if Db.personal.get('playedcards')
+		Dom.h2 tr('You Played:')
+		for p in [0..question.play-1]
+			renderCard false, Db.personal.get('playedcards', p)
 
 	Dom.h2 tr('Others Played:')
 
@@ -298,7 +296,7 @@ renderCard = (black, text, handler, play, compact) !->
 			backgroundColor: backgroundcolor
 			color: textcolor
 			margin: '20px auto 0 auto'
-			boxShadow: '4px 0px #bbb'
+			boxShadow: '-3px -2px 10px #aaa, 8px -2px 10px #bbb'
 			padding: if compact then '0em 0.5em' else '0.5em 1.5em'
 			borderRadius: '15px 15px 0 0'
 			borderColor: 'black'
@@ -396,7 +394,7 @@ selectMemberModal = (value, handleChange) !->
 
 exports.renderSettings = !->
 	Dom.div !->
-		Dom.text tr("Disclaimer: If you or anyone else in this group is offended by <b>anything</b> at all (seriously), then don't install this Group App. This Group App is definitely not suitable for children, families, sensitive people or humanity in general.")
+		Markdown.render tr("Disclaimer: If you or anyone else in this group is offended by *anything* at all (seriously), then don't install this Group App. This Group App is definitely not suitable for children, families, sensitive people or humanity in general.")
 
 	if Db.shared
 		if Plugin.userIsAdmin()
