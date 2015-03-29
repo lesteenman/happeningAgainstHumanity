@@ -209,8 +209,6 @@ playRender = !->
 
 voteRender = !->
 	vote = Db.personal.get('vote')
-	if !vote
-		Dom.text tr('Answer on the funniest white card(s)!')
 	
 	Dom.h2 'Question'
 	question = Db.shared.get 'question'
@@ -221,7 +219,10 @@ voteRender = !->
 		renderCard false, Db.personal.get('playedcards', p)
 
 	Dom.h2 tr('Others Played:')
-	Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
+
+	if !vote
+		Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
+
 	for cards in Db.shared.get 'playedcards'
 		log 'Cards:', cards
 		do (cards) !->
@@ -290,7 +291,7 @@ renderCard = (black, text, handler, play, compact) !->
 			color: textcolor
 			margin: '20px auto 0 auto'
 			boxShadow: '4px 0px #bbb'
-			padding: if compact then '6%' else '10%'
+			padding: if compact then '0em 1em' else '1em 2em'
 			borderRadius: '15px 15px 0 0'
 			borderColor: 'black'
 			borderWidth: '10px'
@@ -335,18 +336,6 @@ cardselectModal = (selected, cards, handlepick) !->
 						for i in [0..(Db.shared.get('question', 'play'))-1]
 							if selected.get(i) == card
 								isselected = true
-
-						if isselected
-							Dom.style fontWeight: 'bold'
-
-							Dom.div !->
-								Dom.style
-									Flex: 1
-									padding: '0 10px'
-									textAlign: 'left'
-									fontSize: '150%'
-									color: Plugin.colors().highlight
-								Dom.text "✓"
 
 						Dom.style
 							paddingBottom: '0'
