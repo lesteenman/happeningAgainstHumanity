@@ -279,20 +279,27 @@ exports.client_playcard = (p, card) !->
 		log 'Invalid card'
 		return false
 
-	log 'Player selected card $1: $2', p, card
-	Db.personal(Plugin.userId()).set 'playedcards', p, card
-	everyoneplayed = true
+	played = Db.personal(Plugin.userId()).get 'playedcards'
+	if played
+		for i, c of played
+			if c == card
+				played[i] = played[p]
+	else
+		played = {}
+	played[p] = card
+
+	log 'Player selected cards:', played
+	Db.personal(Plugin.userId()).set 'playedcards', played
 	waitingfor = []
 
 	for userId in Plugin.userIds()
 		for i in [0..Db.shared.get('question', 'play')-1]
 			if userId in waitingfor then continue
 			if not Db.personal(userId).get 'playedcards', i
-				everyoneplayed = false
 				waitingfor.push userId
 
 	Db.shared.set 'waitingfor', waitingfor
-	if everyoneplayed
+	if waitingfor.length == 0
 		exports.closeround()
 
 # returns 'false' if no cards remaining.

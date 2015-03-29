@@ -254,6 +254,9 @@ renderCardSelect = !->
 			renderCard false, playedcards.get(p), !->
 				cardselectModal playedcards, hand, (card) !->
 					Server.sync 'playcard', p, card, !->
+						for i, c of playedcards.get()
+							if c == card
+								playedcards.set(i, playedcards.get(p))
 						playedcards.set(p, card)
 
 renderQuestion = (text, handler, play, answers) !->
@@ -343,10 +346,9 @@ cardselectModal = (selected, cards, handlepick) !->
 							textAlign: 'left'
 						renderCard false, card, null, null, true
 
-						if not isselected
-							Dom.onTap !->
-								handlepick card
-								Modal.remove()
+						Dom.onTap !->
+							handlepick card
+							Modal.remove()
 	, null, ['cancel', "Cancel"]
 
 selectMemberModal = (value, handleChange) !->
