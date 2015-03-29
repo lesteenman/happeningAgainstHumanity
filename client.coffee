@@ -299,7 +299,7 @@ renderCard = (black, text, handler, play, compact) !->
 			boxShadow: '-3px -2px 10px #aaa, 8px -2px 10px #bbb'
 			padding: if compact then '0em 0.5em' else '0.5em 1.5em'
 			borderRadius: '15px 15px 0 0'
-			borderColor: 'black'
+			borderColor: backgroundcolor
 			borderWidth: '10px'
 			borderStyle: 'solid'
 			borderBottom: 'none'
