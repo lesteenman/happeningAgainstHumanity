@@ -131,7 +131,7 @@ Happening against Humanity is a politically very incorrect game that is not suit
 
 ## Black and White cards
 The game has 2 types of cards: The black (question) cards, and the white (answer) cards.
-- After each round, any player can start the next round by drawing a black card. A black card usually has a blank in the question/sentence (_____), or is simply a question.
+- After each round, any player can start the next round by drawing a black card. A black card usually has a blank in the question/sentence (\_\_\_\_\_), or is simply a question.
 - At the start of the game, everyone gets 10 white cards, and after playing any you can draw white cards until you have a full hand again. You use these white cards to complete or answer the black cards.
 
 ## Gameplay
