@@ -16,6 +16,6 @@ Each round consists of 2 phases: Playing and Voting.
 The game is paused when you run out of either white or black cards. If you want to pause the game at any other moment, simply don't draw new black cards again.
 
 ## Inspiration
-The game is based on the game 'Cards against Humanity', and uses its original set of cards (with some changes, with thanks to /Pretend You're Xyzzy/), which have been made available to use under the [http://creativecommons.org/licenses/by-nc-sa/3.0/](Attribution-NonCommercial-ShareAlike 3.0 Creative Commons license).
+The game is based on the game 'Cards against Humanity', and uses its original set of cards (with some changes, with thanks to /Pretend You're Xyzzy/), which have been made available to use under the [Attribution-NonCommercial-ShareAlike 3.0 Creative Commons license](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 Do you have ideas for more cards? Please suggest them in the support Happening!
