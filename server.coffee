@@ -2,6 +2,8 @@ Db = require 'db'
 Event = require 'event'
 Plugin = require 'plugin'
 Timer = require 'timer'
+Black = require 'black'
+White = require 'white'
 {tr} = require 'i18n'
 
 handsize = 10
@@ -126,10 +128,16 @@ startround = !->
 	Timer.set (duration-3600)*1000, 'remindPlay'
 	Timer.set duration*1000, 'closeround'
 
-	Event.create
+	eventObject = {
 		unit: 'game'
 		text: tr('Next Question: "')+question.text+'"'
-		include: ['all']
+	}
+	if Plugin.userId()
+		eventObject.exclude = [Plugin.userId()]
+	else
+		eventObject.include = ['all']
+
+	Event.create eventObject
 
 exports.closeround = !->
 	Timer.cancel()
@@ -144,6 +152,8 @@ exports.closeround = !->
 		cards = Db.personal(userId).get('playedcards')
 		log 'cards', cards
 		if cards and Object.keys(cards).length == play
+			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
+
 			log 'User $1s Played Cards: $2', userId, JSON.stringify(cards)
 			hand = Db.personal(userId).get 'hand'
 			for c,card of cards
@@ -182,21 +192,28 @@ exports.closevotes = !->
 	log 'closing votes and counting'
 
 	# First, count which card got most votes (by text).
-	votecount = {}
+	votes = {}
 	for userId in Plugin.userIds()
 		log 'Counting answer for userId', userId
 		if answer = JSON.stringify(Db.personal(userId).get('vote'))
-			log 'Adding 1 tally for ' + answer, 'old:', votecount[answer]
-			votecount[answer] = (votecount[answer]|0) + 1
-			log '    New:', votecount[answer]
+			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
+
+			log 'Adding 1 tally for ' + answer, 'old:', votes[answer]
+			# votes[answer] = (votes[answer]|0) + 1
+			if !votes[answer]
+				votes[answer] = [userId]
+			else
+				votes[answer].push(userId)
+			log '    New:', votes[answer]
 			Db.personal(userId).set 'vote', null
 	
 	# Next, determine who won. Necessary in case several get equal votes, the
 	# winner will be chosen randomly.
 	maxcount = 0
 	wincards = null
-	log 'votecount:', JSON.stringify(votecount)
-	for vote, count of votecount
+	log 'votecount:', JSON.stringify(votes)
+	for vote, users of votes
+		count = users.length
 		if wincards == null
 			log 'No winner yet, choosing first!', vote
 			wincards = vote
@@ -242,7 +259,7 @@ exports.closevotes = !->
 		q: question
 		a: JSON.parse(wincards)
 		p: winner
-		v: votecount
+		v: votes
 	Db.shared.set 'winners', winners
 
 	# Add this winner to everyone's showwinner stack.
@@ -255,7 +272,7 @@ exports.closevotes = !->
 
 	Event.create
 		unit: 'game'
-		text: tr('The round has ended, and %1 won!', Plugin.userName(winner))
+		text: tr('%1 won the round!', Plugin.userName(winner))
 		include: ['all']
 
 	nextround()
@@ -397,6 +414,17 @@ getRoundDuration = (currentTime) ->
 		duration += increment*3600
 
 	duration
+
+addComment = (comment) !->
+	comment =
+		t: 0|Plugin.time()
+		u: 0
+		s: true
+		c: comment
+
+	comments = Db.shared.createRef("comments", Db.shared.get 'roundcounter')
+	max = comments.incr 'max'
+	comments.set max, comment
 
 
 ### Cards ###

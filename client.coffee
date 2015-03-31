@@ -5,42 +5,54 @@ Obs = require 'obs'
 Page = require 'page'
 Plugin = require 'plugin'
 Server = require 'server'
+Social = require 'social'
 Time = require 'time'
 Ui = require 'ui'
 Markdown = require 'markdown'
-# White = require 'white'
-# Black = require 'black'
 {tr} = require 'i18n'
 
 handsize = 10
 
 exports.render = !->
 	phase = Db.shared.get 'phase'
-	
-	renderInfoBar()
+	commentsRound = false
 
-	if Db.personal.get('showwinners').length
-		popWinnerModal()
-	else if phase is 'paused'
-		Dom.text tr('You have run of either answers or questions. Please wait until more have been added, or start a new game!')
-	else if phase is 'vote'
-		voteRender()
-	else if Db.personal.get('hand').length < handsize
-		drawNewAnswerCards()
-	else if phase is 'play'
-		playRender()
-	else if phase is 'draw'
-		renderDrawQuestionButton()
-	
-	if Object.keys(Db.shared.get 'winners').length
-		Ui.bigButton !->
-			Dom.text tr('Show Last Rounds')
-			Dom.onTap !->
-				showWinnerListModal()
+	if round = +Page.state.get(0)
+		renderWinnerPage round
+	else
+		renderInfoBar()
+		if Db.personal.get('showwinners').length
+			popWinnerModal()
+		else if phase is 'paused'
+			Dom.text tr('You have run of either answers or questions. Please wait until more have been added, or start a new game!')
+		else if phase is 'vote'
+			commentsRound = Db.shared.get 'round'
+			if isNewbie()
+				Dom.div !->
+					Dom.h2 tr('Voting Explained')
+					Dom.text tr('After the cards have been played, everyone will get a chance to vote for their favorite card. The card with the most votes will win, and that player will get a point!')
+			voteRender()
+		else if Db.personal.get('hand').length < handsize
+			drawNewAnswerCards()
+		else if phase is 'play'
+			commentsRound = Db.shared.get 'round'
+			playRender()
+		else if phase is 'draw'
+			renderDrawQuestionButton()
+
+		if phase in ['play', 'vote']
+			renderComments(commentsRound)
+		
+		if Object.keys(Db.shared.get 'winners').length
+			Ui.bigButton !->
+				Dom.text tr('Show Last Rounds')
+				Dom.onTap !->
+					showWinnerListModal()
 
 renderInfoBar = !->
 	Dom.div !->
-		buttonWidth = Math.floor(100 / 3)
+		phase = Db.shared.get 'phase'
+		buttonWidth = Math.floor(100 / (if phase in ['play', 'vote'] then 3 else 2))
 		Dom.style
 			height: '45px'
 			color: '#666'
@@ -65,7 +77,7 @@ renderInfoBar = !->
 		answersLeft = (Db.shared.get 'answerdeck').length
 		scores = Db.shared.get 'score'
 		if Object.keys(scores).length
-			myscore = scores[Plugin.userId()]
+			myscore = (0|scores[Plugin.userId()])
 			position = 1
 			for u, s of scores
 				if s != Plugin.userId() and s > myscore
@@ -74,35 +86,36 @@ renderInfoBar = !->
 			position = undefined
 
 
-		Dom.div !->
-			Dom.style
-				display: 'inline-block'
-				width: buttonWidth + '%'
-				fontWeight: 'bold'
-				fontSize: '1em'
-				margin: '3px 0px'
-				height: '39px'
-			Dom.text tr('Time Left')
+		if phase in ['play', 'vote']
 			Dom.div !->
 				Dom.style
-					color: '#888'
-					fontWeight: 'normal'
-				Time.deltaText(Db.shared.get('phase_end'), 'short')
-			Dom.onTap !->
-				numplayers = (Db.shared.get 'waitingfor').length
-				waitingtext = if (Db.shared.get 'phase') == 'play' then tr('played their cards') else tr('voted')
-				Modal.show 'Waiting For', !->
-					Dom.div !->
-						Dom.text tr('The game will continue ')
-						Time.deltaText(Db.shared.get 'phase_end')
-						Dom.text tr(', or when everyone %1.', waitingtext)
-					Dom.div !->
-						Dom.style marginTop: '15px'
-						Dom.text tr('Still waiting for %1 Players:', numplayers)
-					Dom.ul !->
-						for userId in Db.shared.get 'waitingfor'
-							Dom.li !->
-								Dom.text Plugin.userName userId
+					display: 'inline-block'
+					width: buttonWidth + '%'
+					fontWeight: 'bold'
+					fontSize: '1em'
+					margin: '3px 0px'
+					height: '39px'
+				Dom.text tr('Time Left')
+				Dom.div !->
+					Dom.style
+						color: '#888'
+						fontWeight: 'normal'
+					Time.deltaText(Db.shared.get('phase_end'), 'short')
+				Dom.onTap !->
+					numplayers = (Db.shared.get 'waitingfor').length
+					waitingtext = if (Db.shared.get 'phase') == 'play' then tr('played their cards') else tr('voted')
+					Modal.show 'Waiting For', !->
+						Dom.div !->
+							Dom.text tr('The game will continue ')
+							Time.deltaText(Db.shared.get 'phase_end')
+							Dom.text tr(', or when everyone %1.', waitingtext)
+						Dom.div !->
+							Dom.style marginTop: '15px'
+							Dom.text tr('Still waiting for %1 Players:', numplayers)
+						Dom.ul !->
+							for userId in Db.shared.get 'waitingfor'
+								Dom.li !->
+									Dom.text Plugin.userName userId
 
 		Dom.div !->
 			Dom.style
@@ -149,6 +162,22 @@ The game is based on the game 'Cards against Humanity', and uses its original se
 Do you have ideas for more cards? Please suggest them in the support Happening!
 """
 
+renderComments = (round) !->
+	Social.renderComments
+		path: [round]
+		closed: false
+		render: (comment) !->
+			if comment.s
+				Dom.div !->
+					Dom.style margin: '6px 0 6px 56px', fontSize: '70%'
+
+					Dom.span !->
+						Dom.style color: '#999'
+						Time.deltaText comment.t
+						Dom.text " • "
+
+					Dom.text comment.c
+				return true # We're rendering these type of comments
 
 renderScore = !->
 	if Db.shared.get 'score' is {}
@@ -164,9 +193,48 @@ showWinnerListModal = !->
 	Page.nav !->
 		Obs.observe !->
 			Dom.h1 tr('Previous Winners')
-			for round, winner of Db.shared.get 'winners'
-				Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
-				renderQuestion winner.q.text, null, winner.q.play, winner.a
+			if Db.shared.get 'winners'
+				rounds = Object.keys(Db.shared.get 'winners')
+				for r in [rounds.length - 1..0] by -1
+					round = rounds[r]
+					winner = Db.shared.get 'winners', round
+					# Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
+					Dom.div !->
+						Dom.style
+							margin: '0px -10px -20px'
+						do (round) !->
+							renderQuestion winner.q.text, !->
+									Page.nav round
+							, winner.q.play, winner.a, winner.p
+
+renderWinnerPage = (round) !->
+	winner = Db.shared.get 'winners', round
+	Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
+	renderQuestion winner.q.text, null, winner.q.play, winner.a, winner.p
+	renderVoteCount winner
+
+	renderComments round
+
+renderVoteCount = (winner) !->
+	if winner.v
+		Dom.h3 'Votes:'
+		log 'winner.v:', winner.v
+		Dom.div !->
+			for answer, users of winner.v
+				log 'answer', JSON.stringify(answer), 'users', JSON.stringify(users)
+				answerString = ''
+				for i, a of JSON.parse(answer)
+					log i, a
+					if answerString != ''
+						answerString += ', '
+					answerString += '*' + a + '*'
+				userString = ''
+				for u in users
+					log u
+					if userString != ''
+						userString += ', '
+					userString += Plugin.userName(u)
+				Markdown.render(answerString + ': ' + userString)
 
 popWinnerModal = !->
 	round = Db.personal.get('showwinners').shift()
@@ -177,15 +245,22 @@ popWinnerModal = !->
 
 	Modal.show tr('Winner of round %1: %2', round, Plugin.userName(player)), !->
 		log 'question, answer', question, answer
-		renderQuestion question.text, null, question.play, answer
+		renderQuestion question.text, null, question.play, answer, [winner.w]
+		renderVoteCount winner
 	, !->
 		Server.call 'popShowWinner'
 
 drawNewAnswerCards = !->
 	Server.call 'drawcards', (cards) !->
 		Modal.show tr('Your new White Card%1', if cards.length > 1 then 's' else ''), !->
+			if isNewbie()
+				Dom.div !->
+					Dom.style
+						marginBottom: '25px'
+					Dom.h2 tr('Your Hand')
+					Dom.text tr('After every round, you will draw new cards for your hand until you hold 10 cards again.')
 			for c in cards
-				renderCard false, c
+				renderCard 'white', c
 
 renderDrawQuestionButton = !->
 	Dom.text tr('Click the button below to start a new round!')
@@ -195,30 +270,32 @@ renderDrawQuestionButton = !->
 			Server.call 'drawquestion'
 
 playRender = !->
+	if isNewbie()
+		Dom.div !->
+			Dom.h2 tr('Playing Cards Explained')
+			Dom.text tr('Every round starts by one player drawing a question. After that, everyone gets to play one or more cards from their hand. At the end of the round, you will get to vote for who played the best card!')
+
 	question = Db.shared.get 'question'
 	myanswers = Db.personal.get 'playedcards'
 	Dom.h1 tr('Play your card%1', if question.play > 1 then 's' else '')
 
-	Dom.h1 tr('Question:')
+	Dom.h2 tr('Question:')
 	renderQuestion question.text, null, question.play, myanswers
 	renderCardSelect()
 
 voteRender = !->
 	question = Db.shared.get 'question'
 	vote = Db.personal.get('vote')
-	
+
 	Dom.h1 tr('Vote for the best card%1', if question.play > 1 then 's' else '')
 	Dom.h2 'Question'
 	renderQuestion question.text, null, question.play, vote
 
-	if Db.personal.get('playedcards')
-		Dom.h2 tr('You Played:')
-		for p in [0..question.play-1]
-			renderCard false, Db.personal.get('playedcards', p)
-
 	Dom.h2 tr('Others Played:')
 
-	if !vote
+	Dom.div !->
+		Dom.style
+			marginBottom: '30px'
 		Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
 
 	for cards in Db.shared.get 'playedcards'
@@ -232,12 +309,18 @@ voteRender = !->
 					Dom.style
 						display: 'inline-block'
 						width: '100%'
-						marginBottom: '0px auto 30px auto'
-						backgroundColor: if selected then 'lightblue'
+						marginTop: '-20px'
 					for i,card of cards
-						renderCard false, card, !->
+						renderCard (if selected then 'selected' else 'white'), card, !->
 							log 'Chose', cards, 'as winning card'
-							Server.sync 'vote', cards
+							Server.sync 'vote'
+
+	if Db.personal.get('playedcards')
+		Dom.h2 tr('You Played:')
+		if isNewbie()
+			Dom.text tr("This is the card you played. You can't vote for your own card, though!")
+		for p in [0..question.play-1]
+			renderCard 'white', Db.personal.get('playedcards', p)
 
 renderCardSelect = !->
 	hand = Db.personal.ref 'hand'
@@ -249,7 +332,7 @@ renderCardSelect = !->
 	playcount = playedcards.count()
 	for p in [0..question.play-1]
 		do (p) !->
-			renderCard false, playedcards.get(p), !->
+			renderCard 'white', playedcards.get(p), !->
 				cardselectModal playedcards, hand, (card) !->
 					Server.sync 'playcard', p, card, !->
 						for i, c of playedcards.get()
@@ -257,7 +340,7 @@ renderCardSelect = !->
 								playedcards.set(i, playedcards.get(p))
 						playedcards.set(p, card)
 
-renderQuestion = (text, handler, play, answers) !->
+renderQuestion = (text, handler, play, answers, winners) !->
 	i = 0
 	if answers
 		text = text.replace(/(__+)/g, !->
@@ -279,30 +362,55 @@ renderQuestion = (text, handler, play, answers) !->
 
 		while answers[i]
 			text = text + '\r\n\r\n*' + answers[i++] + '*'
+	
+	if winners
+		if +winners > 0
+			log 'winners is one person', winners
+			winners = [winners]
+
+		wincount = 0
+		winnerText = 'Won by: '
+		for w in winners
+			if wincount then winnerText += ', '
+			winnerText += Plugin.userName(w)
 
 	text = text.replace(/_/g, '\\_')
 
-	renderCard true, text, handler, play, false
+	renderCard 'black', text, handler, play, false, winnerText
 
-renderCard = (black, text, handler, play, compact) !->
-	backgroundcolor = if black then 'black' else 'white'
-	textcolor = if black then 'white' else 'black'
+renderCard = (style, text, handler, play, compact, subtext) !->
+	if style == 'selected'
+		black = false
+		selected = true
+	else
+		selected = false
+		black = style == 'black'
+
+	backgroundcolor = if black then 'black' else (if selected then '#ba1a6e' else 'white')
+	textcolor = if (black || selected) then 'white' else 'black'
+
 	Dom.div !->
 		Markdown.render text || tr('tap to select card')
+		if selected || subtext
+			Dom.span !->
+				Dom.style
+					display: 'block'
+					marginLeft: '1em'
+					marginBottom: '0.5em'
+					fontSize: '0.7em'
+					fontStyle: 'italic'
+				Dom.text (if selected then 'selected' else '') + (subtext||'')
 		Dom.style
 			position: 'relative'
 			fontStyle: if not text then 'italic' else ''
 			textAlign: if text then 'left' else 'center'
 			backgroundColor: backgroundcolor
 			color: textcolor
-			margin: '20px auto 0 auto'
+			margin: '10px auto 0 auto'
 			boxShadow: '-3px -2px 10px #aaa, 8px -2px 10px #bbb'
-			padding: if compact then '0em 0.5em' else '0.5em 1.5em'
+			padding: if compact then '0.5em 1em' else '1em 2em'
+			paddingBottom: if selected then '2.0em'
 			borderRadius: '15px 15px 0 0'
-			borderColor: backgroundcolor
-			borderWidth: '10px'
-			borderStyle: 'solid'
-			borderBottom: 'none'
 			fontSize: if Dom.viewport.get('width') > 480 then '1.5em' else '1.2em'
 			fontWeight: 'bold'
 			minWidth: '255px'
@@ -325,8 +433,14 @@ renderCard = (black, text, handler, play, compact) !->
 			Dom.onTap handler
 
 cardselectModal = (selected, cards, handlepick) !->
-	Modal.show tr('Select card'), !->
-		Dom.style width: '80%'
+	Modal.show tr('Your Hand'), !->
+		Dom.style
+			width: '80%'
+		if isNewbie()
+			Dom.div !->
+				Dom.style
+					marginBottom: '30px'
+				Dom.text 'These are the 10 white (answer) cards you currently have in your hand. After each round, you will draw new cards until you have 10 cards again.'
 		Dom.div !->
 			Dom.style
 				maxHeight: '40%'
@@ -334,6 +448,7 @@ cardselectModal = (selected, cards, handlepick) !->
 				_overflowScrolling: 'touch'
 				backgroundColor: '#eee'
 				margin: '-12px'
+				paddingTop: '15px'
 
 			for card in cards.get()
 				do (card) !->
@@ -344,10 +459,10 @@ cardselectModal = (selected, cards, handlepick) !->
 								isselected = true
 
 						Dom.style
-							backgroundColor: if isselected then 'lightblue'
 							padding: '5px 10px 0 10px'
+							marginTop: '-20px'
 							textAlign: 'left'
-						renderCard false, card, null, null, true
+						renderCard (if isselected then 'selected' else 'white'), card, null, null, true
 
 						Dom.onTap !->
 							handlepick card
@@ -391,6 +506,19 @@ selectMemberModal = (value, handleChange) !->
 			handleChange ''
 			value.set ''
 	, if value.get() then ['cancel', "Cancel", 'clear', "Clear"] else ['cancel', "Cancel"]
+
+isNewbie = !->
+	activity = Db.personal.get('activity') | 0
+	if Plugin.userName(Plugin.userId()) == 'Erik'
+		activity = 1
+
+	if activity >= 4
+		return false
+
+	if score = Db.shared.get 'score'
+		if Plugin.userId() in Object.keys(score)
+			return false
+	return true
 
 exports.renderSettings = !->
 	Dom.div !->
