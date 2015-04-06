@@ -1,5 +1,6 @@
 Db = require 'db'
 Dom = require 'dom'
+Event = require 'event'
 Modal = require 'modal'
 Obs = require 'obs'
 Page = require 'page'
@@ -8,6 +9,7 @@ Server = require 'server'
 Social = require 'social'
 Time = require 'time'
 Ui = require 'ui'
+Util = require 'util'
 Markdown = require 'markdown'
 {tr} = require 'i18n'
 
@@ -17,8 +19,21 @@ exports.render = !->
 	phase = Db.shared.get 'phase'
 	commentsRound = false
 
-	if round = +Page.state.get(0)
-		renderWinnerPage round
+	log 'Page:', +Page.state.get(0)
+	log 'Phase:', phase
+	log 'Phase:', Db.shared.get 'phase'
+	log 'Showwinners:', Db.personal.get('showwinners').length
+	log 'Hand:', Db.personal.get('hand').length
+
+	log 'QQ:', (Db.personal.get 'activity'), +(Db.personal.get 'activity') >= 0, not +(Db.personal.get 'activity')
+	if Plugin.groupId() == 159 and not (+(Db.personal.get 'activity')>=0)
+		renderTutorialQuestion()
+	else if Page.state.get(0)
+		if page = Page.state.get(0)
+			if round = +Page.state.get(1)
+				renderWinnerPage round
+			else if page == 'hist'
+				renderScorePage()
 	else
 		renderInfoBar()
 		if Db.personal.get('showwinners').length
@@ -27,10 +42,6 @@ exports.render = !->
 			Dom.text tr('You have run of either answers or questions. Please wait until more have been added, or start a new game!')
 		else if phase is 'vote'
 			commentsRound = Db.shared.get 'round'
-			if isNewbie()
-				Dom.div !->
-					Dom.h2 tr('Voting Explained')
-					Dom.text tr('After the cards have been played, everyone will get a chance to vote for their favorite card. The card with the most votes will win, and that player will get a point!')
 			voteRender()
 		else if Db.personal.get('hand').length < handsize
 			drawNewAnswerCards()
@@ -39,15 +50,16 @@ exports.render = !->
 			playRender()
 		else if phase is 'draw'
 			renderDrawQuestionButton()
+		
+		# if Object.keys(Db.shared.get 'winners').length
+		# 	Ui.bigButton !->
+		# 		Dom.text tr('Show Last Rounds')
+		# 		Dom.onTap !->
+		# 			showWinnerListModal()
 
 		if phase in ['play', 'vote']
+			Event.markRead 'hist', commentsRound
 			renderComments(commentsRound)
-		
-		if Object.keys(Db.shared.get 'winners').length
-			Ui.bigButton !->
-				Dom.text tr('Show Last Rounds')
-				Dom.onTap !->
-					showWinnerListModal()
 
 renderInfoBar = !->
 	Dom.div !->
@@ -125,6 +137,7 @@ renderInfoBar = !->
 				fontSize: '1em'
 				margin: '3px 0px'
 				height: '39px'
+			Event.renderBubble()
 			Dom.text tr('Position')
 			Dom.div !->
 				Dom.style
@@ -133,8 +146,7 @@ renderInfoBar = !->
 				Dom.text if position? then position else 'n/a'
 			if position?
 				Dom.onTap !->
-					Modal.show tr('Score'), !->
-						renderScore()
+					Page.nav 'hist'
 
 showHelpPage = !->
 	Page.nav !->
@@ -162,9 +174,13 @@ The game is based on the game 'Cards against Humanity', and uses its original se
 Do you have ideas for more cards? Please suggest them in the support Happening!
 """
 
+renderScorePage = !->
+	renderScore()
+	showWinnerListModal()
+
 renderComments = (round) !->
 	Social.renderComments
-		path: [round]
+		path: ['hist', round]
 		closed: false
 		render: (comment) !->
 			if comment.s
@@ -180,6 +196,8 @@ renderComments = (round) !->
 				return true # We're rendering these type of comments
 
 renderScore = !->
+	Dom.h1 tr 'Score'
+
 	if Db.shared.get 'score' is {}
 		Dom.text tr('No score yet.')
 	else
@@ -190,27 +208,34 @@ renderScore = !->
 				Dom.text Plugin.userName(userId) + ': ' + scores[userId]
 
 showWinnerListModal = !->
-	Page.nav !->
-		Obs.observe !->
-			Dom.h1 tr('Previous Winners')
-			if Db.shared.get 'winners'
-				rounds = Object.keys(Db.shared.get 'winners')
-				for r in [rounds.length - 1..0] by -1
-					round = rounds[r]
-					winner = Db.shared.get 'winners', round
-					# Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
-					Dom.div !->
-						Dom.style
-							margin: '0px -10px -20px'
-						do (round) !->
+	Dom.h1 tr('Previous Winners')
+	if Db.shared.get 'winners'
+		rounds = Object.keys(Db.shared.get 'winners')
+		for r in [rounds.length - 1..0] by -1
+			round = rounds[r]
+			winner = Db.shared.get 'winners', round
+			do (round, winner) !->
+				log round, winner
+				Dom.div !->
+					Event.renderBubble [round]
+					for i in [0..winner.p.length - 1]
+						Dom.div !->
+							Dom.style
+								margin: '0px -10px -20px'
+							log winner
 							renderQuestion winner.q.text, !->
-									Page.nav round
-							, winner.q.play, winner.a, winner.p
+									Page.nav ['hist', round]
+							, winner.q.play, winner.a[i], winner.p[i]
 
 renderWinnerPage = (round) !->
+	Event.showStar tr 'round %1', round
+	Event.markRead 'hist', round
+
 	winner = Db.shared.get 'winners', round
 	Dom.h2 tr('Round %1: %2', round, Plugin.userName(winner.p))
-	renderQuestion winner.q.text, null, winner.q.play, winner.a, winner.p
+	for i in [0..winner.p.length - 1]
+		renderQuestion winner.q.text, null, winner.q.play, winner.a[i], winner.p[i]
+
 	renderVoteCount winner
 
 	renderComments round
@@ -240,13 +265,25 @@ popWinnerModal = !->
 	round = Db.personal.get('showwinners').shift()
 	winner = Db.shared.get 'winners', round
 	question = winner.q
-	answer = winner.a
-	player = winner.p
+	answers = winner.a
+	players = winner.p
 
-	Modal.show tr('Winner of round %1: %2', round, Plugin.userName(player)), !->
-		log 'question, answer', question, answer
-		renderQuestion question.text, null, question.play, answer, [winner.w]
-		renderVoteCount winner
+	winnerString = Util.getWinnerNames(players)
+
+	Modal.show tr('Winner%1 of round %2: %3', (if players.length > 1 then 's' else ''), round, winnerString), !->
+		Dom.div !->
+			Dom.style
+				maxHeight: (Dom.viewport.get('height') - 150) + 'px'
+				overflow: 'scroll'
+			# if isNewbie()
+			# 	Dom.div !->
+			# 		Dom.text tr 'The winner is decided by the votes. After #TODO'
+			log 'question, answer', question, answer
+			for i in [0..players.length - 1]
+				answer = answers[i]
+				player = players[i]
+				renderQuestion question.text, null, question.play, answer, player
+			renderVoteCount winner
 	, !->
 		Server.call 'popShowWinner'
 
@@ -263,7 +300,9 @@ drawNewAnswerCards = !->
 				renderCard 'white', c
 
 renderDrawQuestionButton = !->
-	Dom.text tr('Click the button below to start a new round!')
+	if isNewbie()
+		Dom.text tr('Click the button below to start a new round!')
+
 	Ui.bigButton !->
 		Dom.text tr('Draw Question')
 		Dom.onTap !->
@@ -284,6 +323,11 @@ playRender = !->
 	renderCardSelect()
 
 voteRender = !->
+	if isNewbie()
+		Dom.div !->
+			Dom.h2 tr('Voting Explained')
+			Dom.text tr('After the cards have been played, everyone will get a chance to vote for their favorite card. The card with the most votes will win, and that player will get a point!')
+
 	question = Db.shared.get 'question'
 	vote = Db.personal.get('vote')
 
@@ -291,36 +335,65 @@ voteRender = !->
 	Dom.h2 'Question'
 	renderQuestion question.text, null, question.play, vote
 
-	Dom.h2 tr('Others Played:')
+	Dom.h2 tr('Cast Your Vote')
+
+	if isNewbie()
+		Dom.div !->
+			Dom.style
+				marginBottom: '30px'
+			Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
 
 	Dom.div !->
-		Dom.style
-			marginBottom: '30px'
-		Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
-
-	for cards in Db.shared.get 'playedcards'
-		log 'Cards:', cards
-		do (cards) !->
-			log 'Comparing with own', JSON.stringify(cards), JSON.stringify(Db.personal.get 'playedcards')
-			if JSON.stringify(cards) != JSON.stringify(Db.personal.get 'playedcards')
-				log 'Comparing with vote', cards, vote
-				Dom.div !->
-					selected = JSON.stringify(cards) == JSON.stringify(vote)
-					Dom.style
-						display: 'inline-block'
-						width: '100%'
-						marginTop: '-20px'
-					for i,card of cards
-						renderCard (if selected then 'selected' else 'white'), card, !->
-							log 'Chose', cards, 'as winning card'
-							Server.sync 'vote'
+		Dom.style marginTop: '20px'
+		for cards in Db.shared.get 'playedcards'
+			log 'Cards:', cards
+			do (cards) !->
+				log 'Comparing with own', JSON.stringify(cards), JSON.stringify(Db.personal.get 'playedcards')
+				if JSON.stringify(cards) != JSON.stringify(Db.personal.get 'playedcards')
+					log 'Comparing with vote', cards, vote
+					Dom.div !->
+						selected = JSON.stringify(cards) == JSON.stringify(vote)
+						Dom.style
+							display: 'inline-block'
+							width: '100%'
+							marginTop: if question.play > 1 then '20px' else '-20px'
+						for i,card of cards
+							Dom.div !->
+								if question.play > 1 then Dom.style marginTop: '-15px'
+								renderCard (if selected then 'selected' else 'white'), card, !->
+									log 'Chose', cards, 'as winning card'
+									Server.sync 'vote', cards, !->
+										Db.personal.set 'vote', cards
 
 	if Db.personal.get('playedcards')
 		Dom.h2 tr('You Played:')
 		if isNewbie()
-			Dom.text tr("This is the card you played. You can't vote for your own card, though!")
-		for p in [0..question.play-1]
-			renderCard 'white', Db.personal.get('playedcards', p)
+			Dom.text tr("This is what you played. You can't vote for your own card, though!")
+		Dom.div !->
+			Dom.style marginTop: '20px'
+			for p in [0..question.play-1]
+				Dom.div !->
+					Dom.style marginTop: '-20px'
+					renderCard 'white', Db.personal.get('playedcards', p)
+
+renderTutorialQuestion = !->
+	Dom.div !->
+		Dom.style
+			margin: '50px auto'
+			maxWidth: '250px'
+			textAlign: 'center'
+		if +(Db.personal.get 'activity') < 0
+			Dom.text tr("Do you want some hints on how to play the game for the first few rounds anyway?")
+			Ui.bigButton tr('Yes'), !->
+				Server.call 'tutorialAnswer', 1, 1
+			Ui.bigButton tr('No'), !->
+				Server.call 'tutorialAnswer', 1, 0
+		else
+			Dom.text tr("Have you ever played either 'Happening against Humanity', or the card game it is based on, 'Cards against Humanity', before? If not, we can show a few short hints during the game.")
+			Ui.bigButton tr('Yes'), !->
+				Server.call 'tutorialAnswer', 0, 1
+			Ui.bigButton tr('No'), !->
+				Server.call 'tutorialAnswer', 0, 0
 
 renderCardSelect = !->
 	hand = Db.personal.ref 'hand'
@@ -343,10 +416,13 @@ renderCardSelect = !->
 renderQuestion = (text, handler, play, answers, winners) !->
 	i = 0
 	if answers
+		log 'Answers:', JSON.stringify(answers)
 		text = text.replace(/(__+)/g, !->
+			log 'Replacing', i
 			if answers[i]
 				ans = answers[i++]
 
+				log 'Answer:', ans
 				# Lowercase first character (will be better most of the time)
 				ans = (ans[0]).toLowerCase() + ans.substring 1
 
@@ -440,7 +516,10 @@ cardselectModal = (selected, cards, handlepick) !->
 			Dom.div !->
 				Dom.style
 					marginBottom: '30px'
-				Dom.text 'These are the 10 white (answer) cards you currently have in your hand. After each round, you will draw new cards until you have 10 cards again.'
+				if Db.personal.get 'activity' > 3 # #moreMagicNumbers
+					Dom.text tr 'These are the 10 white (answer) cards you currently have in your hand. After each round, you will draw new cards until you have 10 cards again.'
+				else
+					Dom.text tr 'If you do not have any cards that you think might win you this round, consider playing some of your worst cards to get new ones next round.'
 		Dom.div !->
 			Dom.style
 				maxHeight: '40%'
@@ -509,10 +588,10 @@ selectMemberModal = (value, handleChange) !->
 
 isNewbie = !->
 	activity = Db.personal.get('activity') | 0
-	if Plugin.userName(Plugin.userId()) == 'Erik'
-		activity = 1
+	# if Plugin.userName(Plugin.userId()) == 'Erik'
+	# 	activity = Math.floor(Math.random() * 8)
 
-	if activity >= 4
+	if activity >= 6 # hashtagMagicNumbers
 		return false
 
 	if score = Db.shared.get 'score'
@@ -522,7 +601,7 @@ isNewbie = !->
 
 exports.renderSettings = !->
 	Dom.div !->
-		Markdown.render tr("Disclaimer: If you or anyone else in this group is offended by *anything* at all (seriously), then don't install this Group App. This Group App is definitely not suitable for children, families, sensitive people or humanity in general.")
+		Markdown.render tr("Disclaimer: If you or anyone else in this group is offended by *anything* at all , then don't install this Group App. This Group App is not suitable for children, families, sensitive people or humanity in general.")
 
 	if Db.shared
 		if Plugin.userIsAdmin()

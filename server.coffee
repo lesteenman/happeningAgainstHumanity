@@ -2,6 +2,7 @@ Db = require 'db'
 Event = require 'event'
 Plugin = require 'plugin'
 Timer = require 'timer'
+Util = require 'util'
 Black = require 'black'
 White = require 'white'
 {tr} = require 'i18n'
@@ -23,7 +24,10 @@ exports.onConfig = onConfig = (config) !->
 	else
 		# Defaults for template groups
 
-# exports.onUpgrade = !->
+exports.onUpgrade = !->
+	log 'Upgrading..'
+	# for r, winner of Db.shared.get 'winners'
+	# 	log 'Upgrading round', r
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
@@ -103,23 +107,30 @@ nextround = !->
 	handempty = false # if anyone has <2 cards remaining, out of cards
 	waitingfor = [] # also fill this here, we're looping over all users anyway.
 	for userId in Plugin.userIds()
+		log 'Clearing played cards for', userId
+		Db.personal(userId).set 'playedcards', null
 		waitingfor.push userId
-		if Db.personal(userId).get('hand').length < 2
+		if !Db.personal(userId).get 'hand'
+			Db.personal(userId).set 'hand', []
+		else if Db.personal(userId).get('hand').length < 2
 			handempty = true
 
 	Db.shared.set 'waitingfor', waitingfor
 
-	if handempty
+	if (Db.shared.get 'answerdeck').length == 0
+		log 'Pausing since we ran out of answer cards!'
 		Db.shared.set 'phase', 'paused'
 
 # Triggered by drawQuestion
 startround = !->
 	Timer.cancel()
 
-	question = Db.shared.get 'question'
-	if not question
+	if (Db.shared.get 'questiondeck').length == 0
+		log 'Pausing since we ran out of questions!'
 		Db.shared.set 'phase', 'paused'
 		return
+
+	question = Db.shared.get 'question'
 	
 	Db.shared.set 'phase', 'play'
 
@@ -185,7 +196,7 @@ exports.closeround = !->
 
 	Event.create
 		unit: 'game'
-		text: tr('All players have played their cards, it is time to vote for the winner!')
+		text: tr('The cards have been played, it is time to vote for the winner!')
 		include: ['all']
 
 exports.closevotes = !->
@@ -209,71 +220,82 @@ exports.closevotes = !->
 	
 	# Next, determine who won. Necessary in case several get equal votes, the
 	# winner will be chosen randomly.
-	maxcount = 0
-	wincards = null
+	maxcount = -1
+	wincards = []
 	log 'votecount:', JSON.stringify(votes)
 	for vote, users of votes
+		log 'Vote:', JSON.stringify(vote)
 		count = users.length
-		if wincards == null
-			log 'No winner yet, choosing first!', vote
-			wincards = vote
-
-		# TODO: This is actually not really random, since the player with the highest
-		# userId has a much higher chance to win than the others with the same score.
 		if count == maxcount
-			if Math.random() > 0.5
-				wincards = vote
+			log 'Vote', vote, 'had just as much votes: ', users.length
+			wincards.push vote
 		else if count > maxcount
-			wincards = vote
+			log 'Vote', vote, 'had more votes: ', users.length
+			wincards = [vote]
 			maxcount = count
 
 	# Next, see who played this card.
-	winner = 0
+	winners = []
 	log 'Checking to see who played winning card', wincards
-	for userId in Plugin.userIds()
-		log 'userId:', userId
-		if playedcards = Db.personal(userId).get 'playedcards'
-			log '  Comparing', JSON.stringify(playedcards), 'With', wincards
-			if JSON.stringify(playedcards) is wincards
-				log '    Found the winner!'
-				winner = userId
-			
-			# Reset played cards
+	if wincards.length
+		for wincard in wincards
+			for userId in Plugin.userIds()
+				if playedcards = Db.personal(userId).get 'playedcards'
+					log '  Comparing', JSON.stringify(playedcards), 'With', wincards
+					log 'UserId:', userId
+					if JSON.stringify(playedcards) == wincard
+						log '    Found a winner: ' + userId
+						winners.push userId
+				# Reset played cards
+				Db.personal(userId).set 'playedcards', null
+	else
+		for userId in Plugin.userIds()
 			Db.personal(userId).set 'playedcards', null
 
-	if winner == 0
+	if winners.length == 0
 		Event.create
 			unit: 'game'
 			text: tr('The votes have closed, but nobody cast a vote. No winner!')
 			include: ['all']
-	
-	log 'Winner:', winner
+	else
+		_wincards = []
+		for wincard in wincards
+			_wincards.push JSON.parse wincard
+		wincards = _wincards
+		
+		log 'Winners:', winners
+		log 'Wincards:', JSON.stringify(wincards)
 
-	prevscore = Db.shared.get 'score', winner
-	Db.shared.set 'score', winner, (0|prevscore) + 1
+		for winner in winners
+			prevscore = Db.shared.get 'score', winner
+			Db.shared.set 'score', winner, (0|prevscore) + 1
 
-	round = Db.shared.get 'round'
-	question = Db.shared.get 'question'
-	winners = Db.shared.get 'winners'
-	winners[round] =
-		q: question
-		a: JSON.parse(wincards)
-		p: winner
-		v: votes
-	Db.shared.set 'winners', winners
+		round = Db.shared.get 'round'
+		question = Db.shared.get 'question'
+		all_winners = Db.shared.get 'winners'
+		all_winners[round] =
+			q: question
+			a: wincards
+			p: winners
+			v: votes
+		Db.shared.set 'winners', all_winners
 
-	# Add this winner to everyone's showwinner stack.
-	for userId in Plugin.userIds()
-		showwinners = Db.personal(userId).get 'showwinners'
-		if showwinners.length == maxWinnerStackLength
-			showwinners.shift()
-		showwinners.push round
-		Db.personal(userId).set 'showwinners', showwinners
+		# Add these winners to everyone's showwinner stack.
+		for userId in Plugin.userIds()
+			if showwinners = Db.personal(userId).get 'showwinners'
+				if showwinners.length == maxWinnerStackLength
+					showwinners.shift()
+			else
+				showwinners = []
+			showwinners.push round
+			Db.personal(userId).set 'showwinners', showwinners
 
-	Event.create
-		unit: 'game'
-		text: tr('%1 won the round!', Plugin.userName(winner))
-		include: ['all']
+		winnerString = Util.getWinnerNames winners
+
+		Event.create
+			unit: 'game'
+			text: tr('%1 won the round!', winnerString)
+			include: ['all']
 
 	nextround()
 
@@ -375,6 +397,28 @@ exports.client_vote = (wincards) !->
 	Db.shared.set 'waitingfor', waitingfor
 	if everyonevoted
 		exports.closevotes()
+
+exports.client_tutorialAnswer = (q, a) !->
+	log 'Answered', q, a
+	if q == 0
+		if a == 0
+			# Did not play before
+			log 'Set activity to 0'
+			Db.personal(Plugin.userId()).set 'activity', 0
+		else if a == 1
+			# Played before
+			log 'Set activity to -1'
+			Db.personal(Plugin.userId()).set 'activity', -1
+	else if q == 1
+		if a == 0
+			# Does not want to see hints
+			log 'Set activity to 10'
+			Db.personal(Plugin.userId()).set 'activity', 10
+		else if a == 1
+			# Still wants help
+			log 'Set activity to 0'
+			Db.personal(Plugin.userId()).set 'activity', 0
+
 
 ### Helper Functions (e.g. Deck-Related) ###
 
