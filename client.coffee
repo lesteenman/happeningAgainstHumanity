@@ -26,6 +26,7 @@ exports.render = !->
 	log 'Hand:', Db.personal.get('hand').length
 
 	log 'QQ:', (Db.personal.get 'activity'), +(Db.personal.get 'activity') >= 0, not +(Db.personal.get 'activity')
+	# 159 is my personal group ID, so as not to trigger this in other Happenings that are running this plugin for now.
 	if Plugin.groupId() == 159 and not (+(Db.personal.get 'activity')>=0)
 		renderTutorialQuestion()
 	else if Page.state.get(0)
