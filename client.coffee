@@ -58,7 +58,7 @@ exports.render = !->
 		# 		Dom.onTap !->
 		# 			showWinnerListModal()
 
-		if phase in ['play', 'vote']
+		if phase is 'vote'
 			Event.markRead 'hist', commentsRound
 			renderComments(commentsRound)
 
