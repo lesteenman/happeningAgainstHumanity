@@ -1,5 +1,6 @@
 exports.cards = !->
 	return [
+		"Devout prostitutes.",
 		"Michelle Obama's arms.",
 		"White people.",
 		"An erection that lasts longer than four hours.",

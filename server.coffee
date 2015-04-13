@@ -19,15 +19,81 @@ exports.onInstall = (config) !->
 exports.onConfig = onConfig = (config) !->
 	if config?
 		# Do things
-		if not Db.shared.get 'phase'
+		if not Db.shared.get 'rounds'
 			exports.startgame()
 	else
 		# Defaults for template groups
 
 exports.onUpgrade = !->
-	log 'Upgrading..'
-	# for r, winner of Db.shared.get 'winners'
-	# 	log 'Upgrading round', r
+	log 'Upgraded the Plugin'
+	if (Db.shared.get 'question') and Plugin.groupId() == 159
+		log 'Performing Upgrade..'
+		Timer.cancel()
+
+		# The path of comments has been moved from ['hist', id] to [id]
+		comments = Db.shared.get 'comments'
+		Db.shared.set 'comments', null
+		for path, comment of comments
+			id = path.split(" ")[1]
+			Db.shared.set 'comments', id, comment
+
+		likes = Db.shared.get 'likes'
+		Db.shared.set 'likes', null
+		for path, like of likes
+			id = path.split(" ")[1]
+			Db.shared.set 'likes', id, like
+
+		lastround = Db.shared.get 'round'
+		lastphase = Db.shared.get 'phase'
+		Db.shared.set 'lastround', lastround
+
+		lastRoundInfo =
+			question: Db.shared.get 'question'
+			phase: Db.shared.get 'phase'
+			phase_end: Db.shared.get 'phase_end'
+			playedcards: Db.shared.get 'playedcards'
+			waitingfor: Db.shared.get 'waitingfor'
+		Db.shared.set 'rounds', lastround, lastRoundInfo
+
+		for round, winner of Db.shared.get 'winners'
+			roundInfo =
+				question: winner.q
+				phase: 'done'
+				phase_end: 0
+				playedcards: []
+				waitingfor: []
+				winner:
+					a: winner.a
+					p: winner.p
+					v: winner.v
+
+			Db.shared.set 'rounds', round, roundInfo
+
+		for userId in Plugin.userIds()
+			playedcards = Db.personal(userId).get 'playedcards'
+			vote = Db.personal(userId).get 'vote'
+
+			Db.personal(userId).set 'playedcards', null
+			Db.personal(userId).set 'playedcards', lastround, playedcards
+			Db.personal(userId).set 'vote', null
+			Db.personal(userId).set 'vote', lastround, vote
+
+		Db.shared.set 'paused', false
+		Db.shared.set 'question', null
+		Db.shared.set 'phase', null
+		Db.shared.set 'phase_end', null
+		Db.shared.set 'playedcards', null
+		Db.shared.set 'waitingfor', null
+		Db.shared.set 'round', null
+		Db.shared.set 'winners', null
+
+		# Prepare the last few rounds for the new system
+		if lastphase is 'play'
+			closeRound lastround
+		if lastphase in ['vote', 'play']
+			newround = prepareNewRound()
+			drawquestion newround
+			startround newround
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
@@ -38,41 +104,34 @@ exports.client_startgame = !->
 	if Plugin.userIsAdmin()
 		exports.startgame()
 
-exports.client_nextround = !->
+exports.client_advanceround = !->
 	if Plugin.userIsAdmin()
-		nextround()
-	
-exports.client_closeround = !->
-	if Plugin.userIsAdmin()
-		exports.closeround()
-
-exports.client_closevotes = !->
-	if Plugin.userIsAdmin()
-		exports.closevotes()
+		exports.advanceRound()
 
 ### Reminder Functions ###
 
-exports.remindPlay = !->
+exports.remindPlay = (roundId) !->
 	Event.create
 		unit: 'game'
 		text: tr('Do not forget to play a card!')
-		include: Db.shared.get('waitingfor')
+		include: Db.shared.get('rounds', roundId, 'waitingfor')
 
-exports.remindVote = !->
+exports.remindVote = (roundId) !->
 	Event.create
 		unit: 'game'
 		text: tr('Do not forget to vote for the best card!')
-		include: Db.shared.get('waitingfor')
+		include: Db.shared.get('rounds', roundId, 'waitingfor')
 
 ### Phase-switch functions ###
 
 exports.startgame = !->
+	Timer.cancel()
 	Db.shared.set 'questiondeck', [0..questionCards.length - 1] # [0..Black.cards.length - 1]
 	Db.shared.set 'answerdeck', [0..answerCards.length - 1] # [0..White.cards.length - 1]
-	Db.shared.set 'round', 0
+	Db.shared.set 'lastround', 0
 	Db.shared.set 'score', {}
-	Db.shared.set 'winners', {}
-	Db.shared.set 'phase', 'starting'
+	Db.shared.set 'rounds', {}
+	Db.shared.set 'paused', false
  
 	# can be used to add cards during a game with an upgrade
 	Db.shared.set 'questiondecksize', questionCards.length # Black.cards.length
@@ -92,57 +151,66 @@ exports.startgame = !->
 		unit: 'game'
 		text: tr("A new game of 'Happening against Humanity' was started!")
 		include: ['all']
-	nextround()
+	firstround = prepareNewRound()
+	exports.startround firstround
 
 # Initializes a new round
-nextround = !->
+prepareNewRound = !->
 	Timer.cancel()
 
-	Db.shared.set 'round', Db.shared.get('round') + 1
-	Db.shared.set 'phase', 'draw'
-	Db.shared.set 'waitingfor', []
-	Db.shared.set 'question', {play:0, text:''}
-	Db.shared.set 'playedcards', []
+	newroundnum = Db.shared.get('lastround') + 1
+	Db.shared.set 'lastround', newroundnum
 
-	handempty = false # if anyone has <2 cards remaining, out of cards
-	waitingfor = [] # also fill this here, we're looping over all users anyway.
+	waitingfor = []
 	for userId in Plugin.userIds()
 		log 'Clearing played cards for', userId
-		Db.personal(userId).set 'playedcards', null
+		# Db.personal(userId).set 'playedcards', newroundnum, {}
 		waitingfor.push userId
 		if !Db.personal(userId).get 'hand'
 			Db.personal(userId).set 'hand', []
-		else if Db.personal(userId).get('hand').length < 2
-			handempty = true
-
-	Db.shared.set 'waitingfor', waitingfor
+	
+	newround =
+		phase: 'draw'
+		playedcards: []
+		question:
+			play: 0
+			text: ''
+		waitingfor: waitingfor
+	Db.shared.set 'rounds', newroundnum, newround
 
 	if (Db.shared.get 'answerdeck').length == 0
 		log 'Pausing since we ran out of answer cards!'
-		Db.shared.set 'phase', 'paused'
+		Db.shared.set 'paused', 'forced'
 
-# Triggered by drawQuestion
-startround = !->
+	return newroundnum
+
+# Triggered by exports.client_drawquestion
+startround = (roundId) !->
 	Timer.cancel()
+
+	round = Db.shared.ref 'rounds', roundId
+	if not round then return
+
+	if round.get('phase') isnt 'draw' then return
 
 	if (Db.shared.get 'questiondeck').length == 0
 		log 'Pausing since we ran out of questions!'
-		Db.shared.set 'phase', 'paused'
+		Db.shared.set 'paused', 'forced'
 		return
-
-	question = Db.shared.get 'question'
 	
-	Db.shared.set 'phase', 'play'
+	round.set 'phase', 'play'
 
 	duration = getRoundDuration(Date.now()/1000)
-	Db.shared.set 'phase_end', (Date.now()/1000+duration)
-	Timer.set (duration-3600)*1000, 'remindPlay'
-	Timer.set duration*1000, 'closeround'
+	round.set 'phase_end', (Date.now()/1000+duration)
+	Timer.set (duration-3600)*1000, 'remindPlay', roundId
+	# Closes both the playing and voting rounds, but doing this here makes sure it is
+	# also triggered for the very first round of a game.
+	Timer.set duration*1000, 'advanceRound'
 
-	eventObject = {
+	eventObject =
 		unit: 'game'
-		text: tr('Next Question: "')+question.text+'"'
-	}
+		text: tr("A new round was started. Next Question: '%1'", round.get 'question', 'text')
+
 	if Plugin.userId()
 		eventObject.exclude = [Plugin.userId()]
 	else
@@ -150,19 +218,52 @@ startround = !->
 
 	Event.create eventObject
 
-exports.closeround = !->
+exports.tryAdvanceRound = !->
+	ready = true
+	rounds = Db.shared.get 'rounds'
+	for round in rounds
+		if round.phase in ['play', 'vote']
+			if round.waitingfor.length > 0
+				ready = false
+
+	if ready
+		log 'Should move on rounds now!'
+
+# Closes the last rounds (both play and vote), and starts a new one if the played
+# round was active.
+exports.advanceRound = !->
+	Timer.cancel()
+	playedRoundId = Db.shared.get 'lastround'
+	voteRoundId = playedRoundId - 1
+
+	playedRound = Db.shared.get 'rounds', playedRoundId
+	voteRound = Db.shared.get 'rounds', voteRoundId
+
+	if voteRound then closeVotes voteRoundId
+	if playedRound
+		wasActive = closeRound playedRoundId
+		newround = prepareNewRound()
+		
+		# Automatically start the new round if we still have a voting round open
+		if wasActive
+			drawquestion newround
+			startround newround
+
+closeRound = (roundId) !->
 	Timer.cancel()
 
-	log 'closeround'
-	Db.shared.set 'phase', 'vote'
-	play = (Db.shared.get 'question', 'play')
+	round = Db.shared.ref 'rounds', roundId
+	if not round then return
+
+	log 'closeRound', roundId
+	round.set 'phase', 'vote'
 	playedcards = []
 	waitingfor = []
 	for userId in Plugin.userIds()
 		waitingfor.push userId
-		cards = Db.personal(userId).get('playedcards')
+		cards = Db.personal(userId).get('playedcards', roundId)
 		log 'cards', cards
-		if cards and Object.keys(cards).length == play
+		if cards and Object.keys(cards).length == round.get 'question', 'play'
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
 			log 'User $1s Played Cards: $2', userId, JSON.stringify(cards)
@@ -175,38 +276,40 @@ exports.closeround = !->
 			playedcards.push cards
 
 	if playedcards.length == 0
+		log 'Throwing away everyone"s played cards'
 		for userId in Plugin.userIds()
-			Db.personal(userId).set 'playedcards', null
-		Event.create
-			unit: 'game'
-			text: tr('The round has ended, but nobody played a card. No winner!')
-			include: ['all']
+			Db.personal(userId).set 'playedcards', roundId, null
+		round.set 'phase', 'unfinished'
+		# Event.create
+		# 	unit: 'game'
+		# 	text: tr('The round has ended, but nobody played a card. No winner!')
+		# 	include: ['all']
 
-		nextround()
-		return true
+		return false
 	
-	Db.shared.set 'waitingfor', waitingfor
-	Db.shared.set 'playedcards', playedcards
+	round.set 'waitingfor', waitingfor
+	round.set 'playedcards', playedcards
 
 	duration = getRoundDuration(Date.now()/1000)
 	log 'Duration2:', duration
-	Db.shared.set 'phase_end', (Date.now()/1000+duration)
-	Timer.set (duration-3600)*1000, 'remindVote'
-	Timer.set duration*1000, 'closevotes'
+	round.set 'phase_end', (Date.now()/1000+duration)
+	Timer.set (duration-3600)*1000, 'remindVote', roundId
 
-	Event.create
-		unit: 'game'
-		text: tr('The cards have been played, it is time to vote for the winner!')
-		include: ['all']
+	return true
 
-exports.closevotes = !->
+	# Event.create
+	# 	unit: 'game'
+	# 	text: tr('The cards have been played, it is time to vote for the winner!')
+	# 	include: ['all']
+
+closeVotes = (roundId) !->
 	log 'closing votes and counting'
 
 	# First, count which card got most votes (by text).
 	votes = {}
 	for userId in Plugin.userIds()
 		log 'Counting answer for userId', userId
-		if answer = JSON.stringify(Db.personal(userId).get('vote'))
+		if answer = JSON.stringify(Db.personal(userId).get('vote', roundId))
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
 			log 'Adding 1 tally for ' + answer, 'old:', votes[answer]
@@ -216,10 +319,11 @@ exports.closevotes = !->
 			else
 				votes[answer].push(userId)
 			log '    New:', votes[answer]
-			Db.personal(userId).set 'vote', null
+			Db.personal(userId).set 'vote', roundId, null
 	
-	# Next, determine who won. Necessary in case several get equal votes, the
-	# winner will be chosen randomly.
+	Db.shared.set 'rounds', roundId, 'phase', 'done'
+
+	# Next, determine which card won.
 	maxcount = -1
 	wincards = []
 	log 'votecount:', JSON.stringify(votes)
@@ -241,7 +345,7 @@ exports.closevotes = !->
 		for wincard in wincards
 			log 'Winning Card:', wincard
 			for userId in Plugin.userIds()
-				if playedcards = Db.personal(userId).get 'playedcards'
+				if playedcards = Db.personal(userId).get 'playedcards', roundId
 					log '  Comparing', JSON.stringify(playedcards), 'With', wincard
 					log 'UserId:', userId
 					if JSON.stringify(playedcards) == wincard
@@ -249,16 +353,14 @@ exports.closevotes = !->
 						winners.push userId
 		# Finally, Reset played cards
 		for userId in Plugin.userIds()
-			Db.personal(userId).set 'playedcards', null
+			Db.personal(userId).set 'playedcards', roundId, null
 	else
 		for userId in Plugin.userIds()
-			Db.personal(userId).set 'playedcards', null
+			Db.personal(userId).set 'playedcards', roundId, null
 
+	round = Db.shared.ref 'rounds', roundId
 	if winners.length == 0
-		Event.create
-			unit: 'game'
-			text: tr('The votes have closed, but nobody cast a vote. No winner!')
-			include: ['all']
+		round.set 'phase', 'unfinished'
 	else
 		_wincards = []
 		for wincard in wincards
@@ -272,15 +374,11 @@ exports.closevotes = !->
 			prevscore = Db.shared.get 'score', winner
 			Db.shared.set 'score', winner, (0|prevscore) + 1
 
-		round = Db.shared.get 'round'
-		question = Db.shared.get 'question'
-		all_winners = Db.shared.get 'winners'
-		all_winners[round] =
-			q: question
+		question = round.get 'question'
+		round.set 'winner',
 			a: wincards
 			p: winners
 			v: votes
-		Db.shared.set 'winners', all_winners
 
 		# Add these winners to everyone's showwinner stack.
 		for userId in Plugin.userIds()
@@ -289,7 +387,7 @@ exports.closevotes = !->
 					showwinners.shift()
 			else
 				showwinners = []
-			showwinners.push round
+			showwinners.push roundId
 			Db.personal(userId).set 'showwinners', showwinners
 
 		winnerString = Util.getWinnerNames winners
@@ -298,8 +396,6 @@ exports.closevotes = !->
 			unit: 'game'
 			text: tr('%1 won the round!', winnerString)
 			include: ['all']
-
-	nextround()
 
 
 ### Player Action functions ###
@@ -311,27 +407,31 @@ exports.client_popShowWinner = !->
 	showwinners.shift()
 	Db.personal(Plugin.userId()).set 'showwinners', showwinners
 
-exports.client_drawquestion = !->
-	log 'Cancel timer'
+exports.client_drawquestion = (roundId) !->
 	Timer.cancel()
+	drawquestion roundId
+	startround roundId
 
+drawquestion = (roundId) !->
 	# Small 'hack' to allow removing questions from the deck during a game.
 	question = {play: 0, text: ''}
 	while question.text == '' or question.play == 0
 		question = drawQuestionCard()
 
 	log 'question', question
-	Db.shared.set 'question', question
-	startround()
+	Db.shared.set 'rounds', roundId, 'question', question
 
-exports.client_playcard = (p, card) !->
+exports.client_playcard = (roundId, p, card) !->
+	log 'Playing Card'
+	round = Db.shared.ref 'rounds', roundId
 	hand = Db.personal(Plugin.userId()).get('hand')
+	log 'Round:', roundId
 	log 'User $1 played Card $2', Plugin.userId(), card
 	if not card in hand
 		log 'Invalid card'
 		return false
 
-	played = Db.personal(Plugin.userId()).get 'playedcards'
+	played = Db.personal(Plugin.userId()).get 'playedcards', roundId
 	if played
 		for i, c of played
 			if c == card
@@ -340,30 +440,26 @@ exports.client_playcard = (p, card) !->
 		played = {}
 	played[p] = card
 
-	log 'Player selected cards:', played
-	Db.personal(Plugin.userId()).set 'playedcards', played
+	log 'Player selected cards:', JSON.stringify played
+	Db.personal(Plugin.userId()).set 'playedcards', roundId, played
 	waitingfor = []
 
 	for userId in Plugin.userIds()
-		for i in [0..Db.shared.get('question', 'play')-1]
+		log 'User'
+		log userId
+		for i in [0..(round.get('question', 'play') - 1)]
+			log 'User:', userId
 			if userId in waitingfor then continue
-			if not Db.personal(userId).get 'playedcards', i
+			if not Db.personal(userId).get 'playedcards', roundId, i
+				log 'Did not yet play'
 				waitingfor.push userId
 
-	Db.shared.set 'waitingfor', waitingfor
+	log 'Waitingfor: ', waitingfor
+	round.set 'waitingfor', waitingfor
 	if waitingfor.length == 0
 		# Don't close immediately to give people a chance to change their mind.
 		closedelay = 15
-		Timer.set (closedelay * 1000), 'tryCloseround'
-
-# Checks if everyone still played their cards and then closes the round
-exports.tryCloseround = !->
-	# If someone cancelled a card (not even possible at the moment), then the play
-	# function would have updated this DB field as well, so simply check that.
-	waitingfor = Db.shared.get 'waitingfor'
-
-	if waitingfor.length == 0
-		exports.closeround()
+		Timer.set (closedelay * 1000), 'tryAdvanceRound', roundId
 
 # returns 'false' if no cards remaining.
 exports.client_drawcards = (cb) !->
@@ -386,19 +482,22 @@ exports.client_drawcards = (cb) !->
 
 	cb.reply newcards
 
-exports.client_vote = (wincards) !->
-	Db.personal(Plugin.userId()).set 'vote', wincards
+exports.client_vote = (roundId, wincards) !->
+	log 'User voted:', wincards
+	Db.personal(Plugin.userId()).set 'vote', roundId, wincards
 
 	everyonevoted = true
 	waitingfor = []
 	for userId in Plugin.userIds()
-		if not Db.personal(userId).get 'vote'
+		if not Db.personal(userId).get 'vote', roundId
 			everyonevoted = false
 			waitingfor.push userId
 
-	Db.shared.set 'waitingfor', waitingfor
+	Db.shared.set 'rounds', roundId, 'waitingfor', waitingfor
 	if everyonevoted
-		exports.closevotes()
+		# Don't close immediately to give people a chance to change their mind.
+		closedelay = 15
+		Timer.set (closedelay * 1000), 'tryAdvanceRound', roundId
 
 exports.client_tutorialAnswer = (q, a) !->
 	log 'Answered', q, a
