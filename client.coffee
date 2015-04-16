@@ -48,57 +48,75 @@ exports.render = !->
 			Dom.div !->
 				rounds = Db.shared.get 'rounds'
 				log 'Rounds', rounds
+				Dom.h2 tr 'Active Rounds'
+				activeRounds = 0
 				Ui.list !->
 					for i in [(Object.keys rounds).length - 1..0]
 						roundId = Object.keys(rounds)[i]
-						round = Db.shared.get 'rounds', roundId
-						do (roundId) !->
-							if round.phase isnt 'unfinished'
-								Ui.item !->
-									Event.renderBubble [roundId]
-									Dom.div !->
-										Dom.div !->
-											Dom.style
-												fontSize: '120%'
-												textOverflow: 'ellipsis'
-												whiteSpace: 'nowrap'
-												overflow: 'hidden'
-											Dom.text round.question.text
-										Dom.div !->
-											switch(round.phase)
-												when 'draw'
-													Dom.style color: '#ba1a6e'
-													Dom.text tr 'Ready to start!'
-													break
-												when 'play'
-													if Db.personal.get 'playedcards', roundId
-														playedString = ''
-														for id, card of Db.personal.get 'playedcards', roundId
-															if playedString then playedString += ', '
-															playedString += card
-														Dom.text tr 'Played: %1', playedString
-													else
-														Dom.style color: '#ba1a6e'
-														Dom.text tr 'You still have to play a card!'
-													break
-												when 'vote'
-													if Db.personal.get 'vote', roundId
-														votedString = ''
-														for id, card of Db.personal.get 'vote', roundId
-															if votedString then votedString += ', '
-															votedString += card
-														Dom.text tr 'Voted for: %1', votedString
-													else
-														Dom.style color: '#ba1a6e'
-														Dom.text tr 'You still have to vote!'
-													break
-												when 'done'
-													Dom.text tr 'Won by: %1', Util.getWinnerNames round.winner.p
-									Dom.onTap !->
-										Page.nav roundId
+						if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
+							activeRounds += 1
+							renderRoundListItem roundId
+				if activeRounds == 0
+					Dom.text tr 'Currently no active rounds...'
+
+				Dom.h2 tr 'Finished Rounds'
+				Ui.list !->
+					for i in [(Object.keys rounds).length - 1 - activeRounds..0]
+						roundId = Object.keys(rounds)[i]
+						renderRoundListItem roundId
 
 	if Db.personal.get('showwinners').length
 		popWinnerModal()
+
+renderRoundListItem = (roundId) !->
+	round = Db.shared.get 'rounds', roundId
+	if round.phase isnt 'unfinished'
+		Ui.item !->
+			Event.renderBubble [roundId]
+			Dom.div !->
+				Dom.div !->
+					Dom.style
+						fontSize: '100%'
+						textOverflow: 'ellipsis'
+						whiteSpace: 'nowrap'
+						overflow: 'hidden'
+					Dom.text round.question.text
+				Dom.div !->
+					Dom.style
+						marginTop: '2px'
+						fontSize: '80%'
+						color: '#888'
+					switch(round.phase)
+						when 'draw'
+							Dom.style color: '#ba1a6e'
+							Dom.text tr 'Ready to start!'
+							break
+						when 'play'
+							if Db.personal.get 'playedcards', roundId
+								playedString = ''
+								for id, card of Db.personal.get 'playedcards', roundId
+									if playedString then playedString += ', '
+									playedString += card
+								Dom.text tr 'Played: %1', playedString
+							else
+								Dom.style color: '#ba1a6e'
+								Dom.text tr 'You still have to play a card!'
+							break
+						when 'vote'
+							if Db.personal.get 'vote', roundId
+								votedString = ''
+								for id, card of Db.personal.get 'vote', roundId
+									if votedString then votedString += ', '
+									votedString += card
+								Dom.text tr 'Voted for: %1', votedString
+							else
+								Dom.style color: '#ba1a6e'
+								Dom.text tr 'You still have to vote!'
+							break
+						when 'done'
+							Dom.text tr 'Won by: %1', Util.getWinnerNames round.winner.p
+			Dom.onTap !->
+				Page.nav roundId
 
 renderInfoBar = !->
 	log 'Comments:'
@@ -157,11 +175,11 @@ renderInfoBar = !->
 					Time.deltaText(Db.shared.get('rounds', page, 'phase_end'), 'short')
 				Dom.onTap !->
 					numplayers = (Db.shared.get 'rounds', page, 'waitingfor').length
-					waitingtext = if (Db.shared.get 'phase') == 'play' then tr('played their cards') else tr('voted')
+					waitingtext = if (Db.shared.get 'rounds', page, 'phase') == 'play' then tr('played their cards') else tr('voted')
 					Modal.show 'Waiting For', !->
 						Dom.div !->
 							Dom.text tr('The game will continue ')
-							Time.deltaText(Db.shared.get 'phase_end')
+							Time.deltaText(Db.shared.get 'rounds', page, 'phase_end')
 							Dom.text tr(', or when everyone %1.', waitingtext)
 						Dom.div !->
 							Dom.style marginTop: '15px'

@@ -26,84 +26,107 @@ exports.onConfig = onConfig = (config) !->
 
 exports.onUpgrade = !->
 	log 'Upgraded the Plugin'
-	if (Db.shared.get 'question') and Plugin.groupId() == 159
-		log 'Performing Upgrade..'
-		Timer.cancel()
 
-		# The path of comments has been moved from ['hist', id] to [id]
-		comments = Db.shared.get 'comments'
-		Db.shared.set 'comments', null
-		for path, comment of comments
-			id = path.split(" ")[1]
-			Db.shared.set 'comments', id, comment
+	# TODO/NOTE: Uncomment if you still have old-style plugins to upgrade.
+	# if (Db.shared.get 'question')
+	# 	log 'Performing Upgrade..'
+	# 	Timer.cancel()
 
-		likes = Db.shared.get 'likes'
-		Db.shared.set 'likes', null
-		for path, like of likes
-			id = path.split(" ")[1]
-			Db.shared.set 'likes', id, like
+	# 	# The path of comments has been moved from ['hist', id] to [id]
+	# 	comments = Db.shared.get 'comments'
+	# 	Db.shared.set 'comments', null
+	# 	for path, comment of comments
+	# 		id = path.split(" ")[1]
+	# 		Db.shared.set 'comments', id, comment
 
-		lastround = Db.shared.get 'round'
-		lastphase = Db.shared.get 'phase'
-		Db.shared.set 'lastround', lastround
+	# 	likes = Db.shared.get 'likes'
+	# 	Db.shared.set 'likes', null
+	# 	for path, like of likes
+	# 		id = path.split(" ")[1]
+	# 		Db.shared.set 'likes', id, like
 
-		lastRoundInfo =
-			question: Db.shared.get 'question'
-			phase: Db.shared.get 'phase'
-			phase_end: Db.shared.get 'phase_end'
-			playedcards: Db.shared.get 'playedcards'
-			waitingfor: Db.shared.get 'waitingfor'
-		Db.shared.set 'rounds', lastround, lastRoundInfo
+	# 	lastround = Db.shared.get 'round'
+	# 	lastphase = Db.shared.get 'phase'
+	# 	Db.shared.set 'lastround', lastround
 
-		for round, winner of Db.shared.get 'winners'
-			roundInfo =
-				question: winner.q
-				phase: 'done'
-				phase_end: 0
-				playedcards: []
-				waitingfor: []
-				winner:
-					a: winner.a
-					p: winner.p
-					v: winner.v
+	# 	lastRoundInfo =
+	# 		question: Db.shared.get 'question'
+	# 		phase: Db.shared.get 'phase'
+	# 		phase_end: Db.shared.get 'phase_end'
+	# 		playedcards: Db.shared.get 'playedcards'
+	# 		waitingfor: Db.shared.get 'waitingfor'
+	# 	Db.shared.set 'rounds', lastround, lastRoundInfo
 
-			Db.shared.set 'rounds', round, roundInfo
+	# 	for round, winner of Db.shared.get 'winners'
+	# 		roundInfo =
+	# 			question: winner.q
+	# 			phase: 'done'
+	# 			phase_end: 0
+	# 			playedcards: []
+	# 			waitingfor: []
+	# 			winner:
+	# 				a: winner.a
+	# 				p: winner.p
+	# 				v: winner.v
 
-		for userId in Plugin.userIds()
-			playedcards = Db.personal(userId).get 'playedcards'
-			vote = Db.personal(userId).get 'vote'
+	# 		Db.shared.set 'rounds', round, roundInfo
 
-			Db.personal(userId).set 'playedcards', null
-			Db.personal(userId).set 'playedcards', lastround, playedcards
-			Db.personal(userId).set 'vote', null
-			Db.personal(userId).set 'vote', lastround, vote
+	# 	for userId in Plugin.userIds()
+	# 		playedcards = Db.personal(userId).get 'playedcards'
+	# 		vote = Db.personal(userId).get 'vote'
 
-		Db.shared.set 'paused', false
-		Db.shared.set 'question', null
-		Db.shared.set 'phase', null
-		Db.shared.set 'phase_end', null
-		Db.shared.set 'playedcards', null
-		Db.shared.set 'waitingfor', null
-		Db.shared.set 'round', null
-		Db.shared.set 'winners', null
+	# 		Db.personal(userId).set 'playedcards', null
+	# 		Db.personal(userId).set 'playedcards', lastround, playedcards
+	# 		Db.personal(userId).set 'vote', null
+	# 		Db.personal(userId).set 'vote', lastround, vote
 
-		# Prepare the last few rounds for the new system
-		if lastphase is 'play'
-			closeRound lastround
-		if lastphase in ['vote', 'play']
-			newround = prepareNewRound()
-			drawquestion newround
-			startround newround
+	# 	Db.shared.set 'paused', false
+	# 	Db.shared.set 'question', null
+	# 	Db.shared.set 'phase', null
+	# 	Db.shared.set 'phase_end', null
+	# 	Db.shared.set 'playedcards', null
+	# 	Db.shared.set 'waitingfor', null
+	# 	Db.shared.set 'round', null
+	# 	Db.shared.set 'winners', null
+
+	# 	# Prepare the last few rounds for the new system
+	# 	if lastphase is 'play'
+	# 		closeRound lastround
+	# 	if lastphase in ['vote', 'play']
+	# 		newround = prepareNewRound()
+	# 		drawquestion newround
+	# 		startround newround
 	
+	# This is only used to move from the old questions deck that were in this file,
+	# to the new ones in a seperate file.
 	if (Db.shared.get 'questiondecksize') == 180
-		newquestions = [0..Black.cards().length-1]
+		newquestions = [0..Black.numcards()-1]
 		Db.shared.set 'questiondeck', newquestions
-		Db.shared.set 'questiondecksize', Black.cards().length
+		Db.shared.set 'questiondecksize', Black.numcards()
 
 	if (Db.shared.get 'answerdecksize') == 540
-		newquestions = [0..White.cards().length-1]
+		newquestions = [0..White.numcards()-1]
 		Db.shared.set 'answerdeck', newquestions
-		Db.shared.set 'answerdecksize', White.cards().length
+		Db.shared.set 'answerdecksize', White.numcards()
+
+		# Give everyone new cards since we have a new set now.
+		for userId in Plugin.userIds()
+			hand = []
+			for i in [0..handsize-1]
+				hand.push drawAnswerCard()
+			Db.personal(userId).set 'hand', hand
+	
+	if (Db.shared.get 'questiondecksize') < Black.numcards()
+		newCards = [(Black.numcards() - Db.shared.get 'questiondecksize')..Black.numcards() - 1]
+		oldCards = Db.shared.get 'questiondeck'
+		Db.shared.set 'questiondeck', oldCards.concat newCards
+		Db.shared.set 'questiondecksize', Black.numcards()
+	
+	if (Db.shared.get 'answerdecksize') < White.numcards()
+		newCards = [(White.numcards() - Db.shared.get 'answerdecksize')..White.numcards() - 1]
+		oldCards = Db.shared.get 'answerdeck'
+		Db.shared.set 'answerdeck', oldCards.concat newCards
+		Db.shared.set 'answerdecksize', White.numcards()
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
