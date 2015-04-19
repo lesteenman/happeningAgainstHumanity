@@ -27,6 +27,11 @@ exports.onConfig = onConfig = (config) !->
 exports.onUpgrade = !->
 	log 'Upgraded the Plugin'
 
+	deck = Db.shared.get 'answerdeck'
+	log 'Cards in deck:', deck.length
+	if not deck.length
+		refillAnswerDeck()
+
 	# TODO/NOTE: Uncomment if you still have old-style plugins to upgrade.
 	# if (Db.shared.get 'question')
 	# 	log 'Performing Upgrade..'
@@ -127,6 +132,11 @@ exports.onUpgrade = !->
 		oldCards = Db.shared.get 'answerdeck'
 		Db.shared.set 'answerdeck', oldCards.concat newCards
 		Db.shared.set 'answerdecksize', White.numcards()
+
+refillAnswerDeck = !->
+	log 'Ran out of answer cards. Reshuffling deck!'
+	Db.shared.set 'answerdeck', [0..White.numcards()-1]
+	Db.shared.set 'answerdecksize', White.numcards()
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
@@ -570,15 +580,22 @@ drawQuestionCard = !->
 	return card
 
 drawAnswerCard = !->
+	if not (Db.shared.get 'answerdeck').length
+		refillAnswerDeck()
+
 	deck = Db.shared.get 'answerdeck'
-	if not deck.length
-		return false
+	log 'Drawing Card'
+	log 'Cards in deck:', deck.length
 
 	r = Math.floor(Math.random()*deck.length)
 	cardId = deck[r]
 	card = White.cards()[cardId]
 
-	deck.splice(r, 1)
+	if r >= 0 then deck.splice(r, 1)
+
+	log 'Drawed new card', cardId, card
+	log 'Splicing Deck:', r, 1
+	log 'Cards in deck after:', deck.length
 	Db.shared.set 'answerdeck', deck
 	return card
 

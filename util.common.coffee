@@ -36,3 +36,5 @@ exports.replaceQuestionText = (text, answers) !->
 		while answers[i]
 			text = text + '\r\n\r\n*' + answers[i++] + '*'
 	return text
+
+exports.removeArrayItem = (v) -> x for x in @ when x!=v

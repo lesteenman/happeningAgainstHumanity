@@ -18,7 +18,7 @@ handsize = 10
 exports.render = !->
 	if not (+(Db.personal.get 'activity')>=0)
 		renderTutorialQuestion()
-	else if Db.personal.get('hand').length < handsize
+	else if Db.personal.get('hand').length < handsize and (Db.shared.get 'answerdeck').length > 0
 		drawNewAnswerCards()
 	else if page = Page.state.get(0)
 		if page == 'showhand'
@@ -51,6 +51,10 @@ exports.render = !->
 				Dom.h2 tr 'Active Rounds'
 				activeRounds = 0
 				Ui.list !->
+					Dom.style
+						paddingTop: '30px'
+						backgroundColor: 'white'
+						overflowX: 'hidden'
 					for i in [(Object.keys rounds).length - 1..0]
 						roundId = Object.keys(rounds)[i]
 						if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
@@ -61,6 +65,10 @@ exports.render = !->
 
 				Dom.h2 tr 'Finished Rounds'
 				Ui.list !->
+					Dom.style
+						paddingTop: '30px'
+						backgroundColor: 'white'
+						overflowX: 'hidden'
 					for i in [(Object.keys rounds).length - 1 - activeRounds..0]
 						roundId = Object.keys(rounds)[i]
 						renderRoundListItem roundId
@@ -72,51 +80,81 @@ renderRoundListItem = (roundId) !->
 	round = Db.shared.get 'rounds', roundId
 	if round.phase isnt 'unfinished'
 		Ui.item !->
+			Dom.style
+				margin: '-30px -30px 0'
+				paddingBottom: '0px'
 			Event.renderBubble [roundId]
-			Dom.div !->
+			
+			subtext = null
+			switch(round.phase)
+				when 'draw'
+					subtext = tr 'Ready to start!'
+					break
+				when 'play'
+					if Db.personal.get 'playedcards', roundId
+						subtext = tr 'You played your cards.'
+						answers = Db.personal.get 'playedcards', roundId
+					else
+						subtext = tr '*You still have to play a card!*'
+					break
+				when 'vote'
+					if Db.personal.get 'vote', roundId
+						subtext = tr 'You cast your vote.'
+						answers = Db.personal.get 'vote', roundId
+					else
+						subtext = tr '*You still have to vote!*'
+					break
+				when 'done'
+					if round.question.play > 1
+						subtext = tr 'And %1 more', round.question.play - 1
+					answers = if round.winner then round.winner.a[0] else null
+					winners = if round.winner then round.winner.p[0] else null
+
+
+			if round.phase in ['play', 'vote', 'done']
+				renderQuestion
+					text: round.question.text
+					play: round.question.play
+					answers: answers
+					winners: winners
+					subtext: subtext
+					ontapHandler: !->
+						Page.nav roundId
+			else
 				Dom.div !->
-					Dom.style
-						fontSize: '100%'
-						textOverflow: 'ellipsis'
-						whiteSpace: 'nowrap'
-						overflow: 'hidden'
-					Dom.text round.question.text
-				Dom.div !->
-					Dom.style
-						marginTop: '2px'
-						fontSize: '80%'
-						color: '#888'
-					switch(round.phase)
-						when 'draw'
-							Dom.style color: '#ba1a6e'
-							Dom.text tr 'Ready to start!'
-							break
-						when 'play'
-							if Db.personal.get 'playedcards', roundId
-								playedString = ''
-								for id, card of Db.personal.get 'playedcards', roundId
-									if playedString then playedString += ', '
-									playedString += card
-								Dom.text tr 'Played: %1', playedString
-							else
-								Dom.style color: '#ba1a6e'
-								Dom.text tr 'You still have to play a card!'
-							break
-						when 'vote'
-							if Db.personal.get 'vote', roundId
-								votedString = ''
-								for id, card of Db.personal.get 'vote', roundId
-									if votedString then votedString += ', '
-									votedString += card
-								Dom.text tr 'Voted for: %1', votedString
-							else
-								Dom.style color: '#ba1a6e'
-								Dom.text tr 'You still have to vote!'
-							break
-						when 'done'
-							Dom.text tr 'Won by: %1', Util.getWinnerNames round.winner.p
-			Dom.onTap !->
-				Page.nav roundId
+					Dom.div !->
+						Dom.style
+							marginTop: '2px'
+							fontSize: '80%'
+							color: '#888'
+						Dom.style color: '#ba1a6e'
+						Dom.text tr 'Ready to start!'
+			# 			when 'play'
+			# 				if Db.personal.get 'playedcards', roundId
+			# 					playedString = ''
+			# 					for id, card of Db.personal.get 'playedcards', roundId
+			# 						if playedString then playedString += ', '
+			# 						playedString += card
+			# 					Dom.text tr 'Played: %1', playedString
+			# 				else
+			# 					Dom.style color: '#ba1a6e'
+			# 					Dom.text tr 'You still have to play a card!'
+			# 				break
+			# 			when 'vote'
+			# 				if Db.personal.get 'vote', roundId
+			# 					votedString = ''
+			# 					for id, card of Db.personal.get 'vote', roundId
+			# 						if votedString then votedString += ', '
+			# 						votedString += card
+			# 					Dom.text tr 'Voted for: %1', votedString
+			# 				else
+			# 					Dom.style color: '#ba1a6e'
+			# 					Dom.text tr 'You still have to vote!'
+			# 				break
+			# 			when 'done'
+			# 				Dom.text tr 'Won by: %1', Util.getWinnerNames round.winner.p
+			# Dom.onTap !->
+			# 	Page.nav roundId
 
 renderInfoBar = !->
 	log 'Comments:'
@@ -124,23 +162,27 @@ renderInfoBar = !->
 	# TODO: Update Info Bar
 	page = Page.state.get(0)
 	Dom.div !->
-		buttonWidth = Math.floor(100 / 3)
 		Dom.style
+			display: 'flex'
 			height: '45px'
 			color: '#666'
 			backgroundColor: 'lightgray'
 			padding: '0'
 			margin: '-6px -8px 5px -8px'
 			textAlign: 'center'
+			overflow: 'hidden'
+			textOverflow: 'ellipsis'
+			whiteSpace: 'nowrap'
 
 		Dom.div !->
 			Dom.style
 				display: 'inline-block'
-				width: buttonWidth + '%'
 				fontWeight: 'bold'
 				fontSize: '2.2em'
 				margin: '3px 0px'
 				height: '39px'
+				borderRight: '1px solid #bbb'
+				flexGrow: '1'
 			Dom.text '?'
 			Dom.onTap !->
 				showHelpPage()
@@ -157,22 +199,26 @@ renderInfoBar = !->
 		else
 			position = undefined
 
-		if page
+		phase_end = 0
+		for roundId, round of Db.shared.get 'rounds'
+			phase_end = Math.max phase_end, round.phase_end
+		Dom.div !->
+			Dom.style
+				display: 'inline-block'
+				fontWeight: 'bold'
+				fontSize: '1em'
+				margin: '3px 0px'
+				height: '39px'
+				borderRight: '1px solid #bbb'
+				flexGrow: '2'
+			Dom.text tr('Time Left')
 			Dom.div !->
 				Dom.style
-					display: 'inline-block'
-					width: buttonWidth + '%'
-					fontWeight: 'bold'
-					fontSize: '1em'
-					margin: '3px 0px'
-					height: '39px'
-				Dom.text tr('Time Left')
-				Dom.div !->
-					Dom.style
-						color: '#888'
-						fontWeight: 'normal'
-					# Time Left is stored per page/round
-					Time.deltaText(Db.shared.get('rounds', page, 'phase_end'), 'short')
+					color: '#888'
+					fontWeight: 'normal'
+				# Time Left is stored per page/round
+				Time.deltaText phase_end
+			if page
 				Dom.onTap !->
 					numplayers = (Db.shared.get 'rounds', page, 'waitingfor').length
 					waitingtext = if (Db.shared.get 'rounds', page, 'phase') == 'play' then tr('played their cards') else tr('voted')
@@ -188,15 +234,16 @@ renderInfoBar = !->
 							for userId in Db.shared.get 'rounds', page, 'waitingfor'
 								Dom.li !->
 									Dom.text Plugin.userName userId
-		else
+		if not page
 			Dom.div !->
 				Dom.style
 					display: 'inline-block'
-					width: buttonWidth + '%'
 					fontWeight: 'bold'
 					fontSize: '1em'
 					margin: '3px 0px'
 					height: '39px'
+					borderRight: '1px solid #bbb'
+					flexGrow: '2'
 				Dom.text tr 'Your Hand'
 				Dom.div !->
 					Dom.style
@@ -209,11 +256,11 @@ renderInfoBar = !->
 		Dom.div !->
 			Dom.style
 				display: 'inline-block'
-				width: buttonWidth + '%'
 				fontWeight: 'bold'
 				fontSize: '1em'
 				margin: '3px 0px'
 				height: '39px'
+				flexGrow: '2'
 			Dom.text tr('Position')
 			Dom.div !->
 				Dom.style
@@ -252,8 +299,13 @@ Do you have ideas for more cards? Please suggest them in the support Happening!
 """
 
 renderHand = !->
+	Dom.h1 tr 'Your Hand'
 	for card in Db.personal.get 'hand'
-		renderCard 'white', card
+		Dom.div !->
+			Dom.style marginBottom: '-30px'
+			renderCard
+				style: 'white'
+				text: card
 
 renderComments = (round) !->
 	log 'Rendering comments', round
@@ -274,8 +326,6 @@ renderComments = (round) !->
 				return true # We're rendering these type of comments
 
 renderScore = !->
-	Dom.h1 tr 'Score'
-
 	if Db.shared.get 'score' is {}
 		Dom.text tr('No score yet.')
 	else
@@ -290,7 +340,11 @@ renderWinnerPage = (roundId) !->
 	winner = round.winner
 	Dom.h2 tr('Round %1: %2', roundId, Plugin.userName(winner.p))
 	for i in [0..winner.p.length - 1]
-		renderQuestion round.question.text, round.question.play, false, winner.a[i], null, winner.p[i]
+		renderQuestion
+			text: round.question.text
+			play: round.question.play
+			answers: winner.a[i]
+			winners: winner.p[i]
 
 	renderVoteCount winner
 
@@ -337,7 +391,11 @@ popWinnerModal = !->
 			for i in [0..players.length - 1]
 				answer = answers[i]
 				player = players[i]
-				renderQuestion question.text, question.play, false, answer, null, player
+				renderQuestion
+					text: question.text
+					play: question.play
+					answers: answer
+					winners: player
 			renderVoteCount winner
 	, !->
 		Server.call 'popShowWinner'
@@ -352,7 +410,9 @@ drawNewAnswerCards = !->
 					Dom.h2 tr('Your Hand')
 					Dom.text tr('After every round, you will draw new cards for your hand until you hold 10 cards again.')
 			for c in cards
-				renderCard 'white', c
+				renderCard
+					style: 'white'
+					text: c
 
 renderDrawQuestionButton = (roundId) !->
 	if isNewbie()
@@ -380,7 +440,10 @@ playRender = (roundId) !->
 	log question
 	log 'Answers:'
 	log myanswers
-	renderQuestion question.text, question.play, false, myanswers
+	renderQuestion
+		text: question.text
+		play: question.play
+		answers: myanswers
 	renderCardSelect roundId, question.play
 
 voteRender = (roundId) !->
@@ -395,10 +458,6 @@ voteRender = (roundId) !->
 	vote = Db.personal.get('vote', roundId)
 
 	Dom.h1 tr('Vote for the best card%1', if question.play > 1 then 's' else '')
-	# Dom.h2 'Question'
-	# renderQuestion question.text, question.play, false, vote
-
-	Dom.h2 tr('Cast Your Vote')
 
 	if isNewbie()
 		Dom.div !->
@@ -423,10 +482,15 @@ voteRender = (roundId) !->
 							marginTop: if question.play > 1 then '20px' else '-20px'
 						Dom.div !->
 							if question.play > 1 then Dom.style marginTop: '-15px'
-							renderQuestion question.text, question.play, selected, cards, !->
-								log 'Chose', cards, 'as winning card'
-								Server.sync 'vote', roundId, cards, !->
-									Db.personal.set 'vote', roundId, cards
+							renderQuestion
+								text: question.text
+								play: question.play
+								selected: selected
+								answers: cards
+								ontapHandler: !->
+									log 'Chose', cards, 'as winning card'
+									Server.sync 'vote', roundId, cards, !->
+										Db.personal.set 'vote', roundId, cards
 
 	if Db.personal.get('playedcards')
 		Dom.h2 tr('You Played:')
@@ -434,7 +498,10 @@ voteRender = (roundId) !->
 			Dom.text tr("This is what you played. You can't vote for your own card, though!")
 		Dom.div !->
 			Dom.style marginTop: '20px'
-			renderQuestion question.text, question.play, false, Db.personal.get 'playedcards', roundId
+			renderQuestion
+				text: question.text
+				play: question.play
+				answers: Db.personal.get 'playedcards', roundId
 
 renderTutorialQuestion = !->
 	Dom.div !->
@@ -470,46 +537,74 @@ renderCardSelect = (roundId, numplay) !->
 		playcount = playedcards.count()
 		for p in [0..numplay-1]
 			do (p) !->
-				renderCard 'white', playedcards.get(p), !->
-					cardselectModal playedcards, hand, (card) !->
-						Server.sync 'playcard', roundId, p, card, !->
-							for i, c of playedcards.get()
-								if c == card
-									playedcards.set(i, playedcards.get(p))
-							playedcards.set(p, card)
+				renderCard
+					style: 'white'
+					text: playedcards.get(p)
+					ontapHandler: !->
+						cardselectModal numplay, playedcards, hand, (card) !->
+							Server.sync 'playcard', roundId, p, card, !->
+								for i, c of playedcards.get()
+									if c == card
+										playedcards.set(i, playedcards.get(p))
+								playedcards.set(p, card)
 
-renderQuestion = (text, play, selected, answers, handler, winners) !->
-	text = Util.replaceQuestionText text, answers
+# Opts Values:
+# 	text: The text of the question
+# 	play: The number of cards that should be played
+# 	selected: if the question is selected (default false)
+# 	answers: The given answers that are used to fill in the question
+# 	ontapHandler: A function that is called when the card is tapped.
+# 	winners: Who won this round.
+# 	subtext: Additional subtext that is rendered above the winner text
+renderQuestion = (opts) !->
+	log 'opts', opts
+	text = Util.replaceQuestionText opts.text, opts.answers
+
+	subtext = ''
+	if opts.subtext
+		subtext = opts.subtext + '\r\n'
 	
-	if winners
-		if +winners > 0
-			log 'winners is one person', winners
-			winners = [winners]
+	if opts.winners
+		if +opts.winners > 0
+			log 'winners is one person', opts.winners
+			opts.winners = [opts.winners]
 
 		wincount = 0
-		winnerText = 'Won by: '
-		for w in winners
-			if wincount then winnerText += ', '
-			winnerText += Plugin.userName(w)
+		subtext = 'Won by: '
+		for w in opts.winners
+			if wincount then subtext += ', '
+			subtext += Plugin.userName(w)
 
 	text = text.replace(/_/g, '\\_')
 
-	renderCard (if selected then 'selected' else 'black'), text, handler, play, false, winnerText
+	renderCard
+		style: (if opts.selected then 'selected' else 'black')
+		text: text
+		ontapHandler: opts.ontapHandler
+		play: opts.play
+		subtext: subtext
 
-renderCard = (style, text, handler, play, compact, subtext) !->
-	if style == 'selected'
+# Opt Values:
+# 	style: black, white, selected (required)
+# 	text: The large text that occupies most of the card (required)
+# 	ontapHandler: A function that is called when this card is tapped
+# 	play: How many cards should be played
+# 	compact: Compact style (less padding), boolean
+# 	subtext: Smaller text on the bottom of the card
+renderCard = (opts) !->
+	if opts.style == 'selected'
 		black = false
 		selected = true
 	else
 		selected = false
-		black = style == 'black'
+		black = opts.style == 'black'
 
 	backgroundcolor = if black then 'black' else (if selected then '#ba1a6e' else 'white')
 	textcolor = if (black || selected) then 'white' else 'black'
 
 	Dom.div !->
-		Markdown.render text || tr('tap to select card')
-		if selected || subtext
+		Markdown.render opts.text || tr('tap to select card')
+		if selected || opts.subtext
 			Dom.span !->
 				Dom.style
 					display: 'block'
@@ -517,16 +612,16 @@ renderCard = (style, text, handler, play, compact, subtext) !->
 					marginBottom: '0.5em'
 					fontSize: '0.7em'
 					fontStyle: 'italic'
-				Dom.text (if selected then 'selected' else '') + (subtext||'')
+				Dom.text (if selected then 'selected' else '') + (opts.subtext||'')
 		Dom.style
 			position: 'relative'
-			fontStyle: if not text then 'italic' else ''
-			textAlign: if text then 'left' else 'center'
+			fontStyle: if not opts.text then 'italic' else ''
+			textAlign: if opts.text then 'left' else 'center'
 			backgroundColor: backgroundcolor
 			color: textcolor
 			margin: '10px auto 0 auto'
 			boxShadow: '-3px -2px 10px #aaa, 8px -2px 10px #bbb'
-			padding: if compact then '0.5em 1em' else '1em 2em'
+			padding: if opts.compact then '0.5em 1em' else '1em 2em'
 			paddingBottom: if selected then '2.0em'
 			borderRadius: '15px 15px 0 0'
 			fontSize: if Dom.viewport.get('width') > 480 then '1.5em' else '1.2em'
@@ -535,7 +630,7 @@ renderCard = (style, text, handler, play, compact, subtext) !->
 			width: '80%'
 			maxWidth: '480px'
 			boxSizing: 'border-box'
-		if play > 1
+		if opts.play > 1
 			Dom.div !->
 				Dom.style
 					color: backgroundcolor
@@ -546,11 +641,11 @@ renderCard = (style, text, handler, play, compact, subtext) !->
 					position: 'absolute'
 					right: '10px'
 					bottom: '10px'
-				Dom.text 'Play ' + play
-		if handler
-			Dom.onTap handler
+				Dom.text 'Play ' + opts.play
+		if opts.ontapHandler
+			Dom.onTap opts.ontapHandler
 
-cardselectModal = (selected, cards, handlepick) !->
+cardselectModal = (play, selected, cards, handlepick) !->
 	Modal.show tr('Your Hand'), !->
 		Dom.style
 			width: '80%'
@@ -575,7 +670,7 @@ cardselectModal = (selected, cards, handlepick) !->
 				do (card) !->
 					Ui.item !->
 						isselected = false
-						for i in [0..(Db.shared.get('question', 'play'))-1]
+						for i in [0..play-1]
 							if selected.get(i) == card
 								isselected = true
 
@@ -583,7 +678,10 @@ cardselectModal = (selected, cards, handlepick) !->
 							padding: '5px 10px 0 10px'
 							marginTop: '-20px'
 							textAlign: 'left'
-						renderCard (if isselected then 'selected' else 'white'), card, null, null, true
+						renderCard
+							style: (if isselected then 'selected' else 'white')
+							text: card
+							compact: true
 
 						Dom.onTap !->
 							handlepick card
