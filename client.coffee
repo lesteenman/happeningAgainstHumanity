@@ -14,6 +14,7 @@ Markdown = require 'markdown'
 {tr} = require 'i18n'
 
 handsize = 10
+maxtrashcards = 1
 
 exports.render = !->
 	if not (+(Db.personal.get 'activity')>=0)
@@ -73,19 +74,26 @@ exports.render = !->
 						roundId = Object.keys(rounds)[i]
 						renderRoundListItem roundId
 
-	if Db.personal.get('showwinners').length
+	if (Db.personal.get 'showpatchinfo') == 1
+		Modal.show 'New!', !->
+			Dom.text tr 'You can now throw away useless cards by tapping \'My Cards\' in the top bar!'
+		, !->
+			Server.sync 'readPatchNotes'
+	else if Db.personal.get('showwinners').length
 		popWinnerModal()
 
 renderRoundListItem = (roundId) !->
 	round = Db.shared.get 'rounds', roundId
 	if round.phase isnt 'unfinished'
 		Ui.item !->
-			Dom.style
-				margin: '-30px -30px 0'
-				paddingBottom: '0px'
+			if round.phase in ['play', 'vote', 'done']
+				Dom.style
+					margin: '-30px -30px 0'
+					paddingBottom: '0px'
 			Event.renderBubble [roundId]
 			
 			subtext = null
+			highlight = false
 			switch(round.phase)
 				when 'draw'
 					subtext = tr 'Ready to start!'
@@ -95,14 +103,16 @@ renderRoundListItem = (roundId) !->
 						subtext = tr 'You played your cards.'
 						answers = Db.personal.get 'playedcards', roundId
 					else
-						subtext = tr '*You still have to play a card!*'
+						subtext = tr 'You still have to play a card!'
+						highlight = true
 					break
 				when 'vote'
 					if Db.personal.get 'vote', roundId
 						subtext = tr 'You cast your vote.'
 						answers = Db.personal.get 'vote', roundId
 					else
-						subtext = tr '*You still have to vote!*'
+						subtext = tr 'You still have to vote!'
+						highlight = true
 					break
 				when 'done'
 					if round.question.play > 1
@@ -118,17 +128,15 @@ renderRoundListItem = (roundId) !->
 					answers: answers
 					winners: winners
 					subtext: subtext
+					highlight: highlight
 					ontapHandler: !->
 						Page.nav roundId
 			else
 				Dom.div !->
-					Dom.div !->
-						Dom.style
-							marginTop: '2px'
-							fontSize: '80%'
-							color: '#888'
-						Dom.style color: '#ba1a6e'
-						Dom.text tr 'Ready to start!'
+					Dom.style color: '#ba1a6e'
+					Dom.text tr 'Ready to start!'
+				Dom.onTap !->
+					Page.nav roundId
 			# 			when 'play'
 			# 				if Db.personal.get 'playedcards', roundId
 			# 					playedString = ''
@@ -300,12 +308,33 @@ Do you have ideas for more cards? Please suggest them in the support Happening!
 
 renderHand = !->
 	Dom.h1 tr 'Your Hand'
-	for card in Db.personal.get 'hand'
+
+	Dom.div !->
+		Dom.text tr 'You can select up to %1 card%2 which will be thrown away after this round.', maxtrashcards, if maxtrashcards > 1 then 's' else ''
+	if isNewbie()
 		Dom.div !->
-			Dom.style marginBottom: '-30px'
-			renderCard
-				style: 'white'
-				text: card
+			Dom.text tr 'It sometimes happens that you have cards you really see no way of using. Each round, you can select up to %1 card%2 to throw away after this round, so that you will get additional new cards in the next round. Note that, if you also played that card in the same round, it will *not* get trashed.', maxtrashcards, if maxtrashcards > 1 then 's' else ''
+
+	trashcards = (Db.personal.get 'trashcards') || []
+	for card in Db.personal.get 'hand'
+		do (card) !->
+			Dom.div !->
+				Dom.style marginBottom: '-30px'
+				renderCard
+					style: if card in trashcards then 'selected' else 'white'
+					text: card
+					ontapHandler: !->
+						Server.sync 'trashcard', card, !->
+							if card in trashcards
+								r = trashcards.indexOf card
+								trashcards.splice r, 1
+							else
+								if trashcards.length >= maxtrashcards
+									trashcards.pop()
+								trashcards.push card
+
+							Db.personal.set 'trashcards', trashcards
+
 
 renderComments = (round) !->
 	log 'Rendering comments', round
@@ -578,7 +607,7 @@ renderQuestion = (opts) !->
 	text = text.replace(/_/g, '\\_')
 
 	renderCard
-		style: (if opts.selected then 'selected' else 'black')
+		style: (if opts.selected then 'selected' else (if opts.highlight then 'highlight' else 'black'))
 		text: text
 		ontapHandler: opts.ontapHandler
 		play: opts.play
@@ -599,8 +628,8 @@ renderCard = (opts) !->
 		selected = false
 		black = opts.style == 'black'
 
-	backgroundcolor = if black then 'black' else (if selected then '#ba1a6e' else 'white')
-	textcolor = if (black || selected) then 'white' else 'black'
+	backgroundcolor = if black then 'black' else (if (selected or opts.style == 'highlight') then '#ba1a6e' else 'white')
+	textcolor = if (black || selected || opts.style == 'highlight') then 'white' else 'black'
 
 	Dom.div !->
 		Markdown.render opts.text || tr('tap to select card')

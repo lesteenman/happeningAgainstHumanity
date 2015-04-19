@@ -8,6 +8,7 @@ White = require 'white'
 {tr} = require 'i18n'
 
 handsize = 10
+maxtrashcards = 1
 maxWinnerStackLength = 3
 
 ### Standard Functions ###
@@ -133,6 +134,10 @@ exports.onUpgrade = !->
 		Db.shared.set 'answerdeck', oldCards.concat newCards
 		Db.shared.set 'answerdecksize', White.numcards()
 
+	for userId in Plugin.userIds()
+		if !Db.personal(userId).get 'showpatchinfo'
+			Db.personal(userId).set 'showpatchinfo', 1
+
 refillAnswerDeck = !->
 	log 'Ran out of answer cards. Reshuffling deck!'
 	Db.shared.set 'answerdeck', [0..White.numcards()-1]
@@ -196,6 +201,19 @@ exports.startgame = !->
 		include: ['all']
 	firstround = prepareNewRound()
 	exports.startround firstround
+
+# Throws away cards that players selected they want to throw away.
+checkTrashCards = !->
+	for userId in Plugin.userIds()
+		hand = Db.personal(userId).get 'hand'
+		trashcards = Db.personal(userId).get 'trashcards'
+
+		for card in trashcards
+			if card in hand
+				r = hand.indexOf card
+				hand.splice r, 1
+
+		Db.personal(userId).set 'hand', hand
 
 # Initializes a new round
 prepareNewRound = !->
@@ -286,6 +304,7 @@ exports.advanceRound = !->
 	if playedRound
 		wasActive = closeRound playedRoundId
 		newround = prepareNewRound()
+		checkTrashCards()
 		
 		# Automatically start the new round if we still have a voting round open
 		if wasActive
@@ -450,6 +469,9 @@ exports.client_popShowWinner = !->
 	showwinners.shift()
 	Db.personal(Plugin.userId()).set 'showwinners', showwinners
 
+exports.client_readPatchNotes = !->
+	Db.personal(Plugin.userId()).set 'showpatchinfo', (Db.personal(Plugin.userId()).get 'showpatchinfo') + 1
+
 exports.client_drawquestion = (roundId) !->
 	Timer.cancel()
 	drawquestion roundId
@@ -524,6 +546,22 @@ exports.client_drawcards = (cb) !->
 			newcards.push newcard
 
 	cb.reply newcards
+
+exports.client_trashcard = (card) !->
+	hand = Db.personal(Plugin.userId()).get 'hand'
+	if not card in hand
+		return false
+
+	trashcards = Db.personal(Plugin.userId()).get('trashcards') || []
+	if card in trashcards
+		r = trashcards.indexOf card
+		trashcards.splice r, 1
+	else
+		if trashcards.length >= maxtrashcards
+			trashcards.pop()
+		trashcards.push(card)
+
+	Db.personal(Plugin.userId()).set 'trashcards', trashcards
 
 exports.client_vote = (roundId, wincards) !->
 	log 'User voted:', wincards
