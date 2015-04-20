@@ -39,6 +39,7 @@ exports.render = !->
 				log 'Page:', page
 				renderWinnerPage page
 
+			Event.showStar tr 'Round %1', page
 			Event.markRead [page]
 			renderComments page
 	else
@@ -90,7 +91,7 @@ renderRoundListItem = (roundId) !->
 				Dom.style
 					margin: '-30px -30px 0'
 					paddingBottom: '0px'
-			Event.renderBubble [roundId]
+					position: 'relative'
 			
 			subtext = null
 			highlight = false
@@ -131,43 +132,15 @@ renderRoundListItem = (roundId) !->
 					highlight: highlight
 					ontapHandler: !->
 						Page.nav roundId
+					renderBubble: [roundId]
 			else
 				Dom.div !->
 					Dom.style color: '#ba1a6e'
 					Dom.text tr 'Ready to start!'
 				Dom.onTap !->
 					Page.nav roundId
-			# 			when 'play'
-			# 				if Db.personal.get 'playedcards', roundId
-			# 					playedString = ''
-			# 					for id, card of Db.personal.get 'playedcards', roundId
-			# 						if playedString then playedString += ', '
-			# 						playedString += card
-			# 					Dom.text tr 'Played: %1', playedString
-			# 				else
-			# 					Dom.style color: '#ba1a6e'
-			# 					Dom.text tr 'You still have to play a card!'
-			# 				break
-			# 			when 'vote'
-			# 				if Db.personal.get 'vote', roundId
-			# 					votedString = ''
-			# 					for id, card of Db.personal.get 'vote', roundId
-			# 						if votedString then votedString += ', '
-			# 						votedString += card
-			# 					Dom.text tr 'Voted for: %1', votedString
-			# 				else
-			# 					Dom.style color: '#ba1a6e'
-			# 					Dom.text tr 'You still have to vote!'
-			# 				break
-			# 			when 'done'
-			# 				Dom.text tr 'Won by: %1', Util.getWinnerNames round.winner.p
-			# Dom.onTap !->
-			# 	Page.nav roundId
 
 renderInfoBar = !->
-	log 'Comments:'
-	log JSON.stringify(Db.shared.get 'comments')
-	# TODO: Update Info Bar
 	page = Page.state.get(0)
 	Dom.div !->
 		Dom.style
@@ -612,6 +585,7 @@ renderQuestion = (opts) !->
 		ontapHandler: opts.ontapHandler
 		play: opts.play
 		subtext: subtext
+		renderBubble: opts.renderBubble
 
 # Opt Values:
 # 	style: black, white, selected (required)
@@ -628,7 +602,10 @@ renderCard = (opts) !->
 		selected = false
 		black = opts.style == 'black'
 
-	backgroundcolor = if black then 'black' else (if (selected or opts.style == 'highlight') then '#ba1a6e' else 'white')
+	if opts.style == 'highlight' then backgroundcolor = 'rgb(0,77,140)'
+	else if black then backgroundcolor = 'black'
+	else if selected then backgroundcolor = '#ba1a6e'
+	else backgroundcolor = 'white'
 	textcolor = if (black || selected || opts.style == 'highlight') then 'white' else 'black'
 
 	Dom.div !->
@@ -673,6 +650,14 @@ renderCard = (opts) !->
 				Dom.text 'Play ' + opts.play
 		if opts.ontapHandler
 			Dom.onTap opts.ontapHandler
+
+		if opts.renderBubble
+			Dom.div !->
+				Dom.style
+					position: 'absolute'
+					top: '30px'
+					right: '20px'
+				Event.renderBubble opts.renderBubble
 
 cardselectModal = (play, selected, cards, handlepick) !->
 	Modal.show tr('Your Hand'), !->

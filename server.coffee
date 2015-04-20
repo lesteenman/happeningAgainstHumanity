@@ -205,15 +205,15 @@ exports.startgame = !->
 # Throws away cards that players selected they want to throw away.
 checkTrashCards = !->
 	for userId in Plugin.userIds()
-		hand = Db.personal(userId).get 'hand'
-		trashcards = Db.personal(userId).get 'trashcards'
+		if trashcards = Db.personal(userId).get 'trashcards'
+			hand = Db.personal(userId).get 'hand'
 
-		for card in trashcards
-			if card in hand
-				r = hand.indexOf card
-				hand.splice r, 1
+			for card in trashcards
+				if card in hand
+					r = hand.indexOf card
+					hand.splice r, 1
 
-		Db.personal(userId).set 'hand', hand
+			Db.personal(userId).set 'hand', hand
 
 # Initializes a new round
 prepareNewRound = !->
@@ -289,6 +289,7 @@ exports.tryAdvanceRound = !->
 
 	if ready
 		log 'Should move on rounds now!'
+		exports.advanceRound()
 
 # Closes the last rounds (both play and vote), and starts a new one if the played
 # round was active.
@@ -371,7 +372,8 @@ closeVotes = (roundId) !->
 	votes = {}
 	for userId in Plugin.userIds()
 		log 'Counting answer for userId', userId
-		if answer = JSON.stringify(Db.personal(userId).get('vote', roundId))
+		if _answer = Db.personal(userId).get('vote', roundId)
+			answer = JSON.stringify(_answer)
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
 			log 'Adding 1 tally for ' + answer, 'old:', votes[answer]
@@ -510,13 +512,9 @@ exports.client_playcard = (roundId, p, card) !->
 	waitingfor = []
 
 	for userId in Plugin.userIds()
-		log 'User'
-		log userId
 		for i in [0..(round.get('question', 'play') - 1)]
-			log 'User:', userId
 			if userId in waitingfor then continue
 			if not Db.personal(userId).get 'playedcards', roundId, i
-				log 'Did not yet play'
 				waitingfor.push userId
 
 	log 'Waitingfor: ', waitingfor
@@ -564,7 +562,7 @@ exports.client_trashcard = (card) !->
 	Db.personal(Plugin.userId()).set 'trashcards', trashcards
 
 exports.client_vote = (roundId, wincards) !->
-	log 'User voted:', wincards
+	log 'User voted:', JSON.stringify(wincards)
 	Db.personal(Plugin.userId()).set 'vote', roundId, wincards
 
 	everyonevoted = true
