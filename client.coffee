@@ -116,7 +116,7 @@ renderRoundListItem = (roundId) !->
 						highlight = true
 					break
 				when 'done'
-					if round.question.play > 1
+					if round.winner.a.length > 1
 						subtext = tr 'And %1 more', round.question.play - 1
 					answers = if round.winner then round.winner.a[0] else null
 					winners = if round.winner then round.winner.p[0] else null

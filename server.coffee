@@ -134,7 +134,8 @@ exports.onUpgrade = !->
 		Db.shared.set 'answerdeck', oldCards.concat newCards
 		Db.shared.set 'answerdecksize', White.numcards()
 
-	log 'Cards in deck after upgrade:', deck.length
+	log 'Cards in answerdeck after upgrade:', (Db.shared.get 'answerdeck').length
+	log 'Cards in questiondeck after upgrade:', (Db.shared.get 'questiondeck').length
 
 	for userId in Plugin.userIds()
 		if !Db.personal(userId).get 'showpatchinfo'
