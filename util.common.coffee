@@ -20,8 +20,9 @@ exports.replaceQuestionText = (text, answers) !->
 				ans = answers[i++]
 
 				log 'Answer:', ans
-				# Lowercase first character (will be better most of the time)
-				ans = (ans[0]).toLowerCase() + ans.substring 1
+				# Lowercase first character if the second character was not uppercased
+				if (ans[1]).toUpperCase() isnt ans[1]
+					ans = (ans[0]).toLowerCase() + ans.substring 1
 
 				# Remove the dot at the end
 				if ans[ans.length-1] == '.'

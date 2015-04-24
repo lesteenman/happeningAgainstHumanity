@@ -227,7 +227,6 @@ prepareNewRound = !->
 
 	waitingfor = []
 	for userId in Plugin.userIds()
-		log 'Clearing played cards for', userId
 		# Db.personal(userId).set 'playedcards', newroundnum, {}
 		waitingfor.push userId
 		if !Db.personal(userId).get 'hand'
@@ -321,28 +320,23 @@ closeRound = (roundId) !->
 	round = Db.shared.ref 'rounds', roundId
 	if not round then return
 
-	log 'closeRound', roundId
 	round.set 'phase', 'vote'
 	playedcards = []
 	waitingfor = []
 	for userId in Plugin.userIds()
 		waitingfor.push userId
 		cards = Db.personal(userId).get('playedcards', roundId)
-		log 'cards', cards
 		if cards and Object.keys(cards).length == round.get 'question', 'play'
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
-			log 'User $1s Played Cards: $2', userId, JSON.stringify(cards)
 			hand = Db.personal(userId).get 'hand'
 			for c,card of cards
 				i = hand.indexOf card
-				log 'Removing card at index', i
 				hand.splice(i, 1)
 			Db.personal(userId).set 'hand', hand
 			playedcards.push cards
 
 	if playedcards.length == 0
-		log 'Throwing away everyone"s played cards'
 		for userId in Plugin.userIds()
 			Db.personal(userId).set 'playedcards', roundId, null
 		round.set 'phase', 'unfinished'
@@ -374,18 +368,15 @@ closeVotes = (roundId) !->
 	# First, count which card got most votes (by text).
 	votes = {}
 	for userId in Plugin.userIds()
-		log 'Counting answer for userId', userId
 		if _answer = Db.personal(userId).get('vote', roundId)
 			answer = JSON.stringify(_answer)
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
-			log 'Adding 1 tally for ' + answer, 'old:', votes[answer]
 			# votes[answer] = (votes[answer]|0) + 1
 			if !votes[answer]
 				votes[answer] = [userId]
 			else
 				votes[answer].push(userId)
-			log '    New:', votes[answer]
 			Db.personal(userId).set 'vote', roundId, null
 	
 	Db.shared.set 'rounds', roundId, 'phase', 'done'
@@ -395,28 +386,20 @@ closeVotes = (roundId) !->
 	wincards = []
 	log 'votecount:', JSON.stringify(votes)
 	for vote, users of votes
-		log 'Vote:', JSON.stringify(vote)
 		count = users.length
 		if count == maxcount
-			log 'Vote', vote, 'had just as much votes: ', users.length
 			wincards.push vote
 		else if count > maxcount
-			log 'Vote', vote, 'had more votes: ', users.length
 			wincards = [vote]
 			maxcount = count
 
 	# Next, see who played this card.
 	winners = []
-	log 'Checking to see who played winning card', wincards
 	if wincards.length
 		for wincard in wincards
-			log 'Winning Card:', wincard
 			for userId in Plugin.userIds()
 				if playedcards = Db.personal(userId).get 'playedcards', roundId
-					log '  Comparing', JSON.stringify(playedcards), 'With', wincard
-					log 'UserId:', userId
 					if JSON.stringify(playedcards) == wincard
-						log userId, 'Played Card', wincard
 						winners.push userId
 		# Finally, Reset played cards
 		for userId in Plugin.userIds()
@@ -469,7 +452,6 @@ closeVotes = (roundId) !->
 
 # Used to indicate the client has finished watching at the oldest winner in his stack
 exports.client_popShowWinner = !->
-	log 'User ', Plugin.userId(), ' checked out a winner!'
 	showwinners = Db.personal(Plugin.userId()).get 'showwinners'
 	showwinners.shift()
 	Db.personal(Plugin.userId()).set 'showwinners', showwinners
@@ -488,17 +470,12 @@ drawquestion = (roundId) !->
 	while question.text == '' or question.play == 0
 		question = drawQuestionCard()
 
-	log 'question', question
 	Db.shared.set 'rounds', roundId, 'question', question
 
 exports.client_playcard = (roundId, p, card) !->
-	log 'Playing Card'
 	round = Db.shared.ref 'rounds', roundId
 	hand = Db.personal(Plugin.userId()).get('hand')
-	log 'Round:', roundId
-	log 'User $1 played Card $2', Plugin.userId(), card
 	if not card in hand
-		log 'Invalid card'
 		return false
 
 	played = Db.personal(Plugin.userId()).get 'playedcards', roundId
@@ -510,7 +487,6 @@ exports.client_playcard = (roundId, p, card) !->
 		played = {}
 	played[p] = card
 
-	log 'Player selected cards:', JSON.stringify played
 	Db.personal(Plugin.userId()).set 'playedcards', roundId, played
 	waitingfor = []
 
@@ -520,7 +496,6 @@ exports.client_playcard = (roundId, p, card) !->
 			if not Db.personal(userId).get 'playedcards', roundId, i
 				waitingfor.push userId
 
-	log 'Waitingfor: ', waitingfor
 	round.set 'waitingfor', waitingfor
 	if waitingfor.length == 0
 		# Don't close immediately to give people a chance to change their mind.
@@ -543,7 +518,6 @@ exports.client_drawcards = (cb) !->
 		if newcard
 			hand.push newcard
 			Db.personal(Plugin.userId()).set 'hand', hand
-			log 'Player '+Plugin.userId()+' drew card:', newcard
 			newcards.push newcard
 
 	cb.reply newcards
@@ -565,7 +539,6 @@ exports.client_trashcard = (card) !->
 	Db.personal(Plugin.userId()).set 'trashcards', trashcards
 
 exports.client_vote = (roundId, wincards) !->
-	log 'User voted:', JSON.stringify(wincards)
 	Db.personal(Plugin.userId()).set 'vote', roundId, wincards
 
 	everyonevoted = true
@@ -582,24 +555,19 @@ exports.client_vote = (roundId, wincards) !->
 		Timer.set (closedelay * 1000), 'tryAdvanceRound', roundId
 
 exports.client_tutorialAnswer = (q, a) !->
-	log 'Answered', q, a
 	if q == 0
 		if a == 0
 			# Did not play before
-			log 'Set activity to 0'
 			Db.personal(Plugin.userId()).set 'activity', 0
 		else if a == 1
 			# Played before
-			log 'Set activity to -1'
 			Db.personal(Plugin.userId()).set 'activity', -1
 	else if q == 1
 		if a == 0
 			# Does not want to see hints
-			log 'Set activity to 10'
 			Db.personal(Plugin.userId()).set 'activity', 10
 		else if a == 1
 			# Still wants help
-			log 'Set activity to 0'
 			Db.personal(Plugin.userId()).set 'activity', 0
 
 
@@ -614,7 +582,12 @@ drawQuestionCard = !->
 	cardId = deck[r]
 	card = Black.cards()[cardId]
 
+	log 'Drawing question:', r, cardId, card
+	log 'Splicing:', r, 1, deck[r]
+
 	deck.splice(r, 1)
+	if cardId in deck
+		log 'CardID', r, 'Was still in the deck!'
 	Db.shared.set 'questiondeck', deck
 	return card
 
@@ -623,18 +596,18 @@ drawAnswerCard = !->
 		refillAnswerDeck()
 
 	deck = Db.shared.get 'answerdeck'
-	log 'Drawing Card'
-	log 'Cards in deck:', deck.length
 
 	r = Math.floor(Math.random()*deck.length)
 	cardId = deck[r]
 	card = White.cards()[cardId]
 
-	if r >= 0 then deck.splice(r, 1)
+	log 'Drawing answer:', r, cardId, card
+	log 'Splicing:', r, 1, deck[r]
 
-	log 'Drawed new card', cardId, card
-	log 'Splicing Deck:', r, 1
-	log 'Cards in deck after:', deck.length
+	if r >= 0 then deck.splice(r, 1)
+	if cardId in deck
+		log 'CardID', r, 'Was still in the deck!'
+
 	Db.shared.set 'answerdeck', deck
 	return card
 
