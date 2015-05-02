@@ -33,103 +33,34 @@ exports.onUpgrade = !->
 	if not deck.length
 		refillAnswerDeck()
 
-	# TODO/NOTE: Uncomment if you still have old-style plugins to upgrade.
-	# if (Db.shared.get 'question')
-	# 	log 'Performing Upgrade..'
-	# 	Timer.cancel()
-
-	# 	# The path of comments has been moved from ['hist', id] to [id]
-	# 	comments = Db.shared.get 'comments'
-	# 	Db.shared.set 'comments', null
-	# 	for path, comment of comments
-	# 		id = path.split(" ")[1]
-	# 		Db.shared.set 'comments', id, comment
-
-	# 	likes = Db.shared.get 'likes'
-	# 	Db.shared.set 'likes', null
-	# 	for path, like of likes
-	# 		id = path.split(" ")[1]
-	# 		Db.shared.set 'likes', id, like
-
-	# 	lastround = Db.shared.get 'round'
-	# 	lastphase = Db.shared.get 'phase'
-	# 	Db.shared.set 'lastround', lastround
-
-	# 	lastRoundInfo =
-	# 		question: Db.shared.get 'question'
-	# 		phase: Db.shared.get 'phase'
-	# 		phase_end: Db.shared.get 'phase_end'
-	# 		playedcards: Db.shared.get 'playedcards'
-	# 		waitingfor: Db.shared.get 'waitingfor'
-	# 	Db.shared.set 'rounds', lastround, lastRoundInfo
-
-	# 	for round, winner of Db.shared.get 'winners'
-	# 		roundInfo =
-	# 			question: winner.q
-	# 			phase: 'done'
-	# 			phase_end: 0
-	# 			playedcards: []
-	# 			waitingfor: []
-	# 			winner:
-	# 				a: winner.a
-	# 				p: winner.p
-	# 				v: winner.v
-
-	# 		Db.shared.set 'rounds', round, roundInfo
-
-	# 	for userId in Plugin.userIds()
-	# 		playedcards = Db.personal(userId).get 'playedcards'
-	# 		vote = Db.personal(userId).get 'vote'
-
-	# 		Db.personal(userId).set 'playedcards', null
-	# 		Db.personal(userId).set 'playedcards', lastround, playedcards
-	# 		Db.personal(userId).set 'vote', null
-	# 		Db.personal(userId).set 'vote', lastround, vote
-
-	# 	Db.shared.set 'paused', false
-	# 	Db.shared.set 'question', null
-	# 	Db.shared.set 'phase', null
-	# 	Db.shared.set 'phase_end', null
-	# 	Db.shared.set 'playedcards', null
-	# 	Db.shared.set 'waitingfor', null
-	# 	Db.shared.set 'round', null
-	# 	Db.shared.set 'winners', null
-
-	# 	# Prepare the last few rounds for the new system
-	# 	if lastphase is 'play'
-	# 		closeRound lastround
-	# 	if lastphase in ['vote', 'play']
-	# 		newround = prepareNewRound()
-	# 		drawquestion newround
-	# 		startround newround
-	
 	# This is only used to move from the old questions deck that were in this file,
 	# to the new ones in a seperate file.
-	if (Db.shared.get 'questiondecksize') == 180
-		newquestions = [0..Black.numcards()-1]
-		Db.shared.set 'questiondeck', newquestions
-		Db.shared.set 'questiondecksize', Black.numcards()
+	# if (Db.shared.get 'questiondecksize') == 180
+	# 	newquestions = [0..Black.numcards()-1]
+	# 	Db.shared.set 'questiondeck', newquestions
+	# 	Db.shared.set 'questiondecksize', Black.numcards()
 
-	if (Db.shared.get 'answerdecksize') == 540
-		newquestions = [0..White.numcards()-1]
-		Db.shared.set 'answerdeck', newquestions
-		Db.shared.set 'answerdecksize', White.numcards()
+	# if (Db.shared.get 'answerdecksize') == 540
+	# 	newquestions = [0..White.numcards()-1]
+	# 	Db.shared.set 'answerdeck', newquestions
+	# 	Db.shared.set 'answerdecksize', White.numcards()
 
-		# Give everyone new cards since we have a new set now.
-		for userId in Plugin.userIds()
-			hand = []
-			for i in [0..handsize-1]
-				hand.push drawAnswerCard()
-			Db.personal(userId).set 'hand', hand
+	# 	# Give everyone new cards since we have a new set now.
+	# 	for userId in Plugin.userIds()
+	# 		hand = []
+	# 		for i in [0..handsize-1]
+	# 			hand.push drawAnswerCard()
+	# 		Db.personal(userId).set 'hand', hand
 	
+	# Add new cards to both decks
 	if (Db.shared.get 'questiondecksize') < Black.numcards()
-		newCards = [(Black.numcards() - Db.shared.get 'questiondecksize')..Black.numcards() - 1]
+		newCards = [Db.shared.get('questiondecksize')..Black.numcards() - 1]
 		oldCards = Db.shared.get 'questiondeck'
 		Db.shared.set 'questiondeck', oldCards.concat newCards
 		Db.shared.set 'questiondecksize', Black.numcards()
 	
 	if (Db.shared.get 'answerdecksize') < White.numcards()
-		newCards = [(White.numcards() - Db.shared.get 'answerdecksize')..White.numcards() - 1]
+		newCards = [Db.shared.get('answerdecksize')..White.numcards() - 1]
 		oldCards = Db.shared.get 'answerdeck'
 		Db.shared.set 'answerdeck', oldCards.concat newCards
 		Db.shared.set 'answerdecksize', White.numcards()
@@ -140,6 +71,21 @@ exports.onUpgrade = !->
 	for userId in Plugin.userIds()
 		if !Db.personal(userId).get 'showpatchinfo'
 			Db.personal(userId).set 'showpatchinfo', 1
+
+	# Remove Duplicates from the decks
+	# answerDeck = Db.shared.get 'answerdeck'
+	# questionDeck = Db.shared.get 'questiondeck'
+	# cleanedAnswerDeck = []
+	# cleanedQuestionDeck = []
+	# for id in answerDeck
+	# 	if id not in cleanedAnswerDeck
+	# 		cleanedAnswerDeck.push id
+	# for id in questionDeck
+	# 	if id not in cleanedQuestionDeck
+	# 		cleanedQuestionDeck.push id
+	
+	# Db.shared.set 'answerdeck', cleanedAnswerDeck
+	# Db.shared.set 'questiondeck', cleanedQuestionDeck
 
 refillAnswerDeck = !->
 	log 'Ran out of answer cards. Reshuffling deck!'
@@ -270,16 +216,17 @@ startround = (roundId) !->
 	# also triggered for the very first round of a game.
 	Timer.set duration*1000, 'advanceRound'
 
-	eventObject =
+	# Only send to people with an empty 'showwinners' property, to prevent
+	# others from getting a double notification.
+	include = []
+	for userId in Plugin.userIds()
+		if userId isnt Plugin.userId() and not (Db.personal(userId).get 'showwinners').length
+			include.push userId
+
+	Event.create
 		unit: 'game'
-		text: tr("A new round was started. Next Question: '%1'", round.get 'question', 'text')
-
-	if Plugin.userId()
-		eventObject.exclude = [Plugin.userId()]
-	else
-		eventObject.include = ['all']
-
-	Event.create eventObject
+		text: tr("'%1'", round.get 'question', 'text')
+		include: include
 
 exports.tryAdvanceRound = !->
 	ready = true
@@ -578,16 +525,21 @@ drawQuestionCard = !->
 	if not deck.length
 		return false
 
-	r = Math.floor(Math.random()*deck.length)
-	cardId = deck[r]
-	card = Black.cards()[cardId]
+	cardText = ''
+	while cardText == ''
+		r = Math.floor(Math.random()*deck.length)
+		cardId = deck[r]
+		card = Black.cards()[cardId]
 
-	log 'Drawing question:', r, cardId, card
-	log 'Splicing:', r, 1, deck[r]
+		log 'Drawing question:', r, cardId, card
+		log 'Splicing:', r, 1, deck[r]
 
-	deck.splice(r, 1)
-	if cardId in deck
-		log 'CardID', r, 'Was still in the deck!'
+		deck.splice(r, 1)
+		if cardId in deck
+			log 'CardID', r, 'Was still in the deck!'
+		if card.active
+			cardText = card.text
+
 	Db.shared.set 'questiondeck', deck
 	return card
 
@@ -597,19 +549,24 @@ drawAnswerCard = !->
 
 	deck = Db.shared.get 'answerdeck'
 
-	r = Math.floor(Math.random()*deck.length)
-	cardId = deck[r]
-	card = White.cards()[cardId]
+	cardText = ''
+	while cardText == ''
+		r = Math.floor(Math.random()*deck.length)
+		cardId = deck[r]
+		card = White.cards()[cardId]
 
-	log 'Drawing answer:', r, cardId, card
-	log 'Splicing:', r, 1, deck[r]
+		log 'Drawing answer:', r, cardId, card
+		log 'Splicing:', r, 1, deck[r]
 
-	if r >= 0 then deck.splice(r, 1)
-	if cardId in deck
-		log 'CardID', r, 'Was still in the deck!'
+		if r >= 0 then deck.splice(r, 1)
+		if cardId in deck
+			log 'CardID', r, 'Was still in the deck!'
+
+		if card.active
+			cardText = card.text
 
 	Db.shared.set 'answerdeck', deck
-	return card
+	return cardText
 
 getRoundDuration = (currentTime) ->
 	return false if !currentTime

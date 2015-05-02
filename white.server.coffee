@@ -944,7 +944,7 @@ exports.cards = !->
 		{active: true, text: "Stream lag."}
 		{active: true, text: "Stupid damage."}
 		{active: true, text: "A tactical backflip."}
-		{active: true, text: "The Northernlion Story."}
+		{active: false, text: "The Northernlion Story."}
 		{active: true, text: "Whispering sweet nothings into your rear."}
 		{active: true, text: "The notorious Grey's Anatomy let's play."}
 		{active: true, text: "Thornforg."}

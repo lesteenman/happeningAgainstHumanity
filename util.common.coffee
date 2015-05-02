@@ -21,7 +21,7 @@ exports.replaceQuestionText = (text, answers) !->
 
 				log 'Answer:', ans
 				# Lowercase first character if the second character was not uppercased
-				if (ans[1]).toUpperCase() isnt ans[1]
+				if (ans).toUpperCase() isnt ans
 					ans = (ans[0]).toLowerCase() + ans.substring 1
 
 				# Remove the dot at the end
