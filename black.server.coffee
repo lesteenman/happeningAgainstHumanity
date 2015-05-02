@@ -301,22 +301,17 @@ exports.cards = !->
 		{active: 1, play: 1, text:"Don't stand behind him, if you value your ____."}
 		{active: 1, play: 2, text:"Rock and Roll is nothing but ____ and the rage of ____!"}#
 		# {active: 1, play: 1, text:"What the hell is 'Juvijuvibro'?!"}
-		# {active: 1, play: 1, text:"Being fed up with reviewing lamps, what obscure topic did Linkara review next?"}
 		# {active: 1, play: 2, text:"When I was a kid, all we had in Lunchables were three ____ and ____."}
 		# {active: 1, play: 2, text:"On its last dying breath, ____ sent out a cry for help. A bunch of ____ heard the cry."}
 		# {active: 1, play: 1, text:"I also take ____ as payment for commissions."}
 		# {active: 1, play: 1, text:"____ looks pretty in all the art, but have you seen one in real life?"}
-		# {active: 1, play: 1, text:"At the last PAX, Paul and Storm had ____ thrown at them during 'Opening Band'."}
 		# {active: 1, play: 1, text:"How did I lose my virginity?"}
 		# {active: 1, play: 1, text:"Here is the church, here is the steeple, open the doors, and there is ____."}
-		# {active: 1, play: 1, text:"During his childhood, Salvador Dal&iacute; produced hundreds of paintings of ____."}
 		# {active: 1, play: 1, text:"This is the way the world ends \ This is the way the world ends \ Not with a bang but with ____."}
 		# {active: 1, play: 1, text:"In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?"}
 		# {active: 1, play: 1, text:"War! What is it good for?"}
 		# {active: 1, play: 1, text:"What don't you want to find in your Kung Pao chicken?"}
-		# {active: 1, play: 2, text:"Rumor has it that Vladimir Putin's favorite delicacy is ____ stuffed with ____."}
 		# {active: 1, play: 1, text:"The Smithsonian Museum of Natural History has just opened an exhibit on ____."}
-		# {active: 1, play: 1, text:"What did the commenters bitch about next to Doug?"}
 		# {active: 1, play: 1, text:"At first I couldn't understand ____, but now it's my biggest kink."}
 		# {active: 1, play: 1, text:"Long story short, I ended up with ____ in my ass."}
 		# {active: 1, play: 1, text:"Don't knock ____ until you've tried it."}
@@ -324,7 +319,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"It's difficult to explain to friends and family why I know so much about ____."}
 		# {active: 1, play: 1, text:"Once I started roleplaying ____, it was all downhill from there."}
 		# {active: 1, play: 1, text:"____ are so goddamn cool."}
-		# {active: 1, play: 1, text:"____, by Bad Dragon™."}
 		# {active: 1, play: 1, text:"No, look, you don't understand. I REALLY like ____."}
 		# {active: 1, play: 1, text:"I don't think my parents will ever accept that the real me is ____."}
 		# {active: 1, play: 1, text:"I can't believe I spent most of my paycheck on ____."}
@@ -334,37 +328,20 @@ exports.cards = !->
 		# {active: 1, play: 3, text:"The next crossover will have ____ and ____ review ____."}
 		# {active: 1, play: 1, text:"We all made a mistake when we ate ____ at MAGFest."}
 		# {active: 1, play: 1, text:"Kyle's next student film will focus on ____."}
-		# {active: 1, play: 1, text:"The RDA chat knew Nash was trolling them when he played ____."}
-		# {active: 1, play: 1, text:"Why does Linkara have all of those Cybermats?"}
 		# {active: 1, play: 1, text:"____ will be the subject of the next TGWTG panel at MAGFest."}
-		# {active: 1, play: 1, text:"At his next con appearance, Linkara will cosplay as ____."}
 		# {active: 1, play: 1, text:"WAIT!  I have an idea!  It involves using ____!"}
-		# {active: 1, play: 1, text:"What does Linkara eat with his chicken strips?"}
-		# {active: 1, play: 1, text:"Why was Radio Dead Air shut down this time?"}
 		# {active: 1, play: 1, text:"If you value your life, never mention ____ around Oancitizen."}
-		# {active: 1, play: 2, text:"Arlo P. Arlo's newest weapon combines ____ and ____!"}
-		# {active: 1, play: 2, text:"____ and ____ are in the worst comic Linkara ever read."}
 		# {active: 1, play: 2, text:"____ is only on the site because of ____."}
 		# {active: 1, play: 2, text:"The newest fanfic trend is turning ____ into ____."}
-		# {active: 1, play: 3, text:"Every weekend, Golby likes to ____ then ____ before finally ____."}
-		# {active: 1, play: 3, text:"Every weekend, Golby enjoys drinking ____ before getting into a fight with ____ and having sex with ____."}
-		# {active: 1, play: 1, text:"Connie the Condor often doesn't talk on skype because of ____."}
-		# {active: 1, play: 1, text:"Jorgi the Corgi most definitely enjoys ____."}
 		# {active: 1, play: 1, text:"Tom is good, but he's not ____ good."}
-		# {active: 1, play: 1, text:"It's DJ Manny in the hizouse, playing ____ all night long!"}
 		# {active: 1, play: 1, text:"BENCH ALL THE ____."}
 		# {active: 1, play: 1, text:"Hey guys, check out my ____ montage!"}
-		# {active: 1, play: 2, text:"____ + ____ = Golby."}
-		# {active: 1, play: 1, text:"____ is the reason Linkara doesn't like to swear."}
 		# {active: 1, play: 1, text:"____ was completely avoidable!"}
 		# {active: 1, play: 1, text:"____ will live!"}
-		# {active: 1, play: 1, text:"____ is something else Diamanda Hagan has to live with every day."}
 		# {active: 1, play: 1, text:"____ should be on TGWTG."}
-		# {active: 1, play: 1, text:"____ was the first thing to go when Hagan took over the world."}
 		# {active: 1, play: 1, text:"____! What are you doing here?"}
 		# {active: 1, play: 1, text:"____! You know, for kids."}
 		# {active: 1, play: 1, text:"I love ____. It's so bad."}
-		# {active: 1, play: 1, text:"As part of a recent promotion, Japanese KFCs are now dressing their Colonel Sanders statues up as ____."}
 		# {active: 1, play: 1, text:"____. With onions."}
 		# {active: 1, play: 1, text:"____ is the theme of this year's anniversary crossover."}
 		# {active: 1, play: 1, text:"A ____ Credit Card!?"}
@@ -372,18 +349,14 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"It's no secret.  Deep down, everybody wants to fuck ____."}
 		# {active: 1, play: 1, text:"Behold! My trap card, ____!"}
 		# {active: 1, play: 1, text:"Blip checks are way smaller in January so I'll spend the month riffing on ____ to gain more views."}
-		# {active: 1, play: 1, text:"Brad Tries ____."}
 		# {active: 1, play: 1, text:"Doug still regrets the day he decided to do a Let's Play video for 'Bart Simpson's ____ Adventure'."}
-		# {active: 1, play: 1, text:"Enemies of Diamanda Hagan have been known to receive strange packages filled with  ____."}
 		# {active: 1, play: 1, text:"High and away on a wing and a prayer, who could it be? Believe it or not, it's just ____."}
-		# {active: 1, play: 1, text:"What broke Nash this week?"}
 		# {active: 1, play: 1, text:"I ____ so you don't have to."}
 		# {active: 1, play: 1, text:"I AM THE VOICELESS. THE NEVER SHOULD. I AM ____."}
 		# {active: 1, play: 1, text:"I prefer for MY exploitation films to have ____, thank you very much."}
 		# {active: 1, play: 1, text:"I watch movies just to see if I can find a Big Lipped ____ Moment."}
 		# {active: 1, play: 1, text:"I'm looking forward to Jesuotaku's playthrough of Fire Emblem: ____."}
 		# {active: 1, play: 1, text:"After eating a Devil Fruit, I now have the power of ____."}
-		# {active: 1, play: 1, text:"In his latest review, Phelous was killed by ____."}
 		# {active: 1, play: 1, text:"It was all going well until they found ____."}
 		# {active: 1, play: 1, text:"JW confirms, you can play ____,"}
 		# {active: 1, play: 1, text:"Next January, the Nostalgia Critic is doing ____ Month."}
@@ -400,36 +373,21 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"The next person to leave Channel Awesome will announce their departure via ____."}
 		# {active: 1, play: 1, text:"The next Renegade Cut is about ____ in a beloved children's movie."}
 		# {active: 1, play: 1, text:"The Nostalgia Critic will NEVER review ____."}
-		# {active: 1, play: 1, text:"The only thing Linkara would sell his soul for is ____."}
-		# {active: 1, play: 1, text:"What is the real reason Demo Reel failed?"}
 		# {active: 1, play: 1, text:"By far, the most mind-bogglingly awesome thing I've ever seen in anime is ____."}
 		# {active: 1, play: 1, text:"My Little Sister Can't Be ____!"}
-		# {active: 1, play: 1, text:"This weekend, the nation of Haganistan will once again commence its annual celebration of ____.  "}
-		# {active: 1, play: 1, text:"To troll the RDA chat this time, Todd requested a song by ____."}
-		# {active: 1, play: 1, text:"Todd knew he didn't have a chance after trying to seduce Lupa with ____."}
-		# {active: 1, play: 1, text:"Turns out, that wasn't tea in MikeJ's cup, it was ____."}
-		# {active: 1, play: 1, text:"Viewers were shocked when Paw declared ____ the best song of the movie."}
 		# {active: 1, play: 1, text:"WE WERE FIGHTING LIKE ____."}
-		# {active: 1, play: 1, text:"Well, I've read enough fanfic about ____ and Lupa to last a lifetime."}
-		# {active: 1, play: 1, text:"What does Nash like to sing about?"}
-		# {active: 1, play: 1, text:"What does Todd look like under his mask?"}
 		# {active: 1, play: 1, text:"What doesn't go there?"}
 		# {active: 1, play: 1, text:"What doesn't work that way?"}
-		# {active: 1, play: 1, text:"What else does Diamanda Hagan have to live with every day?"}
 		# {active: 1, play: 1, text:"What is in Sci Fi Guy's vest?"}
 		# {active: 1, play: 1, text:"What the fuck is wrong with you?"}
-		# {active: 1, play: 1, text:"What will Tara name her next hippo?"}
 		# {active: 1, play: 1, text:"What's holding up the site redesign?"}
 		# {active: 1, play: 1, text:"What's really inside the Plot Hole?"}
-		# {active: 1, play: 1, text:"What's the real reason nobody has ever played the TGWTG Panel Drinking Game?"}
 		# {active: 1, play: 1, text:"What's up next on WTFIWWY?"}
 		# {active: 1, play: 1, text:"When the JesuOtaku stream got to the 'awful part of the night,' the GreatSG video featured ____."}
 		# {active: 1, play: 1, text:"Why can't Film Brain stop extending his final vowels?"}
 		# {active: 1, play: 1, text:"90's Kid's favorite comic is ____."}
 		# {active: 1, play: 1, text:"Because poor literacy is ____."}
 		# {active: 1, play: 1, text:"He is a glitch. He is missing. He is ____."}
-		# {active: 1, play: 1, text:"In a surprise twist, the villain of Linkara's next story arc turned out to be ____."}
-		# {active: 1, play: 1, text:"Linkara now prefers to say ____ in lieu of 'fuck'."}
 		# {active: 1, play: 1, text:"Of course!  Don't you know anything about ___?"}
 		# {active: 1, play: 1, text:"Snowflame feels no ____."}
 		# {active: 1, play: 1, text:"Snowflame found a new love besides cocaine. What is it?"}
@@ -439,10 +397,7 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"What is as low as the standards of the 90's Kid?"}
 		# {active: 1, play: 1, text:"What delayed the next History of Power Rangers?"}
 		# {active: 1, play: 1, text:"____ has the 'mount' keyword."}
-		# {active: 1, play: 3, text:"On a night out, Golby will traditionally get into a fight with a ____ then have sex with a ____ before complaining about a hangover from too much ____."}
 		# {active: 1, play: 1, text:"You're so _____ I'll have to delete you."}
-		# {active: 1, play: 1, text:"Cindi suddenly turned into Steven after ____."}
-		# {active: 1, play: 1, text:"When Barta isn't talking he's ____."}
 		# {active: 1, play: 1, text:"I got a new tattoo, it looks a bit like ____."}
 		# {active: 1, play: 1, text:"What strange Korean delicacy will Mark enjoy today?"}
 		# {active: 1, play: 1, text:"____ is camping my lane."}
@@ -453,10 +408,8 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"____. BELIEVE IT!"}
 		# {active: 1, play: 1, text:"Make a contract with me, and become ____!"}
 		# {active: 1, play: 1, text:"You guys are so wrong. Obviously, ____ is best waifu."}
-		# {active: 1, play: 1, text:"In the latest chapter of Toriko, our hero hunts down, kills, and eats a creature made entirely of ____."}
 		# {active: 1, play: 1, text:"THIS ____ HAS BEEN PASSED DOWN THE ARMSTRONG FAMILY LINE FOR GENERATIONS!!!"}
 		# {active: 1, play: 2, text:"My favorite episode of ____ is the one with ____."}
-		# {active: 1, play: 2, text:"Make a yaoi shipping."}
 		# {active: 1, play: 2, text:"This doujinshi I just bought has ____ and ____ getting it on, hardcore."}
 		# {active: 1, play: 2, text:"On the next episode of Dragon Ball Z, ____ is forced to do the fusion dance with ____."}
 		# {active: 1, play: 1, text:"You are already ____."}
@@ -473,14 +426,10 @@ exports.cards = !->
 		# {active: 1, play: 2, text:"No matter how you look at it, ultimately ____ is responsible for ____."}
 		# {active: 1, play: 1, text:"S-Shut up!! I-It's not like I'm ____ or anything."}
 		# {active: 1, play: 2, text:"The English dub of ____ sucks worse than ____."}
-		# {active: 1, play: 1, text:"What is mo&eacute;?"}
-		# {active: 1, play: 1, text:"Hayao Miyazaki's latest family film is about a young boy befriending ____."}
 		# {active: 1, play: 1, text:"Congratulations, ____."}
 		# {active: 1, play: 1, text:"By far the best panel at any anime convention is the one for ____."}
 		# {active: 1, play: 1, text:"One thing you almost never see in anime is ____."}
-		# {active: 1, play: 1, text:"The rarest Pok&eacute;mon in my collection is ____."}
 		# {active: 1, play: 1, text:"What do I hate most about anime?"}
-		# {active: 1, play: 1, text:"Mamoru Oshii's latest film is a slow-paced, two hour-long cerebral piece about the horrors of ____."}
 		# {active: 1, play: 1, text:"What do I love most about anime?"}
 		# {active: 1, play: 1, text:"This morning, hundreds of Japanese otaku lined up outside their favorite store to buy the limited collector's edition of ____."}
 		# {active: 1, play: 1, text:"Every now and then, I like to participate in the time-honored Japanese tradition of ____."}
@@ -490,20 +439,16 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Using my power of Geass, I command you to do... THIS!"}
 		# {active: 1, play: 1, text:"Chicks. Dig. ____. Nice."}
 		# {active: 1, play: 1, text:"When it comes to Japanese cuisine, there's simply nothing better than ____."}
-		# {active: 1, play: 1, text:"The next big Tokusatsu show: 'Super Sentai ____ Ranger!'"}
 		# {active: 1, play: 1, text:"In the name of the moon, I will punish ____!"}
 		# {active: 1, play: 3, text:"Just announced: The brand new anime adaptation of ____, starring ____ as the voice of ____."}
 		# {active: 1, play: 1, text:"Don't worry, he's okay! He survived thanks to ____."}
 		# {active: 1, play: 1, text:"____. Goddammit, Japan."}
-		# {active: 1, play: 1, text:"In the latest chapter of Golgo 13, he kills his target with ____."}
 		# {active: 1, play: 1, text:"Welcome home, Master! Is there anything your servant girl can bring you today?"}
-		# {active: 1, play: 3, text:"In the latest episode of Case Closed, Conan deduces that it was ____ who killed ____ because of ____."}
 		# {active: 1, play: 1, text:"I have never in my life laughed harder than the first time I watched ____."}
 		# {active: 1, play: 1, text:"Take this! My love, my anger, and all of my ____!"}
 		# {active: 1, play: 1, text:"Karaoke night! I'm totally gonna sing my favorite song, ____."}
 		# {active: 1, play: 1, text:"Digimon! Digivolve to: ____-mon!"}
 		# {active: 1, play: 1, text:"Now! Face my ultimate attack!"}
-		# {active: 1, play: 1, text:"Behold the name of my Zanpakuto, ____!"}
 		# {active: 1, play: 3, text:"From the twisted mind of Nabeshin: An anime about ____, ____, and ____."}
 		# {active: 1, play: 1, text:"____. Only on Toonami"}
 		# {active: 1, play: 1, text:"I am in despair! ____ has left me in despair!"}
@@ -514,7 +459,6 @@ exports.cards = !->
 		# {active: 1, play: 3, text:"Dreaming! Don't give it up ____! Dreaming! Don't give it up ____! Dreaming! Don't give it up ____!"}
 		# {active: 1, play: 1, text:"Lupin the III's latest caper involves him trying to steal ____."}
 		# {active: 1, play: 1, text:"A piece of ____ is missing."}
-		# {active: 1, play: 1, text:"What do Brad and Floyd like to do after a long day?"}
 		# {active: 1, play: 1, text:"At least he didn't fuck ____."}
 		# {active: 1, play: 2, text:"Hello, and welcome to Atop ____, where ____ burns."}
 		# {active: 1, play: 1, text:"No matter how I look at it, it's your fault I'm not ____!"}
@@ -544,7 +488,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"____. HE DEDD."}
 		# {active: 1, play: 1, text:"She'll thaw out if you try ____."}
 		# {active: 1, play: 1, text:"You see, I'm simply ____."}
-		# {active: 1, play: 1, text:"Yoko Kanno's latest musical score features a song sung entirely by ____."}
 		# {active: 1, play: 1, text:"Truly and without question, ____ is the manliest of all men."}
 		# {active: 1, play: 1, text:"WANTED: $50,000,000,000 reward for the apprehension of____."}
 		# {active: 1, play: 1, text:"This year, I totally lucked out and found ____ in the dealer's room."}
@@ -562,10 +505,8 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Coming to Neon Alley: ____, completely UNCUT & UNCENSORED."}
 		# {active: 1, play: 1, text:"No matter how many times I see it, ____ always brings a tear to my eye."}
 		# {active: 1, play: 1, text:"Of my entire collection, my most prized possession is ____."}
-		# {active: 1, play: 1, text:"Who placed first in the most recent Shonen Jump popularity poll?"}
 		# {active: 1, play: 1, text:"Someday when I have kids, I want to share with them the joys of ____."}
 		# {active: 1, play: 1, text:"So, what have you learned from all of this?"}
-		# {active: 1, play: 3, text:"In this episode of Master Keaton, Keaton builds ____ out of ____ and ____."}
 		# {active: 1, play: 1, text:"The World Line was changed when I sent a D-mail to myself about ____."}
 		# {active: 1, play: 1, text:"After years of searching, the crew of the Thousand Sunny finally found out that the One Piece is actually ____."}
 		# {active: 1, play: 1, text:"When I found all 7 Dragon Balls, Shenron granted me my wish for ____."}
@@ -575,8 +516,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"He might just save the universe, if he only had some ____!"}
 		# {active: 1, play: 5, text:"Make a harem."}
 		# {active: 1, play: 6, text:"Make a dub cast. ____ as ____, ____ as ____, & ____ as ____."}
-		# {active: 1, play: 1, text:"So just who is this Henry Goto fellow, anyway?"}
-		# {active: 1, play: 1, text:"When Henry Goto is alone and thinks that no one's looking, he secretly enjoys ____."}
 		# {active: 1, play: 1, text:"Dr. Black Jack, please hurry! The patient is suffering from a terminal case of ____!"}
 		# {active: 1, play: 1, text:"I'M-A FIRIN' MAH ____!"}
 		# {active: 1, play: 3, text:"Make a love triangle."}
@@ -659,7 +598,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"____ ruined the fandom."}
 		# {active: 1, play: 1, text:"The most recent item in my search history."}
 		# {active: 1, play: 1, text:"Is it weird that I want to rub my face on ____?"}
-		# {active: 1, play: 1, text:"In her newest review, Diamanda Hagan finds herself in the body of ____."}
 		# {active: 1, play: 1, text:"My love for you is like ____.  BERSERKER!"}
 		# {active: 1, play: 2, text:"Last time I took bath salts, I ended up ____ in ____."}
 		# {active: 1, play: 2, text:"Tara taught me that if you're going to engage in ____, then ____ isn't a good idea."}
@@ -673,7 +611,6 @@ exports.cards = !->
 		# {active: 1, play: 2, text:"It has been said... That there are entire forests of ____, made from the sweetest ____."}
 		# {active: 1, play: 1, text:"Attention, duelists: My hair is ____."}
 		# {active: 1, play: 1, text:"What do otaku smell like?"}
-		# {active: 1, play: 1, text:"Madoka Kyouno's nickname for Muginami's older brother is ____."}
 		# {active: 1, play: 1, text:"And from Kyoto Animation, a show about cute girls doing ____."}
 		# {active: 1, play: 1, text:"Anime has taught me that classic literature can always be improved by adding ____."}
 		# {active: 1, play: 1, text:"The mo&eacute; debate was surprisingly civil until someone mentioned ____."}
@@ -690,7 +627,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Choosy Moms Choose ____."}
 		# {active: 1, play: 1, text:"At camp, we'd scare each other by telling stories about ____ around the fire."}
 		# {active: 1, play: 1, text:"Big Mac sleeps soundly whenever ____ is with him."}
-		# {active: 1, play: 2, text:"____ has won the national Equestrian award for ____."}
 		# {active: 1, play: 1, text:"____ is best pony."}
 		# {active: 1, play: 3, text:"____ should ____ ____."}
 		# {active: 1, play: 1, text:"____? That's future Spike's problem."}
@@ -704,45 +640,24 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Dear Princess Celestia, Today I learned about ____. "}
 		# {active: 1, play: 1, text:"Despite everypony's expectations, Sweetie Belle's cutie mark ended up being ____."}
 		# {active: 1, play: 1, text:"Equestrian researchers have discovered that ____ is The 7th Element of Harmony."}
-		# {active: 1, play: 1, text:"Every Morning, Princess Celestia Rises ____."}
 		# {active: 1, play: 2, text:"In a stroke of unparalleled evil, Discord turned ____ into ____."}
 		# {active: 1, play: 1, text:"In a world without humans, saddles are actually made for ____."}
 		# {active: 1, play: 1, text:"Inexplicably, the only thing the parasprites wouldn't eat was ____."}
 		# {active: 1, play: 1, text:"It turns out Hitler's favorite pony was ____."}
 		# {active: 1, play: 1, text:"It's not a boulder! It's ____!"}
-		# {active: 1, play: 1, text:"Lauren Faust was shocked to find ____ in her mailbox."}
-		# {active: 1, play: 1, text:"Luna didn't help in the fight against Chrysalis because she was too busy with ____."}
 		# {active: 1, play: 1, text:"My cutie mark would be ____."}
-		# {active: 1, play: 1, text:"Not many people know that Tara Strong is also the voice of ____."}
 		# {active: 1, play: 1, text:"Nothing makes Pinkie smile more than ____."}
-		# {active: 1, play: 1, text:"Everypony was shocked to discover that Scootaloo's cutie mark was ____."}
 		# {active: 1, play: 1, text:"Giggle at ____!"}
 		# {active: 1, play: 2, text:"I never knew what ____ could be, until you all shared its ____ with me."}
 		# {active: 1, play: 1, text:"I'd like to be ____."}
-		# {active: 1, play: 3, text:"In a fit of rage, Princess Celestia sent ____ to the ____ for ____."}
 		# {active: 1, play: 2, text:"Once upon a time, the land of Equestria was ruled by ____ and ____."}
 		# {active: 1, play: 1, text:"Ponyville is widely known for ____."}
-		# {active: 1, play: 1, text:"Ponyville was shocked to discover ____ in Fluttershy's shed."}
-		# {active: 1, play: 1, text:"Prince Blueblood's cutie mark represents ____."}
-		# {active: 1, play: 1, text:"Rainbow Dash has always wanted ____."}
-		# {active: 1, play: 1, text:"Rainbow Dash is the only pony in all of Equestria who can ____."}
-		# {active: 1, play: 1, text:"Rainbow Dash received a concussion after flying into ____."}
 		# {active: 1, play: 1, text:"Rarity has a long forgotten line of clothing inspired by ____."}
 		# {active: 1, play: 1, text:"Rarity was supposed to have a song about ____, but it was cut."}
 		# {active: 1, play: 1, text:"Rarity's latest dress design was inspired by ____."}
 		# {active: 1, play: 1, text:"Should the Elements of Harmony fail, ____ is to be used as a last resort."}
-		# {active: 1, play: 1, text:"Super Speedy ____ Squeezy 5000."}
-		# {active: 1, play: 1, text:"Surprisingly, Canterlot has a museum of ____."}
 		# {active: 1, play: 1, text:"____. That is my fetish."}
 		# {active: 1, play: 1, text:"The Elements of Harmony were originally the Elements of ____."}
-		# {active: 1, play: 1, text:"The Everfree forest is full of ____."}
-		# {active: 1, play: 1, text:"The national anthem of Equestria is ____."}
-		# {active: 1, play: 1, text:"The only way to get Opal in the bath is with ____."}
-		# {active: 1, play: 2, text:"The worst mishap caused by Princess Cadance was when she made ____ and ____ fall in love."}
-		# {active: 1, play: 1, text:"To much controversy, Princess Celestia made ____ illegal."}
-		# {active: 1, play: 2, text:"Today, Mayor Mare announced her official campaign position on ____ and ____. No pony was the least bit surprised."}
-		# {active: 1, play: 1, text:"Twilight got bored with the magic of friendship, and now studies the magic of ____."}
-		# {active: 1, play: 1, text:"Twilight Sparkle owns far more books on ____ than she'd like to admit."}
 		# {active: 1, play: 1, text:"When Luna got to the moon, she was greeted with ____."}
 		# {active: 1, play: 1, text:"____? Oh murr."}
 		# {active: 1, play: 3, text:"Who dunnit? ____ with ____ in ____."}
@@ -751,7 +666,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"The newest feature of the Xbox One is ____."}
 		# {active: 1, play: 1, text:"PS3: It only does  ____."}
 		# {active: 1, play: 1, text:"The new TF2 promo items are based on ____."}
-		# {active: 1, play: 1, text:"If Gordon Freeman spoke, what would he talk about?"}
 		# {active: 1, play: 1, text:"All you had to do was follow the damn ____, CJ!"}
 		# {active: 1, play: 1, text:"Liquid! How can you still be alive?"}
 		# {active: 1, play: 1, text:"What can change the nature of a man?"}
@@ -772,7 +686,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"WHAT IS A MAN?"}
 		# {active: 1, play: 2, text:"What is a ___ but a ____?"}
 		# {active: 1, play: 1, text:"WE WILL DRAG THIS ___ INTO THE 21ST CENTURY."}
-		# {active: 1, play: 1, text:"Wake up, Mr. Freeman. Wake up and ____."}
 		# {active: 1, play: 1, text:"All your ____ are belong to us"}
 		# {active: 1, play: 1, text:"I'm in ur base, ____"}
 		# {active: 1, play: 1, text:"Pop Quiz: Beatles Song- ___ terday."}
@@ -837,7 +750,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"we must embrace ____ and burn it as fuel for out journey."}
 		# {active: 1, play: 1, text:"In Kingdom Hearts, Donald Duck will be replaced with ____ ."}
 		# {active: 1, play: 1, text:"____ is a lie."}
-		# {active: 1, play: 1, text:"Without any warning, Pinkie Pie burst into a song about ____."}
 		# {active: 1, play: 1, text:"Because of the lastest school shooting, ____ is being blamed for making kids too violent."}
 		# {active: 1, play: 1, text:"Here lies ____: peperony and chease"}
 		# {active: 1, play: 1, text:"Throwaway round: Get rid of those shit cards you don't want. Thanks for all the suggestions, /v/"}
@@ -892,7 +804,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"You sometimes wish you'd encounter ____ while all alone, in the woods. With a bottle of lube."}
 		# {active: 1, play: 1, text:"I used to avoid talking about ____, but now it's just a part of normal conversation with my friends."}
 		# {active: 1, play: 1, text:"The most controversial game at PAX this year is an 8-bit indie platformer about ____. (38/44)"}
-		# {active: 1, play: 1, text:"You're a human transported to Equestria! The first thing you'd look for is ____."}
 		# {active: 1, play: 2, text:"Zecora is a well known supplier of ____ and ____."}
 		# {active: 1, play: 1, text:"There was a riot at the Gearbox panel when they gave the attendees ____. (41/44)"}
 		# {active: 1, play: 1, text:"The most controversial game at PAX this year is an 8-bit indie platformer about ____."}
@@ -904,78 +815,39 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"____ is the subject of the Critic's newest review."}
 		# {active: 1, play: 1, text:"____ is the subject of the missing short from The Uncanny Valley."}
 		# {active: 1, play: 1, text:"____ needs more gay."}
-		# {active: 1, play: 1, text:"____ will be Linkara's next cosplay."}
 		# {active: 1, play: 1, text:"____ wound up in this week's top WTFIWWY story."}
 		# {active: 1, play: 1, text:"After getting snowed in at MAGfest, the reviewers were stuck with ____."}
 		# {active: 1, play: 1, text:"ALL OF ____."}
-		# {active: 1, play: 1, text:"An intervention was staged for Linkara after ____ was discovered in his hat."}
-		# {active: 1, play: 1, text:"As a way of apologizing for a poorly received episode, E Rod promised to review ____."}
 		# {active: 1, play: 1, text:"Being done with My Little Pony, 8-Bit Mickey has moved onto ____."}
 		# {active: 1, play: 1, text:"Birdemic 3: ____"}
-		# {active: 1, play: 1, text:"E Rod has a new dance move called ____."}
-		# {active: 1, play: 1, text:"Even Kyle thinks ____ is pretentious."}
 		# {active: 1, play: 1, text:"Florida's new crazy is about ____."}
 		# {active: 1, play: 1, text:"Hello, I'm a ____."}
-		# {active: 1, play: 1, text:"Here There Be ____."}
-		# {active: 1, play: 1, text:"Hey kids, I'm Nash, and I couldn't make ____ up if I tried."}
-		# {active: 1, play: 1, text:"Hey Nash, whatcha playin'?"}
-		# {active: 1, play: 1, text:"How is Bennett going to creep out Ask That Guy this time? "}
-		# {active: 1, play: 1, text:"In his most recent Avatar vlog, Doug's favorite thing about the episode was ____."}
-		# {active: 1, play: 1, text:"In the newest Cheap Damage, CR looks at the trading card game version of ____."}
 		# {active: 1, play: 1, text:"IT'S NOT ____!"}
 		# {active: 1, play: 1, text:"It's not nudity if there's ____."}
-		# {active: 1, play: 1, text:"Leon Thomas almost named his show Renegade ____."}
-		# {active: 1, play: 1, text:"Linkara was shocked when he found out Insano was secretly ____."}
-		# {active: 1, play: 1, text:"Linkara's Yu-Gi-Oh deck is built up with nothing but ____."}
-		# {active: 1, play: 1, text:"Luke Mochrie proved he was still part of the site by____."}
 		# {active: 1, play: 1, text:"MikeJ's next sexual conquest is ____."}
 		# {active: 1, play: 1, text:"Nash had a long day at work, so tonight he'll stream ____."}
 		# {active: 1, play: 1, text:"Nash rejected yet another RDA request for ____."}
 		# {active: 1, play: 1, text:"Nash's recent rant about Microsoft led to ____."}
 		# {active: 1, play: 1, text:"Nash's Reviewer Spotlight featured ____."}
 		# {active: 1, play: 1, text:"New rule in the RDA Drinking Game:  Every time ____ happens, take a shot!"}
-		# {active: 1, play: 1, text:"On the next WTFIWWY, Nash will give us a brief history of ____."}
 		# {active: 1, play: 1, text:"The best Bad Movie Beatdown sketch is where Film Brain ropes Lordhebe into ____."}
 		# {active: 1, play: 1, text:"The controversy over ad-blocking could be easily solved by ____."}
 		# {active: 1, play: 1, text:"The easiest way to counteract a DMCA takedown notice is with ____."}
-		# {active: 1, play: 1, text:"The last time Welshy and Film Brain were in a room together, they ended up ____."}
 		# {active: 1, play: 1, text:"The new site that will overtake TGWTG is ____."}
 		# {active: 1, play: 1, text:"The newest Rap Libs makes extensive use of the phrase '____.'"}
 		# {active: 1, play: 1, text:"The theme of this week's WTFIWWY is ____."}
-		# {active: 1, play: 1, text:"This week, Nash's beer is made with ____."}
-		# {active: 1, play: 1, text:"What did Doug bring to the set of To Boldly Flee?"}
-		# {active: 1, play: 1, text:"What does Ven have to do now?"}
-		# {active: 1, play: 1, text:"What hot, trendy new dance will feature in Paw's next Dance Spectacular?"}
-		# {active: 1, play: 1, text:"What is hidden in Linkara's hat?"}
 		# {active: 1, play: 1, text:"What is literally the only thing tastier than a dragon's soul?"}
-		# {active: 1, play: 1, text:"What is Snowflame's only known weakness?"}
 		# {active: 1, play: 1, text:"What is the name of the next new Channel Awesome contributor?"}
 		# {active: 1, play: 1, text:"What killed Harvey Finevoice's son?"}
 		# {active: 1, play: 1, text:"What made Dodger ban someone from the RDA chat this week?"}
-		# {active: 1, play: 1, text:"What new upgrade did Nash give Laura?"}
-		# {active: 1, play: 1, text:"What was the first sign that Linkara was turning evil?"}
-		# {active: 1, play: 1, text:"What will Nash try to kill next with his hammer?"}
-		# {active: 1, play: 1, text:"When Arlo The Orc turns into a werewolf, he likes to snack on ____."}
-		# {active: 1, play: 1, text:"When interviewing Linkara, be sure to ask him about ____!"}
-		# {active: 1, play: 1, text:"When not reviewing or ruling Haganistan with an iron fist, Hagan's hobby is ____."}
-		# {active: 1, play: 1, text:"Who REALLY called Oancitizen to help him snap out of his ennui?"}
-		# {active: 1, play: 1, text:"Whose ass did Zodann kick this time?"}
-		# {active: 1, play: 1, text:"Why did Nash go to Chicago?"}
-		# {active: 1, play: 1, text:"Why doesn't Doug ever attend MAGFest?"}
-		# {active: 1, play: 1, text:"Why doesn't Film Brain have an actual reviewer costume?"}
-		# {active: 1, play: 2, text:"The MAGFest Nerf War took a dark turn when ____ was waylaid by ____."}
-		# {active: 1, play: 2, text:"For a late night snack, Nash made a sandwich of ____ and ____."}
 		# {active: 1, play: 2, text:"The next TGWTG porn spoof?  ____ with ____!"}
 		# {active: 1, play: 2, text:"Putting ____ in ____? That doesn't go there!"}
 		# {active: 1, play: 2, text:"In trying to ban ____, Florida accidentally banned ____."}
 		# {active: 1, play: 2, text:"If ____ got to direct an Uncanny Valley short, it would have featured ____."}
-		# {active: 1, play: 2, text:"At ConBravo, ____ will be hosting a panel on ____."}
 		# {active: 1, play: 2, text:"At MAGFest, ____ will host a panel focusing on ____."}
 		# {active: 1, play: 2, text:"'Greetings, dear listeners.  Won't you join ____ for ____?'"}
-		# {active: 1, play: 2, text:"Sad Panda is actually ____ and  ____."}
 		# {active: 1, play: 2, text:"I'm going to die watching ____ review ____."}
 		# {active: 1, play: 2, text:"In a new latest announcement video, ____ has announced an appearance at ____."}
-		# {active: 1, play: 2, text:"After ____, Phelous regenerated into ____. "}
 		# {active: 1, play: 2, text:"____ and ____ would make awesome siblings."}
 		# {active: 1, play: 2, text:"Some fangirls lay awake all night thinking of ____ and ____ together."}
 		# {active: 1, play: 2, text:"In my new show, I review ____ while dressed like ____."}
@@ -984,7 +856,6 @@ exports.cards = !->
 		# {active: 1, play: 2, text:"____ is the reason that ____ picked 'AIDS.'"}
 		# {active: 1, play: 3, text:"Nash's newest made-up curse word is ____-____-____! "}
 		# {active: 1, play: 3, text:"Using alchemy, combine ____ and ____ to make ____! "}
-		# {active: 1, play: 3, text:"Write Linkara's next storyline as a haiku."}
 		# {active: 1, play: 3, text:"Nash will build his next contraption with just ____, ____, and ____."}
 		# {active: 1, play: 3, text:" ____  did ____ to avoid ____."}
 		# {active: 1, play: 3, text:"Make a WTFIWWY story."}
@@ -994,58 +865,37 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"My apologies to the ____ estate."}
 		# {active: 1, play: 1, text:"What interrupted the #NLSS?"}
 		# {active: 1, play: 1, text:"Travel by ____."}
-		# {active: 1, play: 1, text:"The stream broke when Ryuka stepped on the ____ key."}
 		# {active: 1, play: 1, text:"Say that to my face one more time and I'll start ____."}
 		# {active: 1, play: 1, text:"Oh my god, he's using ____ magic!"}
-		# {active: 1, play: 1, text:"Krazy Mike lost to ____!"}
-		# {active: 1, play: 1, text:"What would you do if Ohm really did just die?"}
 		# {active: 1, play: 1, text:"____ has invaded!"}
 		# {active: 1, play: 1, text:"We're having technical difficulties due to ____."}
-		# {active: 1, play: 1, text:"JSmithOTI is referred to as a Scumlord, but his friends call him ____."}
 		# {active: 1, play: 1, text:"Ohmwrecker is known for his MLG online play. What people don't know is that he's also MLG at ____."}
-		# {active: 1, play: 1, text:"Follow MichaelALFox on Twitter and you can see pictures of ____."}
-		# {active: 1, play: 1, text:"After Mars, ____ is the next furthest planet from the sun."}
-		# {active: 1, play: 1, text:"What would Ohm do?"}
 		# {active: 1, play: 1, text:"The next movie reading will be of ____."}
 		# {active: 1, play: 1, text:"How did Northernlion unite Scotland?"}
 		# {active: 1, play: 1, text:"Green loves the new Paranautical Activity item ____, but keeps comparing it to the crossbow."}
 		# {active: 1, play: 1, text:"____ is really essential to completing the game."}
 		# {active: 1, play: 1, text:"My channel is youtube.com/____."}
-		# {active: 1, play: 1, text:"Northernlion's cat Ryuka is known for ____ while he records."}
-		# {active: 1, play: 1, text:"What gave Ohmwrecker his gaming powers?"}
 		# {active: 1, play: 1, text:"Hello anybody, I am ____Patrol."}
 		# {active: 1, play: 2, text:"I have ____, can you ____ me?"}
 		# {active: 1, play: 2, text:"____! Get off the ____!"}
 		# {active: 1, play: 2, text:"My name is ____ and today we'll be checking out ____."}
-		# {active: 1, play: 2, text:"It's true that Green9090 is ____, but we must all admit that Ohm is better at ____"}
 		# {active: 1, play: 2, text:"That's the way ____ did it, that's the way ____ does it, and it''s worked out pretty well so far."}
-		# {active: 1, play: 2, text:"Today on Crusader Kings 2, NL plays King ____ the ____."}
-		# {active: 1, play: 2, text:"After winning yet another race, Josh made ____ tweet about ____."}
 		# {active: 1, play: 3, text:"This time on ____ vs. ____, we're playing ____."}
 		# {active: 1, play: 1, text:"Welcome back to ____."}
 		# {active: 1, play: 1, text:"Welcome to Sonic Team! We make ____, I think!"}
 		# {active: 1, play: 1, text:"What am I willing to put up with today?"}
-		# {active: 1, play: 1, text:"What can be found in Arin's chins?"}
-		# {active: 1, play: 1, text:"What do Mumbo's magic words mean?"}
 		# {active: 1, play: 1, text:"What is the boopinest shit?"}
 		# {active: 1, play: 1, text:"WHAT THE FUCK IS A ____?!"}
-		# {active: 1, play: 1, text:"What's better than Skyward Sword?"}
-		# {active: 1, play: 1, text:"What's the real reason Jon left?"}
 		# {active: 1, play: 1, text:"When I look in the mirror I see ____."}
-		# {active: 1, play: 1, text:"Who replaced Jon when he left GameGrumps?"}
 		# {active: 1, play: 1, text:"Who's an asshole?"}
-		# {active: 1, play: 1, text:"Why is Steam Train so controversial?"}
 		# {active: 1, play: 1, text:"WOOP WOOP WOOP I'M A ____!"}
 		# {active: 1, play: 1, text:"You know what fan mail makes me the happiest every time I see it? It's the ones where people are like, '____.' "}
 		# {active: 1, play: 1, text:"You're ruining my integrity! ____ won't hire me now!"}
 		# {active: 1, play: 1, text:"I've been ____ again!"}
 		# {active: 1, play: 1, text:"Rolling around at the speed of ____!"}
-		# {active: 1, play: 1, text:"This time on Guest Grumps, we have ____."}
-		# {active: 1, play: 1, text:"Top five games, go! 1? Mega Man X. 2-5? ____."}
 		# {active: 1, play: 1, text:"Use your ____!"}
 		# {active: 1, play: 1, text:"Look at this guy, he's like ____."}
 		# {active: 1, play: 1, text:"Look, it's ____!"}
-		# {active: 1, play: 1, text:"Next time on Game Grumps, ____!"}
 		# {active: 1, play: 1, text:"Nightshade: The Claws of ____."}
 		# {active: 1, play: 1, text:"Number one! With a bullet! Zoom in on the ____!"}
 		# {active: 1, play: 1, text:"Oh, it's ____!"}
@@ -1062,10 +912,7 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Jon just wants to touch ____."}
 		# {active: 1, play: 1, text:"Is there anything to gain from this?"}
 		# {active: 1, play: 1, text:"It's no use! Take ____!"}
-		# {active: 1, play: 1, text:"Jon and Arin suck at ____."}
-		# {active: 1, play: 1, text:"Jon and Arin win! They realize ____ is more important."}
 		# {active: 1, play: 1, text:"If the ____ wasn't there, I would do. But it's there, so it's not."}
-		# {active: 1, play: 1, text:"How many ____ does Mega Man get?"}
 		# {active: 1, play: 1, text:"How many nose hairs does ____ have?"}
 		# {active: 1, play: 1, text:"I certainly can't do it without you, and I know you can't do it without ____!"}
 		# {active: 1, play: 1, text:"I tell you once, I tell you twice! ____ is good for economy!"}
@@ -1080,16 +927,13 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Fool me once, I'm mad. Fool me twice? How could you. Fool me three times, you're officially ____."}
 		# {active: 1, play: 1, text:"For my first attack, I will juggle ____ to impress you."}
 		# {active: 1, play: 1, text:"Fuck, I found a ____."}
-		# {active: 1, play: 1, text:"Game Grumps: sponsored by ____."}
 		# {active: 1, play: 1, text:"Give ____ a chance! He'll grow on you!"}
 		# {active: 1, play: 1, text:"____? Ten-outta-ten!"}
 		# {active: 1, play: 1, text:"____. I AAAAAAIN’T HAVIN’ THAT SHIT!"}
 		# {active: 1, play: 1, text:"____. It's no use!"}
 		# {active: 1, play: 1, text:"____. MILLIONS ARE DEAD!!!"}
-		# {active: 1, play: 1, text:"____. Put that in, Barry."}
 		# {active: 1, play: 1, text:"____. This is like one of my Japanese animes!"}
 		# {active: 1, play: 1, text:"...What the bloody hell are you two talking about?!"}
-		# {active: 1, play: 1, text:"'These new ____ t-shirts are gonna change some lives, Arin.'"}
 		# {active: 1, play: 1, text:"'You want cheese pizza?' 'No. ____.'"}
 		# {active: 1, play: 1, text:"And then, as a fuckin' goof, I'd put a hole in ____."}
 		# {active: 1, play: 1, text:"And there it was...Kirby had finally met the ____ of the lost city."}
@@ -1103,11 +947,8 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Barry's sheer skill at ____ is unmatched."}
 		# {active: 1, play: 1, text:"I don't like the ____ flavor."}
 		# {active: 1, play: 1, text:"____ don't even cost this less!"}
-		# {active: 1, play: 1, text:"____ Grumps!"}
 		# {active: 1, play: 1, text:"____ has aged really well."}
 		# {active: 1, play: 1, text:"____ is GREAT GREAT GREAT!"}
-		# {active: 1, play: 1, text:"____ is Jon's favorite video game of all time."}
-		# {active: 1, play: 1, text:"____ is not Jon's strong suit."}
 		# {active: 1, play: 1, text:"____ Train!"}
 		# {active: 1, play: 1, text:"____ WINS!"}
 		# {active: 1, play: 1, text:"____: Better than deer shit!"}
@@ -1115,14 +956,11 @@ exports.cards = !->
 		# {active: 1, play: 2, text:"Real talk? Is that ____ ____?"}
 		# {active: 1, play: 2, text:"Look at that ____-ass ____!"}
 		# {active: 1, play: 2, text:"JON'S ____, SHOW US YOUR ____."}
-		# {active: 1, play: 2, text:"The Grumps' latest silly player names are ____ and ____."}
 		# {active: 1, play: 2, text:"If you don't know what ____ is, you can't go to ____."}
-		# {active: 1, play: 2, text:"In this corner, ____; in the other corner, ____; it's Game Grumps VS!"}
 		# {active: 1, play: 2, text:"IF I CAN'T BE ____, I SURE AS HELL CAN BE ____!!"}
 		# {active: 1, play: 2, text:"COME ON AND ____, AND WELCOME TO THE ____!"}
 		# {active: 1, play: 3, text:"If ____ evolved from ____, why the fuck is there still ____, dude?!"}
 		# {active: 1, play: 3, text:"____? Pretty smart. ____? Pretty fuckin' smart. ____? FUCKING GENIUS!!!!"}
-		# {active: 1, play: 1, text:"____ is probably a Venusaur kind of guy."}
 		# {active: 1, play: 1, text:"____ is the greatest Canadian."}
 		# {active: 1, play: 1, text:"____ is the worst on the Podcast."}
 		# {active: 1, play: 1, text:"____. That's top."}
@@ -1137,7 +975,6 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Fight, fight, fight, ____?"}
 		# {active: 1, play: 1, text:"Fuck it, I mean ____, right?"}
 		# {active: 1, play: 1, text:"I'ma smother you in my ____!"}
-		# {active: 1, play: 1, text:"If Jack was frog and you kissed him, what would he turn into?"}
 		# {active: 1, play: 1, text:"If you could fuck anyone in the world, who would you choose?"}
 		# {active: 1, play: 1, text:"If you could have any superpower, what would it be?"}
 		# {active: 1, play: 1, text:"If you were allowed to do one illegal thing, what would it be? "}
@@ -1155,12 +992,9 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Shout out to my mom. Called my Teddy Bear ____."}
 		# {active: 1, play: 1, text:"So, I was just walking along, until suddenly ____ came along and attacked me."}
 		# {active: 1, play: 1, text:"Thanks to ____ for this week's theme song."}
-		# {active: 1, play: 1, text:"The next RvB cameo will be voiced by ____."}
-		# {active: 1, play: 1, text:"They questioned Ryan's sanity after finding ____ in his house."}
 		# {active: 1, play: 1, text:"This week on AHWU, ____."}
 		# {active: 1, play: 1, text:"This week on Immersion, we are going to test ____."}
 		# {active: 1, play: 1, text:"What are fire hydrants called in England?"}
-		# {active: 1, play: 1, text:"What does Ryan's kid listen to?"}
 		# {active: 1, play: 1, text:"What is Game Night?"}
 		# {active: 1, play: 1, text:"What is the meaning of life?"}
 		# {active: 1, play: 1, text:"What is the saddest thing you've ever seen?"}
@@ -1169,16 +1003,10 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"What is your favorite book?"}
 		# {active: 1, play: 1, text:"What is your mating call?"}
 		# {active: 1, play: 1, text:"What makes Caboose angry?"}
-		# {active: 1, play: 1, text:"What makes Michael the angriest?"}
-		# {active: 1, play: 1, text:"What mysteries lie beyond Jack's beard? "}
 		# {active: 1, play: 1, text:"What would be your chosen catchphrase?"}
-		# {active: 1, play: 1, text:"What's in Gavin's desk?"}
 		# {active: 1, play: 1, text:"Where are we going for lunch?"}
-		# {active: 1, play: 1, text:"Where does Ray belong?"}
 		# {active: 1, play: 1, text:"Who has a fake Internet girlfriend?"}
 		# {active: 1, play: 1, text:"Why are we here?"}
-		# {active: 1, play: 1, text:"Why is Geoff cool?"}
-		# {active: 1, play: 1, text:"Why was Michael screaming at Gavin?"}
 		# {active: 1, play: 1, text:"Would you guys still like me if my name was ____?"}
 		# {active: 1, play: 1, text:"You threw it against the wall like a ____!"}
 		# {active: 1, play: 2, text:"____ is ____ as dicks."}
@@ -1902,14 +1730,186 @@ exports.cards = !->
 		# {active: 1, play: 1, text:"Dustin Browder demands more ____ in StarCraft&reg;."}
 		# {active: 1, play: 1, text:"To top One More Day, future comic writers will use ____ to break up a relationship."}
 		# active: 1, {play: 1, text:"The real reason MAGFest was ruined was ____."}
-		# {active: 1, play: 1, text:"The reason Linkara doesn't like milk in his cereal is ____."}
-		# {active: 1, play: 1, text:"The secret of Linkara's magic gun is ____."}
 		# {active: 1, play: 2, text:"For the next Anniversary event, the TGWTG producers must battle ____ to get ____."}
-		# {active: 1, play: 2, text:"I asked Linkara to retweet ____, but instead, he retweeted ____."}
 		# {active: 1, play: 2, text:"I write slash fanfiction pairing ____ with ____."}
 		# {active: 1, play: 2, text:"Next time on Obscurus Lupa Presents: ' ____ IV: The Return of ____'."}
 		# {active: 1, play: 2, text:"Todd in the Shadows broke the Not a Rhyme button when the singer tried to rhyme ____ with ____."}
 		# {active: 1, play: 2, text:"Welshy is to ____ as Sad Panda is to ____."}
+		# {active: 1, play: 1, text:"What is hidden in Linkara's hat?"}
+		# {active: 1, play: 1, text:"What was the first sign that Linkara was turning evil?"}
+		# {active: 1, play: 1, text:"When interviewing Linkara, be sure to ask him about ____!"}
+		# {active: 1, play: 3, text:"Write Linkara's next storyline as a haiku."}
+		# {active: 1, play: 1, text:"The reason Linkara doesn't like milk in his cereal is ____."}
+		# {active: 1, play: 1, text:"The secret of Linkara's magic gun is ____."}
+		# {active: 1, play: 2, text:"I asked Linkara to retweet ____, but instead, he retweeted ____."}
 		# {active: 1, play: 2, text:"Linkara's next story arc will involve him defeating ____ with the power of  ____."}
+		# {active: 1, play: 1, text:"Being fed up with reviewing lamps, what obscure topic did Linkara review next?"}
+		# {active: 1, play: 1, text:"Why does Linkara have all of those Cybermats?"}
+		# {active: 1, play: 1, text:"At his next con appearance, Linkara will cosplay as ____."}
+		# {active: 1, play: 1, text:"What does Linkara eat with his chicken strips?"}
+		# {active: 1, play: 2, text:"____ and ____ are in the worst comic Linkara ever read."}
+		# {active: 1, play: 1, text:"____ is the reason Linkara doesn't like to swear."}
+		# {active: 1, play: 1, text:"The only thing Linkara would sell his soul for is ____."}
+		# {active: 1, play: 1, text:"In a surprise twist, the villain of Linkara's next story arc turned out to be ____."}
+		# {active: 1, play: 1, text:"Linkara now prefers to say ____ in lieu of 'fuck'."}
+		# {active: 1, play: 1, text:"____ will be Linkara's next cosplay."}
+		# {active: 1, play: 1, text:"An intervention was staged for Linkara after ____ was discovered in his hat."}
+		# {active: 1, play: 1, text:"Linkara was shocked when he found out Insano was secretly ____."}
+		# {active: 1, play: 1, text:"Linkara's Yu-Gi-Oh deck is built up with nothing but ____."}
+		# {active: 1, play: 1, text:"Why was Radio Dead Air shut down this time?"}
+		# {active: 1, play: 1, text:"During his childhood, Salvador Dal&iacute; produced hundreds of paintings of ____."}
+		# {active: 1, play: 2, text:"Rumor has it that Vladimir Putin's favorite delicacy is ____ stuffed with ____."}
+		# {active: 1, play: 1, text:"____, by Bad Dragon™."}
+		# {active: 1, play: 2, text:"Arlo P. Arlo's newest weapon combines ____ and ____!"}
+		# {active: 1, play: 1, text:"____ is something else Diamanda Hagan has to live with every day."}
+		# {active: 1, play: 1, text:"As part of a recent promotion, Japanese KFCs are now dressing their Colonel Sanders statues up as ____."}
+		# {active: 1, play: 1, text:"Brad Tries ____."}
+		# {active: 1, play: 1, text:"Enemies of Diamanda Hagan have been known to receive strange packages filled with  ____."}
+		# {active: 1, play: 1, text:"What else does Diamanda Hagan have to live with every day?"}
+		# {active: 1, play: 1, text:"What's the real reason nobody has ever played the TGWTG Panel Drinking Game?"}
+		# {active: 1, play: 1, text:"When Barta isn't talking he's ____."}
+		# {active: 1, play: 1, text:"Hayao Miyazaki's latest family film is about a young boy befriending ____."}
+		# {active: 1, play: 1, text:"What is mo&eacute;?"}
+		# {active: 1, play: 2, text:"Make a yaoi shipping."}
+		# {active: 1, play: 3, text:"On a night out, Golby will traditionally get into a fight with a ____ then have sex with a ____ before complaining about a hangover from too much ____."}
+		# {active: 1, play: 1, text:"At the last PAX, Paul and Storm had ____ thrown at them during 'Opening Band'."}
+		# {active: 1, play: 1, text:"What did the commenters bitch about next to Doug?"}
+		# {active: 1, play: 1, text:"The RDA chat knew Nash was trolling them when he played ____."}
+		# {active: 1, play: 3, text:"Every weekend, Golby likes to ____ then ____ before finally ____."}
+		# {active: 1, play: 3, text:"Every weekend, Golby enjoys drinking ____ before getting into a fight with ____ and having sex with ____."}
+		# {active: 1, play: 1, text:"Connie the Condor often doesn't talk on skype because of ____."}
+		# {active: 1, play: 1, text:"Jorgi the Corgi most definitely enjoys ____."}
+		# {active: 1, play: 1, text:"It's DJ Manny in the hizouse, playing ____ all night long!"}
+		# {active: 1, play: 2, text:"____ + ____ = Golby."}
+		# {active: 1, play: 1, text:"____ was the first thing to go when Hagan took over the world."}
+		# {active: 1, play: 1, text:"What broke Nash this week?"}
+		# {active: 1, play: 1, text:"In his latest review, Phelous was killed by ____."}
+		# {active: 1, play: 1, text:"This weekend, the nation of Haganistan will once again commence its annual celebration of ____.  "}
+		# {active: 1, play: 1, text:"What is the real reason Demo Reel failed?"}
+		# {active: 1, play: 1, text:"To troll the RDA chat this time, Todd requested a song by ____."}
+		# {active: 1, play: 1, text:"Todd knew he didn't have a chance after trying to seduce Lupa with ____."}
+		# {active: 1, play: 1, text:"Turns out, that wasn't tea in MikeJ's cup, it was ____."}
+		# {active: 1, play: 1, text:"Viewers were shocked when Paw declared ____ the best song of the movie."}
+		# {active: 1, play: 1, text:"Well, I've read enough fanfic about ____ and Lupa to last a lifetime."}
+		# {active: 1, play: 1, text:"What does Nash like to sing about?"}
+		# {active: 1, play: 1, text:"What does Todd look like under his mask?"}
+		# {active: 1, play: 1, text:"What will Tara name her next hippo?"}
+		# {active: 1, play: 1, text:"Cindi suddenly turned into Steven after ____."}
+		# {active: 1, play: 1, text:"In the latest chapter of Toriko, our hero hunts down, kills, and eats a creature made entirely of ____."}
+		# {active: 1, play: 1, text:"The rarest Pok&eacute;mon in my collection is ____."}
+		# {active: 1, play: 1, text:"Mamoru Oshii's latest film is a slow-paced, two hour-long cerebral piece about the horrors of ____."}
+		# {active: 1, play: 1, text:"The next big Tokusatsu show: 'Super Sentai ____ Ranger!'"}
+		# {active: 1, play: 1, text:"In the latest chapter of Golgo 13, he kills his target with ____."}
+		# {active: 1, play: 3, text:"In the latest episode of Case Closed, Conan deduces that it was ____ who killed ____ because of ____."}
+		# {active: 1, play: 1, text:"Behold the name of my Zanpakuto, ____!"}
+		# {active: 1, play: 1, text:"What do Brad and Floyd like to do after a long day?"}
+		# {active: 1, play: 1, text:"Yoko Kanno's latest musical score features a song sung entirely by ____."}
+		# {active: 1, play: 1, text:"Who placed first in the most recent Shonen Jump popularity poll?"}
+		# {active: 1, play: 3, text:"In this episode of Master Keaton, Keaton builds ____ out of ____ and ____."}
+		# {active: 1, play: 1, text:"So just who is this Henry Goto fellow, anyway?"}
+		# {active: 1, play: 1, text:"When Henry Goto is alone and thinks that no one's looking, he secretly enjoys ____."}
+		# {active: 1, play: 1, text:"In her newest review, Diamanda Hagan finds herself in the body of ____."}
+		# {active: 1, play: 1, text:"Madoka Kyouno's nickname for Muginami's older brother is ____."}
+		# {active: 1, play: 2, text:"____ has won the national Equestrian award for ____."}
+		# {active: 1, play: 1, text:"Every Morning, Princess Celestia Rises ____."}
+		# {active: 1, play: 1, text:"Lauren Faust was shocked to find ____ in her mailbox."}
+		# {active: 1, play: 1, text:"Luna didn't help in the fight against Chrysalis because she was too busy with ____."}
+		# {active: 1, play: 1, text:"Not many people know that Tara Strong is also the voice of ____."}
+		# {active: 1, play: 1, text:"Everypony was shocked to discover that Scootaloo's cutie mark was ____."}
+		# {active: 1, play: 3, text:"In a fit of rage, Princess Celestia sent ____ to the ____ for ____."}
+		# {active: 1, play: 1, text:"Ponyville was shocked to discover ____ in Fluttershy's shed."}
+		# {active: 1, play: 1, text:"Prince Blueblood's cutie mark represents ____."}
+		# {active: 1, play: 1, text:"Rainbow Dash has always wanted ____."}
+		# {active: 1, play: 1, text:"Rainbow Dash is the only pony in all of Equestria who can ____."}
+		# {active: 1, play: 1, text:"Rainbow Dash received a concussion after flying into ____."}
+		# {active: 1, play: 1, text:"Super Speedy ____ Squeezy 5000."}
+		# {active: 1, play: 1, text:"Surprisingly, Canterlot has a museum of ____."}
+		# {active: 1, play: 1, text:"The Everfree forest is full of ____."}
+		# {active: 1, play: 1, text:"The national anthem of Equestria is ____."}
+		# {active: 1, play: 1, text:"The only way to get Opal in the bath is with ____."}
+		# {active: 1, play: 2, text:"The worst mishap caused by Princess Cadance was when she made ____ and ____ fall in love."}
+		# {active: 1, play: 1, text:"To much controversy, Princess Celestia made ____ illegal."}
+		# {active: 1, play: 2, text:"Today, Mayor Mare announced her official campaign position on ____ and ____. No pony was the least bit surprised."}
+		# {active: 1, play: 1, text:"Twilight got bored with the magic of friendship, and now studies the magic of ____."}
+		# {active: 1, play: 1, text:"Twilight Sparkle owns far more books on ____ than she'd like to admit."}
+		# {active: 1, play: 1, text:"If Gordon Freeman spoke, what would he talk about?"}
+		# {active: 1, play: 1, text:"Wake up, Mr. Freeman. Wake up and ____."}
+		# {active: 1, play: 1, text:"Without any warning, Pinkie Pie burst into a song about ____."}
+		# {active: 1, play: 1, text:"You're a human transported to Equestria! The first thing you'd look for is ____."}
+		# {active: 1, play: 1, text:"As a way of apologizing for a poorly received episode, E Rod promised to review ____."}
+		# {active: 1, play: 1, text:"E Rod has a new dance move called ____."}
+		# {active: 1, play: 1, text:"Even Kyle thinks ____ is pretentious."}
+		# {active: 1, play: 1, text:"Here There Be ____."}
+		# {active: 1, play: 1, text:"Hey kids, I'm Nash, and I couldn't make ____ up if I tried."}
+		# {active: 1, play: 1, text:"Hey Nash, whatcha playin'?"}
+		# {active: 1, play: 1, text:"How is Bennett going to creep out Ask That Guy this time? "}
+		# {active: 1, play: 1, text:"In his most recent Avatar vlog, Doug's favorite thing about the episode was ____."}
+		# {active: 1, play: 1, text:"In the newest Cheap Damage, CR looks at the trading card game version of ____."}
+		# {active: 1, play: 1, text:"Leon Thomas almost named his show Renegade ____."}
+		# {active: 1, play: 1, text:"Luke Mochrie proved he was still part of the site by____."}
+		# {active: 1, play: 1, text:"On the next WTFIWWY, Nash will give us a brief history of ____."}
+		# {active: 1, play: 1, text:"The last time Welshy and Film Brain were in a room together, they ended up ____."}
+		# {active: 1, play: 1, text:"This week, Nash's beer is made with ____."}
+		# {active: 1, play: 1, text:"What did Doug bring to the set of To Boldly Flee?"}
+		# {active: 1, play: 1, text:"What does Ven have to do now?"}
+		# {active: 1, play: 1, text:"What hot, trendy new dance will feature in Paw's next Dance Spectacular?"}
+		# {active: 1, play: 1, text:"What is Snowflame's only known weakness?"}
+		# {active: 1, play: 1, text:"What new upgrade did Nash give Laura?"}
+		# {active: 1, play: 1, text:"What will Nash try to kill next with his hammer?"}
+		# {active: 1, play: 1, text:"When Arlo The Orc turns into a werewolf, he likes to snack on ____."}
+		# {active: 1, play: 1, text:"When not reviewing or ruling Haganistan with an iron fist, Hagan's hobby is ____."}
+		# {active: 1, play: 1, text:"Who REALLY called Oancitizen to help him snap out of his ennui?"}
+		# {active: 1, play: 1, text:"Whose ass did Zodann kick this time?"}
+		# {active: 1, play: 1, text:"Why did Nash go to Chicago?"}
+		# {active: 1, play: 1, text:"Why doesn't Doug ever attend MAGFest?"}
+		# {active: 1, play: 1, text:"Why doesn't Film Brain have an actual reviewer costume?"}
+		# {active: 1, play: 2, text:"The MAGFest Nerf War took a dark turn when ____ was waylaid by ____."}
+		# {active: 1, play: 2, text:"For a late night snack, Nash made a sandwich of ____ and ____."}
+		# {active: 1, play: 2, text:"At ConBravo, ____ will be hosting a panel on ____."}
+		# {active: 1, play: 2, text:"Sad Panda is actually ____ and  ____."}
+		# {active: 1, play: 2, text:"After ____, Phelous regenerated into ____. "}
+		# {active: 1, play: 1, text:"The stream broke when Ryuka stepped on the ____ key."}
+		# {active: 1, play: 1, text:"Krazy Mike lost to ____!"}
+		# {active: 1, play: 1, text:"What would you do if Ohm really did just die?"}
+		# {active: 1, play: 1, text:"JSmithOTI is referred to as a Scumlord, but his friends call him ____."}
+		# {active: 1, play: 1, text:"Follow MichaelALFox on Twitter and you can see pictures of ____."}
+		# {active: 1, play: 1, text:"After Mars, ____ is the next furthest planet from the sun."}
+		# {active: 1, play: 1, text:"What would Ohm do?"}
+		# {active: 1, play: 1, text:"Northernlion's cat Ryuka is known for ____ while he records."}
+		# {active: 1, play: 1, text:"What gave Ohmwrecker his gaming powers?"}
+		# {active: 1, play: 2, text:"It's true that Green9090 is ____, but we must all admit that Ohm is better at ____"}
+		# {active: 1, play: 2, text:"Today on Crusader Kings 2, NL plays King ____ the ____."}
+		# {active: 1, play: 2, text:"After winning yet another race, Josh made ____ tweet about ____."}
+		# {active: 1, play: 1, text:"What can be found in Arin's chins?"}
+		# {active: 1, play: 1, text:"What do Mumbo's magic words mean?"}
+		# {active: 1, play: 1, text:"What's better than Skyward Sword?"}
+		# {active: 1, play: 1, text:"What's the real reason Jon left?"}
+		# {active: 1, play: 1, text:"Who replaced Jon when he left GameGrumps?"}
+		# {active: 1, play: 1, text:"Why is Steam Train so controversial?"}
+		# {active: 1, play: 1, text:"This time on Guest Grumps, we have ____."}
+		# {active: 1, play: 1, text:"Top five games, go! 1? Mega Man X. 2-5? ____."}
+		# {active: 1, play: 1, text:"Next time on Game Grumps, ____!"}
+		# {active: 1, play: 1, text:"Jon and Arin suck at ____."}
+		# {active: 1, play: 1, text:"Jon and Arin win! They realize ____ is more important."}
+		# {active: 1, play: 1, text:"How many ____ does Mega Man get?"}
+		# {active: 1, play: 1, text:"Game Grumps: sponsored by ____."}
+		# {active: 1, play: 1, text:"____. Put that in, Barry."}
+		# {active: 1, play: 1, text:"'These new ____ t-shirts are gonna change some lives, Arin.'"}
+		# {active: 1, play: 1, text:"____ Grumps!"}
+		# {active: 1, play: 1, text:"____ is Jon's favorite video game of all time."}
+		# {active: 1, play: 1, text:"____ is not Jon's strong suit."}
+		# {active: 1, play: 2, text:"The Grumps' latest silly player names are ____ and ____."}
+		# {active: 1, play: 2, text:"In this corner, ____; in the other corner, ____; it's Game Grumps VS!"}
+		# {active: 1, play: 1, text:"____ is probably a Venusaur kind of guy."}
+		# {active: 1, play: 1, text:"If Jack was frog and you kissed him, what would he turn into?"}
+		# {active: 1, play: 1, text:"The next RvB cameo will be voiced by ____."}
+		# {active: 1, play: 1, text:"They questioned Ryan's sanity after finding ____ in his house."}
+		# {active: 1, play: 1, text:"What does Ryan's kid listen to?"}
+		# {active: 1, play: 1, text:"What makes Michael the angriest?"}
+		# {active: 1, play: 1, text:"What mysteries lie beyond Jack's beard? "}
+		# {active: 1, play: 1, text:"What's in Gavin's desk?"}
+		# {active: 1, play: 1, text:"Where does Ray belong?"}
+		# {active: 1, play: 1, text:"Why is Geoff cool?"}
+		# {active: 1, play: 1, text:"Why was Michael screaming at Gavin?"}
 		# {active: 1, play: 2, text:"Buzzfeed presents: 10 pictures of ____ that look like ____."}
 	]

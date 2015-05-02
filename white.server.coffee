@@ -1006,529 +1006,415 @@ exports.cards = !->
 		{active: true, text: "Mating season."}
 		{active: true, text: "The Ouya."}
 		{active: true, text: "Jew-Fros."}
-		# {active: true, text: "Fruit Fuckers."}
-		# {active: true, text: "Blowing your hand off with a firework."}
-		# {active: true, text: "Beer Pong."}
-		# {active: true, text: "Duke Nukem Forever."}
-		# {active: true, text: "Rule 34."}
-		# {active: true, text: "Made-for-TV movies."}
-		# {active: true, text: "Spanish soap operas."}
-		# {active: true, text: "Teh Urn."}
-		# {active: true, text: "Viking Metal."}
-		# {active: true, text: "Tickle Me Elmo."}
-		# {active: true, text: "Barney's rape dungeon."}
-		# {active: true, text: "Nurse Joy."}
-		# {active: true, text: "Canadian tuxedo."}
-		# {active: true, text: "Hungry Hungry Hippos."}
-		# {active: true, text: "The smallest, whitest dick."}
-		# {active: true, text: "Abusive fathers."}
-		# {active: true, text: "Rich, chocolatey Ovaltine&reg;."}
-		# {active: true, text: "Ringworm."}
-		# {active: true, text: "The hero of time."}
-		# {active: true, text: "Terabytes of horse porn."}
-		# {active: true, text: "Blowing the President."}
-		# {active: true, text: "Skullcrusher Mountain."}
-		# {active: true, text: "Mr. Fancy Pants."}
-		# {active: true, text: "TotalBiscuit's top hat."}
-		# {active: true, text: "Demi Moore's bush."}
-		# {active: true, text: "Eating 120 White Castle burgers&reg;."}
-		# {active: true, text: "A walrus with a beret."}
-		# {active: true, text: "Speedrunning life."}
-		# {active: true, text: "The truffle shuffle."}
-		# {active: true, text: "An 8-ball."}
-		# {active: true, text: "Quiznos&reg;."}
-		# {active: true, text: "Bong hits for Jesus."}
-		# {active: true, text: "Penn and Teller."}
-		# {active: true, text: "Indentured servants."}
-		# {active: true, text: "Sex in your mouth."}
-		# {active: true, text: "Hoola hoops."}
-		# {active: true, text: "Literally drinking bottled fangirl tears."}
-		# {active: true, text: "LordKaT's used nipple tassles."}
-		# {active: true, text: "Luke's curly hair."}
-		# {active: true, text: "Lupa's brand of hair dye."}
-		# {active: true, text: "Ma-Ti being castrated and having his balls shipped to Oancitizen in the mail by Diamanda Hagan."}
-		# {active: true, text: "Magical fairy sex."}
-		# {active: true, text: "Making angry love to a DVD copy of 'Neverending Story III'."}
-		# {active: true, text: "Mako."}
-		# {active: true, text: "Malachite's Hand."}
-		# {active: true, text: "Maven's secret sparkling vampire dildo."}
-		# {active: true, text: "Melvin, brother of the Joker."}
-		# {active: true, text: "My mom."}
-		# {active: true, text: "My penis catching fire."}
-		# {active: true, text: "Naked crazy."}
-		# {active: true, text: "Nash breaking his ass."}
-		# {active: true, text: "Nash dressed in drag."}
-		# {active: true, text: "Nash in a gimp suit."}
-		# {active: true, text: "Nash popping a blood vessel over Florida."}
-		# {active: true, text: "Nash."}
-		# {active: true, text: "Nash's long, long hair."}
-		# {active: true, text: "Newborn porn."}
-		# {active: true, text: "Nun fuckery."}
-		# {active: true, text: "Oancitizen."}
-		# {active: true, text: "Over-intrusive fanboys."}
-		# {active: true, text: "Having sex at a screening of Mr. Popper's Penguins."}
-		# {active: true, text: "Phelous making love to his Turtles collection."}
-		# {active: true, text: "Poop, as a plan."}
-		# {active: true, text: "Punching your foe in the stomach and screaming 'I AM A MAN!'"}
-		# {active: true, text: "PushingUpRoses' bird tattoos."}
-		# {active: true, text: "Putting sexy pantyhose on your dog."}
-		# {active: true, text: "Radio Dead Air."}
-		# {active: true, text: "Non-consensual sex with Zaush."}
-		# {active: true, text: "Reading fan fiction on a live stream."}
-		# {active: true, text: "Reading the comments."}
-		# {active: true, text: "Reviewer dibs."}
-		# {active: true, text: "Robotic sex slaves that are made to feel sadness."}
-		# {active: true, text: "Rule 34 of Linkara and a lamp."}
-		# {active: true, text: "Sad Panda."}
-		# {active: true, text: "Santa Christ."}
-		# {active: true, text: "Santa Christ's raging boner."}
-		# {active: true, text: "My tailhole."}
-		# {active: true, text: "Sharkleberry Finn-flavored Kool-Aid."}
-		# {active: true, text: "Shooting colored corn syrup up your nose."}
-		# {active: true, text: "Slightly creepy comments about Tara's hair."}
-		# {active: true, text: "Smoking kittens."}
-		# {active: true, text: "Snowdicking."}
-		# {active: true, text: "Snowflame, feeling no pain."}
-		# {active: true, text: "Sodomizing a loved one with a baseball bat."}
-		# {active: true, text: "Space Guy."}
-		# {active: true, text: "Spoony's fans."}
-		# {active: true, text: "Spoony's sexy goth pixie girlfriend."}
-		# {active: true, text: "Stick figure porn."}
-		# {active: true, text: "Stickboy."}
-		# {active: true, text: "Storing your dead friend's ashes into a Quaker Oats can."}
-		# {active: true, text: "Suggestively eating a banana at the sight of David Bowie."}
-		# {active: true, text: "SYMBOLISM!"}
-		# {active: true, text: "Taking someone by the shoulders, throwing them on the bed and riding them like a stallion."}
-		# {active: true, text: "That Aussie Guy."}
-		# {active: true, text: "That goddamned Colossus roar."}
-		# {active: true, text: "That one guy with snails."}
-		# {active: true, text: "The Angry Video Game Nerd."}
-		# {active: true, text: "The Blockbuster Buster."}
-		# {active: true, text: "The Cinema Snob Movie DVD."}
-		# {active: true, text: "THE COCK."}
-		# {active: true, text: "The Continuity Alarm."}
-		# {active: true, text: "The elephant in the room."}
-		# {active: true, text: "The Film Renegado."}
-		# {active: true, text: "The five months when the Nostalgia Critic was dead."}
-		# {active: true, text: "The LAAAAAAAAAAAAAAAAAAAAAW!"}
-		# {active: true, text: "The Makeover Fairy."}
-		# {active: true, text: "The Nostalgia Critic."}
-		# {active: true, text: "The pig fucking movie."}
-		# {active: true, text: "The plot hole."}
-		# {active: true, text: "The Power Glove."}
-		# {active: true, text: "The RDA drinking game."}
-		# {active: true, text: "The RDA IRC channel."}
-		# {active: true, text: "The Spocker."}
-		# {active: true, text: "The TGWTG site redesign."}
-		# {active: true, text: "The Wunder Boner."}
-		# {active: true, text: "This fecal matter you call 'Fluttershy'."}
-		# {active: true, text: "Throwing a Baby Tumbles Surprise down a staircase."}
-		# {active: true, text: "Time travel."}
-		# {active: true, text: "Timing."}
-		# {active: true, text: "Todd's unmasked visage."}
-		# {active: true, text: "Using Crystal Pepsi as a substitute for lube."}
-		# {active: true, text: "Using your underwear to shoplift raw meat from your local Wal-Mart."}
-		# {active: true, text: "Vigorously shagging your sister while holding a mug of warm tea."}
-		# {active: true, text: "Welshy."}
-		# {active: true, text: "Whatever the hell Barfiesta was supposed to be."}
-		# {active: true, text: "Yet another Thunderdome reference."}
-		# {active: true, text: "Your mom."}
-		# {active: true, text: "Zodan The Unbouncable."}
-		# {active: true, text: "90's Kid's comic collection."}
-		# {active: true, text: "A Linkara cameo."}
-		# {active: true, text: "A plushie cybermat."}
-		# {active: true, text: "ALL THE COCAINE!!!"}
-		# {active: true, text: "Bees!"}
-		# {active: true, text: "Being fed up with reviewing lamps, what obscure topic did Linkara review next?"}
-		# {active: true, text: "Harvey Finevoice's fine voice."}
-		# {active: true, text: "Killing clowns."}
-		# {active: true, text: "Linkara crying in his Gatorade made of cybermat tears."}
-		# {active: true, text: "Linkara stalking Gail Simone on Twitter."}
-		# {active: true, text: "Linkara's cybermat invasion force."}
-		# {active: true, text: "Linkara's fangirl support group."}
-		# {active: true, text: "Linkara's magic gun."}
-		# {active: true, text: "Linkara's masculine arms."}
-		# {active: true, text: "MAGfest."}
-		# {active: true, text: "Marzkara fanfiction."}
-		# {active: true, text: "Mechakara's phallic drill."}
-		# {active: true, text: "Reviews of $20 lamps."}
-		# {active: true, text: "What did the commenters bitch about next to Doug?"}
-		# {active: true, text: "A diet consisting almost entirely of potatoes."}
-		# {active: true, text: "A baseball to the nuts."}
-		# {active: true, text: "A bat credit card."}
-		# {active: true, text: "A Big Lipped Alligator Moment."}
-		# {active: true, text: "A big long pink ding dong penis."}
-		# {active: true, text: "A bird fucking a horse."}
-		# {active: true, text: "A Blip check."}
-		# {active: true, text: "A bootleg ninja turtle action figure possessed by Satan."}
-		# {active: true, text: "A car landing on a roof."}
-		# {active: true, text: "A case of disappearing bears."}
-		# {active: true, text: "A Chia-Child."}
-		# {active: true, text: "A congregation of bums."}
-		# {active: true, text: "A Crystal Pepsi&reg;-flavored enema."}
-		# {active: true, text: "Adoptables with visible genitalia."}
-		# {active: true, text: "An embarrassingly long F-List profile."}
-		# {active: true, text: "A drugged Oancitizen in a schoolgirl outfit."}
-		# {active: true, text: "A greased-up meth guy."}
-		# {active: true, text: "Catching STDs at conventions."}
-		# {active: true, text: "A killer rabbit."}
-		# {active: true, text: "A mexican car wash."}
-		# {active: true, text: "A misguided Tumblr activism campaign."}
-		# {active: true, text: "A mobile meth lab in your pants."}
-		# {active: true, text: "Fursuit adventures."}
-		# {active: true, text: "A novelty slot machine."}
-		# {active: true, text: "A Pan-Galactic Gargle Blaster."}
-		# {active: true, text: "A poorly-written ugly mess."}
-		# {active: true, text: "A really pimped out DeLorean."}
-		# {active: true, text: "A talking snail in a suit."}
-		# {active: true, text: "A tiny white dick."}
-		# {active: true, text: "A titanic, undead, six-headed space dragon spewing bubbles."}
-		# {active: true, text: "A zombie fisherman."}
-		# {active: true, text: "Accidentally punching your cohost in the face."}
-		# {active: true, text: "ALL OF THE DICKS."}
-		# {active: true, text: "Almost dying at Sesame Street."}
-		# {active: true, text: "An art film Kyle's reviewed."}
-		# {active: true, text: "An autoclitorodectomy."}
-		# {active: true, text: "A semen-stained fursuit."}
-		# {active: true, text: "An obscure reference only two people will get."}
-		# {active: true, text: "Anal tearing."}
-		# {active: true, text: "Andrew Dickman."}
-		# {active: true, text: "Angrily playing piano."}
-		# {active: true, text: "Ash."}
-		# {active: true, text: "Ash and Checkers."}
-		# {active: true, text: "Ask That Guy raped by Ma-Ti live."}
-		# {active: true, text: "ASS ASS ASS ASS ASS ASS ASS ASS."}
-		# {active: true, text: "Ass demons."}
-		# {active: true, text: "Awkward pity sex with a sparkly teenage Cthulu."}
-		# {active: true, text: "Fake furry girls."}
-		# {active: true, text: "Because no one wants to see your dick."}
-		# {active: true, text: "Because the Kool-Aid Man is red."}
-		# {active: true, text: "Because there's nothing sexy at the Wal-Mart."}
-		# {active: true, text: "Bees. My God."}
-		# {active: true, text: "Being frozen today."}
-		# {active: true, text: "Beppo the Invisible Monkey."}
-		# {active: true, text: "BETRAYAL!"}
-		# {active: true, text: "Big Jim Slade."}
-		# {active: true, text: "Blockbuster Buster busting a nut."}
-		# {active: true, text: "Breaking someone's spine by fucking."}
-		# {active: true, text: "Carl Copenhagen."}
-		# {active: true, text: "Casper."}
-		# {active: true, text: "Chuck Norris."}
-		# {active: true, text: "Confusing The Last Angry Geek and Linkara."}
-		# {active: true, text: "CR's collection of My Little Pony pins."}
-		# {active: true, text: "Creepy fans at cons buying expensive stuff for MarzGurl."}
-		# {active: true, text: "Creepy guys in the RDA chat hitting on Tara."}
-		# {active: true, text: "Nash's creepy face."}
-		# {active: true, text: "Crying your eyes out at a bunch of online reviewers."}
-		# {active: true, text: "Crystal Pepsi&reg;."}
-		# {active: true, text: "Dark Nella."}
-		# {active: true, text: "David Bowie's package."}
-		# {active: true, text: "That one straight guy at the party."}
-		# {active: true, text: "Diamanda Hagan's sexbot."}
-		# {active: true, text: "Diamanda's copy of Cockhammer."}
-		# {active: true, text: "Disney's Anne Frank."}
-		# {active: true, text: "Dogs wearing pantyhose."}
-		# {active: true, text: "Dolphin rape."}
-		# {active: true, text: "A douchequake."}
-		# {active: true, text: "Dr. Insano."}
-		# {active: true, text: "Dr. Wiki."}
-		# {active: true, text: "Explosively masturbating with Malachite's Hand."}
-		# {active: true, text: "Ferdinand Von Turrell."}
-		# {active: true, text: "Film Brain's lovely accent."}
-		# {active: true, text: "Firing a blue shell at the opposing house ship."}
-		# {active: true, text: "Florida."}
-		# {active: true, text: "Florida Man."}
-		# {active: true, text: "Flying sex snakes in monocles and bow ties."}
-		# {active: true, text: "Fort Super-Awesome."}
-		# {active: true, text: "FOUR HOURS?!"}
-		# {active: true, text: "An apartment full of internet-obsessed losers."}
-		# {active: true, text: "Fuck yeah, SPARKLE SPARKLE SPARKLE!"}
-		# {active: true, text: "Fuck you, I do what I want."}
-		# {active: true, text: "FUCK YOU, I'M SPIDERMAN!"}
-		# {active: true, text: "Fucking bubbles."}
-		# {active: true, text: "Getting buggered by a giant hamster."}
-		# {active: true, text: "Getting mauled by a mountain lion AND a grizzly bear at the same time."}
-		# {active: true, text: "Glenn Beck being torn apart by zombies."}
-		# {active: true, text: "Going full retard."}
-		# {active: true, text: "Going through the effort to build a wall in your back yard just to bash your head into it over and over again."}
-		# {active: true, text: "Gooby."}
-		# {active: true, text: "Hagan's dictator tendencies."}
-		# {active: true, text: "Hagan's make up artist."}
-		# {active: true, text: "Hagan's masturbating minion."}
-		# {active: true, text: "Ham?"}
-		# {active: true, text: "Hippo Queen Tara."}
-		# {active: true, text: "Hitler without the mustache."}
-		# {active: true, text: "Mamoru Oshii's dog love."}
-		# {active: true, text: "Humping a can of trash."}
-		# {active: true, text: "I AM A MAN!"}
-		# {active: true, text: "Invading a micronation in Nevada and making it your own."}
-		# {active: true, text: "JewWario's solar penis."}
-		# {active: true, text: "Kickassia."}
-		# {active: true, text: "Kitler."}
-		# {active: true, text: "Kyle humping a trashcan."}
-		# {active: true, text: "Linkara's 'special' comic books."}
-		# {active: true, text: "Linkara's hat."}
-		# {active: true, text: "Superboy Prime."}
-		# {active: true, text: "The Entity."}
-		# {active: true, text: "The legendary MAGFest orgy."}
-		# {active: true, text: "The most important job, reviewing a crappy comic book."}
-		# {active: true, text: "The next History of Power Rangers."}
-		# {active: true, text: "Youngblood's disease."}
-		# {active: true, text: "Twin clones of Hitler."}
-		# {active: true, text: "Thundercunt."}
-		# {active: true, text: "A disembodied orgasm hippo."}
-		# {active: true, text: "A doppelganger in black leather with a sword."}
-		# {active: true, text: "A guest appearance by Giovanni Jones, the talking lobster."}
-		# {active: true, text: "A naked rampage."}
-		# {active: true, text: "An awkward slash fic between The Nostalgia Critic and The Angry Video Game Nerd."}
-		# {active: true, text: "Bath salts."}
-		# {active: true, text: "Diamanda Hagan."}
-		# {active: true, text: "Frying the Coke."}
-		# {active: true, text: "Rapidly pounding themselves in the face with a hammer."}
-		# {active: true, text: "Velcro&trade;."}
-		# {active: true, text: "Sci-Fi Guy's ponytail."}
-		# {active: true, text: "A beef swarm."}
-		# {active: true, text: "A butt pooping upwards an egg."}
-		# {active: true, text: "The League of Legends."}
-		# {active: true, text: "Advice from a wise, old black man."}
-		# {active: true, text: "The Devil himself."}
-		# {active: true, text: "The art of seduction."}
-		# {active: true, text: "Funky fresh rhymes."}
-		# {active: true, text: "The light of a billion suns."}
-		# {active: true, text: "A tub of Vaseline."}
-		# {active: true, text: "Destroying the evidence."}
-		# {active: true, text: "Sex with strangers."}
-		# {active: true, text: "Silence."}
-		# {active: true, text: "Growing a pair."}
-		# {active: true, text: "Synergistic management solutions."}
-		# {active: true, text: "Wet dreams."}
-		# {active: true, text: "A live studio audience."}
-		# {active: true, text: "The Great Depression."}
-		# {active: true, text: "An M16 assault rifle."}
-		# {active: true, text: "Poopy diapers."}
-		# {active: true, text: "Tickling Sean Hannity, even after he tells you to stop."}
-		# {active: true, text: "Stalin."}
-		# {active: true, text: "A spastic nerd."}
-		# {active: true, text: "Rush Limbaugh's soft, shitty body."}
-		# {active: true, text: "Capturing Newt Gingrich and forcing him to dance in a monkey suit."}
-		# {active: true, text: "Battlefield amputations."}
-		# {active: true, text: "Brown people."}
-		# {active: true, text: "Rehab."}
-		# {active: true, text: "An ugly face."}
-		# {active: true, text: "Menstrual rage."}
-		# {active: true, text: "An uppercut."}
-		# {active: true, text: "Shiny objects."}
-		# {active: true, text: "50,000 volts straight to the nipples."}
-		# {active: true, text: "A bucket of fish heads."}
-		# {active: true, text: "Hospice care."}
-		# {active: true, text: "Being fat and stupid."}
-		# {active: true, text: "Getting married, having a few kids, buying some stuff, retiring to Florida, and dying."}
-		# {active: true, text: "A pyramid of severed heads."}
-		# {active: true, text: "Crucifixion."}
-		# {active: true, text: "A subscription to Men's Fitness."}
-		# {active: true, text: "Some god-damn peace and quiet."}
-		# {active: true, text: "A micropig wearing a tiny raincoat and booties."}
-		# {active: true, text: "Used panties."}
-		# {active: true, text: "The penny whistle solo from 'My Heart Will Go On'."}
-		# {active: true, text: "A tribe of warrior women."}
-		# {active: true, text: "An oversized lollipop."}
-		# {active: true, text: "Helplessly giggling at the mention of Hutus and Tutsis."}
-		# {active: true, text: "Not wearing pants."}
-		# {active: true, text: "Consensual sex."}
-		# {active: true, text: "Her Majesty, Queen Elizabeth II."}
-		# {active: true, text: "Angry Joe."}
-		# {active: true, text: "Marzgurl."}
-		# {active: true, text: "Chester A. Bum."}
-		# {active: true, text: "Ask That Guy With The Glasses."}
-		# {active: true, text: "Dominic the Bartender."}
-		# {active: true, text: "Obscurus Lupa."}
-		# {active: true, text: "ChaosD1."}
-		# {active: true, text: "Skitch."}
-		# {active: true, text: "Y Ruler Of Time."}
-		# {active: true, text: "Linkara."}
-		# {active: true, text: "Mechakara."}
-		# {active: true, text: "Lord Vyce."}
-		# {active: true, text: "90's Kid."}
-		# {active: true, text: "Corporate Commander."}
-		# {active: true, text: "JewWario."}
-		# {active: true, text: "A demonic Teddy Ruxpin doll."}
-		# {active: true, text: "Luke."}
-		# {active: true, text: "Luke's inners."}
-		# {active: true, text: "PhelousD1."}
-		# {active: true, text: "Phelous."}
-		# {active: true, text: "Filmbrain."}
-		# {active: true, text: "Iron Liz."}
-		# {active: true, text: "Malachite."}
-		# {active: true, text: "Zodd."}
-		# {active: true, text: "The Executor."}
-		# {active: true, text: "PhilBuni."}
-		# {active: true, text: "Ven Gethenian."}
-		# {active: true, text: "That Sci-Fi Guy."}
-		# {active: true, text: "Black Lantern Spoony."}
-		# {active: true, text: "The Trousers Cosmic."}
-		# {active: true, text: "Nash's folksy, velvety voice."}
-		# {active: true, text: "Australia, Florida of the Pacific."}
-		# {active: true, text: "Angrily eating lettuce."}
-		# {active: true, text: "Mary Sewage."}
-		# {active: true, text: "A legion of mechawolves."}
-		# {active: true, text: "Linkara's futon."}
-		# {active: true, text: "The Gooby Curse."}
-		# {active: true, text: "ANCIENT EGYPT!"}
-		# {active: true, text: "An obligatory cameo."}
-		# {active: true, text: "Dodger of Zion."}
-		# {active: true, text: "An elevator party."}
-		# {active: true, text: "Pants that need to be darkened."}
-		# {active: true, text: "Only being on the site because of the influence of famous acquaintences."}
-		# {active: true, text: "Enoby Dark'ness Dementia Raven TARA Way."}
-		# {active: true, text: "JSmith's salty nuts."}
-		# {active: true, text: "#ShotsFired."}
-		# {active: true, text: "Banana bread."}
-		# {active: true, text: "Butterjail."}
-		# {active: true, text: "People who cosplay at furry conventions."}
-		# {active: true, text: "Fursuiters at anime conventions."}
-		# {active: true, text: "Embarrassing craigslist ads."}
-		# {active: true, text: "Pounced.org."}
-		# {active: true, text: "A large, flared Chance."}
-		# {active: true, text: "Stretching your anus in preparation for horse cock."}
-		# {active: true, text: "A hermaphrodite foxtaur."}
-		# {active: true, text: "Babyfurs."}
-		# {active: true, text: "Uncomfortably attractive animals."}
-		# {active: true, text: "Confusing feelings about cartoon characters."}
-		# {active: true, text: "PetSmart."}
-		# {active: true, text: "Krystal, the fox."}
-		# {active: true, text: "StarFox."}
-		# {active: true, text: "Sonic the Hedgehog."}
-		# {active: true, text: "Bowser's sweaty balls."}
-		# {active: true, text: "A furpile."}
-		# {active: true, text: "The stench of half a dozen unwashed bronies."}
-		# {active: true, text: "Intimacy with the family dog."}
-		# {active: true, text: "Horses."}
-		# {active: true, text: "Fursecution."}
-		# {active: true, text: "Chakats."}
-		# {active: true, text: "DeviantArt."}
-		# {active: true, text: "Otherkin."}
-		# {active: true, text: "Heated debates about human genitalia versus animal genitalia."}
-		# {active: true, text: "Taking the knot."}
-		# {active: true, text: "Really, really liking Disney's Robin Hood."}
-		# {active: true, text: "Applying your obscure, unrealistic fetishes to 90's cartoon characters."}
-		# {active: true, text: "The texture and color of raw meat."}
-		# {active: true, text: "An oversized clitoris that acts as a functional penis."}
-		# {active: true, text: "A hermaphrodite snow leopard."}
-		# {active: true, text: "Drawing furry porn."}
-		# {active: true, text: "Lovingly rendered dragon anus."}
-		# {active: true, text: "Cloaca."}
-		# {active: true, text: "Animal genitalia."}
-		# {active: true, text: "Motherfucking wolves."}
-		# {active: true, text: "Christian furries."}
-		# {active: true, text: "Barbed penises."}
-		# {active: true, text: "Two knots."}
-		# {active: true, text: "A really attractive wolf."}
-		# {active: true, text: "A slutty gay fox."}
-		# {active: true, text: "A surprisingly attractive anteater."}
-		# {active: true, text: "FUCK YOU, I'M A DRAGON."}
-		# {active: true, text: "Tumbles, the Stair Dragon."}
-		# {active: true, text: "Furry Weekend Atlanta."}
-		# {active: true, text: "Further Confusion."}
-		# {active: true, text: "AnthroCon."}
-		# {active: true, text: "Literally a bucket of semen."}
-		# {active: true, text: "Sexual interest in pretty much anything with a hole."}
-		# {active: true, text: "Attraction to pretty much anything with a penis."}
-		# {active: true, text: "Transformation porn."}
-		# {active: true, text: "Anatomically incorrect genitalia."}
-		# {active: true, text: "When you catch yourself glancing at the crotches of animated characters."}
-		# {active: true, text: "Belly rubs leading to awkward boners."}
-		# {active: true, text: "Scritches."}
-		# {active: true, text: "Lifting your tail."}
-		# {active: true, text: "Experimenting with fisting."}
-		# {active: true, text: "Bad decisions."}
-		# {active: true, text: "A little bitch."}
-		# {active: true, text: "A lime Citra."}
-		# {active: true, text: "Sergals."}
-		# {active: true, text: "An autistic knife fight."}
-		# {active: true, text: "The noises red pandas make during sex."}
-		# {active: true, text: "About 16 ounces of horse semen."}
-		# {active: true, text: "Dog cum."}
-		# {active: true, text: "Oral knotting."}
-		# {active: true, text: "Leaving your orifices bloody and sore."}
-		# {active: true, text: "Rubbing peanut butter on your genitals."}
-		# {active: true, text: "Bad Dragon&trade; cumlube."}
-		# {active: true, text: "Piss."}
-		# {active: true, text: "Smells."}
-		# {active: true, text: "When 'blowing ten bucks' makes you think of a long night with a bunch of deer."}
-		# {active: true, text: "Forgetting which set of fursuit paws you use for handjobs."}
-		# {active: true, text: "A strategically placed hole."}
-		# {active: true, text: "Shitting on my face."}
-		# {active: true, text: "Barking at strangers."}
-		# {active: true, text: "Sitting on your face."}
-		# {active: true, text: "Spending more money on commissions than food in a given week."}
-		# {active: true, text: "A dick so big you have to give it a hugjob."}
-		# {active: true, text: "The fine line between feral and outright bestiality."}
-		# {active: true, text: "Anal training."}
-		# {active: true, text: "Discovering monster porn."}
-		# {active: true, text: "Realizing that rimming is pretty cool."}
-		# {active: true, text: "Endearing social ineptitude."}
-		# {active: true, text: "All this lube."}
-		# {active: true, text: "That thing that gives your dick a knot IRL."}
-		# {active: true, text: "Gay."}
-		# {active: true, text: "Really, truly heterosexual."}
-		# {active: true, text: "Drenching your fursuit in Febreeze."}
-		# {active: true, text: "That time you let your dog go a little further than just sniffing your crotch."}
-		# {active: true, text: "Poodles with afros."}
-		# {active: true, text: "Offensively stereotyped African animals."}
-		# {active: true, text: "A sassy lioness."}
-		# {active: true, text: "Surprise hermaphrodites."}
-		# {active: true, text: "Taking special interest in nature documentaries."}
-		# {active: true, text: "Becoming a veterinarian for all the wrong reasons."}
-		# {active: true, text: "The premise of every furry comic ever."}
-		# {active: true, text: "Anal sex you didn't know you wanted."}
-		# {active: true, text: "The incredibly satisfying sound it makes when you pull it out."}
-		# {active: true, text: "Bear tits."}
-		# {active: true, text: "Big cute paws."}
-		# {active: true, text: "Paws."}
-		# {active: true, text: "Furry porn, shamelessly taped to the walls."}
-		# {active: true, text: "Grabby-paws."}
-		# {active: true, text: "Masturbating, with claws."}
-		# {active: true, text: "Pawing-off."}
-		# {active: true, text: "Tail-sex."}
-		# {active: true, text: "Mary, the anthro mare."}
-		# {active: true, text: "Natascha, the anthro husky."}
-		# {active: true, text: "Nipple buffet."}
-		# {active: true, text: "Crotch-tits."}
-		# {active: true, text: "The tailstar tango."}
-		# {active: true, text: "Furries in heat."}
-		# {active: true, text: "Fantasizing about sex with just about every monster you encounter in your video game."}
-		# {active: true, text: "Impure thoughts about Kobolds."}
-		# {active: true, text: "Erotic roleplay."}
-		# {active: true, text: "Monsters with bedroom eyes."}
-		# {active: true, text: "Accurate avian anatomy."}
-		# {active: true, text: "Getting fur stuck in your teeth."}
-		# {active: true, text: "Getting feathers stuck in your teeth."}
-		# {active: true, text: "Ignoring a person's faults because their character is hot."}
-		# {active: true, text: "A legion of spiders."}
-		# {active: true, text: "A secret goat porn stash."}
-		# {active: true, text: "An 8 million yen debt to a club of rich pretty boys."}
-		# {active: true, text: "Hideaki Anno's poor, tortured therapist."}
-		# {active: true, text: "Golby."}
-		# {active: true, text: "Fucking postcards as a cheap-ass pack-in gift."}
-		# {active: true, text: "Wild Tiger's Hundred Power."}
-		# {active: true, text: "Totoro."}
-		# {active: true, text: "Traps."}
-		# {active: true, text: "Korean Jesus."}
-		# {active: true, text: "Astro Boy."}
-		# {active: true, text: "Jacking off into a bottle of formaldehyde and calling it our firstborn."}
-		# {active: true, text: "Valvrape the Dominator."}
-		# {active: true, text: "Piles of dead children."}
-		# {active: true, text: "An unending, unquenchable thirst for orange Fanta."}
-		# {active: true, text: "Breaking the fourth wall to kill the mangaka."}
-		# {active: true, text: "Hentai voice acting."}
-		# {active: true, text: "A vampire ninja."}
-		# {active: true, text: "A potato committing seppuku."}
-		# {active: true, text: "A giant robot German suplex."}
-		# {active: true, text: "Benchpressing."}
-		# {active: true, text: "Mother's debit card."}
-		# {active: true, text: "Kevin Golby."}
-		# {active: true, text: "That Kevin Golby."}
-		# {active: true, text: "The Golbies: like the jitters but with a concern towards stabbings."}
+		{active: true, text: "Fruit Fuckers."}
+		{active: true, text: "Blowing your hand off with a firework."}
+		{active: true, text: "Beer Pong."}
+		{active: true, text: "Duke Nukem Forever."}
+		{active: true, text: "Rule 34."}
+		{active: true, text: "Made-for-TV movies."}
+		{active: true, text: "Spanish soap operas."}
+		{active: true, text: "Teh Urn."}
+		{active: true, text: "Viking Metal."}
+		{active: true, text: "Tickle Me Elmo."}
+		{active: true, text: "Barney's rape dungeon."}
+		{active: true, text: "Nurse Joy."}
+		{active: true, text: "Canadian tuxedo."}
+		{active: true, text: "Hungry Hungry Hippos."}
+		{active: true, text: "The smallest, whitest dick."}
+		{active: true, text: "Abusive fathers."}
+		{active: true, text: "Ringworm."}
+		{active: true, text: "The hero of time."}
+		{active: true, text: "Terabytes of horse porn."}
+		{active: true, text: "Blowing the President."}
+		{active: true, text: "Skullcrusher Mountain."}
+		{active: true, text: "Mr. Fancy Pants."}
+		{active: true, text: "A walrus with a beret."}
+		{active: true, text: "Speedrunning life."}
+		{active: true, text: "The truffle shuffle."}
+		{active: true, text: "An 8-ball."}
+		{active: true, text: "Bong hits for Jesus."}
+		{active: true, text: "Indentured servants."}
+		{active: true, text: "Sex in your mouth."}
+		{active: true, text: "Hoola hoops."}
+		{active: true, text: "Literally drinking bottled fangirl tears."}
+		{active: true, text: "Magical fairy sex."}
+		{active: true, text: "Making angry love to a DVD copy of 'Neverending Story III'."}
+		{active: true, text: "A sparkling vampire dildo."}
+		{active: true, text: "My mom."}
+		{active: true, text: "My penis catching fire."}
+		{active: true, text: "Naked crazy."}
+		{active: true, text: "Newborn porn."}
+		{active: true, text: "Nun fuckery."}
+		{active: true, text: "Over-intrusive fanboys."}
+		{active: true, text: "Poop, as a plan."}
+		{active: true, text: "Punching your foe in the stomach and screaming 'I AM A MAN!'"}
+		{active: true, text: "Putting sexy pantyhose on your dog."}
+		{active: true, text: "Radio Dead Air."}
+		{active: true, text: "Reading fan fiction on a live stream."}
+		{active: true, text: "Reading the comments."}
+		{active: true, text: "Reviewer dibs."}
+		{active: true, text: "Robotic sex slaves that are made to feel sadness."}
+		{active: true, text: "Sad Panda."}
+		{active: true, text: "Santa Christ."}
+		{active: true, text: "Santa Christ's raging boner."}
+		{active: true, text: "My tailhole."}
+		{active: true, text: "Shooting colored corn syrup up your nose."}
+		{active: true, text: "Smoking kittens."}
+		{active: true, text: "Snowdicking."}
+		{active: true, text: "Snowflame, feeling no pain."}
+		{active: true, text: "Sodomizing a loved one with a baseball bat."}
+		{active: true, text: "Space Guy."}
+		{active: true, text: "Stick figure porn."}
+		{active: true, text: "Stickboy."}
+		{active: true, text: "Suggestively eating a banana."}
+		{active: true, text: "SYMBOLISM!"}
+		{active: true, text: "Taking someone by the shoulders, throwing them on the bed and riding them like a stallion."}
+		{active: true, text: "That Aussie Guy."}
+		{active: true, text: "That one guy with snails."}
+		{active: true, text: "The Angry Video Game Nerd."}
+		{active: true, text: "The Blockbuster Buster."}
+		{active: true, text: "THE COCK."}
+		{active: true, text: "The Continuity Alarm."}
+		{active: true, text: "The elephant in the room."}
+		{active: true, text: "The five months when the Nostalgia Critic was dead."}
+		{active: true, text: "The LAAAAAAAAAAAAAAAAAAAAAW!"}
+		{active: true, text: "The Makeover Fairy."}
+		{active: true, text: "The Nostalgia Critic."}
+		{active: true, text: "The pig fucking movie."}
+		{active: true, text: "The plot hole."}
+		{active: true, text: "The Power Glove."}
+		{active: true, text: "The Wunder Boner."}
+		{active: true, text: "Time travel."}
+		{active: true, text: "Timing."}
+		{active: true, text: "Using Crystal Pepsi as a substitute for lube."}
+		{active: true, text: "Using your underwear to shoplift raw meat from your local Wal-Mart."}
+		{active: true, text: "Vigorously shagging your sister while holding a mug of warm tea."}
+		{active: true, text: "Your mom."}
+		{active: true, text: "90's Kid's comic collection."}
+		{active: true, text: "A plushie cybermat."}
+		{active: true, text: "ALL THE COCAINE!!!"}
+		{active: true, text: "Bees!"}
+		{active: true, text: "Killing clowns."}
+		{active: true, text: "A phallic drill."}
+		{active: true, text: "Reviews of $20 lamps."}
+		{active: true, text: "A diet consisting almost entirely of potatoes."}
+		{active: true, text: "A baseball to the nuts."}
+		{active: true, text: "A bat credit card."}
+		{active: true, text: "A Big Lipped Alligator Moment."}
+		{active: true, text: "A big long pink ding dong penis."}
+		{active: true, text: "A bird fucking a horse."}
+		{active: true, text: "A Blip check."}
+		{active: true, text: "A bootleg ninja turtle action figure possessed by Satan."}
+		{active: true, text: "A car landing on a roof."}
+		{active: true, text: "A case of disappearing bears."}
+		{active: true, text: "A congregation of bums."}
+		{active: true, text: "A Crystal Pepsi&reg;-flavored enema."}
+		{active: true, text: "Adoptables with visible genitalia."}
+		{active: true, text: "An embarrassingly long F-List profile."}
+		{active: true, text: "A drugged Oancitizen in a schoolgirl outfit."}
+		{active: true, text: "A greased-up meth guy."}
+		{active: true, text: "Catching STDs at conventions."}
+		{active: true, text: "A killer rabbit."}
+		{active: true, text: "A mexican car wash."}
+		{active: true, text: "A misguided Tumblr activism campaign."}
+		{active: true, text: "A mobile meth lab in your pants."}
+		{active: true, text: "Fursuit adventures."}
+		{active: true, text: "A novelty slot machine."}
+		{active: true, text: "A Pan-Galactic Gargle Blaster."}
+		{active: true, text: "A poorly-written ugly mess."}
+		{active: true, text: "A really pimped out DeLorean."}
+		{active: true, text: "A talking snail in a suit."}
+		{active: true, text: "A tiny white dick."}
+		{active: true, text: "A titanic, undead, six-headed space dragon spewing bubbles."}
+		{active: true, text: "A zombie fisherman."}
+		{active: true, text: "Accidentally punching your cohost in the face."}
+		{active: true, text: "ALL OF THE DICKS."}
+		{active: true, text: "Almost dying at Sesame Street."}
+		{active: true, text: "An autoclitorodectomy."}
+		{active: true, text: "A semen-stained fursuit."}
+		{active: true, text: "An obscure reference only two people will get."}
+		{active: true, text: "Anal tearing."}
+		{active: true, text: "Angrily playing piano."}
+		{active: true, text: "Ash."}
+		{active: true, text: "Ash and Checkers."}
+		{active: true, text: "Ask That Guy raped on TV live."}
+		{active: true, text: "ASS ASS ASS ASS ASS ASS ASS ASS."}
+		{active: true, text: "Ass demons."}
+		{active: true, text: "Awkward pity sex with a sparkly teenage Cthulu."}
+		{active: true, text: "Fake furry girls."}
+		{active: true, text: "Because no one wants to see your dick."}
+		{active: true, text: "Because the Kool-Aid Man is red."}
+		{active: true, text: "Because there's nothing sexy at the Wal-Mart."}
+		{active: true, text: "Bees. My God."}
+		{active: true, text: "Being frozen today."}
+		{active: true, text: "Beppo the Invisible Monkey."}
+		{active: true, text: "BETRAYAL!"}
+		{active: true, text: "Blockbuster Buster busting a nut."}
+		{active: true, text: "Breaking someone's spine by fucking."}
+		{active: true, text: "Chuck Norris."}
+		{active: true, text: "CR's collection of My Little Pony pins."}
+		{active: true, text: "Crying your eyes out at a bunch of online reviewers."}
+		{active: true, text: "That one straight guy at the party."}
+		{active: true, text: "Disney's Anne Frank."}
+		{active: true, text: "Dogs wearing pantyhose."}
+		{active: true, text: "Dolphin rape."}
+		{active: true, text: "A douchequake."}
+		{active: true, text: "Dr. Insano."}
+		{active: true, text: "Dr. Wiki."}
+		{active: true, text: "Explosively masturbating."}
+		{active: true, text: "Firing a blue shell at the opposing house ship."}
+		{active: true, text: "Florida."}
+		{active: true, text: "Florida Man."}
+		{active: true, text: "Flying sex snakes in monocles and bow ties."}
+		{active: true, text: "Fort Super-Awesome."}
+		{active: true, text: "FOUR HOURS?!"}
+		{active: true, text: "An apartment full of internet-obsessed losers."}
+		{active: true, text: "Fuck yeah, SPARKLE SPARKLE SPARKLE!"}
+		{active: true, text: "Fuck you, I do what I want."}
+		{active: true, text: "FUCK YOU, I'M SPIDERMAN!"}
+		{active: true, text: "Fucking bubbles."}
+		{active: true, text: "Getting buggered by a giant hamster."}
+		{active: true, text: "Getting mauled by a mountain lion AND a grizzly bear at the same time."}
+		{active: true, text: "Going full retard."}
+		{active: true, text: "Going through the effort to build a wall in your back yard just to bash your head into it over and over again."}
+		{active: true, text: "Gooby."}
+		{active: true, text: "Ham?"}
+		{active: true, text: "The Hippo Queen."}
+		{active: true, text: "Hitler without the mustache."}
+		{active: true, text: "Humping a can of trash."}
+		{active: true, text: "I AM A MAN!"}
+		{active: true, text: "Invading a micronation in Nevada and making it your own."}
+		{active: true, text: "JewWario's solar penis."}
+		{active: true, text: "Kickassia."}
+		{active: true, text: "Kitler."}
+		{active: true, text: "Superboy Prime."}
+		{active: true, text: "The Entity."}
+		{active: true, text: "The legendary MAGFest orgy."}
+		{active: true, text: "The most important job, reviewing a crappy comic book."}
+		{active: true, text: "The next History of Power Rangers."}
+		{active: true, text: "Youngblood's disease."}
+		{active: true, text: "Twin clones of Hitler."}
+		{active: true, text: "Thundercunt."}
+		{active: true, text: "A disembodied orgasm hippo."}
+		{active: true, text: "A doppelganger in black leather with a sword."}
+		{active: true, text: "A guest appearance by Giovanni Jones, the talking lobster."}
+		{active: true, text: "A naked rampage."}
+		{active: true, text: "An awkward slash fic between The Nostalgia Critic and The Angry Video Game Nerd."}
+		{active: true, text: "Bath salts."}
+		{active: true, text: "Frying the Coke."}
+		{active: true, text: "Rapidly pounding themselves in the face with a hammer."}
+		{active: true, text: "Sci-Fi Guy's ponytail."}
+		{active: true, text: "A beef swarm."}
+		{active: true, text: "A butt pooping upwards an egg."}
+		{active: true, text: "The League of Legends."}
+		{active: true, text: "Advice from a wise, old black man."}
+		{active: true, text: "The Devil himself."}
+		{active: true, text: "The art of seduction."}
+		{active: true, text: "Funky fresh rhymes."}
+		{active: true, text: "The light of a billion suns."}
+		{active: true, text: "A tub of Vaseline."}
+		{active: true, text: "Destroying the evidence."}
+		{active: true, text: "Sex with strangers."}
+		{active: true, text: "Silence."}
+		{active: true, text: "Growing a pair."}
+		{active: true, text: "Synergistic management solutions."}
+		{active: true, text: "Wet dreams."}
+		{active: true, text: "A live studio audience."}
+		{active: true, text: "The Great Depression."}
+		{active: true, text: "An M16 assault rifle."}
+		{active: true, text: "Poopy diapers."}
+		{active: true, text: "Stalin."}
+		{active: true, text: "A spastic nerd."}
+		{active: true, text: "Capturing Newt Gingrich and forcing him to dance in a monkey suit."}
+		{active: true, text: "Battlefield amputations."}
+		{active: true, text: "Brown people."}
+		{active: true, text: "Rehab."}
+		{active: true, text: "An ugly face."}
+		{active: true, text: "Menstrual rage."}
+		{active: true, text: "An uppercut."}
+		{active: true, text: "Shiny objects."}
+		{active: true, text: "50,000 volts straight to the nipples."}
+		{active: true, text: "A bucket of fish heads."}
+		{active: true, text: "Hospice care."}
+		{active: true, text: "Being fat and stupid."}
+		{active: true, text: "Getting married, having a few kids, buying some stuff, retiring to Florida, and dying."}
+		{active: true, text: "A pyramid of severed heads."}
+		{active: true, text: "Crucifixion."}
+		{active: true, text: "A subscription to Men's Fitness."}
+		{active: true, text: "Some god-damn peace and quiet."}
+		{active: true, text: "A micropig wearing a tiny raincoat and booties."}
+		{active: true, text: "Used panties."}
+		{active: true, text: "The penny whistle solo from 'My Heart Will Go On'."}
+		{active: true, text: "A tribe of warrior women."}
+		{active: true, text: "An oversized lollipop."}
+		{active: true, text: "Helplessly giggling at the mention of Hutus and Tutsis."}
+		{active: true, text: "Not wearing pants."}
+		{active: true, text: "Consensual sex."}
+		{active: true, text: "Her Majesty, Queen Elizabeth II."}
+		{active: true, text: "Angry Joe."}
+		{active: true, text: "Chester A. Bum."}
+		{active: true, text: "Ask That Guy With The Glasses."}
+		{active: true, text: "Dominic the Bartender."}
+		{active: true, text: "Skitch."}
+		{active: true, text: "Y Ruler Of Time."}
+		{active: true, text: "90's Kid."}
+		{active: true, text: "Corporate Commander."}
+		{active: true, text: "A demonic Teddy Ruxpin doll."}
+		{active: true, text: "Filmbrain."}
+		{active: true, text: "Malachite."}
+		{active: true, text: "The Executor."}
+		{active: true, text: "That Sci-Fi Guy."}
+		{active: true, text: "Black Lantern Spoony."}
+		{active: true, text: "The Trousers Cosmic."}
+		{active: true, text: "Australia, Florida of the Pacific."}
+		{active: true, text: "Angrily eating lettuce."}
+		{active: true, text: "Mary Sewage."}
+		{active: true, text: "A legion of mechawolves."}
+		{active: true, text: "The Gooby Curse."}
+		{active: true, text: "ANCIENT EGYPT!"}
+		{active: true, text: "An obligatory cameo."}
+		{active: true, text: "An elevator party."}
+		{active: true, text: "Pants that need to be darkened."}
+		{active: true, text: "Only being on the site because of the influence of famous acquaintences."}
+		{active: true, text: "#ShotsFired."}
+		{active: true, text: "Banana bread."}
+		{active: true, text: "Butterjail."}
+		{active: true, text: "People who cosplay at furry conventions."}
+		{active: true, text: "Fursuiters at anime conventions."}
+		{active: true, text: "Embarrassing craigslist ads."}
+		{active: true, text: "Pounced.org."}
+		{active: true, text: "A large, flared Chance."}
+		{active: true, text: "Stretching your anus in preparation for horse cock."}
+		{active: true, text: "A hermaphrodite foxtaur."}
+		{active: true, text: "Babyfurs."}
+		{active: true, text: "Uncomfortably attractive animals."}
+		{active: true, text: "Confusing feelings about cartoon characters."}
+		{active: true, text: "PetSmart."}
+		{active: true, text: "Krystal, the fox."}
+		{active: true, text: "StarFox."}
+		{active: true, text: "Sonic the Hedgehog."}
+		{active: true, text: "Bowser's sweaty balls."}
+		{active: true, text: "A furpile."}
+		{active: true, text: "The stench of half a dozen unwashed bronies."}
+		{active: true, text: "Intimacy with the family dog."}
+		{active: true, text: "Horses."}
+		{active: true, text: "Fursecution."}
+		{active: true, text: "Chakats."}
+		{active: true, text: "DeviantArt."}
+		{active: true, text: "Otherkin."}
+		{active: true, text: "Heated debates about human genitalia versus animal genitalia."}
+		{active: true, text: "Taking the knot."}
+		{active: true, text: "Really, really liking Disney's Robin Hood."}
+		{active: true, text: "Applying your obscure, unrealistic fetishes to 90's cartoon characters."}
+		{active: true, text: "The texture and color of raw meat."}
+		{active: true, text: "An oversized clitoris that acts as a functional penis."}
+		{active: true, text: "A hermaphrodite snow leopard."}
+		{active: true, text: "Drawing furry porn."}
+		{active: true, text: "Lovingly rendered dragon anus."}
+		{active: true, text: "Cloaca."}
+		{active: true, text: "Animal genitalia."}
+		{active: true, text: "Motherfucking wolves."}
+		{active: true, text: "Christian furries."}
+		{active: true, text: "Barbed penises."}
+		{active: true, text: "Two knots."}
+		{active: true, text: "A really attractive wolf."}
+		{active: true, text: "A slutty gay fox."}
+		{active: true, text: "A surprisingly attractive anteater."}
+		{active: true, text: "FUCK YOU, I'M A DRAGON."}
+		{active: true, text: "Tumbles, the Stair Dragon."}
+		{active: true, text: "Furry Weekend Atlanta."}
+		{active: true, text: "Further Confusion."}
+		{active: true, text: "AnthroCon."}
+		{active: true, text: "Literally a bucket of semen."}
+		{active: true, text: "Sexual interest in pretty much anything with a hole."}
+		{active: true, text: "Attraction to pretty much anything with a penis."}
+		{active: true, text: "Transformation porn."}
+		{active: true, text: "Anatomically incorrect genitalia."}
+		{active: true, text: "When you catch yourself glancing at the crotches of animated characters."}
+		{active: true, text: "Belly rubs leading to awkward boners."}
+		{active: true, text: "Scritches."}
+		{active: true, text: "Lifting your tail."}
+		{active: true, text: "Experimenting with fisting."}
+		{active: true, text: "Bad decisions."}
+		{active: true, text: "A little bitch."}
+		{active: true, text: "A lime Citra."}
+		{active: true, text: "Sergals."}
+		{active: true, text: "An autistic knife fight."}
+		{active: true, text: "The noises red pandas make during sex."}
+		{active: true, text: "About 16 ounces of horse semen."}
+		{active: true, text: "Dog cum."}
+		{active: true, text: "Oral knotting."}
+		{active: true, text: "Leaving your orifices bloody and sore."}
+		{active: true, text: "Rubbing peanut butter on your genitals."}
+		{active: true, text: "Piss."}
+		{active: true, text: "Smells."}
+		{active: true, text: "When 'blowing ten bucks' makes you think of a long night with a bunch of deer."}
+		{active: true, text: "Forgetting which set of fursuit paws you use for handjobs."}
+		{active: true, text: "A strategically placed hole."}
+		{active: true, text: "Shitting on my face."}
+		{active: true, text: "Barking at strangers."}
+		{active: true, text: "Sitting on your face."}
+		{active: true, text: "Spending more money on commissions than food in a given week."}
+		{active: true, text: "A dick so big you have to give it a hugjob."}
+		{active: true, text: "The fine line between feral and outright bestiality."}
+		{active: true, text: "Anal training."}
+		{active: true, text: "Discovering monster porn."}
+		{active: true, text: "Realizing that rimming is pretty cool."}
+		{active: true, text: "Endearing social ineptitude."}
+		{active: true, text: "All this lube."}
+		{active: true, text: "That thing that gives your dick a knot IRL."}
+		{active: true, text: "Gay."}
+		{active: true, text: "Really, truly heterosexual."}
+		{active: true, text: "Drenching your fursuit in Febreeze."}
+		{active: true, text: "That time you let your dog go a little further than just sniffing your crotch."}
+		{active: true, text: "Poodles with afros."}
+		{active: true, text: "Offensively stereotyped African animals."}
+		{active: true, text: "A sassy lioness."}
+		{active: true, text: "Surprise hermaphrodites."}
+		{active: true, text: "Taking special interest in nature documentaries."}
+		{active: true, text: "Becoming a veterinarian for all the wrong reasons."}
+		{active: true, text: "The premise of every furry comic ever."}
+		{active: true, text: "Anal sex you didn't know you wanted."}
+		{active: true, text: "The incredibly satisfying sound it makes when you pull it out."}
+		{active: true, text: "Bear tits."}
+		{active: true, text: "Big cute paws."}
+		{active: true, text: "Paws."}
+		{active: true, text: "Furry porn, shamelessly taped to the walls."}
+		{active: true, text: "Grabby-paws."}
+		{active: true, text: "Masturbating, with claws."}
+		{active: true, text: "Pawing-off."}
+		{active: true, text: "Tail-sex."}
+		{active: true, text: "Nipple buffet."}
+		{active: true, text: "Crotch-tits."}
+		{active: true, text: "The tailstar tango."}
+		{active: true, text: "Furries in heat."}
+		{active: true, text: "Fantasizing about sex with just about every monster you encounter in your video game."}
+		{active: true, text: "Impure thoughts about Kobolds."}
+		{active: true, text: "Erotic roleplay."}
+		{active: true, text: "Monsters with bedroom eyes."}
+		{active: true, text: "Accurate avian anatomy."}
+		{active: true, text: "Getting fur stuck in your teeth."}
+		{active: true, text: "Getting feathers stuck in your teeth."}
+		{active: true, text: "Ignoring a person's faults because their character is hot."}
+		{active: true, text: "A legion of spiders."}
+		{active: true, text: "A secret goat porn stash."}
+		{active: true, text: "An 8 million yen debt to a club of rich pretty boys."}
+		{active: true, text: "Fucking postcards as a cheap-ass pack-in gift."}
+		{active: true, text: "Totoro."}
+		{active: true, text: "Traps."}
+		{active: true, text: "Korean Jesus."}
+		{active: true, text: "Astro Boy."}
+		{active: true, text: "Jacking off into a bottle of formaldehyde and calling it our firstborn."}
+		{active: true, text: "Valvrape the Dominator."}
+		{active: true, text: "Piles of dead children."}
+		{active: true, text: "An unending, unquenchable thirst for orange Fanta."}
+		{active: true, text: "Breaking the fourth wall to kill the mangaka."}
+		{active: true, text: "Hentai voice acting."}
+		{active: true, text: "A vampire ninja."}
+		{active: true, text: "A potato committing seppuku."}
+		{active: true, text: "A giant robot German suplex."}
+		{active: true, text: "Benchpressing."}
+		{active: true, text: "Mother's debit card."}
 		# {active: true, text: "STEAL ALL THE FARM."}
 		# {active: true, text: "Norwegian Oil."}
 		# {active: true, text: "Grandiosa."}
@@ -1540,9 +1426,6 @@ exports.cards = !->
 		# {active: true, text: "Lulu's double E."}
 		# {active: true, text: "A blurry picture."}
 		# {active: true, text: "The Merchant Navy."}
-		# {active: true, text: "Extensive research by Trygve."}
-		# {active: true, text: "The Trygvipedia."}
-		# {active: true, text: "Chak looking like Ross Kemp on a good day."}
 		# {active: true, text: "Manny's epic laugh."}
 		# {active: true, text: "Clearly jealous."}
 		# {active: true, text: "A very tight vest from Primark."}
@@ -1552,7 +1435,6 @@ exports.cards = !->
 		# {active: true, text: "smoochy moochy."}
 		# {active: true, text: "A Superman tattoo."}
 		# {active: true, text: "Gary Glitter."}
-		# {active: true, text: "Blanda Upp!."}
 		# {active: true, text: "Hestkuk."}
 		# {active: true, text: "A nice guy."}
 		# {active: true, text: "My 6.3 KDA ratio."}
@@ -1562,12 +1444,10 @@ exports.cards = !->
 		# {active: true, text: "Those moments when you're bored and pucker your anus to a good beat."}
 		# {active: true, text: "An undetermined but significant quantity of penis."}
 		# {active: true, text: "PEEEEEEEEEEEEEEEENIIIISSSSSSSS."}
-		# {active: true, text: "The Shawk."}
 		# {active: true, text: "They're taking the hobbits to Isengard!"}
 		# {active: true, text: "Confounding jerry at every turn."}
 		# {active: true, text: "Jumanji."}
 		# {active: true, text: "Wards."}
-		# {active: true, text: "Build an Aegis!"}
 		# {active: true, text: "Wildturtle's vast range of emotions."}
 		# {active: true, text: "K-Pop."}
 		# {active: true, text: "Doing Gangnam Style at a funeral."}
@@ -1576,7 +1456,6 @@ exports.cards = !->
 		# {active: true, text: "Barta not being sarcastic."}
 		# {active: true, text: "Golby's itchy testicles."}
 		# {active: true, text: "Surgery to move the male g-spot to the naval."}
-		# {active: true, text: "The Kirk vs Spock fight scene music."}
 		# {active: true, text: "Golby not jungling."}
 		# {active: true, text: "Feeling a fart pushing against your prostate."}
 		# {active: true, text: "I'm Batman. WHERE ARE THEY?!?"}
@@ -1587,24 +1466,17 @@ exports.cards = !->
 		# {active: true, text: "A corgi."}
 		# {active: true, text: "Chak's bald spot."}
 		# {active: true, text: "THE HAWK!"}
-		# {active: true, text: "When Aunt Erma visits."}
 		# {active: true, text: "Jamiroquai."}
 		# {active: true, text: "BAWNJOURNO."}
 		# {active: true, text: "Black people's nostrils."}
 		# {active: true, text: "LOOK AT MY HORSE."}
 		# {active: true, text: "MY HORSE IS AMAZING."}
 		# {active: true, text: "XPEKE!"}
-		# {active: true, text: "Because Froggen did it."}
-		# {active: true, text: "Meowing Ride of the Valkyries during intercourse."}
 		# {active: true, text: "CACAW!"}
 		# {active: true, text: "Dryhumping."}
-		# {active: true, text: "Gilbert Gotfried."}
 		# {active: true, text: "50 Shades of Gay."}
-		# {active: true, text: "Maple Bourbon Bacon Jam."}
 		# {active: true, text: "Chak making a sandwich."}
 		# {active: true, text: "Jealous."}
-		# {active: true, text: "Frozen Heart Ashe."}
-		# {active: true, text: "Yorick Ult on Anivia Egg."}
 		# {active: true, text: "David."}
 		# {active: true, text: "A healthy dose of Vitamin Cock and Vitamin Dick."}
 		# {active: true, text: "Questioning my sexuality."}
@@ -1617,9 +1489,7 @@ exports.cards = !->
 		# {active: true, text: "Pissing yourself."}
 		# {active: true, text: "GAO! GAI! GAR!!!"}
 		# {active: true, text: "Vocaloid death metal."}
-		# {active: true, text: "The Dark Lord Shawne Kleckner."}
 		# {active: true, text: "Yaoi paddles."}
-		# {active: true, text: "Bad Steven Foster dubs."}
 		# {active: true, text: "Mr. Satan."}
 		# {active: true, text: "An actual, honest-to-God black guy."}
 		# {active: true, text: "4,000 tacos, and one Diet Coke."}
@@ -1639,13 +1509,11 @@ exports.cards = !->
 		# {active: true, text: "I Can't Believe It's Not Butter."}
 		# {active: true, text: "A Wanksock."}
 		# {active: true, text: "An arsehole like a wellington top."}
-		# {active: true, text: "Emma Watson dressed as a crab dancing to K-Pop."}
 		# {active: true, text: "BORK."}
 		# {active: true, text: "Handicapped people on Takeshi's Castle."}
 		# {active: true, text: "The Chuckle Brothers at their mother's funeral."}
 		# {active: true, text: "A 3am phone call."}
 		# {active: true, text: "A cardboard cutout of Jennifer Lawrence."}
-		# {active: true, text: "Robert Pattinson with Freddy Mercury's moustache and Gilbert."}
 		# {active: true, text: "Gotfried's voice."}
 		# {active: true, text: "Ezreal's hot sugary ass."}
 		# {active: true, text: "A Canadian penny."}
@@ -1657,107 +1525,73 @@ exports.cards = !->
 		# {active: true, text: "Dead catgirls."}
 		# {active: true, text: "Aniplex of America."}
 		# {active: true, text: "Steve Motherfuckin' Blum."}
-		# {active: true, text: "Norio Wakamoto."}
 		# {active: true, text: "Tentacle rape."}
-		# {active: true, text: "Eating an entire box of Pocky in a single bite."}
 		# {active: true, text: "Lolis."}
 		# {active: true, text: "Hot-blooded shonen protagonists."}
-		# {active: true, text: "Crispin Freeman."}
 		# {active: true, text: "A fuck-mothering vampire."}
 		# {active: true, text: "A big-breasted 14-year-old wearing a bikini and sucking on a popsicle."}
 		# {active: true, text: "Henry Goto being savagely raped by a bear."}
 		# {active: true, text: "Yet another goddamn Goku vs. Superman argument."}
 		# {active: true, text: "FANSERVICE!!!"}
-		# {active: true, text: "Gen Fukunaga counting his money."}
 		# {active: true, text: "FUNimation."}
-		# {active: true, text: "Hatsune Miku."}
 		# {active: true, text: "Strangling hardcore otaku nerds with razor wire."}
-		# {active: true, text: "Aya Hirano being gang-banged by her entire band."}
+		# {active: true, text: "The female lead singer being gang-banged by her entire band."}
 		# {active: true, text: "Bukkake."}
 		# {active: true, text: "OVER 9000!!"}
-		# {active: true, text: "Little Kuriboh."}
 		# {active: true, text: "Bulma's panties."}
 		# {active: true, text: "Mami getting her head bitten off."}
-		# {active: true, text: "A Captain Harlock body pillow."}
 		# {active: true, text: "Onii-chan."}
 		# {active: true, text: "MAWNING LESCUE!!!"}
 		# {active: true, text: "Idiots who don't seem to realize that Avatar: The Last Airbender isn't really an anime."}
-		# {active: true, text: "Christopher R. Sabat."}
 		# {active: true, text: "PASTAAAAA!!!!"}
-		# {active: true, text: "Johnny Yong Bosch."}
 		# {active: true, text: "Yu-Gi-Oh! The Abridged Series."}
 		# {active: true, text: "A fat middle-aged man in a Sailor Moon costume."}
 		# {active: true, text: "$300 anime bluray boxsets."}
 		# {active: true, text: "Man-Faye."}
 		# {active: true, text: "DAN GREEN."}
 		# {active: true, text: "WE UNDERSTAND ANIME FAN WANTS!!"}
-		# {active: true, text: "Dio Brando."}
-		# {active: true, text: "Hokuto! Hyakurestu-ken!"}
-		# {active: true, text: "Vic Micderpaderp."}
 		# {active: true, text: "Goku."}
 		# {active: true, text: "Soldier A."}
 		# {active: true, text: "Red-headed tsunderes."}
 		# {active: true, text: "That sound effect in every hentai when the guy ejaculates."}
 		# {active: true, text: "Sarah Fuckin' Palin."}
-		# {active: true, text: "Edward Wong Hau Pepelu Tivruski IV."}
 		# {active: true, text: "Bang."}
 		# {active: true, text: "Prof's legs."}
 		# {active: true, text: "Naruto."}
-		# {active: true, text: "Wendee Lee."}
 		# {active: true, text: "Rice balls."}
-		# {active: true, text: "Monkey D. Luffy."}
 		# {active: true, text: "JesuOtaku's ginormous lips."}
-		# {active: true, text: "Princess Tutu."}
 		# {active: true, text: "Fujiko's boobs."}
 		# {active: true, text: "Vash the Stampede."}
 		# {active: true, text: "Shinji being a whiny little bitch."}
 		# {active: true, text: "Third Impact."}
 		# {active: true, text: "Kenshiro."}
-		# {active: true, text: "Puella Magi Madoka Magica."}
 		# {active: true, text: "Cowboy Bebop."}
 		# {active: true, text: "Fullmetal Alchemist."}
 		# {active: true, text: "Futanari."}
 		# {active: true, text: "Taking a potato chip... and EATING IT."}
 		# {active: true, text: "Unreasonably long transformation sequences."}
 		# {active: true, text: "Ass dance!! Ass dance!!"}
-		# {active: true, text: "Stupid fucking Kululu."}
 		# {active: true, text: "CENTURY SOOOOUUUP!!!!!"}
-		# {active: true, text: "The Gripper."}
-		# {active: true, text: "Thinking Misty from Pok&eacute;mon is... kinda sexy."}
 		# {active: true, text: "Garzey's Wing."}
 		# {active: true, text: "Reverse harems."}
 		# {active: true, text: "Mewtwo."}
-		# {active: true, text: "Tengen Toppa Gurren Lagann."}
-		# {active: true, text: "Sir Integra Fairbrook Wingates Hellsing."}
 		# {active: true, text: "Wearing panties on the head."}
-		# {active: true, text: "Brina Palencia as an angsty teenage boy, Monica Rial as his bratty little sister, and Shelley Calene-Black as their hot mom."}
 		# {active: true, text: "CARD GAMES ON MOTORCYCLES."}
 		# {active: true, text: "Nice boat."}
-		# {active: true, text: "Boku no Pico."}
 		# {active: true, text: "The One Piece rap."}
-		# {active: true, text: "A Bleach hentai doujin where Rukia rapes Ichigo."}
 		# {active: true, text: "Walpurgisnacht."}
-		# {active: true, text: "Bludgeoning Haruhi Suzumiya to death with a tire iron."}
 		# {active: true, text: "Girls with glasses."}
 		# {active: true, text: "Eating the wrong end of a chocolate cornet."}
 		# {active: true, text: "Being eaten by a titan."}
 		# {active: true, text: "Casca's hairy unshaven vag."}
 		# {active: true, text: "Tits on your hand."}
-		# {active: true, text: "That little fat kid from Accel World."}
 		# {active: true, text: "The Death Note."}
 		# {active: true, text: "A 'read the manga' style ending."}
 		# {active: true, text: "Giant robots."}
-		# {active: true, text: "Osamu Tezuka."}
-		# {active: true, text: "Studio Ghibli."}
 		# {active: true, text: "Masa! <3"}
 		# {active: true, text: "THE MAN-POLE OF <i>DOOOOOOOOOM!!!</i>"}
-		# {active: true, text: "Ladd Russo."}
 		# {active: true, text: "Home For Infinite Losers (HFIL)."}
-		# {active: true, text: "Moe Moe Kyun!"}
-		# {active: true, text: "El Psy Congroo."}
-		# {active: true, text: "Sailor Moon and the 7 Ballz."}
 		# {active: true, text: "Gratuitous panty shots."}
-		# {active: true, text: "Sucking Kyle Hebert's dick for hamburgers."}
 		# {active: true, text: "Cartoon buttholes."}
 		# {active: true, text: "Muscle-bound shirtless MEN."}
 		# {active: true, text: "Recap episodes."}
@@ -4404,5 +4238,171 @@ exports.cards = !->
 		# {active: true, text: "Kaizo Mario."}
 		# {active: true, text: "FrankerZ."}
 		# {active: true, text: "Nu Metal."}
+		# {active: true, text: "Rich, chocolatey Ovaltine&reg;."}
+		# {active: true, text: "TotalBiscuit's top hat."}
+		# {active: true, text: "Demi Moore's bush."}
+		# {active: true, text: "Eating 120 White Castle burgers&reg;."}
+		# {active: true, text: "Quiznos&reg;."}
+		# {active: true, text: "Penn and Teller."}
+		# {active: true, text: "LordKaT's used nipple tassles."}
+		# {active: true, text: "Luke's curly hair."}
+		# {active: true, text: "Lupa's brand of hair dye."}
+		# {active: true, text: "Ma-Ti being castrated and having his balls shipped to Oancitizen in the mail by Diamanda Hagan."}
+		# {active: true, text: "Mako."}
+		# {active: true, text: "Malachite's Hand."}
+		# {active: true, text: "Melvin, brother of the Joker."}
+		# {active: true, text: "Nash breaking his ass."}
+		# {active: true, text: "Nash dressed in drag."}
+		# {active: true, text: "Nash in a gimp suit."}
+		# {active: true, text: "Nash popping a blood vessel over Florida."}
+		# {active: true, text: "Nash."}
+		# {active: true, text: "Nash's long, long hair."}
+		# {active: true, text: "Oancitizen."}
+		# {active: true, text: "Having sex at a screening of Mr. Popper's Penguins."}
+		# {active: true, text: "Phelous making love to his Turtles collection."}
+		# {active: true, text: "PushingUpRoses' bird tattoos."}
+		# {active: true, text: "Non-consensual sex with Zaush."}
+		# {active: true, text: "Rule 34 of Linkara and a lamp."}
+		# {active: true, text: "Sharkleberry Finn-flavored Kool-Aid."}
+		# {active: true, text: "Slightly creepy comments about Tara's hair."}
+		# {active: true, text: "Spoony's fans."}
+		# {active: true, text: "Spoony's sexy goth pixie girlfriend."}
+		# {active: true, text: "Storing your dead friend's ashes into a Quaker Oats can."}
+		# {active: true, text: "That goddamned Colossus roar."}
+		# {active: true, text: "The Cinema Snob Movie DVD."}
+		# {active: true, text: "The Film Renegado."}
+		# {active: true, text: "The RDA drinking game."}
+		# {active: true, text: "The RDA IRC channel."}
+		# {active: true, text: "The Spocker."}
+		# {active: true, text: "The TGWTG site redesign."}
+		# {active: true, text: "This fecal matter you call 'Fluttershy'."}
+		# {active: true, text: "Throwing a Baby Tumbles Surprise down a staircase."}
+		# {active: true, text: "Todd's unmasked visage."}
+		# {active: true, text: "Welshy."}
+		# {active: true, text: "Whatever the hell Barfiesta was supposed to be."}
+		# {active: true, text: "Yet another Thunderdome reference."}
+		# {active: true, text: "Zodan The Unbouncable."}
+		# {active: true, text: "A Linkara cameo."}
+		# {active: true, text: "Being fed up with reviewing lamps, what obscure topic did Linkara review next?"}
+		# {active: true, text: "Harvey Finevoice's fine voice."}
+		# {active: true, text: "Linkara crying in his Gatorade made of cybermat tears."}
+		# {active: true, text: "Linkara stalking Gail Simone on Twitter."}
+		# {active: true, text: "Linkara's cybermat invasion force."}
+		# {active: true, text: "Linkara's fangirl support group."}
+		# {active: true, text: "Linkara's magic gun."}
+		# {active: true, text: "Linkara's masculine arms."}
+		# {active: true, text: "MAGfest."}
+		# {active: true, text: "Marzkara fanfiction."}
+		# {active: true, text: "What did the commenters bitch about next to Doug?"}
+		# {active: true, text: "A Chia-Child."}
+		# {active: true, text: "An art film Kyle's reviewed."}
+		# {active: true, text: "Andrew Dickman."}
+		# {active: true, text: "Big Jim Slade."}
+		# {active: true, text: "Carl Copenhagen."}
+		# {active: true, text: "Casper."}
+		# {active: true, text: "Confusing The Last Angry Geek and Linkara."}
+		# {active: true, text: "Creepy fans at cons buying expensive stuff for MarzGurl."}
+		# {active: true, text: "Creepy guys in the RDA chat hitting on Tara."}
+		# {active: true, text: "Nash's creepy face."}
+		# {active: true, text: "Crystal Pepsi&reg;."}
+		# {active: true, text: "Dark Nella."}
+		# {active: true, text: "David Bowie's package."}
+		# {active: true, text: "Diamanda Hagan's sexbot."}
+		# {active: true, text: "Diamanda's copy of Cockhammer."}
+		# {active: true, text: "Ferdinand Von Turrell."}
+		# {active: true, text: "Film Brain's lovely accent."}
+		# {active: true, text: "Glenn Beck being torn apart by zombies."}
+		# {active: true, text: "Hagan's dictator tendencies."}
+		# {active: true, text: "Hagan's make up artist."}
+		# {active: true, text: "Hagan's masturbating minion."}
+		# {active: true, text: "Mamoru Oshii's dog love."}
+		# {active: true, text: "Kyle humping a trashcan."}
+		# {active: true, text: "Linkara's 'special' comic books."}
+		# {active: true, text: "Linkara's hat."}
+		# {active: true, text: "Diamanda Hagan."}
+		# {active: true, text: "Velcro&trade;."}
+		# {active: true, text: "Tickling Sean Hannity, even after he tells you to stop."}
+		# {active: true, text: "Rush Limbaugh's soft, shitty body."}
+		# {active: true, text: "Marzgurl."}
+		# {active: true, text: "Obscurus Lupa."}
+		# {active: true, text: "ChaosD1."}
+		# {active: true, text: "Linkara."}
+		# {active: true, text: "Mechakara."}
+		# {active: true, text: "Lord Vyce."}
+		# {active: true, text: "JewWario."}
+		# {active: true, text: "Luke."}
+		# {active: true, text: "Luke's inners."}
+		# {active: true, text: "PhelousD1."}
+		# {active: true, text: "Phelous."}
+		# {active: true, text: "Iron Liz."}
+		# {active: true, text: "Zodd."}
+		# {active: true, text: "PhilBuni."}
+		# {active: true, text: "Ven Gethenian."}
+		# {active: true, text: "Nash's folksy, velvety voice."}
+		# {active: true, text: "Linkara's futon."}
+		# {active: true, text: "Dodger of Zion."}
+		# {active: true, text: "Enoby Dark'ness Dementia Raven TARA Way."}
+		# {active: true, text: "JSmith's salty nuts."}
+		# {active: true, text: "Bad Dragon&trade; cumlube."}
+		# {active: true, text: "Natascha, the anthro husky."}
+		# {active: true, text: "Mary, the anthro mare."}
+		# {active: true, text: "Hideaki Anno's poor, tortured therapist."}
+		# {active: true, text: "Golby."}
+		# {active: true, text: "Wild Tiger's Hundred Power."}
+		# {active: true, text: "Kevin Golby."}
+		# {active: true, text: "That Kevin Golby."}
+		# {active: true, text: "The Golbies: like the jitters but with a concern towards stabbings."}
+		# {active: true, text: "Blanda Upp!."}
+		# {active: true, text: "The Shawk."}
+		# {active: true, text: "When Aunt Erma visits."}
+		# {active: true, text: "Because Froggen did it."}
+		# {active: true, text: "Meowing Ride of the Valkyries during intercourse."}
+		# {active: true, text: "Gilbert Gotfried."}
+		# {active: true, text: "Maple Bourbon Bacon Jam."}
+		# {active: true, text: "Extensive research by Trygve."}
+		# {active: true, text: "Chak looking like Ross Kemp on a good day."}
+		# {active: true, text: "The Trygvipedia."}
+		# {active: true, text: "Build an Aegis!"}
+		# {active: true, text: "The Kirk vs Spock fight scene music."}
+		# {active: true, text: "Frozen Heart Ashe."}
+		# {active: true, text: "Yorick Ult on Anivia Egg."}
+		# {active: true, text: "The Dark Lord Shawne Kleckner."}
+		# {active: true, text: "Bad Steven Foster dubs."}
+		# {active: true, text: "Emma Watson dressed as a crab dancing to K-Pop."}
+		# {active: true, text: "Robert Pattinson with Freddy Mercury's moustache and Gilbert."}
+		# {active: true, text: "Norio Wakamoto."}
+		# {active: true, text: "Eating an entire box of Pocky in a single bite."}
+		# {active: true, text: "Crispin Freeman."}
+		# {active: true, text: "Gen Fukunaga counting his money."}
+		# {active: true, text: "Hatsune Miku."}
+		# {active: true, text: "Little Kuriboh."}
+		# {active: true, text: "A Captain Harlock body pillow."}
+		# {active: true, text: "Christopher R. Sabat."}
+		# {active: true, text: "Johnny Yong Bosch."}
+		# {active: true, text: "Dio Brando."}
+		# {active: true, text: "Hokuto! Hyakurestu-ken!"}
+		# {active: true, text: "Vic Micderpaderp."}
+		# {active: true, text: "Edward Wong Hau Pepelu Tivruski IV."}
+		# {active: true, text: "Wendee Lee."}
+		# {active: true, text: "Monkey D. Luffy."}
+		# {active: true, text: "Princess Tutu."}
+		# {active: true, text: "Puella Magi Madoka Magica."}
+		# {active: true, text: "Stupid fucking Kululu."}
+		# {active: true, text: "The Gripper."}
+		# {active: true, text: "Thinking Misty from Pok&eacute;mon is... kinda sexy."}
+		# {active: true, text: "Tengen Toppa Gurren Lagann."}
+		# {active: true, text: "Sir Integra Fairbrook Wingates Hellsing."}
+		# {active: true, text: "Brina Palencia as an angsty teenage boy, Monica Rial as his bratty little sister, and Shelley Calene-Black as their hot mom."}
+		# {active: true, text: "Boku no Pico."}
+		# {active: true, text: "A Bleach hentai doujin where Rukia rapes Ichigo."}
+		# {active: true, text: "Bludgeoning Haruhi Suzumiya to death with a tire iron."}
+		# {active: true, text: "That little fat kid from Accel World."}
+		# {active: true, text: "Osamu Tezuka."}
+		# {active: true, text: "Studio Ghibli."}
+		# {active: true, text: "Ladd Russo."}
+		# {active: true, text: "Moe Moe Kyun!"}
+		# {active: true, text: "El Psy Congroo."}
+		# {active: true, text: "Sailor Moon and the 7 Ballz."}
+		# {active: true, text: "Sucking Kyle Hebert's dick for hamburgers."}
 		# {active: true, text: "Punching a congressman in the face."}
 	]
