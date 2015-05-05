@@ -6,3 +6,4 @@
 *.orig
 .*.sw?
 .deploykey
+.deploykey_production

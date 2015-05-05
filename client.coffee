@@ -276,6 +276,9 @@ The game is paused when you run out of either white or black cards. If you want 
 ## Inspiration
 The game is based on the game 'Cards against Humanity', and uses its original set of cards (with some changes, with thanks to /Pretend You're Xyzzy/), which have been made available to use under the [Attribution-NonCommercial-ShareAlike 3.0 Creative Commons license](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+## Install
+Do you want to install Happening against Humanity in more groups? Tap the 'Add Plugin' button in that plugin, and enter the code '159r555232' in the search to do so!
+
 Do you have ideas for more cards? Please suggest them in the support Happening!
 """
 
