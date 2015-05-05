@@ -1,1 +1,8 @@
 *.swp
+._*
+*~
+*.old
+*.org
+*.orig
+.*.sw?
+.deploykey
