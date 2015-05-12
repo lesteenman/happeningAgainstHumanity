@@ -160,167 +160,167 @@ exports.onUpgrade = !->
 				newvotes[round] = newvote
 			Db.personal(userId).set 'vote', newvotes
 
-exports.client_upgradeGame = !->
-	if Plugin.groupId() is 159
-		exports.onUpgrade()
+# exports.client_upgradeGame = !->
+# 	if Plugin.groupId() is 159
+# 		exports.onUpgrade()
 
-exports.client_generateBogusGame = !->
-	if Plugin.groupId() isnt 159
-		return false
+# exports.client_generateBogusGame = !->
+# 	if Plugin.groupId() isnt 159
+# 		return false
 
-	u1h = ["A Molson muscle.","The economy.","A sad fat dragon with no friends.","World peace.","Overpowering your father.","Stifling a giggle at the mention of Hutus and Tutsis.","Vikings.","Bingeing and purging.","A falcon with a cap on its head.","Pretending to care."]
-	u2h = ["A Burmese tiger pit.","MechaHitler.","Oncoming traffic.","Poutine.","A man in yoga pants with a ponytail and feather earrings.","Homo milk.","A low standard of living.","Fetal alcohol syndrome.","The world's tallest midget.","Being marginalized."]
-	u3h = ["An erection that lasts longer than four hours.","Making a friend.","Scrotal frostbite.","Basic human decency.","Spring break!","Quivering jowls.","A nuanced critique.","Praying the gay away.","The true meaning of Christmas.","Apologizing."]
+# 	u1h = ["A Molson muscle.","The economy.","A sad fat dragon with no friends.","World peace.","Overpowering your father.","Stifling a giggle at the mention of Hutus and Tutsis.","Vikings.","Bingeing and purging.","A falcon with a cap on its head.","Pretending to care."]
+# 	u2h = ["A Burmese tiger pit.","MechaHitler.","Oncoming traffic.","Poutine.","A man in yoga pants with a ponytail and feather earrings.","Homo milk.","A low standard of living.","Fetal alcohol syndrome.","The world's tallest midget.","Being marginalized."]
+# 	u3h = ["An erection that lasts longer than four hours.","Making a friend.","Scrotal frostbite.","Basic human decency.","Spring break!","Quivering jowls.","A nuanced critique.","Praying the gay away.","The true meaning of Christmas.","Apologizing."]
 
-	u1p =
-		8:
-			0: "A Molson muscle."
-		9:
-			0: "A sad fat dragon with no friends."
-	u2p =
-		8:
-			0: "A Burmese tiger pit."
-		9:
-			0: "A man in yoga pants with a ponytail and feather earrings."
-	u3p =
-		8:
-			0: "An erection that lasts longer than four hours."
-		9:
-			0: "Basic human decency."
+# 	u1p =
+# 		8:
+# 			0: "A Molson muscle."
+# 		9:
+# 			0: "A sad fat dragon with no friends."
+# 	u2p =
+# 		8:
+# 			0: "A Burmese tiger pit."
+# 		9:
+# 			0: "A man in yoga pants with a ponytail and feather earrings."
+# 	u3p =
+# 		8:
+# 			0: "An erection that lasts longer than four hours."
+# 		9:
+# 			0: "Basic human decency."
 	
-	u1v =
-		8:
-			0: "An erection that lasts longer than four hours."
-	u2v =
-		8:
-			0: "An erection that lasts longer than four hours."
-	u3v =
-		8:
-			0: "A Molson muscle."
+# 	u1v =
+# 		8:
+# 			0: "An erection that lasts longer than four hours."
+# 	u2v =
+# 		8:
+# 			0: "An erection that lasts longer than four hours."
+# 	u3v =
+# 		8:
+# 			0: "A Molson muscle."
 
-	u1t = ["Stifling a giggle at the mention of Hutus and Tutsis."]
+# 	u1t = ["Stifling a giggle at the mention of Hutus and Tutsis."]
 
-	Db.personal(267).set 'hand', null
-	Db.personal(268).set 'hand', null
-	Db.personal(269).set 'hand', null
-	Db.personal(267).set 'playedcards', null
-	Db.personal(268).set 'playedcards', null
-	Db.personal(269).set 'playedcards', null
-	Db.personal(267).set 'vote', null
-	Db.personal(268).set 'vote', null
-	Db.personal(269).set 'vote', null
-	Db.personal(267).set 'trashcards', null
+# 	Db.personal(267).set 'hand', null
+# 	Db.personal(268).set 'hand', null
+# 	Db.personal(269).set 'hand', null
+# 	Db.personal(267).set 'playedcards', null
+# 	Db.personal(268).set 'playedcards', null
+# 	Db.personal(269).set 'playedcards', null
+# 	Db.personal(267).set 'vote', null
+# 	Db.personal(268).set 'vote', null
+# 	Db.personal(269).set 'vote', null
+# 	Db.personal(267).set 'trashcards', null
 
-	Db.personal(267).set 'hand', u1h
-	Db.personal(268).set 'hand', u2h
-	Db.personal(269).set 'hand', u3h
-	Db.personal(267).set 'playedcards', u1p
-	Db.personal(268).set 'playedcards', u2p
-	Db.personal(269).set 'playedcards', u3p
-	Db.personal(267).set 'vote', u1v
-	Db.personal(268).set 'vote', u2v
-	Db.personal(269).set 'vote', u3v
-	Db.personal(267).set 'trashcards', u1t
+# 	Db.personal(267).set 'hand', u1h
+# 	Db.personal(268).set 'hand', u2h
+# 	Db.personal(269).set 'hand', u3h
+# 	Db.personal(267).set 'playedcards', u1p
+# 	Db.personal(268).set 'playedcards', u2p
+# 	Db.personal(269).set 'playedcards', u3p
+# 	Db.personal(267).set 'vote', u1v
+# 	Db.personal(268).set 'vote', u2v
+# 	Db.personal(269).set 'vote', u3v
+# 	Db.personal(267).set 'trashcards', u1t
 
-	Db.shared.set 'rounds', null
-	Db.shared.set 'rounds', 1,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "What's Teach for America using to inspire inner city students to succeed?"
-		waitingfor: []
-		winner:
-			a: [{"0":"A snapping turtle biting the tip of your penis."}]
-			p: [268]
-	Db.shared.set 'rounds', 2,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "The class field trip was very ruined by ____."
-		waitingfor: []
-		winner:
-			a: [{"0":"The profoundly handicapped."}]
-			p: [267]
-	Db.shared.set 'rounds', 3,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "In L.A. County Jail, word is you can trade 200 cigarettes for ____."
-		waitingfor: []
-		winner:
-			a: [{"0":"8 oz. of sweet Mexican black-tar heroin."},{"0":"Child beauty pageants."}]
-			p: [268,269]
-	Db.shared.set 'rounds', 4,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated __________."
-		waitingfor: []
-		winner:
-			a: [{"0":"The boners of the elderly."}]
-			p: [267]
-	Db.shared.set 'rounds', 5,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "But before I kill you, Mr. Bond, I must show you __________."
-		waitingfor: []
-		winner:
-			a: [{"0":"The heart of a child."},{"0":"A gentle caress of the inner thigh."}]
-			p: [268]
-	Db.shared.set 'rounds', 6,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text: "In Michael Jackson's final moments, he thought about __________."
-		waitingfor: []
-		winner:
-			a: [{"0":"Concealing a boner."},{"0":"Oompa-Loompas."}]
-			p: [267,269]
-	Db.shared.set 'rounds', 7,
-		phase: 'done'
-		phase_end: 0
-		playedcards: []
-		question:
-			play: 1
-			text:"What's my anti-drug?"
-		waitingfor: []
-		winner:
-			a: [{"0":"A sad handjob."},{"0":"Me time."}]
-			p: [269]
-	Db.shared.set 'rounds', 8,
-		phase: 'vote' # TODO: Unbreak;
-		phase_end: (Date.now()/1000+60*5)
-		playedcards: [{"0":"A Molson muscle."},{"0":"A Burmese tiger pit."},{"0":"An erection that lasts longer than four hours."}]
-		question:
-			play: 2
-			text: "What's my secret power?"
-		waitingfor: [268,269]
-	Db.shared.set 'rounds', 9,
-		phase: 'play'
-		phase_end: (Date.now()/1000+60*5)
-		playedcards: []
-		question:
-			active: 1
-			play: 1
-			text: "Before I run for president, I must destroy all evidence of my involvement with ____."
-			waitingfor: [268,269]
-	Db.shared.set 'lastround', 9
+# 	Db.shared.set 'rounds', null
+# 	Db.shared.set 'rounds', 1,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "What's Teach for America using to inspire inner city students to succeed?"
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"A snapping turtle biting the tip of your penis."}]
+# 			p: [268]
+# 	Db.shared.set 'rounds', 2,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "The class field trip was very ruined by ____."
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"The profoundly handicapped."}]
+# 			p: [267]
+# 	Db.shared.set 'rounds', 3,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "In L.A. County Jail, word is you can trade 200 cigarettes for ____."
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"8 oz. of sweet Mexican black-tar heroin."},{"0":"Child beauty pageants."}]
+# 			p: [268,269]
+# 	Db.shared.set 'rounds', 4,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated __________."
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"The boners of the elderly."}]
+# 			p: [267]
+# 	Db.shared.set 'rounds', 5,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "But before I kill you, Mr. Bond, I must show you __________."
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"The heart of a child."},{"0":"A gentle caress of the inner thigh."}]
+# 			p: [268]
+# 	Db.shared.set 'rounds', 6,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text: "In Michael Jackson's final moments, he thought about __________."
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"Concealing a boner."},{"0":"Oompa-Loompas."}]
+# 			p: [267,269]
+# 	Db.shared.set 'rounds', 7,
+# 		phase: 'done'
+# 		phase_end: 0
+# 		playedcards: []
+# 		question:
+# 			play: 1
+# 			text:"What's my anti-drug?"
+# 		waitingfor: []
+# 		winner:
+# 			a: [{"0":"A sad handjob."},{"0":"Me time."}]
+# 			p: [269]
+# 	Db.shared.set 'rounds', 8,
+# 		phase: 'vote' # TODO: Unbreak;
+# 		phase_end: (Date.now()/1000+60*5)
+# 		playedcards: [{"0":"A Molson muscle."},{"0":"A Burmese tiger pit."},{"0":"An erection that lasts longer than four hours."}]
+# 		question:
+# 			play: 2
+# 			text: "What's my secret power?"
+# 		waitingfor: [268,269]
+# 	Db.shared.set 'rounds', 9,
+# 		phase: 'play'
+# 		phase_end: (Date.now()/1000+60*5)
+# 		playedcards: []
+# 		question:
+# 			active: 1
+# 			play: 1
+# 			text: "Before I run for president, I must destroy all evidence of my involvement with ____."
+# 			waitingfor: [268,269]
+# 	Db.shared.set 'lastround', 9
 
-	Timer.cancel()
-	Timer.set 60*5*1000, 'advanceRound'
+# 	Timer.cancel()
+# 	Timer.set 60*5*1000, 'advanceRound'
 
 refillAnswerDeck = !->
 	log 'Ran out of answer cards. Reshuffling deck!'
