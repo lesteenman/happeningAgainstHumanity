@@ -1,4 +1,5 @@
 Plugin = require 'plugin'
+White = require 'white'
 {tr} = require 'i18n'
 
 exports.getWinnerNames = (winners) !->
@@ -17,7 +18,8 @@ exports.replaceQuestionText = (text, answers) !->
 		text = text.replace(/(__+)/g, !->
 			log 'Replacing', i
 			if answers[i]
-				ans = answers[i++]
+				answer = White.getCard answers[i++]
+				ans = answer.text
 
 				log 'Answer:', ans
 				# Lowercase first character if the second character was not uppercased
@@ -35,7 +37,8 @@ exports.replaceQuestionText = (text, answers) !->
 		)
 
 		while answers[i]
-			text = text + '\r\n\r\n*' + answers[i++] + '*'
+			answer = White.getCard answers[i++]
+			text = text + '\r\n\r\n*' + answer.text + '*'
 	return text
 
 exports.removeArrayItem = (v) -> x for x in @ when x!=v

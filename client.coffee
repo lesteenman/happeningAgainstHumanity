@@ -11,6 +11,8 @@ Time = require 'time'
 Ui = require 'ui'
 Util = require 'util'
 Markdown = require 'markdown'
+Black = require 'black'
+White = require 'white'
 {tr} = require 'i18n'
 
 handsize = 10
@@ -36,7 +38,6 @@ exports.render = !->
 				renderInfoBar()
 				voteRender page
 			else
-				log 'Page:', page
 				renderWinnerPage page
 
 			Event.showStar tr 'Round %1', page
@@ -49,7 +50,6 @@ exports.render = !->
 		else
 			Dom.div !->
 				rounds = Db.shared.get 'rounds'
-				log 'Rounds', rounds
 				Dom.h2 tr 'Active Rounds'
 				activeRounds = 0
 				Ui.list !->
@@ -85,9 +85,9 @@ exports.render = !->
 
 renderRoundListItem = (roundId) !->
 	round = Db.shared.get 'rounds', roundId
-	if round.phase isnt 'unfinished'
+	if round.phase not in ['unfinished', 'broken']
 		Ui.item !->
-			if round.phase in ['play', 'vote', 'done']
+			if round.phase in ['play','vote','done']
 				Dom.style
 					margin: '-30px -30px 0'
 					paddingBottom: '0px'
@@ -108,8 +108,11 @@ renderRoundListItem = (roundId) !->
 						highlight = true
 					break
 				when 'vote'
-					if Db.personal.get 'vote', roundId
+					if (Db.personal.get 'vote', roundId)
 						subtext = tr 'You cast your vote.'
+						answers = Db.personal.get 'vote', roundId
+					else if (Db.personal.get 'playedcards', roundId) && round.playedcards.length == 1
+						subtext = tr 'Only you played.'
 						answers = Db.personal.get 'vote', roundId
 					else
 						subtext = tr 'You still have to vote!'
@@ -121,11 +124,11 @@ renderRoundListItem = (roundId) !->
 					answers = if round.winner then round.winner.a[0] else null
 					winners = if round.winner then round.winner.p[0] else null
 
-
-			if round.phase in ['play', 'vote', 'done']
+			if round.phase in ['play','vote','done']
+				question = Black.getCard round.question
 				renderQuestion
-					text: round.question.text
-					play: round.question.play
+					text: question.text
+					play: question.play
 					answers: answers
 					winners: winners
 					subtext: subtext
@@ -296,9 +299,10 @@ renderHand = !->
 		do (card) !->
 			Dom.div !->
 				Dom.style marginBottom: '-30px'
+				cardtext = (White.getCard card).text
 				renderCard
 					style: if card in trashcards then 'selected' else 'white'
-					text: card
+					text: cardtext
 					ontapHandler: !->
 						Server.sync 'trashcard', card, !->
 							if card in trashcards
@@ -313,7 +317,6 @@ renderHand = !->
 
 
 renderComments = (round) !->
-	log 'Rendering comments', round
 	Social.renderComments
 		path: [round]
 		closed: false
@@ -345,9 +348,10 @@ renderWinnerPage = (roundId) !->
 	winner = round.winner
 	Dom.h2 tr('Round %1: %2', roundId, Plugin.userName(winner.p))
 	for i in [0..winner.p.length - 1]
+		question = Black.getCard round.question
 		renderQuestion
-			text: round.question.text
-			play: round.question.play
+			text: question.text
+			play: question.play
 			answers: winner.a[i]
 			winners: winner.p[i]
 
@@ -356,19 +360,16 @@ renderWinnerPage = (roundId) !->
 renderVoteCount = (winner) !->
 	if winner.v
 		Dom.h3 'Votes:'
-		log 'winner.v:', winner.v
 		Dom.div !->
 			for answer, users of winner.v
-				log 'answer', JSON.stringify(answer), 'users', JSON.stringify(users)
 				answerString = ''
 				for i, a of JSON.parse(answer)
-					log i, a
+					answer = (White.getCard a).text
 					if answerString != ''
 						answerString += ', '
-					answerString += '*' + a + '*'
+					answerString += '*' + answer + '*'
 				userString = ''
 				for u in users
-					log u
 					if userString != ''
 						userString += ', '
 					userString += Plugin.userName(u)
@@ -378,7 +379,7 @@ popWinnerModal = !->
 	roundId = Db.personal.get('showwinners').shift()
 	round = Db.shared.get 'rounds', roundId
 	winner = round.winner
-	question = round.question
+	question = Black.getCard round.question
 	answers = winner.a
 	players = winner.p
 
@@ -392,7 +393,6 @@ popWinnerModal = !->
 			# if isNewbie()
 			# 	Dom.div !->
 			# 		Dom.text tr 'The winner is decided by the votes. After #TODO write tip'
-			log 'question, answer', question, answer
 			for i in [0..players.length - 1]
 				answer = answers[i]
 				player = players[i]
@@ -415,9 +415,10 @@ drawNewAnswerCards = !->
 					Dom.h2 tr('Your Hand')
 					Dom.text tr('After every round, you will draw new cards for your hand until you hold 10 cards again.')
 			for c in cards
+				card = White.getCard c
 				renderCard
 					style: 'white'
-					text: c
+					text: card.text
 
 renderDrawQuestionButton = (roundId) !->
 	if isNewbie()
@@ -436,15 +437,11 @@ playRender = (roundId) !->
 			Dom.h2 tr('Playing Cards Explained')
 			Dom.text tr('Every round starts by one player drawing a question. After that, everyone gets to play one or more cards from their hand. At the end of the round, you will get to vote for who played the best card!')
 
-	question = round.question
+	question = Black.getCard round.question
 	myanswers = Db.personal.get 'playedcards', roundId
 	Dom.h1 tr('Play your card%1', if question.play > 1 then 's' else '')
 
 	Dom.h2 tr('Question:')
-	log 'Question:'
-	log question
-	log 'Answers:'
-	log myanswers
 	renderQuestion
 		text: question.text
 		play: question.play
@@ -459,7 +456,7 @@ voteRender = (roundId) !->
 			Dom.h2 tr('Voting Explained')
 			Dom.text tr('After the cards have been played, everyone will get a chance to vote for their favorite card. The card with the most votes will win, and that player will get a point!')
 
-	question = Db.shared.get 'rounds', roundId, 'question'
+	question = Black.getCard Db.shared.get 'rounds', roundId, 'question'
 	vote = Db.personal.get('vote', roundId)
 
 	Dom.h1 tr('Vote for the best card%1', if question.play > 1 then 's' else '')
@@ -470,15 +467,11 @@ voteRender = (roundId) !->
 				marginBottom: '30px'
 			Dom.text tr('Select the card that you think best fills in the blank on the question, or answers the question best/funniest!')
 
-	log 'All:', JSON.stringify(round)
 	Dom.div !->
 		Dom.style marginTop: '20px'
 		for cards in Db.shared.get 'rounds', roundId, 'playedcards'
-			log 'Cards:', cards
 			do (cards) !->
-				log 'Comparing with own', JSON.stringify(cards), JSON.stringify(Db.personal.get 'playedcards', roundId)
 				if JSON.stringify(cards) != JSON.stringify(Db.personal.get 'playedcards', roundId)
-					log 'Comparing with vote', cards, vote
 					Dom.div !->
 						selected = JSON.stringify(cards) == JSON.stringify(vote)
 						Dom.style
@@ -493,7 +486,6 @@ voteRender = (roundId) !->
 								selected: selected
 								answers: cards
 								ontapHandler: !->
-									log 'Chose', cards, 'as winning card'
 									Server.sync 'vote', roundId, cards, !->
 										Db.personal.set 'vote', roundId, cards
 
@@ -529,29 +521,29 @@ renderTutorialQuestion = !->
 
 renderCardSelect = (roundId, numplay) !->
 	Obs.observe !->
-		log 'Rendering card select'
 		hand = Db.personal.ref 'hand'
 		if Db.personal.get 'playedcards', roundId
 			playedcards = Obs.create(Db.personal.get 'playedcards', roundId)
 		else
 			playedcards = Obs.create []
-		log 'Played Cards', playedcards.get()
 
 		Dom.h2 tr('Your played card%1', if numplay > 1 then 's' else '')
 
 		playcount = playedcards.count()
 		for p in [0..numplay-1]
-			do (p) !->
+			cardId = playedcards.get(p)
+			do (p,cardId) !->
+				card = White.getCard cardId
 				renderCard
 					style: 'white'
-					text: playedcards.get(p)
+					text: if card then card.text else ''
 					ontapHandler: !->
-						cardselectModal numplay, playedcards, hand, (card) !->
-							Server.sync 'playcard', roundId, p, card, !->
+						cardselectModal numplay, playedcards, hand, (cardId) !->
+							Server.sync 'playcard', roundId, p, cardId, !->
 								for i, c of playedcards.get()
-									if c == card
+									if c == cardId
 										playedcards.set(i, playedcards.get(p))
-								playedcards.set(p, card)
+								playedcards.set(p, cardId)
 
 # Opts Values:
 # 	text: The text of the question
@@ -562,7 +554,6 @@ renderCardSelect = (roundId, numplay) !->
 # 	winners: Who won this round.
 # 	subtext: Additional subtext that is rendered above the winner text
 renderQuestion = (opts) !->
-	log 'opts', opts
 	text = Util.replaceQuestionText opts.text, opts.answers
 
 	subtext = ''
@@ -571,7 +562,6 @@ renderQuestion = (opts) !->
 	
 	if opts.winners
 		if +opts.winners > 0
-			log 'winners is one person', opts.winners
 			opts.winners = [opts.winners]
 
 		wincount = 0
@@ -683,12 +673,13 @@ cardselectModal = (play, selected, cards, handlepick) !->
 				margin: '-12px'
 				paddingTop: '15px'
 
-			for card in cards.get()
-				do (card) !->
+			for c in cards.get()
+				card = White.getCard c
+				do (c,card) !->
 					Ui.item !->
 						isselected = false
 						for i in [0..play-1]
-							if selected.get(i) == card
+							if selected.get(i) == c
 								isselected = true
 
 						Dom.style
@@ -697,11 +688,11 @@ cardselectModal = (play, selected, cards, handlepick) !->
 							textAlign: 'left'
 						renderCard
 							style: (if isselected then 'selected' else 'white')
-							text: card
+							text: card.text
 							compact: true
 
 						Dom.onTap !->
-							handlepick card
+							handlepick c
 							Modal.remove()
 	, null, ['cancel', "Cancel"]
 
@@ -723,7 +714,7 @@ exports.renderSettings = !->
 		Markdown.render tr("Disclaimer: If you or anyone else in this group is offended by *anything* at all , then don't install this Group App. This Group App is not suitable for children, families, sensitive people or humanity in general.")
 
 	if Db.shared
-		if Plugin.userIsAdmin()
+		if Plugin.groupId() == 159 and Plugin.userIsAdmin()
 			Dom.h3 !->
 				Ui.item !->
 					Dom.text tr('(Re)Start Game')
@@ -733,3 +724,12 @@ exports.renderSettings = !->
 					Dom.text tr 'Advance Round'
 					Dom.onTap !->
 						Server.sync 'advanceround'
+
+				Ui.item !->
+					Dom.text tr 'Generate Test DB'
+					Dom.onTap !->
+						Server.sync 'generateBogusGame'
+				Ui.item !->
+					Dom.text tr 'Run Upgrade'
+					Dom.onTap !->
+						Server.sync 'upgradeGame'
