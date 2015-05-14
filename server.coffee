@@ -28,6 +28,17 @@ exports.onConfig = onConfig = (config) !->
 exports.onUpgrade = !->
 	log 'Upgraded the Plugin'
 
+	rounds = Db.shared.get 'rounds'
+	if rounds
+		activeRounds = 0
+		for i in [(Object.keys rounds).length - 1..0]
+			roundId = Object.keys(rounds)[i]
+			if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
+				activeRounds += 1
+		if activeRounds == 0
+			log 'No Active Rounds!'
+			prepareNewRound()
+
 	deck = Db.shared.get 'answerdeck'
 	log 'Cards in deck:', deck.length
 	if not deck.length
@@ -68,6 +79,7 @@ exports.onUpgrade = !->
 		return -1
 
 	# Change all card texts/objects to IDs.
+	log 'Rounds:', Db.shared.get 'rounds'
 	isNonId = false
 	rounds = Object.keys (Db.shared.get 'rounds')
 	firstround = Db.shared.get 'rounds', rounds[0]
