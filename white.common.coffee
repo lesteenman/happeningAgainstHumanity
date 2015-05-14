@@ -7,8 +7,7 @@ exports.getCard = (id) !->
 # New cards should be added/uncommented *after* the last uncommented card. That way, the
 # plugin will automatically add the new cards to existing games.
 exports.cards = !->
-	log 'Returning Cards'
-	cards = {
+	return {
 		1: {active: true, text: "Devout prostitutes."}
 		2: {active: true, text: "White people."}
 		3: {active: true, text: "An erection that lasts longer than four hours."}
@@ -4410,5 +4409,3 @@ exports.cards = !->
 		# 4399: {active: true, text: "Sucking Kyle Hebert's dick for hamburgers."}
 		# 4400: {active: true, text: "Punching a congressman in the face."}
 	}
-
-	return cards

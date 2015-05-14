@@ -77,16 +77,26 @@ exports.render = !->
 							if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
 								renderRoundListItem roundId
 
-				if ((Object.keys rounds).length - 1 - activeRounds) > 0
-					Dom.h2 tr 'Finished Rounds'
-					Ui.list !->
-						Dom.style
-							paddingTop: '30px'
-							backgroundColor: 'white'
-							overflowX: 'hidden'
-						for i in [(Object.keys rounds).length - 1 - activeRounds..0]
-							roundId = Object.keys(rounds)[i]
-							renderRoundListItem roundId
+				max = Obs.create 10
+				Obs.observe !->
+					rendering = 0
+					if ((Object.keys rounds).length - 1 - activeRounds) > 0
+						Dom.h2 tr 'Finished Rounds'
+						Ui.list !->
+							Dom.style
+								paddingTop: '30px'
+								backgroundColor: 'white'
+								overflowX: 'hidden'
+							for i in [(Object.keys rounds).length - 1 - activeRounds..0]
+								if rendering <= max.get()
+									roundId = Object.keys(rounds)[i]
+									renderRoundListItem roundId
+								rendering += 1
+					if rendering > max.get()
+						Ui.bigButton !->
+							Dom.text tr 'Load More'
+							Dom.onTap !->
+								max.set max.get() + 25
 
 	if (Db.personal.get 'showpatchinfo') == 1
 		Modal.show 'New!', !->
@@ -129,10 +139,16 @@ renderRoundListItem = (roundId) !->
 						highlight = true
 					break
 				when 'done'
-					if round.winner.a.length > 1
-						subtext = tr 'And %1 more', round.question.play - 1
-					answers = if round.winner then round.winner.a[0] else null
-					winners = if round.winner then round.winner.p[0] else null
+					if round.winner
+						if round.winner.a.length > 2
+							subtext = tr 'Tap to see all %1 answers', round.winner.a.length
+						else if round.winner.a.length == 2
+							subtext = tr 'Tap to see both answers'
+						answers = round.winner.a[0]
+						winners = round.winner.p
+					else
+						answers = null
+						winners = null
 
 			if round.phase in ['play','vote','done']
 				question = Black.getCard round.question
@@ -563,20 +579,21 @@ renderQuestion = (opts) !->
 	text = Util.replaceQuestionText opts.text, opts.answers
 
 	subtext = ''
-	if opts.subtext
-		subtext = opts.subtext + '\r\n'
 	
 	if opts.winners
 		if +opts.winners > 0
 			opts.winners = [opts.winners]
 
 		wincount = 0
-		subtext = 'Won by: '
+		subtext += 'Won by: '
 		for w in opts.winners
 			if wincount then subtext += ', '
 			subtext += Plugin.userName(w)
+			wincount += 1
 
 	text = text.replace(/_/g, '\\_')
+	if opts.subtext
+		subtext += (if subtext == '' then '' else '\r\n\r\n') + opts.subtext
 
 	renderCard
 		style: (if opts.selected then 'selected' else (if opts.highlight then 'highlight' else 'black'))
@@ -609,7 +626,14 @@ renderCard = (opts) !->
 
 	Dom.div !->
 		Markdown.render opts.text || tr('tap to select card')
-		if selected || opts.subtext
+		if opts.subtext and selected
+			subtext = opts.subtext + '\r\n\r\nselected'
+		else if opts.subtext
+			subtext = opts.subtext
+		else if selected
+			subtext = 'selected'
+
+		if subtext
 			Dom.span !->
 				Dom.style
 					display: 'block'
@@ -617,7 +641,7 @@ renderCard = (opts) !->
 					marginBottom: '0.5em'
 					fontSize: '0.7em'
 					fontStyle: 'italic'
-				Dom.text (if selected then 'selected' else '') + (opts.subtext||'')
+				Markdown.render subtext
 		Dom.style
 			position: 'relative'
 			fontStyle: if not opts.text then 'italic' else ''

@@ -16,12 +16,10 @@ exports.replaceQuestionText = (text, answers) !->
 	i = 0
 	if answers
 		text = text.replace(/(__+)/g, !->
-			log 'Replacing', i
 			if answers[i]
 				answer = White.getCard answers[i++]
 				ans = answer.text
 
-				log 'Answer:', ans
 				# Lowercase first character if the second character was not uppercased
 				if (ans).toUpperCase() isnt ans
 					ans = (ans[0]).toLowerCase() + ans.substring 1
