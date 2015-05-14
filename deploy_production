@@ -2,8 +2,7 @@
 
 read -p "Are you certain you want to push to production? (Y/N)" confirm
 deploykey=$(cat .deploykey_production)
-echo "Deploying to " $deploykey
 case $confirm in
-	[Yy]* ) ./deploy $deploykey; break;;
+	[Yy]* ) echo "Deploying to" $deploykey; ./deploy $deploykey; break;;
 	* ) echo "Cancelled";;
 esac

@@ -25,8 +25,22 @@ exports.onConfig = onConfig = (config) !->
 	else
 		# Defaults for template groups
 
+exports.onHttp = (request) ->
+	# out = ''
+
+	db = {}
+	db[0] = Db.shared.get()
+
+	for uid in Plugin.userIds()
+		db[uid] = Db.personal(uid).get()
+
+	request.respond 200, JSON.stringify db
+
 exports.onUpgrade = !->
 	log 'Upgraded the Plugin'
+	log 'This plugin"s public URL:', Plugin.inboundUrl()
+	log 'Plugin Userids:', Plugin.userIds()
+	return
 
 	rounds = Db.shared.get 'rounds'
 	if rounds
