@@ -376,6 +376,7 @@ exports.startgame = !->
 		text: tr("A new game of 'Happening against Humanity' was started!")
 		include: ['all']
 	firstround = prepareNewRound()
+	drawquestion firstround
 	startround firstround
 
 # Throws away cards that players selected they want to throw away.
@@ -408,9 +409,7 @@ prepareNewRound = !->
 	newround =
 		phase: 'draw'
 		playedcards: []
-		question:
-			play: 0
-			text: ''
+		question: null
 		waitingfor: waitingfor
 	Db.shared.set 'rounds', newroundnum, newround
 

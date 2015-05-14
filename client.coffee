@@ -52,28 +52,41 @@ exports.render = !->
 				rounds = Db.shared.get 'rounds'
 				Dom.h2 tr 'Active Rounds'
 				activeRounds = 0
-				Ui.list !->
-					Dom.style
-						paddingTop: '30px'
-						backgroundColor: 'white'
-						overflowX: 'hidden'
-					for i in [(Object.keys rounds).length - 1..0]
-						roundId = Object.keys(rounds)[i]
-						if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
-							activeRounds += 1
-							renderRoundListItem roundId
+				nondrawrounds = 0
+				drawround = 0
+				for i in [(Object.keys rounds).length - 1..0]
+					roundId = Object.keys(rounds)[i]
+					if (Db.shared.get 'rounds', roundId, 'phase') in ['play', 'vote']
+						nondrawrounds += 1
+					if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
+						activeRounds += 1
+					if (Db.shared.get 'rounds', roundId, 'phase') is 'draw'
+						drawround = roundId
 				if activeRounds == 0
 					Dom.text tr 'Currently no active rounds...'
+				else if nondrawrounds == 0
+					renderDrawQuestionButton roundId
+				else
+					Ui.list !->
+						Dom.style
+							paddingTop: '30px'
+							backgroundColor: 'white'
+							overflowX: 'hidden'
+						for i in [(Object.keys rounds).length - 1..0]
+							roundId = Object.keys(rounds)[i]
+							if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
+								renderRoundListItem roundId
 
-				Dom.h2 tr 'Finished Rounds'
-				Ui.list !->
-					Dom.style
-						paddingTop: '30px'
-						backgroundColor: 'white'
-						overflowX: 'hidden'
-					for i in [(Object.keys rounds).length - 1 - activeRounds..0]
-						roundId = Object.keys(rounds)[i]
-						renderRoundListItem roundId
+				if ((Object.keys rounds).length - 1 - activeRounds) > 0
+					Dom.h2 tr 'Finished Rounds'
+					Ui.list !->
+						Dom.style
+							paddingTop: '30px'
+							backgroundColor: 'white'
+							overflowX: 'hidden'
+						for i in [(Object.keys rounds).length - 1 - activeRounds..0]
+							roundId = Object.keys(rounds)[i]
+							renderRoundListItem roundId
 
 	if (Db.personal.get 'showpatchinfo') == 1
 		Modal.show 'New!', !->
@@ -96,9 +109,6 @@ renderRoundListItem = (roundId) !->
 			subtext = null
 			highlight = false
 			switch(round.phase)
-				when 'draw'
-					subtext = tr 'Ready to start!'
-					break
 				when 'play'
 					if Db.personal.get 'playedcards', roundId
 						subtext = tr 'You played your cards.'
@@ -136,12 +146,8 @@ renderRoundListItem = (roundId) !->
 					ontapHandler: !->
 						Page.nav roundId
 					renderBubble: [roundId]
-			else
-				Dom.div !->
-					Dom.style color: '#ba1a6e'
-					Dom.text tr 'Ready to start!'
-				Dom.onTap !->
-					Page.nav roundId
+			else if round.phase is 'draw'
+				renderDrawQuestionButton roundId
 
 renderInfoBar = !->
 	page = Page.state.get(0)
