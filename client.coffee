@@ -239,7 +239,8 @@ renderInfoBar = !->
 
 		phase_end = 0
 		for roundId, round of Db.shared.get 'rounds'
-			phase_end = Math.max phase_end, round.phase_end
+			if !isNaN round.phase_end
+				phase_end = Math.max phase_end, round.phase_end
 		Dom.div !->
 			Dom.style
 				display: 'inline-block'
@@ -776,6 +777,13 @@ exports.renderSettings = !->
 		Markdown.render tr("Disclaimer: If you or anyone else in this group is offended by *anything* at all , then don't install this Group App. This Group App is not suitable for children, families, sensitive people or humanity in general.")
 
 	if Db.shared
+		Dom.h3 'Minimum Round Length (hours)'
+		Form.input
+			name: 'roundlength'
+			type: 'number'
+			value: Db.shared.get('roundlength')
+			disabled: true
+		Dom.text tr 'Note that the round will never end between 22:00 and 9:00.'
 		if Plugin.groupId() == 159 and Plugin.userIsAdmin()
 			Dom.h3 !->
 				Ui.item !->
