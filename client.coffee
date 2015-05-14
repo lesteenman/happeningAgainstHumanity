@@ -65,7 +65,7 @@ exports.render = !->
 				if activeRounds == 0
 					Dom.text tr 'Currently no active rounds...'
 				else if nondrawrounds == 0
-					renderDrawQuestionButton roundId
+					renderDrawQuestionButton drawround
 				else
 					Ui.list !->
 						Dom.style

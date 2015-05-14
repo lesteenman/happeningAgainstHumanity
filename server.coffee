@@ -93,86 +93,86 @@ exports.onUpgrade = !->
 		return -1
 
 	# Change all card texts/objects to IDs.
-	log 'Rounds:', Db.shared.get 'rounds'
-	isNonId = false
-	rounds = Object.keys (Db.shared.get 'rounds')
-	firstround = Db.shared.get 'rounds', rounds[0]
-	if firstround.question.text
-		isNonId = true
+	# log 'Rounds:', Db.shared.get 'rounds'
+	# isNonId = false
+	# rounds = Object.keys (Db.shared.get 'rounds')
+	# firstround = Db.shared.get 'rounds', rounds[0]
+	# if firstround.question.text
+	# 	isNonId = true
 
-	if isNonId
-		log 'Upgrading from text to IDs!'
-		rounds = Db.shared.get 'rounds'
-		for id,r of rounds
-			roundBroken = false
-			qt = r.question.text
-			nqt = lookupQuestionCardId qt
-			if nqt < 0
-				roundBroken = true
-			r.question = nqt
+	# if isNonId
+	# 	log 'Upgrading from text to IDs!'
+	# 	rounds = Db.shared.get 'rounds'
+	# 	for id,r of rounds
+	# 		roundBroken = false
+	# 		qt = r.question.text
+	# 		nqt = lookupQuestionCardId qt
+	# 		if nqt < 0
+	# 			roundBroken = true
+	# 		r.question = nqt
 
-			# Winners
-			if r.winner and r.winner.a
-				winners = r.winner.a
-				newwinners = []
-				for w in winners
-					nw = {}
-					for n,a of w
-						na = lookupAnswerCardId a
-						nw[n] = na
-						if na < 0
-							roundBroken = true
-					newwinners.push nw
-				r.winner.a = newwinners
+	# 		# Winners
+	# 		if r.winner and r.winner.a
+	# 			winners = r.winner.a
+	# 			newwinners = []
+	# 			for w in winners
+	# 				nw = {}
+	# 				for n,a of w
+	# 					na = lookupAnswerCardId a
+	# 					nw[n] = na
+	# 					if na < 0
+	# 						roundBroken = true
+	# 				newwinners.push nw
+	# 			r.winner.a = newwinners
 
-			# Played Cards
-			playedcards = r.playedcards
-			newplayedcards = []
-			for cards in playedcards
-				newcards = {}
-				for i,c of cards
-					nc = lookupAnswerCardId c
-					newcards[i] = nc
-					if nc < 0
-						roundBroken = true
-				newplayedcards.push newcards
-			r.playedcards = newplayedcards
+	# 		# Played Cards
+	# 		playedcards = r.playedcards
+	# 		newplayedcards = []
+	# 		for cards in playedcards
+	# 			newcards = {}
+	# 			for i,c of cards
+	# 				nc = lookupAnswerCardId c
+	# 				newcards[i] = nc
+	# 				if nc < 0
+	# 					roundBroken = true
+	# 			newplayedcards.push newcards
+	# 		r.playedcards = newplayedcards
 
-			if roundBroken
-				r.phase = 'broken'
+	# 		if roundBroken
+	# 			r.phase = 'broken'
 
-			Db.shared.set 'rounds', id, r
+	# 		Db.shared.set 'rounds', id, r
 		
-		for userId in Plugin.userIds()
-			hand = Db.personal(userId).get 'hand'
-			newhand = []
-			for card in hand
-				newcard = lookupAnswerCardId card
-				if newcard >= 0
-					newhand.push newcard
-			Db.personal(userId).set 'hand', newhand
+	# 	for userId in Plugin.userIds()
+	# 		hand = Db.personal(userId).get 'hand'
+	# 		newhand = []
+	# 		for card in hand
+	# 			newcard = lookupAnswerCardId card
+	# 			if newcard >= 0
+	# 				newhand.push newcard
+	# 		Db.personal(userId).set 'hand', newhand
 
-			playedCards = Db.personal(userId).get 'playedcards'
-			newplayedcards = {}
-			for round,cards of playedCards
-				newcards = {}
-				for n,c of cards
-					nc = lookupAnswerCardId c
-					if nc >= 0
-						newcards[n] = nc
-				newplayedcards[round] = newcards
-			Db.personal(userId).set 'playedcards', newplayedcards
+	# 		playedCards = Db.personal(userId).get 'playedcards'
+	# 		newplayedcards = {}
+	# 		for round,cards of playedCards
+	# 			newcards = {}
+	# 			for n,c of cards
+	# 				nc = lookupAnswerCardId c
+	# 				if nc >= 0
+	# 					newcards[n] = nc
+	# 			newplayedcards[round] = newcards
+	# 		Db.personal(userId).set 'playedcards', newplayedcards
 
-			votes = Db.personal(userId).get 'vote'
-			newvotes = {}
-			for round,vote of votes
-				newvote = {}
-				for n,v of vote
-					nv = lookupAnswerCardId v
-					if nv > 0
-						newvote[n] = nv
-				newvotes[round] = newvote
-			Db.personal(userId).set 'vote', newvotes
+	# 		votes = Db.personal(userId).get 'vote'
+	# 		newvotes = {}
+	# 		for round,vote of votes
+	# 			newvote = {}
+	# 			for n,v of vote
+	# 				nv = lookupAnswerCardId v
+	# 				if nv > 0
+	# 					newvote[n] = nv
+	# 			newvotes[round] = newvote
+	# 		Db.personal(userId).set 'vote', newvotes
 
 # exports.client_upgradeGame = !->
 # 	if Plugin.groupId() is 159
