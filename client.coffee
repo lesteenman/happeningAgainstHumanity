@@ -1,6 +1,7 @@
 Db = require 'db'
 Dom = require 'dom'
 Event = require 'event'
+Form = require 'form'
 Modal = require 'modal'
 Obs = require 'obs'
 Page = require 'page'
@@ -105,6 +106,37 @@ exports.render = !->
 			Server.sync 'readPatchNotes'
 	else if Db.personal.get('showwinners').length
 		popWinnerModal()
+
+	# Show the 'share' button in the statusbar
+	actions = [
+		label: tr('Share Plugin')
+		icon: 'share'
+		action: !->
+			Modal.show tr('Share Plugin'), !->
+				clipboard = Form.clipboard()
+				Markdown.render tr """
+				Do you want to install this plugin in other groups? Happening against Humanity is not (yet!) in the Plugin Store, but here's an easy way to install it in other groups:
+
+				- Copy the code below
+				- Tap 'Add group app' in the group where you want to install it
+				- In the search field, paste the code
+				- Tap 'Happening against Humanity'
+				"""
+				Ui.item !->
+					Dom.style
+						margin: '0 auto'
+						maxWidth: '130px'
+						backgroundColor: '#dadada'
+						borderRadius: '5px'
+					if clipboard
+						Dom.text 'Tap to copy the install code (159r555232)'
+						Dom.onTap !->
+							clipboard '159r555232'
+							require('toast').show tr 'Code (159r555232) copied to the clipboard'
+					else
+						Dom.text 'Copy Install Code: 159r555232'
+	]
+	Page.setActions actions
 
 renderRoundListItem = (roundId) !->
 	round = Db.shared.get 'rounds', roundId
