@@ -1,5 +1,5 @@
 exports.numcards = !->
-	return exports.cards().length
+	return Object.keys(exports.cards()).length
 
 exports.getCard = (id) !->
 	return exports.cards()[id]

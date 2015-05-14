@@ -345,13 +345,17 @@ exports.remindVote = (roundId) !->
 ### Phase-switch functions ###
 
 exports.startgame = !->
+	log 'Starting Game!'
 	Timer.cancel()
-	Db.shared.set 'questiondeck', [0..Black.cards().length - 1]
-	Db.shared.set 'answerdeck', [0..White.cards().length - 1]
+	Db.shared.set 'questiondeck', [0..Black.numcards() - 1]
+	Db.shared.set 'answerdeck', [0..White.numcards() - 1]
 	Db.shared.set 'round', 0
 	Db.shared.set 'score', {}
 	Db.shared.set 'rounds', {}
 	Db.shared.set 'paused', false
+	log 'Set up the default shared DB'
+	log 'Black Numcards:', JSON.stringify Black.numcards()
+	log 'White Numcards:', JSON.stringify White.numcards()
  
 	# can be used to add cards during a game with an upgrade
 	Db.shared.set 'questiondecksize', Black.cards().length
@@ -372,7 +376,7 @@ exports.startgame = !->
 		text: tr("A new game of 'Happening against Humanity' was started!")
 		include: ['all']
 	firstround = prepareNewRound()
-	exports.startround firstround
+	startround firstround
 
 # Throws away cards that players selected they want to throw away.
 checkTrashCards = !->
