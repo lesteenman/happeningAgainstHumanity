@@ -75,6 +75,41 @@ exports.onUpgrade = !->
 		Db.shared.set 'answerdeck', oldCards.concat newCards
 		Db.shared.set 'answerdecksize', White.numcards()
 
+	# Remove doubles from the question deck
+	playedQuestionCards = []
+	for rid,round of Db.shared.get 'rounds'
+		if +round.question not in playedQuestionCards
+			playedQuestionCards.push +round.question
+	log 'Played Question Cards:', playedQuestionCards
+
+	questionDeck = Db.shared.get 'questiondeck'
+	cleanQuestionDeck = []
+	for c in questionDeck
+		if c not in cleanQuestionDeck and c not in playedQuestionCards
+			cleanQuestionDeck.push c
+	Db.shared.set 'questiondeck', cleanQuestionDeck
+
+	# Remove doubles from the answer deck
+	playedAnswerCards = []
+	for rid,round of Db.shared.get 'rounds'
+		for cards in round.playedcards
+			for i,c of cards
+				if c not in playedAnswerCards
+					playedAnswerCards.push c
+	for userId in Plugin.userIds()
+		for c in Db.personal(userId).get 'hand'
+			if +c not in playedAnswerCards
+				playedAnswerCards.push +c
+	log 'Played Answer Cards:', playedAnswerCards
+
+	Db.shared.set 'answerdeck', cleanAnswerDeck
+	answerDeck = Db.shared.get 'answerdeck'
+	cleanAnswerDeck = []
+	for c in answerDeck
+		if c not in cleanAnswerDeck and c not in playedAnswerCards
+			cleanAnswerDeck.push c
+	Db.shared.set 'answerdeck', cleanAnswerDeck
+
 	log 'Cards in answerdeck after upgrade:', (Db.shared.get 'answerdeck').length
 	log 'Cards in questiondeck after upgrade:', (Db.shared.get 'questiondeck').length
 

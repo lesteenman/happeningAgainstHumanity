@@ -81,7 +81,7 @@ exports.render = !->
 				max = Obs.create 10
 				Obs.observe !->
 					rendering = 0
-					if ((Object.keys rounds).length - 1 - activeRounds) > 0
+					if ((Object.keys rounds).length - activeRounds) > 0
 						Dom.h2 tr 'Finished Rounds'
 						Ui.list !->
 							Dom.style
