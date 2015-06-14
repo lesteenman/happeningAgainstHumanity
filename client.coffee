@@ -309,7 +309,12 @@ renderInfoBar = !->
 			if position?
 				Dom.onTap !->
 					Modal.show tr('Score'), !->
-						renderScore()
+						Dom.div !->
+							Dom.style
+								maxHeight: '60%'
+								overflowY: 'scroll'
+								overFlowX: 'hidden'
+							renderScore()
 
 showHelpPage = !->
 	Page.nav !->
