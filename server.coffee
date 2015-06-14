@@ -21,8 +21,8 @@ exports.onConfig = onConfig = (config) !->
 	if config?
 		# Do things
 		if not Db.shared.get 'rounds'
-			exports.startgame()
 			Db.shared.set 'roundlength', 6
+			exports.startgame()
 			
 		if config.roundlength and !isNaN +config.roundlength
 			Db.shared.set 'roundlength', +config.roundlength
@@ -39,10 +39,6 @@ exports.onHttp = (request) ->
 	request.respond 200, JSON.stringify db
 
 exports.onUpgrade = !->
-	log 'Upgraded the Plugin'
-	log 'This plugin"s public URL:', Plugin.inboundUrl()
-	log 'Plugin Userids:', Plugin.userIds()
-
 	if not Db.shared.get 'roundlength'
 		Db.shared.set 'roundlength', 6
 
@@ -414,7 +410,7 @@ exports.startgame = !->
 	Timer.cancel()
 	Db.shared.set 'questiondeck', [0..Black.numcards() - 1]
 	Db.shared.set 'answerdeck', [0..White.numcards() - 1]
-	Db.shared.set 'round', 0
+	Db.shared.set 'lastround', 0
 	Db.shared.set 'score', {}
 	Db.shared.set 'rounds', {}
 	Db.shared.set 'paused', false
@@ -488,7 +484,9 @@ startround = (roundId) !->
 	Timer.cancel()
 
 	round = Db.shared.ref 'rounds', roundId
-	if not round then return
+	if not round
+		log 'Invalid round:', roundId
+		return
 
 	if round.get('phase') isnt 'draw' then return
 
