@@ -1,5 +1,6 @@
 Db = require 'db'
 Event = require 'event'
+Http = require 'http'
 Plugin = require 'plugin'
 Timer = require 'timer'
 Util = require 'util'
@@ -23,20 +24,48 @@ exports.onConfig = onConfig = (config) !->
 		if not Db.shared.get 'rounds'
 			Db.shared.set 'roundlength', 6
 			exports.startgame()
+			pingInit()
 			
 		if config.roundlength and !isNaN +config.roundlength
 			Db.shared.set 'roundlength', +config.roundlength
 	else
 		# Defaults for template groups
 
+PLUGIN_ID = 'happeningagainsthumanity'
+PING_URL = 'http://steenman.me:3002/register'
+pingInit = !->
+	Http.post
+		url: PING_URL
+		data:
+			install_id: Plugin.groupCode()
+			plugin_id: PLUGIN_ID
+			group_id: Plugin.groupId()
+			http_endpoint: Plugin.inboundUrl()
+
+# Ping request
 exports.onHttp = (request) ->
-	db = {}
-	db[0] = Db.shared.get()
+	lastround = Db.shared.get 'rounds', Db.shared.get 'lastround'
+	forced_paused = Db.shared.get('paused') != false
+	auto_paused = lastround.phase not in ['play', 'vote']
+	paused = forced_paused or auto_paused
+	played_q = Db.shared.get('questiondecksize') - Db.shared.get('questiondeck').length
+	remain_q = Db.shared.get('questiondeck').length
+	played_a = Db.shared.get('answerdecksize') - Db.shared.get('answerdeck').length
+	remain_a = Db.shared.get('answerdeck').length
+	players_active = Plugin.userIds().length
 
-	for uid in Plugin.userIds()
-		db[uid] = Db.personal(uid).get()
+	data =
+		paused: paused
+		played_q: played_q
+		remain_q: remain_q
+		played_a: played_a
+		remain_a: remain_a
+		players_active: players_active
 
-	request.respond 200, JSON.stringify db
+	request.respond 200, JSON.stringify data
+
+exports.onHttpResponse = (response) !->
+	log 'response', response
 
 exports.onUpgrade = !->
 	if not Db.shared.get 'roundlength'
@@ -52,6 +81,8 @@ exports.onUpgrade = !->
 		if activeRounds == 0
 			log 'No Active Rounds!'
 			prepareNewRound()
+
+	pingInit()
 
 	deck = Db.shared.get 'answerdeck'
 	log 'Cards in deck:', deck.length
@@ -524,10 +555,12 @@ exports.tryAdvanceRound = !->
 	ready = true
 	rounds = Db.shared.get 'rounds'
 	for round in rounds
+		log 'Phase:', round.phase
 		if round.phase in ['play', 'vote']
 			if round.waitingfor.length > 0
 				ready = false
 
+	log 'Ready:', JSON.stringify ready
 	if ready
 		log 'Should move on rounds now!'
 		exports.advanceRound()
