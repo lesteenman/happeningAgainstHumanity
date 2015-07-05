@@ -44,15 +44,19 @@ pingInit = !->
 
 # Ping request
 exports.onHttp = (request) ->
-	lastround = Db.shared.get 'rounds', Db.shared.get 'lastround'
-	forced_paused = Db.shared.get('paused') != false
-	auto_paused = lastround.phase not in ['play', 'vote']
-	paused = forced_paused or auto_paused
+	paused = Db.shared.get('paused') != false
 	played_q = Db.shared.get('questiondecksize') - Db.shared.get('questiondeck').length
 	remain_q = Db.shared.get('questiondeck').length
 	played_a = Db.shared.get('answerdecksize') - Db.shared.get('answerdeck').length
 	remain_a = Db.shared.get('answerdeck').length
-	players_active = Plugin.userIds().length
+
+	players_active = 0
+	players_inactive = 0
+	for userId in Plugin.userIds()
+		if Db.personal(userId).get 'inactive'
+			players_inactive++
+		else
+			players_active++
 
 	data =
 		paused: paused
@@ -61,6 +65,7 @@ exports.onHttp = (request) ->
 		played_a: played_a
 		remain_a: remain_a
 		players_active: players_active
+		players_inactive: players_inactive
 
 	request.respond 200, JSON.stringify data
 
@@ -71,16 +76,24 @@ exports.onUpgrade = !->
 	if not Db.shared.get 'roundlength'
 		Db.shared.set 'roundlength', 6
 
-	rounds = Db.shared.get 'rounds'
-	if rounds
-		activeRounds = 0
-		for i in [(Object.keys rounds).length - 1..0]
-			roundId = Object.keys(rounds)[i]
-			if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
-				activeRounds += 1
-		if activeRounds == 0
-			log 'No Active Rounds!'
-			prepareNewRound()
+	# rounds = Db.shared.get 'rounds'
+	# if rounds
+	# 	activeRounds = 0
+	# 	for i in [(Object.keys rounds).length - 1..0]
+	# 		roundId = Object.keys(rounds)[i]
+	# 		if (Db.shared.get 'rounds', roundId, 'phase') in ['draw', 'play', 'vote']
+	# 			activeRounds += 1
+	# 	if activeRounds == 0
+	# 		log 'No Active Rounds!'
+	# 		prepareNewRound()
+
+	lastround = Db.shared.get 'rounds', Db.shared.get 'lastround'
+	forced_paused = Db.shared.get('paused') != false
+	auto_paused = lastround.phase not in ['play', 'vote']
+	if forced_paused or auto_paused
+		Db.shared.set 'paused', true
+		for userId in Plugin.userIds()
+			Db.personal(userId).set 'inactive', true
 
 	pingInit()
 
@@ -158,259 +171,17 @@ exports.onUpgrade = !->
 				return id
 		return -1
 
-	# Change all card texts/objects to IDs.
-	# log 'Rounds:', Db.shared.get 'rounds'
-	# isNonId = false
-	# rounds = Object.keys (Db.shared.get 'rounds')
-	# firstround = Db.shared.get 'rounds', rounds[0]
-	# if firstround.question.text
-	# 	isNonId = true
-
-	# if isNonId
-	# 	log 'Upgrading from text to IDs!'
-	# 	rounds = Db.shared.get 'rounds'
-	# 	for id,r of rounds
-	# 		roundBroken = false
-	# 		qt = r.question.text
-	# 		nqt = lookupQuestionCardId qt
-	# 		if nqt < 0
-	# 			roundBroken = true
-	# 		r.question = nqt
-
-	# 		# Winners
-	# 		if r.winner and r.winner.a
-	# 			winners = r.winner.a
-	# 			newwinners = []
-	# 			for w in winners
-	# 				nw = {}
-	# 				for n,a of w
-	# 					na = lookupAnswerCardId a
-	# 					nw[n] = na
-	# 					if na < 0
-	# 						roundBroken = true
-	# 				newwinners.push nw
-	# 			r.winner.a = newwinners
-
-	# 		# Played Cards
-	# 		playedcards = r.playedcards
-	# 		newplayedcards = []
-	# 		for cards in playedcards
-	# 			newcards = {}
-	# 			for i,c of cards
-	# 				nc = lookupAnswerCardId c
-	# 				newcards[i] = nc
-	# 				if nc < 0
-	# 					roundBroken = true
-	# 			newplayedcards.push newcards
-	# 		r.playedcards = newplayedcards
-
-	# 		if roundBroken
-	# 			r.phase = 'broken'
-
-	# 		Db.shared.set 'rounds', id, r
-		
-	# 	for userId in Plugin.userIds()
-	# 		hand = Db.personal(userId).get 'hand'
-	# 		newhand = []
-	# 		for card in hand
-	# 			newcard = lookupAnswerCardId card
-	# 			if newcard >= 0
-	# 				newhand.push newcard
-	# 		Db.personal(userId).set 'hand', newhand
-
-	# 		playedCards = Db.personal(userId).get 'playedcards'
-	# 		newplayedcards = {}
-	# 		for round,cards of playedCards
-	# 			newcards = {}
-	# 			for n,c of cards
-	# 				nc = lookupAnswerCardId c
-	# 				if nc >= 0
-	# 					newcards[n] = nc
-	# 			newplayedcards[round] = newcards
-	# 		Db.personal(userId).set 'playedcards', newplayedcards
-
-	# 		votes = Db.personal(userId).get 'vote'
-	# 		newvotes = {}
-	# 		for round,vote of votes
-	# 			newvote = {}
-	# 			for n,v of vote
-	# 				nv = lookupAnswerCardId v
-	# 				if nv > 0
-	# 					newvote[n] = nv
-	# 			newvotes[round] = newvote
-	# 		Db.personal(userId).set 'vote', newvotes
-
-# exports.client_upgradeGame = !->
-# 	if Plugin.groupId() is 159
-# 		exports.onUpgrade()
-
-# exports.client_generateBogusGame = !->
-# 	if Plugin.groupId() isnt 159
-# 		return false
-
-# 	u1h = ["A Molson muscle.","The economy.","A sad fat dragon with no friends.","World peace.","Overpowering your father.","Stifling a giggle at the mention of Hutus and Tutsis.","Vikings.","Bingeing and purging.","A falcon with a cap on its head.","Pretending to care."]
-# 	u2h = ["A Burmese tiger pit.","MechaHitler.","Oncoming traffic.","Poutine.","A man in yoga pants with a ponytail and feather earrings.","Homo milk.","A low standard of living.","Fetal alcohol syndrome.","The world's tallest midget.","Being marginalized."]
-# 	u3h = ["An erection that lasts longer than four hours.","Making a friend.","Scrotal frostbite.","Basic human decency.","Spring break!","Quivering jowls.","A nuanced critique.","Praying the gay away.","The true meaning of Christmas.","Apologizing."]
-
-# 	u1p =
-# 		8:
-# 			0: "A Molson muscle."
-# 		9:
-# 			0: "A sad fat dragon with no friends."
-# 	u2p =
-# 		8:
-# 			0: "A Burmese tiger pit."
-# 		9:
-# 			0: "A man in yoga pants with a ponytail and feather earrings."
-# 	u3p =
-# 		8:
-# 			0: "An erection that lasts longer than four hours."
-# 		9:
-# 			0: "Basic human decency."
-	
-# 	u1v =
-# 		8:
-# 			0: "An erection that lasts longer than four hours."
-# 	u2v =
-# 		8:
-# 			0: "An erection that lasts longer than four hours."
-# 	u3v =
-# 		8:
-# 			0: "A Molson muscle."
-
-# 	u1t = ["Stifling a giggle at the mention of Hutus and Tutsis."]
-
-# 	Db.personal(267).set 'hand', null
-# 	Db.personal(268).set 'hand', null
-# 	Db.personal(269).set 'hand', null
-# 	Db.personal(267).set 'playedcards', null
-# 	Db.personal(268).set 'playedcards', null
-# 	Db.personal(269).set 'playedcards', null
-# 	Db.personal(267).set 'vote', null
-# 	Db.personal(268).set 'vote', null
-# 	Db.personal(269).set 'vote', null
-# 	Db.personal(267).set 'trashcards', null
-
-# 	Db.personal(267).set 'hand', u1h
-# 	Db.personal(268).set 'hand', u2h
-# 	Db.personal(269).set 'hand', u3h
-# 	Db.personal(267).set 'playedcards', u1p
-# 	Db.personal(268).set 'playedcards', u2p
-# 	Db.personal(269).set 'playedcards', u3p
-# 	Db.personal(267).set 'vote', u1v
-# 	Db.personal(268).set 'vote', u2v
-# 	Db.personal(269).set 'vote', u3v
-# 	Db.personal(267).set 'trashcards', u1t
-
-# 	Db.shared.set 'rounds', null
-# 	Db.shared.set 'rounds', 1,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "What's Teach for America using to inspire inner city students to succeed?"
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"A snapping turtle biting the tip of your penis."}]
-# 			p: [268]
-# 	Db.shared.set 'rounds', 2,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "The class field trip was very ruined by ____."
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"The profoundly handicapped."}]
-# 			p: [267]
-# 	Db.shared.set 'rounds', 3,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "In L.A. County Jail, word is you can trade 200 cigarettes for ____."
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"8 oz. of sweet Mexican black-tar heroin."},{"0":"Child beauty pageants."}]
-# 			p: [268,269]
-# 	Db.shared.set 'rounds', 4,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated __________."
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"The boners of the elderly."}]
-# 			p: [267]
-# 	Db.shared.set 'rounds', 5,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "But before I kill you, Mr. Bond, I must show you __________."
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"The heart of a child."},{"0":"A gentle caress of the inner thigh."}]
-# 			p: [268]
-# 	Db.shared.set 'rounds', 6,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text: "In Michael Jackson's final moments, he thought about __________."
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"Concealing a boner."},{"0":"Oompa-Loompas."}]
-# 			p: [267,269]
-# 	Db.shared.set 'rounds', 7,
-# 		phase: 'done'
-# 		phase_end: 0
-# 		playedcards: []
-# 		question:
-# 			play: 1
-# 			text:"What's my anti-drug?"
-# 		waitingfor: []
-# 		winner:
-# 			a: [{"0":"A sad handjob."},{"0":"Me time."}]
-# 			p: [269]
-# 	Db.shared.set 'rounds', 8,
-# 		phase: 'vote' # TODO: Unbreak;
-# 		phase_end: (Date.now()/1000+60*5)
-# 		playedcards: [{"0":"A Molson muscle."},{"0":"A Burmese tiger pit."},{"0":"An erection that lasts longer than four hours."}]
-# 		question:
-# 			play: 2
-# 			text: "What's my secret power?"
-# 		waitingfor: [268,269]
-# 	Db.shared.set 'rounds', 9,
-# 		phase: 'play'
-# 		phase_end: (Date.now()/1000+60*5)
-# 		playedcards: []
-# 		question:
-# 			active: 1
-# 			play: 1
-# 			text: "Before I run for president, I must destroy all evidence of my involvement with ____."
-# 			waitingfor: [268,269]
-# 	Db.shared.set 'lastround', 9
-
-# 	Timer.cancel()
-# 	Timer.set 60*5*1000, 'advanceRound'
-
 reshuffleAnswers = !->
 	log 'Ran out of answer cards. Reshuffling deck!'
 	Db.shared.set 'answerdeck', [0..White.numcards()-1]
 	Db.shared.set 'answerdecksize', White.numcards()
+	Db.shared.set 'answerReshuffles', Db.shared.get('answerReshuffles') + 1
 
 reshuffleQuestions = !->
 	log 'Ran out of question cards. Reshuffling deck!'
 	Db.shared.set 'questiondeck', [0..Black.numcards()-1]
 	Db.shared.set 'questiondecksize', Black.numcards()
+	Db.shared.set 'questionReshuffles', Db.shared.get('questionReshuffles') + 1
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
@@ -428,16 +199,50 @@ exports.client_advanceround = !->
 ### Reminder Functions ###
 
 exports.remindPlay = (roundId) !->
+	waitingfor = Db.shared.get 'rounds', roundId, 'waitingfor'
+	notify = []
+	for userId in Plugin.userIds()
+		if not Db.personal(userId).get('inactive') and \
+				not Db.personal(userId).get('notified') and \
+				userId in waitingfor
+			notify.push userId
+			Db.personal(userId).set 'notified', true
 	Event.create
 		unit: 'game'
 		text: tr('Do not forget to play a card!')
-		include: Db.shared.get('rounds', roundId, 'waitingfor')
+		include: notify
 
 exports.remindVote = (roundId) !->
+	waitingfor = Db.shared.get 'rounds', roundId, 'waitingfor'
+	notify = []
+	for userId in Plugin.userIds()
+		if not Db.personal(userId).get('inactive') and \
+				not Db.personal(userId).get('notified') and \
+				userId in waitingfor
+			notify.push userId
+			Db.personal(userId).set 'notified', true
 	Event.create
 		unit: 'game'
 		text: tr('Do not forget to vote for the best card!')
-		include: Db.shared.get('rounds', roundId, 'waitingfor')
+		include: notify
+
+setPlayerInactive = (userId) !->
+	wasInactive = (Db.personal(userId).get 'inactive') == true
+	if not wasInactive
+		Event.create
+			unit: 'game'
+			text: tr('Happening against Humanity will stop sending you notifications. You do not seem to be playing anymore.')
+			include: [userId]
+
+	Db.personal(userId).set 'inactive', true
+
+checkInactivity = !->
+	for userId in Plugin.userIds()
+		if not Db.personal(userId).get 'inactive'
+			noPlayCount = Db.personal(userId).get('noPlayCount')
+			noVoteCount = Db.personal(userId).get('noVoteCount')
+			if noPlayCount >= 3 and noVoteCount >= 3
+				setPlayerInactive userId
 
 ### Phase-switch functions ###
 
@@ -510,9 +315,6 @@ prepareNewRound = !->
 		waitingfor: waitingfor
 	Db.shared.set 'rounds', newroundnum, newround
 
-	if (Db.shared.get 'answerdeck').length == 0
-		Db.shared.set 'paused', 'forced'
-
 	return newroundnum
 
 # Triggered by exports.client_drawquestion
@@ -525,21 +327,19 @@ startround = (roundId) !->
 		return
 
 	if round.get('phase') isnt 'draw' then return
-
-	if (Db.shared.get 'questiondeck').length == 0
-		Db.shared.set 'paused', 'forced'
-		return
 	
+	Db.shared.set 'paused', false
 	round.set 'phase', 'play'
 
 	duration = getRoundDuration(Date.now()/1000)
 	round.set 'phase_end', (Date.now()/1000+duration)
-	Timer.set (duration-3600)*1000, 'remindPlay', roundId
+	# Minimum round time is 1 hour, so set minimum reminder time to half an hour.
+	Timer.set Math.min(1800, duration-3600)*1000, 'remindPlay', roundId
 	# Closes both the playing and voting rounds, but doing this here makes sure it is
 	# also triggered for the very first round of a game.
 	Timer.set duration*1000, 'advanceRound'
 
-	log 'Reminder set at ', (duration-3600)*1000
+	log 'Reminder set at ', Math.min(1800, duration-3600)
 	log 'End time set at ', duration*1000
 
 	# Only send to people with an empty 'showwinners' property, to prevent
@@ -580,6 +380,10 @@ exports.advanceRound = !->
 	playedRound = Db.shared.get 'rounds', playedRoundId
 	voteRound = Db.shared.get 'rounds', voteRoundId
 
+	# Reset the 'notified' flag on users
+	for userId in Plugin.userIds()
+		Db.personal(userId).set 'notified', false
+
 	if voteRound
 		winners = closeVotes voteRoundId
 		if winners
@@ -598,11 +402,16 @@ exports.advanceRound = !->
 				unit: 'game'
 				text: tr("'%1'", question.text)
 				include: ['all']
-		else if winnerString
-			Event.create
-				unit: 'game'
-				text: tr('%1 won the round!', winnerString)
-				include: ['all']
+		else
+			Db.shared.set 'paused', true
+			for userId in Plugin.userIds()
+				Db.personal(userId).set 'inactive', true
+
+			if winnerString
+				Event.create
+					unit: 'game'
+					text: tr('%1 won the round!', winnerString)
+					include: ['all']
 
 closeRound = (roundId) !->
 	Timer.cancel()
@@ -618,6 +427,7 @@ closeRound = (roundId) !->
 		cards = Db.personal(userId).get('playedcards', roundId)
 		question = Black.getCard round.get 'question'
 		if cards and Object.keys(cards).length == question.play
+			# User played cards
 			Db.personal(userId).set 'activity', ((Db.personal(userId).get 'activity')|0) + 1
 
 			hand = Db.personal(userId).get 'hand'
@@ -625,7 +435,13 @@ closeRound = (roundId) !->
 				i = hand.indexOf card
 				hand.splice(i, 1)
 			Db.personal(userId).set 'hand', hand
+			Db.personal(userId).set 'noPlayCount', 0
 			playedcards.push cards
+		else
+			noPlayCount = Db.personal(userId).get 'noPlayCount' || 0
+			Db.personal(userId).set 'noPlayCount', noPlayCount+1
+	
+	checkInactivity()
 
 	if playedcards.length == 0
 		for userId in Plugin.userIds()
@@ -664,7 +480,13 @@ closeVotes = (roundId) !->
 			else
 				votes[answer].push(userId)
 			Db.personal(userId).set 'vote', roundId, null
+			Db.personal(userId).set 'noVoteCount', 0
+		else
+			noVoteCount = Db.personal(userId).get 'noVoteCount' || 0
+			Db.personal(userId).set 'noVoteCount', noVoteCount+1
 	
+	checkInactivity()
+
 	Db.shared.set 'rounds', roundId, 'phase', 'done'
 	log 'Votes:', JSON.stringify votes
 
@@ -777,6 +599,9 @@ exports.client_playcard = (roundId, p, card) !->
 	played[p] = card
 
 	Db.personal(Plugin.userId()).set 'playedcards', roundId, played
+	Db.personal(Plugin.userId()).set 'noPlayCount', 0
+	Db.personal(Plugin.userId()).set 'inactive', false
+
 	waitingfor = []
 
 	for userId in Plugin.userIds()
@@ -830,6 +655,8 @@ exports.client_trashcard = (card) !->
 
 exports.client_vote = (roundId, wincards) !->
 	Db.personal(Plugin.userId()).set 'vote', roundId, wincards
+	Db.personal(Plugin.userId()).set 'noVoteCount', 0
+	Db.personal(Plugin.userId()).set 'inactive', false
 
 	everyonevoted = true
 	waitingfor = []

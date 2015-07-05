@@ -46,7 +46,7 @@ exports.render = !->
 			renderComments page
 	else
 		renderInfoBar()
-		if Db.shared.get 'paused'
+		if Db.shared.get('paused') == 'forced'
 			Dom.text tr('You have run of either answers or questions. Please wait until more have been added, or start a new game!')
 		else
 			Dom.div !->
