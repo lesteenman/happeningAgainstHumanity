@@ -1418,1864 +1418,1864 @@ exports.cards = !->
 		1408: {active: true, text: "A giant robot German suplex."}
 		1409: {active: true, text: "Benchpressing."}
 		1410: {active: true, text: "Mother's debit card."}
-		# 1411: {active: true, text: "STEAL ALL THE FARM."}
-		# 1412: {active: true, text: "Norwegian Oil."}
-		# 1413: {active: true, text: "Grandiosa."}
-		# 1414: {active: true, text: "Drilling."}
-		# 1415: {active: true, text: "Barta's glorious hair."}
-		# 1416: {active: true, text: "BENCH ALL THE MOTHERS."}
-		# 1417: {active: true, text: "Taking the second and third blue buff."}
-		# 1418: {active: true, text: "Invisible stabwounds."}
-		# 1419: {active: true, text: "Lulu's double E."}
-		# 1420: {active: true, text: "A blurry picture."}
-		# 1421: {active: true, text: "The Merchant Navy."}
-		# 1422: {active: true, text: "Manny's epic laugh."}
-		# 1423: {active: true, text: "Clearly jealous."}
-		# 1424: {active: true, text: "A very tight vest from Primark."}
-		# 1425: {active: true, text: "Fisting a nun."}
-		# 1426: {active: true, text: "Teabagging a siamese midget while benchpressing a cybernetically enhanced bear."}
-		# 1427: {active: true, text: "From Primark."}
-		# 1428: {active: true, text: "smoochy moochy."}
-		# 1429: {active: true, text: "A Superman tattoo."}
-		# 1430: {active: true, text: "Gary Glitter."}
-		# 1431: {active: true, text: "Hestkuk."}
-		# 1432: {active: true, text: "A nice guy."}
-		# 1433: {active: true, text: "My 6.3 KDA ratio."}
-		# 1434: {active: true, text: "bronze scrub."}
-		# 1435: {active: true, text: "Get on my level."}
-		# 1436: {active: true, text: "Fucking tryhard."}
-		# 1437: {active: true, text: "Those moments when you're bored and pucker your anus to a good beat."}
-		# 1438: {active: true, text: "An undetermined but significant quantity of penis."}
-		# 1439: {active: true, text: "PEEEEEEEEEEEEEEEENIIIISSSSSSSS."}
-		# 1440: {active: true, text: "They're taking the hobbits to Isengard!"}
-		# 1441: {active: true, text: "Confounding jerry at every turn."}
-		# 1442: {active: true, text: "Jumanji."}
-		# 1443: {active: true, text: "Wards."}
-		# 1444: {active: true, text: "Wildturtle's vast range of emotions."}
-		# 1445: {active: true, text: "K-Pop."}
-		# 1446: {active: true, text: "Doing Gangnam Style at a funeral."}
-		# 1447: {active: true, text: "joseph gordon-Levitt wearing nothing but a kitten."}
-		# 1448: {active: true, text: "125% Reccomended Daily Allowance of cock."}
-		# 1449: {active: true, text: "Barta not being sarcastic."}
-		# 1450: {active: true, text: "Golby's itchy testicles."}
-		# 1451: {active: true, text: "Surgery to move the male g-spot to the naval."}
-		# 1452: {active: true, text: "Golby not jungling."}
-		# 1453: {active: true, text: "Feeling a fart pushing against your prostate."}
-		# 1454: {active: true, text: "I'm Batman. WHERE ARE THEY?!?"}
-		# 1455: {active: true, text: "Band Camp."}
-		# 1456: {active: true, text: "A corgi wearing a hat."}
-		# 1457: {active: true, text: "A corgi wearing a sailor moon outfit."}
-		# 1458: {active: true, text: "a corgi dressed as a viking."}
-		# 1459: {active: true, text: "A corgi."}
-		# 1460: {active: true, text: "Chak's bald spot."}
-		# 1461: {active: true, text: "THE HAWK!"}
-		# 1462: {active: true, text: "Jamiroquai."}
-		# 1463: {active: true, text: "BAWNJOURNO."}
-		# 1464: {active: true, text: "Black people's nostrils."}
-		# 1465: {active: true, text: "LOOK AT MY HORSE."}
-		# 1466: {active: true, text: "MY HORSE IS AMAZING."}
-		# 1467: {active: true, text: "XPEKE!"}
-		# 1468: {active: true, text: "CACAW!"}
-		# 1469: {active: true, text: "Dryhumping."}
-		# 1470: {active: true, text: "50 Shades of Gay."}
-		# 1471: {active: true, text: "Chak making a sandwich."}
-		# 1472: {active: true, text: "Jealous."}
-		# 1473: {active: true, text: "David."}
-		# 1474: {active: true, text: "A healthy dose of Vitamin Cock and Vitamin Dick."}
-		# 1475: {active: true, text: "Questioning my sexuality."}
-		# 1476: {active: true, text: "Tons of Damage."}
-		# 1477: {active: true, text: "A Godzilla attack."}
-		# 1478: {active: true, text: "Eating KFC on Christmas day."}
-		# 1479: {active: true, text: "Hello Kitty! pregnancy doujins."}
-		# 1480: {active: true, text: "Waving it around all willy-nilly."}
-		# 1481: {active: true, text: "Hot anime moms."}
-		# 1482: {active: true, text: "Pissing yourself."}
-		# 1483: {active: true, text: "GAO! GAI! GAR!!!"}
-		# 1484: {active: true, text: "Vocaloid death metal."}
-		# 1485: {active: true, text: "Yaoi paddles."}
-		# 1486: {active: true, text: "Mr. Satan."}
-		# 1487: {active: true, text: "An actual, honest-to-God black guy."}
-		# 1488: {active: true, text: "4,000 tacos, and one Diet Coke."}
-		# 1489: {active: true, text: "Sick with the cancer."}
-		# 1490: {active: true, text: "Black and white samurai movies."}
-		# 1491: {active: true, text: "A promotional crossover with Pizza Hut."}
-		# 1492: {active: true, text: "Transvestite police officers."}
-		# 1493: {active: true, text: "Con funk."}
-		# 1494: {active: true, text: "Star-shaped nipples."}
-		# 1495: {active: true, text: "A laser horse."}
-		# 1496: {active: true, text: "Girls with guns AND glasses."}
-		# 1497: {active: true, text: "Teenaged miniskirt-wearing space pirates."}
-		# 1498: {active: true, text: "Gas station sushi."}
-		# 1499: {active: true, text: "Deman making a racist pun."}
-		# 1500: {active: true, text: "Phreak staring at you and never blinking."}
-		# 1501: {active: true, text: "PENTAFAIL!"}
-		# 1502: {active: true, text: "I Can't Believe It's Not Butter."}
-		# 1503: {active: true, text: "A Wanksock."}
-		# 1504: {active: true, text: "An arsehole like a wellington top."}
-		# 1505: {active: true, text: "BORK."}
-		# 1506: {active: true, text: "Handicapped people on Takeshi's Castle."}
-		# 1507: {active: true, text: "The Chuckle Brothers at their mother's funeral."}
-		# 1508: {active: true, text: "A 3am phone call."}
-		# 1509: {active: true, text: "A cardboard cutout of Jennifer Lawrence."}
-		# 1510: {active: true, text: "Gotfried's voice."}
-		# 1511: {active: true, text: "Ezreal's hot sugary ass."}
-		# 1512: {active: true, text: "A Canadian penny."}
-		# 1513: {active: true, text: "dho's penis."}
-		# 1514: {active: true, text: "Griffy's tits."}
-		# 1515: {active: true, text: "Kyubey."}
-		# 1516: {active: true, text: "Weeaboos."}
-		# 1517: {active: true, text: "Narutards."}
-		# 1518: {active: true, text: "Dead catgirls."}
-		# 1519: {active: true, text: "Aniplex of America."}
-		# 1520: {active: true, text: "Steve Motherfuckin' Blum."}
-		# 1521: {active: true, text: "Tentacle rape."}
-		# 1522: {active: true, text: "Lolis."}
-		# 1523: {active: true, text: "Hot-blooded shonen protagonists."}
-		# 1524: {active: true, text: "A fuck-mothering vampire."}
-		# 1525: {active: true, text: "A big-breasted 14-year-old wearing a bikini and sucking on a popsicle."}
-		# 1526: {active: true, text: "Henry Goto being savagely raped by a bear."}
-		# 1527: {active: true, text: "Yet another goddamn Goku vs. Superman argument."}
-		# 1528: {active: true, text: "FANSERVICE!!!"}
-		# 1529: {active: true, text: "FUNimation."}
-		# 1530: {active: true, text: "Strangling hardcore otaku nerds with razor wire."}
-		# 1531: {active: true, text: "The female lead singer being gang-banged by her entire band."}
-		# 1532: {active: true, text: "Bukkake."}
-		# 1533: {active: true, text: "OVER 9000!!"}
-		# 1534: {active: true, text: "Bulma's panties."}
-		# 1535: {active: true, text: "Mami getting her head bitten off."}
-		# 1536: {active: true, text: "Onii-chan."}
-		# 1537: {active: true, text: "MAWNING LESCUE!!!"}
-		# 1538: {active: true, text: "Idiots who don't seem to realize that Avatar: The Last Airbender isn't really an anime."}
-		# 1539: {active: true, text: "PASTAAAAA!!!!"}
-		# 1540: {active: true, text: "Yu-Gi-Oh! The Abridged Series."}
-		# 1541: {active: true, text: "A fat middle-aged man in a Sailor Moon costume."}
-		# 1542: {active: true, text: "$300 anime bluray boxsets."}
-		# 1543: {active: true, text: "Man-Faye."}
-		# 1544: {active: true, text: "DAN GREEN."}
-		# 1545: {active: true, text: "WE UNDERSTAND ANIME FAN WANTS!!"}
-		# 1546: {active: true, text: "Goku."}
-		# 1547: {active: true, text: "Soldier A."}
-		# 1548: {active: true, text: "Red-headed tsunderes."}
-		# 1549: {active: true, text: "That sound effect in every hentai when the guy ejaculates."}
-		# 1550: {active: true, text: "Sarah Fuckin' Palin."}
-		# 1551: {active: true, text: "Bang."}
-		# 1552: {active: true, text: "Prof's legs."}
-		# 1553: {active: true, text: "Naruto."}
-		# 1554: {active: true, text: "Rice balls."}
-		# 1555: {active: true, text: "JesuOtaku's ginormous lips."}
-		# 1556: {active: true, text: "Fujiko's boobs."}
-		# 1557: {active: true, text: "Vash the Stampede."}
-		# 1558: {active: true, text: "Shinji being a whiny little bitch."}
-		# 1559: {active: true, text: "Third Impact."}
-		# 1560: {active: true, text: "Kenshiro."}
-		# 1561: {active: true, text: "Cowboy Bebop."}
-		# 1562: {active: true, text: "Fullmetal Alchemist."}
-		# 1563: {active: true, text: "Futanari."}
-		# 1564: {active: true, text: "Taking a potato chip... and EATING IT."}
-		# 1565: {active: true, text: "Unreasonably long transformation sequences."}
-		# 1566: {active: true, text: "Ass dance!! Ass dance!!"}
-		# 1567: {active: true, text: "CENTURY SOOOOUUUP!!!!!"}
-		# 1568: {active: true, text: "Garzey's Wing."}
-		# 1569: {active: true, text: "Reverse harems."}
-		# 1570: {active: true, text: "Mewtwo."}
-		# 1571: {active: true, text: "Wearing panties on the head."}
-		# 1572: {active: true, text: "CARD GAMES ON MOTORCYCLES."}
-		# 1573: {active: true, text: "Nice boat."}
-		# 1574: {active: true, text: "The One Piece rap."}
-		# 1575: {active: true, text: "Walpurgisnacht."}
-		# 1576: {active: true, text: "Girls with glasses."}
-		# 1577: {active: true, text: "Eating the wrong end of a chocolate cornet."}
-		# 1578: {active: true, text: "Being eaten by a titan."}
-		# 1579: {active: true, text: "Casca's hairy unshaven vag."}
-		# 1580: {active: true, text: "Tits on your hand."}
-		# 1581: {active: true, text: "The Death Note."}
-		# 1582: {active: true, text: "A 'read the manga' style ending."}
-		# 1583: {active: true, text: "Giant robots."}
-		# 1584: {active: true, text: "Masa! <3"}
-		# 1585: {active: true, text: "THE MAN-POLE OF <i>DOOOOOOOOOM!!!</i>"}
-		# 1586: {active: true, text: "Home For Infinite Losers (HFIL)."}
-		# 1587: {active: true, text: "Gratuitous panty shots."}
-		# 1588: {active: true, text: "Cartoon buttholes."}
-		# 1589: {active: true, text: "Muscle-bound shirtless MEN."}
-		# 1590: {active: true, text: "Recap episodes."}
-		# 1591: {active: true, text: "An overly defensive fanbase."}
-		# 1592: {active: true, text: "Fuckin' Bronies."}
-		# 1593: {active: true, text: "Groping strangers on a train."}
-		# 1594: {active: true, text: "My Cresta."}
-		# 1595: {active: true, text: "Nerdy kids in Speedos."}
-		# 1596: {active: true, text: "Bad K-on! fanart."}
-		# 1597: {active: true, text: "That stupid opening song from Steel Angel Kurumi getting stuck in your head."}
-		# 1598: {active: true, text: "Mamoru Miyano."}
-		# 1599: {active: true, text: "A Hello Kitty! vibrator."}
-		# 1600: {active: true, text: "TETSUOOOOOO!!!"}
-		# 1601: {active: true, text: "Wibble."}
-		# 1602: {active: true, text: "Black cosplayers."}
-		# 1603: {active: true, text: "Fake Nendoroids."}
-		# 1604: {active: true, text: "Eating ramen noodles for a month because you HAD to have that out of print Macross boxset."}
-		# 1605: {active: true, text: "Showing Serial Experiments Lain to toddlers."}
-		# 1606: {active: true, text: "A mindfuck."}
-		# 1607: {active: true, text: "A puppy being beaten to death with a flower pot."}
-		# 1608: {active: true, text: "Gantz. Just.... Gantz."}
-		# 1609: {active: true, text: "Snapping the nipple off of a prostitute's breast and eating it."}
-		# 1610: {active: true, text: "Panty &amp; Stocking with Garterbelt."}
-		# 1611: {active: true, text: "Punching a man so hard his clothes fly off."}
-		# 1612: {active: true, text: "Banana sushi."}
-		# 1613: {active: true, text: "Oro?"}
-		# 1614: {active: true, text: "Creamy Mami."}
-		# 1615: {active: true, text: "Whatever the hell the Utena movie was about."}
-		# 1616: {active: true, text: "Carl Macek."}
-		# 1617: {active: true, text: "The ungodly abomination that is Robotech."}
-		# 1618: {active: true, text: "Kira worshippers."}
-		# 1619: {active: true, text: "The thousands upon thousands of women that Golgo 13 has slept with."}
-		# 1620: {active: true, text: "Uguu..."}
-		# 1621: {active: true, text: "Old man dragon dick."}
-		# 1622: {active: true, text: "Apocalypse Zero."}
-		# 1623: {active: true, text: "Ikki Tousen."}
-		# 1624: {active: true, text: "...."}
-		# 1625: {active: true, text: "The inevitable beach episode."}
-		# 1626: {active: true, text: "A Japanese schoolgirl covered head-to-toe in semen."}
-		# 1627: {active: true, text: "Satoshi Kon."}
-		# 1628: {active: true, text: "Kigurumi."}
-		# 1629: {active: true, text: "Good ol' fashioned Japanese sexism."}
-		# 1630: {active: true, text: "Guro."}
-		# 1631: {active: true, text: "Dr. Who fans showing up at anime cons despite not being invited."}
-		# 1632: {active: true, text: "Plot armor."}
-		# 1633: {active: true, text: "Nekomimi."}
-		# 1634: {active: true, text: "Pure grade-A opium."}
-		# 1635: {active: true, text: "Banging 1,000 dudes."}
-		# 1636: {active: true, text: "A drunken Japanese businessman."}
-		# 1637: {active: true, text: "Maid cafes."}
-		# 1638: {active: true, text: "Host clubs."}
-		# 1639: {active: true, text: "Shooting out nearly an entire liter of cum."}
-		# 1640: {active: true, text: "The Hare Hare Yukai dance."}
-		# 1641: {active: true, text: "Shining Finger!"}
-		# 1642: {active: true, text: "The inkvasion."}
-		# 1643: {active: true, text: "School swimsuits."}
-		# 1644: {active: true, text: "Underpants. Underpants. Underpants. Underpants. Under-"}
-		# 1645: {active: true, text: "Acidic breast milk."}
-		# 1646: {active: true, text: "Kamen Rider."}
-		# 1647: {active: true, text: "The Major's hips and bust."}
-		# 1648: {active: true, text: "Captain Bravo."}
-		# 1649: {active: true, text: "Kirino's ass."}
-		# 1650: {active: true, text: "Crystal Boy's creepy smile."}
-		# 1651: {active: true, text: "Gackt."}
-		# 1652: {active: true, text: "Used panty vending machines."}
-		# 1653: {active: true, text: "Butt sniffing."}
-		# 1654: {active: true, text: "Vegeta's sweet goatee."}
-		# 1655: {active: true, text: "Sub-only releases."}
-		# 1656: {active: true, text: "Getting drunk on sake."}
-		# 1657: {active: true, text: "Flying Vortex of Fear."}
-		# 1658: {active: true, text: "Fishcake."}
-		# 1659: {active: true, text: "Go Nagai sideburns."}
-		# 1660: {active: true, text: "<i>CHIIIIIIIIN.</i>"}
-		# 1661: {active: true, text: "Getting the bad ending of a visual novel."}
-		# 1662: {active: true, text: "The Tsukihime anime."}
-		# 1663: {active: true, text: "Jacuzzi Splot."}
-		# 1664: {active: true, text: "Juvijuvibro."}
-		# 1665: {active: true, text: "Bear punching, tiger chopping, shark suplexing, &amp; helicopter bodyslamming."}
-		# 1666: {active: true, text: "Getting your penis cut in half."}
-		# 1667: {active: true, text: "Stupid sexy Johan."}
-		# 1668: {active: true, text: "Naoki Urasawa."}
-		# 1669: {active: true, text: "Tachikoma-kun."}
-		# 1670: {active: true, text: "Dancin' on the Planet Dance."}
-		# 1671: {active: true, text: "Super Milk-chan."}
-		# 1672: {active: true, text: "You dumbass!"}
-		# 1673: {active: true, text: "Being the uke."}
-		# 1674: {active: true, text: "The power of friendship."}
-		# 1675: {active: true, text: "An arm and a leg."}
-		# 1676: {active: true, text: "The entire cast of School Days."}
-		# 1677: {active: true, text: "Giant naked Rei."}
-		# 1678: {active: true, text: "Masturbating over Asuka's comatose body."}
-		# 1679: {active: true, text: "Let's Fighting Love!"}
-		# 1680: {active: true, text: "Cousin marriage."}
-		# 1681: {active: true, text: "4Kids."}
-		# 1682: {active: true, text: "Making someone's head explode."}
-		# 1683: {active: true, text: "Calling out the name of your attack."}
-		# 1684: {active: true, text: "Multi-episode fights."}
-		# 1685: {active: true, text: "M.D. Geist."}
-		# 1686: {active: true, text: "Blue Water Studios."}
-		# 1687: {active: true, text: "Darrel Guilbeau trying to act."}
-		# 1688: {active: true, text: "Highschool of the Dead."}
-		# 1689: {active: true, text: "Girls with guns."}
-		# 1690: {active: true, text: "The goddamn Maho."}
-		# 1691: {active: true, text: "Fat, sweaty otaku."}
-		# 1692: {active: true, text: "Ganguro girls."}
-		# 1693: {active: true, text: "Magical girls."}
-		# 1694: {active: true, text: "Hot female bass players."}
-		# 1695: {active: true, text: "Goku, Luffy, Toriko, and Lina Inverse in an eating contest."}
-		# 1696: {active: true, text: "BlackStar"}
-		# 1697: {active: true, text: "You cactus bastard!"}
-		# 1698: {active: true, text: "Underwater Ray Romano."}
-		# 1699: {active: true, text: "Sexy schoolteacher types."}
-		# 1700: {active: true, text: "Tig ol' bitties."}
-		# 1701: {active: true, text: "Lesbian subtext."}
-		# 1702: {active: true, text: "Watching FLCL while tripping on acid."}
-		# 1703: {active: true, text: "Inspector Zenigata."}
-		# 1704: {active: true, text: "Pure fighting spirit."}
-		# 1705: {active: true, text: "The GARtender."}
-		# 1706: {active: true, text: "Mad Bull 34."}
-		# 1707: {active: true, text: "Sticking your finger up her ass."}
-		# 1708: {active: true, text: "Freddie riding to school on a wild black stallion."}
-		# 1709: {active: true, text: "Whatever turns you on, big guy."}
-		# 1710: {active: true, text: "Standing outside the gates of the White House completely naked with a revolver in your hand."}
-		# 1711: {active: true, text: "I'LL ANSWER THE PHONE FROM NOW ON, LILY!!"}
-		# 1712: {active: true, text: "KITTEH. :3"}
-		# 1713: {active: true, text: "Manly tears of manliness."}
-		# 1714: {active: true, text: "Zetman."}
-		# 1715: {active: true, text: "Giant mutant cockroaches."}
-		# 1716: {active: true, text: "Bible Black."}
-		# 1717: {active: true, text: "Rape fantasies."}
-		# 1718: {active: true, text: "Keith David's voice."}
-		# 1719: {active: true, text: "Scott McNeil."}
-		# 1720: {active: true, text: "The eternal pervert, Eric Vale."}
-		# 1721: {active: true, text: "The Irresponsible Captain Tylor."}
-		# 1722: {active: true, text: "Birdy the Mighty."}
-		# 1723: {active: true, text: "Prying SpacemanHardy's Master Keaton boxset from his cold, dead hands."}
-		# 1724: {active: true, text: "Satan worshipping Christians."}
-		# 1725: {active: true, text: "Hunting down every single copy of Ninja Resurrection and setting them on fire."}
-		# 1726: {active: true, text: "R-R-R-R-R-REDLINE!!!"}
-		# 1727: {active: true, text: "Catholic priests who drink, smoke, and carry guns."}
-		# 1728: {active: true, text: "Badass 15-year-olds."}
-		# 1729: {active: true, text: "Losing 20 gallons of blood... and surviving."}
-		# 1730: {active: true, text: "One HELL of a butler."}
-		# 1731: {active: true, text: "Being beaten to a bloody pulp by a middle school student."}
-		# 1732: {active: true, text: "Anime News Network."}
-		# 1733: {active: true, text: "Having blackmail sex with your teacher."}
-		# 1734: {active: true, text: "A large paper fan."}
-		# 1735: {active: true, text: "The Shikon Jewel."}
-		# 1736: {active: true, text: "Sneaking a peek at the girls' open bath."}
-		# 1737: {active: true, text: "Revy Two-Hands."}
-		# 1738: {active: true, text: "A Claymore swimsuit issue."}
-		# 1739: {active: true, text: "A samurai terminator."}
-		# 1740: {active: true, text: "Physics."}
-		# 1741: {active: true, text: "Gangnam Style."}
-		# 1742: {active: true, text: "MUNGLE!!<br><i>*shakes fist*</i>"}
-		# 1743: {active: true, text: "A talking motorcycle."}
-		# 1744: {active: true, text: "Rie Kugimiya."}
-		# 1745: {active: true, text: "The Animatrix."}
-		# 1746: {active: true, text: "Your virgin soul."}
-		# 1747: {active: true, text: "Franky's awesome Speedo dance."}
-		# 1748: {active: true, text: "Soul traveling."}
-		# 1749: {active: true, text: "Production I.G."}
-		# 1750: {active: true, text: "GONZO."}
-		# 1751: {active: true, text: "Really shitty CGI effects."}
-		# 1752: {active: true, text: "The hot buttered sex voice of Patrick Seitz."}
-		# 1753: {active: true, text: "Sticking a chopstick in your pee-hole."}
-		# 1754: {active: true, text: "A copy of Trigun signed by Micah Solusod."}
-		# 1755: {active: true, text: "Gilgamesh."}
-		# 1756: {active: true, text: "That one guy who always dresses up as the Red Ranger."}
-		# 1757: {active: true, text: "Engrish."}
-		# 1758: {active: true, text: "A dead meme."}
-		# 1759: {active: true, text: "Madhouse."}
-		# 1760: {active: true, text: "ARMS."}
-		# 1761: {active: true, text: "Mr. Tadakichi."}
-		# 1762: {active: true, text: "Showing episodes of Toriko to starving children."}
-		# 1763: {active: true, text: "Governor Ishihara."}
-		# 1764: {active: true, text: "Shrine maidens."}
-		# 1765: {active: true, text: "Taking a shit in the shrine's donation box."}
-		# 1766: {active: true, text: "Farting... tadpoles?"}
-		# 1767: {active: true, text: "Heavily-tattooed yakuza henchmen."}
-		# 1768: {active: true, text: "The life-sized Gundam statue."}
-		# 1769: {active: true, text: "Forcing someone to watch every episode of Dragon Ball GT."}
-		# 1770: {active: true, text: "ZA WARUDO."}
-		# 1771: {active: true, text: "Eating a banana all sexy-like."}
-		# 1772: {active: true, text: "Awesome Prussia."}
-		# 1773: {active: true, text: "Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora!"}
-		# 1774: {active: true, text: "A shitload of yen."}
-		# 1775: {active: true, text: "Johannes Krauser II."}
-		# 1776: {active: true, text: "Raccoon testicles."}
-		# 1777: {active: true, text: "Beautiful bishonen boys."}
-		# 1778: {active: true, text: "Rule 63'd Death the Kid."}
-		# 1779: {active: true, text: "Hetalia porn."}
-		# 1780: {active: true, text: "1,000 years of pain."}
-		# 1781: {active: true, text: "Rally Vincent firing a gun in her underwear."}
-		# 1782: {active: true, text: "A Maka Chop."}
-		# 1783: {active: true, text: "Twincest."}
-		# 1784: {active: true, text: "Broken-ass Aizen."}
-		# 1785: {active: true, text: "The Garden of Sinners."}
-		# 1786: {active: true, text: "Romi Paku."}
-		# 1787: {active: true, text: "My Johnny!"}
-		# 1788: {active: true, text: "Petite Princess Yucie."}
-		# 1789: {active: true, text: "Ice cold water<br>(and it's only a dollar)."}
-		# 1790: {active: true, text: "Me wearing a penguin suit."}
-		# 1791: {active: true, text: "Farting on your cat."}
-		# 1792: {active: true, text: "Combat afros."}
-		# 1793: {active: true, text: "A brand new, mint condition copy of JoJo's Bizarre Adventure vol. 4, still in shrinkwrap."}
-		# 1794: {active: true, text: "Grave of the Fireflies."}
-		# 1795: {active: true, text: "Strapping hand grenades to your pubes."}
-		# 1796: {active: true, text: "Toilet worship."}
-		# 1797: {active: true, text: "My badass numchucks."}
-		# 1798: {active: true, text: "Trying to get your die-cast Gundam model through airport security."}
-		# 1799: {active: true, text: "Black&#x2605;Star"}
-		# 1800: {active: true, text: "Octopus balls."}
-		# 1801: {active: true, text: "Getting in a fistfight with an earthquake."}
-		# 1802: {active: true, text: "WcDonald's."}
-		# 1803: {active: true, text: "Undead body-swapping space vampire teens."}
-		# 1804: {active: true, text: "The alpha bitch."}
-		# 1805: {active: true, text: "Eating someone else's drool."}
-		# 1806: {active: true, text: "My hot zombie girlfriend.."}
-		# 1807: {active: true, text: "Puppets made from the skin of children."}
-		# 1808: {active: true, text: "Swallowing an entire carton of cigarettes before barfing them back up."}
-		# 1809: {active: true, text: "Giving a girl an orgasm using only your shoulderpads."}
-		# 1810: {active: true, text: "Being accidentally turned into a girl by aliens."}
-		# 1811: {active: true, text: "Ghosts that come out of your asscrack."}
-		# 1812: {active: true, text: "#DesuDes4Life."}
-		# 1813: {active: true, text: "Fucking a nun."}
-		# 1814: {active: true, text: "Raping Tokyo Tower."}
-		# 1815: {active: true, text: "A succubus living inside your testes."}
-		# 1816: {active: true, text: "Saber Starblast."}
-		# 1817: {active: true, text: "An argument lasting over an hour about what mo&eacute; really is."}
-		# 1818: {active: true, text: "Japanese Spider-Man."}
-		# 1819: {active: true, text: "A bass guitar straight to the face."}
-		# 1820: {active: true, text: "Sonny Strait's manly parts."}
-		# 1821: {active: true, text: "Asian cock."}
-		# 1822: {active: true, text: "Guts."}
-		# 1823: {active: true, text: "Holy dildos."}
-		# 1824: {active: true, text: "Finger nigiri."}
-		# 1825: {active: true, text: "Dragon Balls."}
-		# 1826: {active: true, text: "Drills for hands."}
-		# 1827: {active: true, text: "Suplexing your teacher."}
-		# 1828: {active: true, text: "A leopard print fundoshi."}
-		# 1829: {active: true, text: "Breast envy."}
-		# 1830: {active: true, text: "The entire last episode of Blood-C."}
-		# 1831: {active: true, text: "Origami sex toys."}
-		# 1832: {active: true, text: "ALL OF THE HOMO!"}
-		# 1833: {active: true, text: "Japanese rope bondage."}
-		# 1834: {active: true, text: "Griffith's mysterious disappearing penis."}
-		# 1835: {active: true, text: "Naughty geishas."}
-		# 1836: {active: true, text: "Ninjas!"}
-		# 1837: {active: true, text: "Pubic hair needle attack."}
-		# 1838: {active: true, text: "Sexy jutsu."}
-		# 1839: {active: true, text: "Getting your fingernails ripped out."}
-		# 1840: {active: true, text: "Shinichiro Watanabe single-handedly curing cancer, ending world hunger, and bringing peace to the Middle East."}
-		# 1841: {active: true, text: "Love Machine."}
-		# 1842: {active: true, text: "Rapping samurai."}
-		# 1843: {active: true, text: "Putting all the condiments on your steak. ALL OF THEM."}
-		# 1844: {active: true, text: "Naga's extremely annoying laugh."}
-		# 1845: {active: true, text: "A dolphin in a mech suit."}
-		# 1846: {active: true, text: "Flying Nimbus."}
-		# 1847: {active: true, text: "Strikeman and his 'Balls of Justice'."}
-		# 1848: {active: true, text: "A busty, blonde, blue-eyed, dumb-as-rocks American."}
-		# 1849: {active: true, text: "Running during the credits."}
-		# 1850: {active: true, text: "Red bean paste."}
-		# 1851: {active: true, text: "Gender-swapped Oda Nobunaga."}
-		# 1852: {active: true, text: "Cutting off a finger to restore your honor."}
-		# 1853: {active: true, text: "Robots with tits."}
-		# 1854: {active: true, text: "Henry Goto."}
-		# 1855: {active: true, text: "Henry Goto having an accident in his pants during the live Aniplex of America panel."}
-		# 1856: {active: true, text: "Henry Goto's massive peyote &amp; wine cooler addiction."}
-		# 1857: {active: true, text: "Henry Goto, John Sirabella, and Stu Levy in a three man fight to the death."}
-		# 1858: {active: true, text: "Henry Goto fapping to a photograph of himself."}
-		# 1859: {active: true, text: "Henry Goto being eaten by a group of backwoods hillbilly cannibals."}
-		# 1860: {active: true, text: "Henry Goto ending up homeless on the streets and sucking dick for coke."}
-		# 1861: {active: true, text: "Two gallons of elephant shit being dropped on Henry Goto's desk."}
-		# 1862: {active: true, text: "Henry Goto falling down the stairs, receiving a massive head injury, and believing he's really Sailor Moon."}
-		# 1863: {active: true, text: "A Henry Goto joke that no one will laugh at other than SpacemanHardy."}
-		# 1864: {active: true, text: "Henry Goto bleeding profusely from his groin after having his penis bitten off by a 15-year-old Vietnamese prostitute."}
-		# 1865: {active: true, text: "A 30-year-old man who's obsessed with K-on!"}
-		# 1866: {active: true, text: "LAZAR!"}
-		# 1867: {active: true, text: "I AM AWESOME!!"}
-		# 1868: {active: true, text: "Getting kicked in the nuts by a mermaid."}
-		# 1869: {active: true, text: "Taking a seat with Chris Hansen."}
-		# 1870: {active: true, text: "The Village People."}
-		# 1871: {active: true, text: "A Cleveland steamer."}
-		# 1872: {active: true, text: "A big floppy donkey dick."}
-		# 1873: {active: true, text: "Pooping in the bathtub."}
-		# 1874: {active: true, text: "Bathing the homeless."}
-		# 1875: {active: true, text: "An awkward sponge bath."}
-		# 1876: {active: true, text: "Toilet paper."}
-		# 1877: {active: true, text: "Getting off on anime porn."}
-		# 1878: {active: true, text: "Enemas."}
-		# 1879: {active: true, text: "The Teenage Mutant Ninja Turtles."}
-		# 1880: {active: true, text: "Mining for nose gold."}
-		# 1881: {active: true, text: "Laxatives."}
-		# 1882: {active: true, text: "Putting the fucking lotion in the basket."}
-		# 1883: {active: true, text: "The tears of a clown."}
-		# 1884: {active: true, text: "Gangrene."}
-		# 1885: {active: true, text: "Gingivitis."}
-		# 1886: {active: true, text: "Two dogs humping."}
-		# 1887: {active: true, text: "Genital warts."}
-		# 1888: {active: true, text: "Suppositories."}
-		# 1889: {active: true, text: "Face painting."}
-		# 1890: {active: true, text: "A prolapse."}
-		# 1891: {active: true, text: "Digital piracy."}
-		# 1892: {active: true, text: "A poop sandwich."}
-		# 1893: {active: true, text: "Executive parking."}
-		# 1894: {active: true, text: "A dead hooker."}
-		# 1895: {active: true, text: "A skeptical sheriff."}
-		# 1896: {active: true, text: "A chatroom predator."}
-		# 1897: {active: true, text: "A loud mouth-breather."}
-		# 1898: {active: true, text: "The crushed dreams of a stripper."}
-		# 1899: {active: true, text: "Anorexia."}
-		# 1900: {active: true, text: "Gobots."}
-		# 1901: {active: true, text: "A Motown group."}
-		# 1902: {active: true, text: "a classy smoking jacket."}
-		# 1903: {active: true, text: "Giant areolas."}
-		# 1904: {active: true, text: "Peanutbutter jelly time."}
-		# 1905: {active: true, text: "A sexy senior citizen."}
-		# 1906: {active: true, text: "Granny panties."}
-		# 1907: {active: true, text: "A stuttering auctioneer."}
-		# 1908: {active: true, text: "Farting into a fancy handkerchief."}
-		# 1909: {active: true, text: "Lot lizards."}
-		# 1910: {active: true, text: "A LARPing sleeper cell."}
-		# 1911: {active: true, text: "A Fleshlite&trade;."}
-		# 1912: {active: true, text: "A molotov cocktail."}
-		# 1913: {active: true, text: "A cockblocker."}
-		# 1914: {active: true, text: "Public schooling."}
-		# 1915: {active: true, text: "The end of the world."}
-		# 1916: {active: true, text: "Dickjitsu."}
-		# 1917: {active: true, text: "A mushy tushy."}
-		# 1918: {active: true, text: "Don Knotts."}
-		# 1919: {active: true, text: "Morbid obesity."}
-		# 1920: {active: true, text: "Geriatric diaper rash."}
-		# 1921: {active: true, text: "A MILF."}
-		# 1922: {active: true, text: "Bigfoot."}
-		# 1923: {active: true, text: "Yellow snow."}
-		# 1924: {active: true, text: "A limp wrist."}
-		# 1925: {active: true, text: "An angry leprechaun."}
-		# 1926: {active: true, text: "The Tin Man."}
-		# 1927: {active: true, text: "Giving yourself a stranger."}
-		# 1928: {active: true, text: "Shitting into someone's hat for revenge."}
-		# 1929: {active: true, text: "Learning hypnosis to get laid."}
-		# 1930: {active: true, text: "The War of Northern Aggression."}
-		# 1931: {active: true, text: "A snot rocket."}
-		# 1932: {active: true, text: "Miss. Piggy."}
-		# 1933: {active: true, text: "Sailor Moon."}
-		# 1934: {active: true, text: "Mass graves."}
-		# 1935: {active: true, text: "A victim."}
-		# 1936: {active: true, text: "Soiling ones self."}
-		# 1937: {active: true, text: "A clone army."}
-		# 1938: {active: true, text: "Raw sewage."}
-		# 1939: {active: true, text: "War crimes."}
-		# 1940: {active: true, text: "A collapsed lung."}
-		# 1941: {active: true, text: "The town drunk."}
-		# 1942: {active: true, text: "The face of pure evil."}
-		# 1943: {active: true, text: "Spontaneous pie fights."}
-		# 1944: {active: true, text: "The Fresh Prince of Bel-Air."}
-		# 1945: {active: true, text: "Being screamed at in German."}
-		# 1946: {active: true, text: "A lesson in pain."}
-		# 1947: {active: true, text: "Talking like a pirate."}
-		# 1948: {active: true, text: "A Facebook stalker."}
-		# 1949: {active: true, text: "Sausage."}
-		# 1950: {active: true, text: "A compound fracture."}
-		# 1951: {active: true, text: "The magical land of Oz."}
-		# 1952: {active: true, text: "Pow-Pow-PowerWheeels&reg;!"}
-		# 1953: {active: true, text: "Cheating death."}
-		# 1954: {active: true, text: "Clown Shoes."}
-		# 1955: {active: true, text: "Clown college."}
-		# 1956: {active: true, text: "A lousy comb-over."}
-		# 1957: {active: true, text: "Chaz Bono."}
-		# 1958: {active: true, text: "Hoarders."}
-		# 1959: {active: true, text: "Bed wetting."}
-		# 1960: {active: true, text: "Nuns."}
-		# 1961: {active: true, text: "A closed casket funeral."}
-		# 1962: {active: true, text: "Scotch."}
-		# 1963: {active: true, text: "A really ugly baby."}
-		# 1964: {active: true, text: "Realizing, too late, that there is no toilet paper left."}
-		# 1965: {active: true, text: "Illegal immigrants."}
-		# 1966: {active: true, text: "Elder abuse."}
-		# 1967: {active: true, text: "Jerry Jewell's serial killer face."}
-		# 1968: {active: true, text: "A FUCKING DRAGONITE, MOTHERFUCKER!!"}
-		# 1969: {active: true, text: "A school bus orgy."}
-		# 1970: {active: true, text: "Super Aryan Hitler."}
-		# 1971: {active: true, text: "Having sex with a dragon."}
-		# 1972: {active: true, text: "Manga Jesus."}
-		# 1973: {active: true, text: "Manly pink sparkles."}
-		# 1974: {active: true, text: "7 ft. tall red-headed Alexander the Great."}
-		# 1975: {active: true, text: "Training a dinosaur to ride a ball."}
-		# 1976: {active: true, text: "Samba-dancing dinosaurs."}
-		# 1977: {active: true, text: "An armored truck full of shit."}
-		# 1978: {active: true, text: "A Togepi omelet."}
-		# 1979: {active: true, text: "The Puchuu."}
-		# 1980: {active: true, text: "Dying over and over again."}
-		# 1981: {active: true, text: "Fuckingham Palace."}
-		# 1982: {active: true, text: "Epic old bald dudes."}
-		# 1983: {active: true, text: "A smashed-in face."}
-		# 1984: {active: true, text: "A Dragon Slave."}
-		# 1985: {active: true, text: "Zelgadis' flame-proof bikini briefs."}
-		# 1986: {active: true, text: "Morphin'."}
-		# 1987: {active: true, text: "A naughty nurse outfit."}
-		# 1988: {active: true, text: "A sweaty shirtless man holding a large, writhing fish against his chest."}
-		# 1989: {active: true, text: "Millionaire Beaver."}
-		# 1990: {active: true, text: "Dick Saucer."}
-		# 1991: {active: true, text: "A couple that spends over 30 manga volumes trying to get to first base."}
-		# 1992: {active: true, text: "Alice in Sexland."}
-		# 1993: {active: true, text: "Succubus-on-futanari action."}
-		# 1994: {active: true, text: "High-stakes mahjong."}
-		# 1995: {active: true, text: "Garbage collectors... IN SPACE!!"}
-		# 1996: {active: true, text: "Magical friendship lasers."}
-		# 1997: {active: true, text: "The War on Pants."}
-		# 1998: {active: true, text: "An ending where everyone dies."}
-		# 1999: {active: true, text: "A cyborg assassin dressed as a magical girl fighting a talking lion and a floating psychic electric jellyfish."}
-		# 2000: {active: true, text: "J-pop idols."}
-		# 2001: {active: true, text: "Chest-hair afros."}
-		# 2002: {active: true, text: "Cowboy Andy."}
-		# 2003: {active: true, text: "A chainsaw-wielding male magical girl zombie."}
-		# 2004: {active: true, text: "Inoue Kikoku, 17-years old."}
-		# 2005: {active: true, text: "Fujoshi."}
-		# 2006: {active: true, text: "Matrix boobs."}
-		# 2007: {active: true, text: "Completely losing your shit over Endless Eight."}
-		# 2008: {active: true, text: "Violently beating your friends to death with a baseball bat."}
-		# 2009: {active: true, text: "Clothing-dissolving slime."}
-		# 2010: {active: true, text: "Involuntary crossdressing."}
-		# 2011: {active: true, text: "Getting sucked into a fantasy world."}
-		# 2012: {active: true, text: "Hentai artists who don't change their pen name when they go legit."}
-		# 2013: {active: true, text: "A Masamune Shirou artbook."}
-		# 2014: {active: true, text: "Loli in a box."}
-		# 2015: {active: true, text: "Romance of the Three Kingdoms, but everyone is gender-swapped."}
-		# 2016: {active: true, text: "Mo&eacute; schoolgirl Hitler."}
-		# 2017: {active: true, text: "Franken Fran."}
-		# 2018: {active: true, text: "A washpan falling onto someone's head from out of nowhere."}
-		# 2019: {active: true, text: "SHAFT being SHAFT."}
-		# 2020: {active: true, text: "A third-grader seducing her 23-year-old teacher."}
-		# 2021: {active: true, text: "Shotas."}
-		# 2022: {active: true, text: "One a them bamboo things that goes 'doonk'."}
-		# 2023: {active: true, text: "Banging your adopted daughter."}
-		# 2024: {active: true, text: "Tripping, falling, and landing with your face in a girl's breasts."}
-		# 2025: {active: true, text: "A bunny girl having a lightsaber duel with Darth Vader."}
-		# 2026: {active: true, text: "A 10-year old with boobs twice the size of her head."}
-		# 2027: {active: true, text: "An ancient vampire who looks like she's 10."}
-		# 2028: {active: true, text: "Literally ripping your own heart out."}
-		# 2029: {active: true, text: "Japanese-style elf ears."}
-		# 2030: {active: true, text: "Flamboyantly gay William Shakespeare."}
-		# 2031: {active: true, text: "Gen 'The Uro-Butcher'."}
-		# 2032: {active: true, text: "Mikuru Beam!"}
-		# 2033: {active: true, text: "Tons and tons of close-up underaged schoolgirl ass-shots."}
-		# 2034: {active: true, text: "Starfish Hitler."}
-		# 2035: {active: true, text: "Pok&eacute;mon tears."}
-		# 2036: {active: true, text: "Pok&eacute;sexuality."}
-		# 2037: {active: true, text: "Chopstick-based martial arts."}
-		# 2038: {active: true, text: "All the gayness in GetBackers."}
-		# 2039: {active: true, text: "Naming yourself after the method of your suicide."}
-		# 2040: {active: true, text: "The Chupacabra."}
-		# 2041: {active: true, text: "Blowing a child's head off with a rocket launcher."}
-		# 2042: {active: true, text: "Erotic incestuous toothbrushing."}
-		# 2043: {active: true, text: "An artbox that feels like human skin."}
-		# 2044: {active: true, text: "Polygamy jokes in a kid's show."}
-		# 2045: {active: true, text: "Urd, Kana, and Misato in a drinking contest."}
-		# 2046: {active: true, text: "Cute stuff."}
-		# 2047: {active: true, text: "A robot having an orgasm."}
-		# 2048: {active: true, text: "Villagulio."}
-		# 2049: {active: true, text: "Dangling Pok&eacute;balls."}
-		# 2050: {active: true, text: "Having a giant drill for a dick."}
-		# 2051: {active: true, text: "An ingrown toenail on the tip of a penis."}
-		# 2052: {active: true, text: "Feline Leukemia."}
-		# 2053: {active: true, text: "Marky Mark's foam rubber penis from Boogie Nights."}
-		# 2054: {active: true, text: "My Spankerchief."}
-		# 2055: {active: true, text: "Pumping a chemical toilet."}
-		# 2056: {active: true, text: "The fine line between kinky and perverted."}
-		# 2057: {active: true, text: "A Rotisserie Chicken."}
-		# 2058: {active: true, text: "Vultures circling a birthday party."}
-		# 2059: {active: true, text: "An All White Jury."}
-		# 2060: {active: true, text: "Frottage."}
-		# 2061: {active: true, text: "Michael J. Fox trying to use a rotary phone."}
-		# 2062: {active: true, text: "The Five Knuckle Truffle Punch."}
-		# 2063: {active: true, text: "Flipper Babies."}
-		# 2064: {active: true, text: "Ejaculating into an insulin pump."}
-		# 2065: {active: true, text: "Rocky Dennis and John Merrick's lovechild."}
-		# 2066: {active: true, text: "The syrupy goop inside a Stretch Armstrong doll."}
-		# 2067: {active: true, text: "Finding an adhesive bandage at the bottom of your ice cream."}
-		# 2068: {active: true, text: "Life after Parole."}
-		# 2069: {active: true, text: "A cat's sand papery tongue bath."}
-		# 2070: {active: true, text: "A Pit Bull named Genghis."}
-		# 2071: {active: true, text: "Discovering that it's never just a big vagina."}
-		# 2072: {active: true, text: "Dragoneer."}
-		# 2073: {active: true, text: "A horny dragon."}
-		# 2074: {active: true, text: "A sexually frustrated griffon."}
-		# 2075: {active: true, text: "Species stereotypes."}
-		# 2076: {active: true, text: "HELLO FURRIEND, HOWL ARE YOU DOING."}
-		# 2077: {active: true, text: "Convention sluts."}
-		# 2078: {active: true, text: "Horns and hooves."}
-		# 2079: {active: true, text: "Being 'prison gay.'"}
-		# 2080: {active: true, text: "Microwaving diapers."}
-		# 2081: {active: true, text: "Adorable dog people."}
-		# 2082: {active: true, text: "Sexy the Cat."}
-		# 2083: {active: true, text: "That one episode of CSI."}
-		# 2084: {active: true, text: "SecondLife."}
-		# 2085: {active: true, text: "The Gay Yiffy Club."}
-		# 2086: {active: true, text: "Hyper-endowed squirrels."}
-		# 2087: {active: true, text: "A spider furry who isn't even into bondage."}
-		# 2088: {active: true, text: "Being really, really into monsters."}
-		# 2089: {active: true, text: "Sexual arousal from children's cartoons."}
-		# 2090: {active: true, text: "No males, no herms, no cuntboys, no shemales, no trannys, no furries, no aliens, no vampires, and no werewolves. ONLY STRAIGHT OR BI HUMAN FEMALES."}
-		# 2091: {active: true, text: "Overcompensating with a huge horse penis."}
-		# 2092: {active: true, text: "A fedora enthusiast."}
-		# 2093: {active: true, text: "A tongue-beast."}
-		# 2094: {active: true, text: "Frisky tentacles."}
-		# 2095: {active: true, text: "A very steampunk rat."}
-		# 2096: {active: true, text: "Canine superiority."}
-		# 2097: {active: true, text: "Oviposition."}
-		# 2098: {active: true, text: "Flares."}
-		# 2099: {active: true, text: "Dogs wearing panties."}
-		# 2100: {active: true, text: "Monster boys in lingerie."}
-		# 2101: {active: true, text: "Power bottoms."}
-		# 2102: {active: true, text: "Sheath licking."}
-		# 2103: {active: true, text: "Sex with Pok&eacute;mon."}
-		# 2104: {active: true, text: "Making out with dogs."}
-		# 2105: {active: true, text: "YouTube videos of horse breeding."}
-		# 2106: {active: true, text: "Pissing on your significant other to show ownership."}
-		# 2107: {active: true, text: "Da Magicks."}
-		# 2108: {active: true, text: "Being able to recognize your friends by the scent of their asses."}
-		# 2109: {active: true, text: "A notebook full of embarrassing niche porn sketches."}
-		# 2110: {active: true, text: "Cockvore."}
-		# 2111: {active: true, text: "A prehensile penis."}
-		# 2112: {active: true, text: "Puns involving the word 'knot.'"}
-		# 2113: {active: true, text: "Jerking off on an unconscious friend's feet."}
-		# 2114: {active: true, text: "CrusaderCat."}
-		# 2115: {active: true, text: "Your Character Here."}
-		# 2116: {active: true, text: "Sphincter Bleaching."}
-		# 2117: {active: true, text: "Bringing the Hamburglar to Justice."}
-		# 2118: {active: true, text: "Toilet Wine."}
-		# 2119: {active: true, text: "An Amputee's chapped limb nub."}
-		# 2120: {active: true, text: "Febreezing your Taint."}
-		# 2121: {active: true, text: "Leftist Propaganda."}
-		# 2122: {active: true, text: "Cookie Monster's substance abuse issues."}
-		# 2123: {active: true, text: "An outbreak of smallbox."}
-		# 2124: {active: true, text: "The Boxcar Children."}
-		# 2125: {active: true, text: "A world without boxes."}
-		# 2126: {active: true, text: "Boxing up my feelings."}
-		# 2127: {active: true, text: "Something that looks like a box but turns out to be a crate."}
-		# 2128: {active: true, text: "The J15 Patriot Assault Box."}
-		# 2129: {active: true, text: "A box without hinges, key, or lid, yet golden treasure inside is hid."}
-		# 2130: {active: true, text: "Former President George W. Box."}
-		# 2131: {active: true, text: "Pandora's vagina."}
-		# 2132: {active: true, text: "Offering sexual favors for an ore and a sheep. (19/44)"}
-		# 2133: {active: true, text: "Winning the approval of Cooking Mama that you never got from actual mama. (32/44)"}
-		# 2134: {active: true, text: "Reading the comments."}
-		# 2135: {active: true, text: "The collective wail of every Magic player suddenly realizing that they've spent hundreds of dollars on pieces of cardboard."}
-		# 2136: {active: true, text: "Being an attractive elf trapped in an unattractive human's body."}
-		# 2137: {active: true, text: "Temporary invincibility."}
-		# 2138: {active: true, text: "Mario Kart rage."}
-		# 2139: {active: true, text: "A homemade, cum-stained Star Trek uniform."}
-		# 2140: {active: true, text: "Never watching, discussing, or thinking about My Little Pony."}
-		# 2141: {active: true, text: "Turn-of-the-century sky racists."}
-		# 2142: {active: true, text: "A fully-dressed female videogame character."}
-		# 2143: {active: true, text: "Buying virtual clothes for a Sim family instead of real clothes for a real family."}
-		# 2144: {active: true, text: "Google Glass + e-cigarette: Ultimate Combo!"}
-		# 2145: {active: true, text: "A daisy sandwich."}
-		# 2146: {active: true, text: "A box."}
-		# 2147: {active: true, text: "A box within a box."}
-		# 2148: {active: true, text: "A boxing match with a giant box."}
-		# 2149: {active: true, text: "A box that is conscious and wishes it weren't a box."}
-		# 2150: {active: true, text: "Reading the comments. (3/44)"}
-		# 2151: {active: true, text: "Full HD."}
-		# 2152: {active: true, text: "Allowing nacho cheese to curdle in your beard while you creep in League of Legends."}
-		# 2153: {active: true, text: "The Sarlacc."}
-		# 2154: {active: true, text: "Nude-modding Super Mario World."}
-		# 2155: {active: true, text: "An angry stone head that stomps on the floor every three seconds."}
-		# 2156: {active: true, text: "Yoshi's huge egg-laying cloaca."}
-		# 2157: {active: true, text: "The Cock Ring of Alacrity."}
-		# 2158: {active: true, text: "Offering sexual favors for an ore and a sheep."}
-		# 2159: {active: true, text: "Unlocking a new sex position."}
-		# 2160: {active: true, text: "The boner hatch in the Iron Man suit."}
-		# 2161: {active: true, text: "The decade of legal inquests following a single hour of Grand Theft Auto."}
-		# 2162: {active: true, text: "Legendary Creature &ndash; Robert Khoo."}
-		# 2163: {active: true, text: "Winning the approval of Cooking Mama that you never got from actual mama."}
-		# 2164: {active: true, text: "Tapping Sara Angel."}
-		# 2165: {active: true, text: "Charles Barkley Shut Up and Jam!"}
-		# 2166: {active: true, text: "Getting into a situation with an owlbear."}
-		# 2167: {active: true, text: "Grand Theft Auto: Fort Lauderdale."}
-		# 2168: {active: true, text: "A madman who lives in a policebox and kidnaps women."}
-		# 2169: {active: true, text: "SNES cartridge cleaning fluid."}
-		# 2170: {active: true, text: "Eating a pizza that's lying on the street to gain health."}
-		# 2171: {active: true, text: "A decorative toaster cozy."}
-		# 2172: {active: true, text: "A giant horse cock."}
-		# 2173: {active: true, text: "A hoof in the ass."}
-		# 2174: {active: true, text: "A horny stallion."}
-		# 2175: {active: true, text: "A human fetish."}
-		# 2176: {active: true, text: "A juice box fetish."}
-		# 2177: {active: true, text: "A juice box."}
-		# 2178: {active: true, text: "A mare in heat."}
-		# 2179: {active: true, text: "A racially pure Cloudsdale."}
-		# 2180: {active: true, text: "A sexy saddle."}
-		# 2181: {active: true, text: "A sock fetish."}
-		# 2182: {active: true, text: "A Sonic Raingasm."}
-		# 2183: {active: true, text: "A tactical sonic rainnuke."}
-		# 2184: {active: true, text: "A tree."}
-		# 2185: {active: true, text: "Actually cumming inside Rainbow Dash."}
-		# 2186: {active: true, text: "An epic pony war in the distant future."}
-		# 2187: {active: true, text: "An extremely horny Granny Smith."}
-		# 2188: {active: true, text: "Another doughnut! With extra sprinkles!"}
-		# 2189: {active: true, text: "Applebucking."}
-		# 2190: {active: true, text: "Applejack."}
-		# 2191: {active: true, text: "Avasting Fluttershy's Ass."}
-		# 2192: {active: true, text: "Baked Bads."}
-		# 2193: {active: true, text: "Banned From Equestria (Daily)."}
-		# 2194: {active: true, text: "Being trapped on the Moon for 1000 years."}
-		# 2195: {active: true, text: "Best Pony."}
-		# 2196: {active: true, text: "Big Macintosh."}
-		# 2197: {active: true, text: "BonBon."}
-		# 2198: {active: true, text: "Books."}
-		# 2199: {active: true, text: "Celestia's Hoof."}
-		# 2200: {active: true, text: "Celestia's massive harem of foals."}
-		# 2201: {active: true, text: "Cider."}
-		# 2202: {active: true, text: "Clopfics."}
-		# 2203: {active: true, text: "Clopping."}
-		# 2204: {active: true, text: "Crippled foals."}
-		# 2205: {active: true, text: "Cupcakes."}
-		# 2206: {active: true, text: "Daring Do fanfiction."}
-		# 2207: {active: true, text: "Dark Magicks."}
-		# 2208: {active: true, text: "Derpy Hooves."}
-		# 2209: {active: true, text: "Diamond Dog roleplay."}
-		# 2210: {active: true, text: "Discord."}
-		# 2211: {active: true, text: "Equestria."}
-		# 2212: {active: true, text: "Facehoofing."}
-		# 2213: {active: true, text: "Fillidelphia."}
-		# 2214: {active: true, text: "Filly fiddling."}
-		# 2215: {active: true, text: "Fluffy Pony."}
-		# 2216: {active: true, text: "Fluttershy."}
-		# 2217: {active: true, text: "Fluttershy's secret stash."}
-		# 2218: {active: true, text: "Fluttershy's Shed."}
-		# 2219: {active: true, text: "Fluttertree."}
-		# 2220: {active: true, text: "Foal abuse."}
-		# 2221: {active: true, text: "Foodmanes."}
-		# 2222: {active: true, text: "Friendship."}
-		# 2223: {active: true, text: "Futaloo."}
-		# 2224: {active: true, text: "Gabby Gums."}
-		# 2225: {active: true, text: "Gently stroking the horn."}
-		# 2226: {active: true, text: "Getting 20% cooler!"}
-		# 2227: {active: true, text: "Gypsies."}
-		# 2228: {active: true, text: "Having hot pony sex with Bloomberg."}
-		# 2229: {active: true, text: "Horn Necrosis."}
-		# 2230: {active: true, text: "Hugging a pony non-sexually."}
-		# 2231: {active: true, text: "Jappleack."}
-		# 2232: {active: true, text: "Joe's Donut Hole."}
-		# 2233: {active: true, text: "John Joseco."}
-		# 2234: {active: true, text: "Lesbians."}
-		# 2235: {active: true, text: "Zecora's meth lab."}
-		# 2236: {active: true, text: "Lyra Heartstrings."}
-		# 2237: {active: true, text: "Worst pony."}
-		# 2238: {active: true, text: "Magic."}
-		# 2239: {active: true, text: "Wolfieshy."}
-		# 2240: {active: true, text: "Winter Wrap Up."}
-		# 2241: {active: true, text: "Making Magic."}
-		# 2242: {active: true, text: "Wincest."}
-		# 2243: {active: true, text: "Whipping the Earth Pony slaves."}
-		# 2244: {active: true, text: "Vinyl Scratch / DJ Pon-3."}
-		# 2245: {active: true, text: "Unicorn Privilege."}
-		# 2246: {active: true, text: "Man Spike."}
-		# 2247: {active: true, text: "Two fillies shitting into a bucket."}
-		# 2248: {active: true, text: "Manehatten."}
-		# 2249: {active: true, text: "Twist."}
-		# 2250: {active: true, text: "Mare Supremacy."}
-		# 2251: {active: true, text: "Twilight's secret clop stash."}
-		# 2252: {active: true, text: "Molestia's sex dungeon."}
-		# 2253: {active: true, text: "Twilight Sparkle."}
-		# 2254: {active: true, text: "THE ROYAL CANTERLOT VOICE."}
-		# 2255: {active: true, text: "My OC."}
-		# 2256: {active: true, text: "The Rainbow Factory."}
-		# 2257: {active: true, text: "Nightmare Moon."}
-		# 2258: {active: true, text: "The Pegasus Master Race."}
-		# 2259: {active: true, text: "____."}
-		# 2260: {active: true, text: "*liveshot*."}
-		# 2261: {active: true, text: "8-Bit Mickey on an unstoppable merry-go-round."}
-		# 2262: {active: true, text: "80's Dan."}
-		# 2263: {active: true, text: "A Blip ad for the most embarrassing reality show ever."}
-		# 2264: {active: true, text: "A Brad Jones impersonation."}
-		# 2265: {active: true, text: "A crossover."}
-		# 2266: {active: true, text: "A Cybermat in a bow tie."}
-		# 2267: {active: true, text: "A delicious fried chicken holocaust."}
-		# 2268: {active: true, text: "A DMCA takedown notice."}
-		# 2269: {active: true, text: "A fan artist."}
-		# 2270: {active: true, text: "A FUCKING PONCHO!"}
-		# 2271: {active: true, text: "A giant go-fuck-yourself spider."}
-		# 2272: {active: true, text: "A half naked, fencing JewWario."}
-		# 2273: {active: true, text: "A hand-basket of lobsters."}
-		# 2274: {active: true, text: "A Mr. T Trading Card."}
-		# 2275: {active: true, text: "A pile of skulls."}
-		# 2276: {active: true, text: "A pink tutu."}
-		# 2277: {active: true, text: "A plushie TARDIS."}
-		# 2278: {active: true, text: "A poorly made knockoff action figure."}
-		# 2279: {active: true, text: "A REALLY big hoopla about nothing."}
-		# 2280: {active: true, text: "A Serbian Film."}
-		# 2281: {active: true, text: "A smoking, muscled ice cream cone shooting guns and eye lasers."}
-		# 2282: {active: true, text: "A speeding NERF dart to the junk."}
-		# 2283: {active: true, text: "A squadron of attack Corgis."}
-		# 2284: {active: true, text: "A squadron of line-dancing hippos."}
-		# 2285: {active: true, text: "A strip-tease from the Nostalgia Critic."}
-		# 2286: {active: true, text: "A tauntaun puppy."}
-		# 2287: {active: true, text: "A very serious hat."}
-		# 2288: {active: true, text: "Ambiguously nude Linkara."}
-		# 2289: {active: true, text: "An electronic cigarette that resembles a Sonic Screwdriver."}
-		# 2290: {active: true, text: "An evangelizing minion."}
-		# 2291: {active: true, text: "An existential crisis over internet reviews."}
-		# 2292: {active: true, text: "An impassioned plea for understanding."}
-		# 2293: {active: true, text: "An unhinged Oancitizen rolling towards the sea."}
-		# 2294: {active: true, text: "Angry Joe dancing in a squid suit."}
-		# 2295: {active: true, text: "Angry Joe's raging boner."}
-		# 2296: {active: true, text: "Another fucking Iron Liz pun."}
-		# 2297: {active: true, text: "Another goddamn PhilBuni Vine."}
-		# 2298: {active: true, text: "Aplos, or Steve, the Wizard."}
-		# 2299: {active: true, text: "Arlo P. Arlo."}
-		# 2300: {active: true, text: "Arlo the Orc."}
-		# 2301: {active: true, text: "Ashens taking a blowtorch to a crappy toy."}
-		# 2302: {active: true, text: "Ashens."}
-		# 2303: {active: true, text: "Because...hippos."}
-		# 2304: {active: true, text: "Becoming possessed and insulting your colleague."}
-		# 2305: {active: true, text: "Being awkward around your favorite reviewer."}
-		# 2306: {active: true, text: "Bennett the Sage."}
-		# 2307: {active: true, text: "Big Butter Jesus."}
-		# 2308: {active: true, text: "Blip."}
-		# 2309: {active: true, text: "Brad, drinking a Turkey-flavored Jones Soda."}
-		# 2310: {active: true, text: "Bruno Matei."}
-		# 2311: {active: true, text: "Butchered Dutch."}
-		# 2312: {active: true, text: "Comicron One."}
-		# 2313: {active: true, text: "CR."}
-		# 2314: {active: true, text: "Cynthia Rothrock"}
-		# 2315: {active: true, text: "DEATH FROM ABOOOOOVE!!!"}
-		# 2316: {active: true, text: "Derek the Bard."}
-		# 2317: {active: true, text: "Derek the Bard's hat."}
-		# 2318: {active: true, text: "Disturbing comments in the RDA chat."}
-		# 2319: {active: true, text: "Dodger's ban chain."}
-		# 2320: {active: true, text: "Dodging blowjobs."}
-		# 2321: {active: true, text: "Dr. Tease & Dr. Block."}
-		# 2322: {active: true, text: "Dragging Oancitizen back home from a wild night of partying."}
-		# 2323: {active: true, text: "Dump cards."}
-		# 2324: {active: true, text: "E Rod's smooth, smooth dance skills."}
-		# 2325: {active: true, text: "Eating the flesh of your foes while howling at the moon."}
-		# 2326: {active: true, text: "Evilina."}
-		# 2327: {active: true, text: "Evilina's monstrous visage."}
-		# 2328: {active: true, text: "Film Brain, dressed tastefully in fashionable clothing."}
-		# 2329: {active: true, text: "Film Brain's hair."}
-		# 2330: {active: true, text: "Film Renegado creaming himself over Pacific Rim."}
-		# 2331: {active: true, text: "Forcing an NPC to haul your crap."}
-		# 2332: {active: true, text: "Fuckstick the Magic Dragon."}
-		# 2333: {active: true, text: "Gargoyle Cat."}
-		# 2334: {active: true, text: "Haganistan."}
-		# 2335: {active: true, text: "Harmony Korine."}
-		# 2336: {active: true, text: "HIPPOS!"}
-		# 2337: {active: true, text: "Holly."}
-		# 2338: {active: true, text: "Il Neige in a freakishly accurate Film Brain costume."}
-		# 2339: {active: true, text: "Jaeris, the Gunslinger."}
-		# 2340: {active: true, text: "Joe Quesada."}
-		# 2341: {active: true, text: "Kali."}
-		# 2342: {active: true, text: "Kung Tai Ted."}
-		# 2343: {active: true, text: "Kyle playing GTA while drunk."}
-		# 2344: {active: true, text: "Kyle's 'unicorns.'"}
-		# 2345: {active: true, text: "Laura, the Fender Stratocaster Goddess."}
-		# 2346: {active: true, text: "Linkara lying naked on his futon, playing with a Cybermat."}
-		# 2347: {active: true, text: "Linkara, dressed as the Green Ranger."}
-		# 2348: {active: true, text: "Linkara, dropping an F-Bomb."}
-		# 2349: {active: true, text: "Linkara, sexily eating a salad."}
-		# 2350: {active: true, text: "Linkara's massive ego."}
-		# 2351: {active: true, text: "Little Pluckies Ninja Protects."}
-		# 2352: {active: true, text: "Luke Mochrie's trust fund."}
-		# 2353: {active: true, text: "Maven of ze Eventide."}
-		# 2354: {active: true, text: "Mexican Spider-Man."}
-		# 2355: {active: true, text: "MikeJ."}
-		# 2356: {active: true, text: "Moarte."}
-		# 2357: {active: true, text: "Nash, dressed as The Undertaker."}
-		# 2358: {active: true, text: "Nash, making 'vroom vroom' noises."}
-		# 2359: {active: true, text: "Nash, making train sounds in a bathtub."}
-		# 2360: {active: true, text: "Nella."}
-		# 2361: {active: true, text: "Nella's cleavage Altoids."}
-		# 2362: {active: true, text: "Not reading the FAQ."}
-		# 2363: {active: true, text: "Obelisk Blue Linkara."}
-		# 2364: {active: true, text: "Paw."}
-		# 2365: {active: true, text: "Paw's soul patch."}
-		# 2366: {active: true, text: "Penis whiskers."}
-		# 2367: {active: true, text: "the 8 million jews."}
-		# 2368: {active: true, text: "George Costanza"}
-		# 2369: {active: true, text: "Honk! Honk!"}
-		# 2370: {active: true, text: "Hideo Kojima"}
-		# 2371: {active: true, text: "Alright"}
-		# 2372: {active: true, text: "LIQUID!"}
-		# 2373: {active: true, text: "BROTHER!"}
-		# 2374: {active: true, text: "Gaben"}
-		# 2375: {active: true, text: "Kirby's Air Ride"}
-		# 2376: {active: true, text: "Yume Nikki"}
-		# 2377: {active: true, text: "HL3 confirmed!"}
-		# 2378: {active: true, text: "That feel"}
-		# 2379: {active: true, text: "Tim Buckley"}
-		# 2380: {active: true, text: "Bum Tickley"}
-		# 2381: {active: true, text: "Star Wars: Battlefront"}
-		# 2382: {active: true, text: "The Wii U"}
-		# 2383: {active: true, text: "the PS4"}
-		# 2384: {active: true, text: "the NES"}
-		# 2385: {active: true, text: "the SNES"}
-		# 2386: {active: true, text: "the SEGA Genesis"}
-		# 2387: {active: true, text: "the PSX"}
-		# 2388: {active: true, text: "Silent Hill"}
-		# 2389: {active: true, text: "Harry Mason"}
-		# 2390: {active: true, text: "James Sunderland"}
-		# 2391: {active: true, text: "the plot of MGS4"}
-		# 2392: {active: true, text: "Kramer"}
-		# 2393: {active: true, text: "no games"}
-		# 2394: {active: true, text: "Words, Words, Words"}
-		# 2395: {active: true, text: "Le /v/ culture"}
-		# 2396: {active: true, text: "Mods"}
-		# 2397: {active: true, text: "Furfags"}
-		# 2398: {active: true, text: "HERESY!"}
-		# 2399: {active: true, text: "My waifu"}
-		# 2400: {active: true, text: "Jews"}
-		# 2401: {active: true, text: "the duck hunt dog"}
-		# 2402: {active: true, text: "Max Payne"}
-		# 2403: {active: true, text: "L.A. Noire"}
-		# 2404: {active: true, text: "Call of Duty 4"}
-		# 2405: {active: true, text: "Cowadooty Franchise"}
-		# 2406: {active: true, text: "Master Chef"}
-		# 2407: {active: true, text: "Samus Aran"}
-		# 2408: {active: true, text: "Kamiya"}
-		# 2409: {active: true, text: "The red ring of death"}
-		# 2410: {active: true, text: "Toady"}
-		# 2411: {active: true, text: "the mustard race"}
-		# 2412: {active: true, text: "Klonies"}
-		# 2413: {active: true, text: "Valve"}
-		# 2414: {active: true, text: "source engine"}
-		# 2415: {active: true, text: "Wii-tier graphics"}
-		# 2416: {active: true, text: "brown and bloom"}
-		# 2417: {active: true, text: "FUCKING GAMESTOP"}
-		# 2418: {active: true, text: "Mountain Dew"}
-		# 2419: {active: true, text: "Doritoes"}
-		# 2420: {active: true, text: "Dante, but you an call him Dante the demon killer"}
-		# 2421: {active: true, text: "FUCK YOU"}
-		# 2422: {active: true, text: "Princess Peach"}
-		# 2423: {active: true, text: "Ronnie"}
-		# 2424: {active: true, text: "Wreck-It Ralph"}
-		# 2425: {active: true, text: "Destroy-It Dan"}
-		# 2426: {active: true, text: "Rape-It Randy"}
-		# 2427: {active: true, text: "Bayonetta"}
-		# 2428: {active: true, text: "Fifa 2014"}
-		# 2429: {active: true, text: "Superman 64"}
-		# 2430: {active: true, text: "E.T. for Atari"}
-		# 2431: {active: true, text: "Dark Souls"}
-		# 2432: {active: true, text: "Devil May Cry"}
-		# 2433: {active: true, text: "Wubs"}
-		# 2434: {active: true, text: "a custom built PC"}
-		# 2435: {active: true, text: "making an email to gabe newell one post at a time"}
-		# 2436: {active: true, text: "Warioware"}
-		# 2437: {active: true, text: "Earthbound"}
-		# 2438: {active: true, text: "Pikmen"}
-		# 2439: {active: true, text: "Duck Hunt"}
-		# 2440: {active: true, text: "Egoraptor"}
-		# 2441: {active: true, text: "Cory in the House"}
-		# 2442: {active: true, text: "Katawa Shoujio"}
-		# 2443: {active: true, text: "Donte"}
-		# 2444: {active: true, text: "/sp/"}
-		# 2445: {active: true, text: "/pol/"}
-		# 2446: {active: true, text: "/a/"}
-		# 2447: {active: true, text: "Traps"}
-		# 2448: {active: true, text: "Capitan Falcon"}
-		# 2449: {active: true, text: "knowing that feel"}
-		# 2450: {active: true, text: "my sides"}
-		# 2451: {active: true, text: "wagglan"}
-		# 2452: {active: true, text: "playing vidya"}
-		# 2453: {active: true, text: "being a casual fuck"}
-		# 2454: {active: true, text: "JonTron"}
-		# 2455: {active: true, text: "Two Best Friends"}
-		# 2456: {active: true, text: "Tropes vs Women in Video Games"}
-		# 2457: {active: true, text: "Anita"}
-		# 2458: {active: true, text: "Wiimote"}
-		# 2459: {active: true, text: "Xbox Hueg"}
-		# 2460: {active: true, text: "Japan Time"}
-		# 2461: {active: true, text: "the orignal Xbox controller"}
-		# 2462: {active: true, text: "Solid Snake's Ass"}
-		# 2463: {active: true, text: "Big Boss"}
-		# 2464: {active: true, text: "Kirby"}
-		# 2465: {active: true, text: "Waluigi"}
-		# 2466: {active: true, text: "Geno"}
-		# 2467: {active: true, text: "Ridley"}
-		# 2468: {active: true, text: "GLaDOS"}
-		# 2469: {active: true, text: "Shigeru Miyamoto"}
-		# 2470: {active: true, text: "Mother 3"}
-		# 2471: {active: true, text: "Shigesato Itoi"}
-		# 2472: {active: true, text: "Alexey Pajinov"}
-		# 2473: {active: true, text: "Sam & Max"}
-		# 2474: {active: true, text: "Banjo-Kazooie"}
-		# 2475: {active: true, text: "Hank Hill"}
-		# 2476: {active: true, text: "Pheonix Wright"}
-		# 2477: {active: true, text: "the orange gem from Bejeweled&trade;"}
-		# 2478: {active: true, text: "thowing bottles of holy water in the original Castlevania"}
-		# 2479: {active: true, text: "using your PC as a heater in the winter"}
-		# 2480: {active: true, text: "Wii Fit Trainer"}
-		# 2481: {active: true, text: "Nanomachines, son"}
-		# 2482: {active: true, text: "Creating a LttP vs Majora's Mask"}
-		# 2483: {active: true, text: "Following the damn train"}
-		# 2484: {active: true, text: "Kotaku"}
-		# 2485: {active: true, text: "checking your privledge"}
-		# 2486: {active: true, text: "having fun"}
-		# 2487: {active: true, text: "Call of Cthulhu"}
-		# 2488: {active: true, text: "Corruption of Champions"}
-		# 2489: {active: true, text: "Sanic"}
-		# 2490: {active: true, text: "Sanic Adventure 2"}
-		# 2491: {active: true, text: "Civillization IV"}
-		# 2492: {active: true, text: "League of Legends"}
-		# 2493: {active: true, text: "DoTA 2"}
-		# 2494: {active: true, text: "HoN"}
-		# 2495: {active: true, text: "asking br? when joining a server"}
-		# 2496: {active: true, text: "Geralt"}
-		# 2497: {active: true, text: "Halo"}
-		# 2498: {active: true, text: "Doomguy"}
-		# 2499: {active: true, text: "Regginator"}
-		# 2500: {active: true, text: "tfw no qt gf"}
-		# 2501: {active: true, text: "Atelier"}
-		# 2502: {active: true, text: "Asura"}
-		# 2503: {active: true, text: "Obsidrones"}
-		# 2504: {active: true, text: "Nintenyearolds"}
-		# 2505: {active: true, text: "Xbots"}
-		# 2506: {active: true, text: "Sonyggers"}
-		# 2507: {active: true, text: "Hitscan"}
-		# 2508: {active: true, text: "xX420blazeitXx"}
-		# 2509: {active: true, text: "Sakurai"}
-		# 2510: {active: true, text: "blowing into a catridge"}
-		# 2511: {active: true, text: "Dragon Dildos"}
-		# 2512: {active: true, text: "Nintendo"}
-		# 2513: {active: true, text: "Sony"}
-		# 2514: {active: true, text: "Microsoft"}
-		# 2515: {active: true, text: "Sega"}
-		# 2516: {active: true, text: "Konami"}
-		# 2517: {active: true, text: "Game Freak"}
-		# 2518: {active: true, text: "Fez"}
-		# 2519: {active: true, text: "Cave Story"}
-		# 2520: {active: true, text: "Wololololololololo"}
-		# 2521: {active: true, text: "pirating games because you hate the government"}
-		# 2522: {active: true, text: "New Super Luigi Bros"}
-		# 2523: {active: true, text: "the Demoman (who takes skill)"}
-		# 2524: {active: true, text: "the Pyro (who takes skill)"}
-		# 2525: {active: true, text: "on disk DLC"}
-		# 2526: {active: true, text: "sports games the come out year after year"}
-		# 2527: {active: true, text: "Ass Creed"}
-		# 2528: {active: true, text: "playing counterstrike too seriously"}
-		# 2529: {active: true, text: "Minecraft"}
-		# 2530: {active: true, text: "Notch"}
-		# 2531: {active: true, text: "Buzzwords"}
-		# 2532: {active: true, text: "OFF by Mortis Ghost"}
-		# 2533: {active: true, text: "an indie dev that no one knows about"}
-		# 2534: {active: true, text: "the Secret of Monkey Island"}
-		# 2535: {active: true, text: "watching let's plays on youtube"}
-		# 2536: {active: true, text: "grumpy dumpies"}
-		# 2537: {active: true, text: "Spaghetti"}
-		# 2538: {active: true, text: "the best Final Fantasy game"}
-		# 2539: {active: true, text: "Grayson Hunt"}
-		# 2540: {active: true, text: "not completing all the side quests"}
-		# 2541: {active: true, text: "artificial difficulty"}
-		# 2542: {active: true, text: "padding"}
-		# 2543: {active: true, text: "artificial fun"}
-		# 2544: {active: true, text: "Matt and Pat"}
-		# 2545: {active: true, text: "Hamberger Helper"}
-		# 2546: {active: true, text: "Yahtzee"}
-		# 2547: {active: true, text: "iJustine"}
-		# 2548: {active: true, text: "Jack Thompson"}
-		# 2549: {active: true, text: "rebbit"}
-		# 2550: {active: true, text: "The /v/idya gaem awards"}
-		# 2551: {active: true, text: "Emi (from Katawa Shoujo)"}
-		# 2552: {active: true, text: "Rin (from Katawa Shuojo)"}
-		# 2553: {active: true, text: "Lilly (from Katawa Shuojo)"}
-		# 2554: {active: true, text: "Hanako (from Katawa Shuojo)"}
-		# 2555: {active: true, text: "Shizune (from Katawa Shuojo)"}
-		# 2556: {active: true, text: "Misha (from Katawa Shuojo)"}
-		# 2557: {active: true, text: "Kenji (from Katawa Shuojo)"}
-		# 2558: {active: true, text: "The Last of Us"}
-		# 2559: {active: true, text: "/v/"}
-		# 2560: {active: true, text: "Video Games"}
-		# 2561: {active: true, text: "NSA"}
-		# 2562: {active: true, text: "Christopher Robin"}
-		# 2563: {active: true, text: "The Master Race"}
-		# 2564: {active: true, text: "/mlp/"}
-		# 2565: {active: true, text: "Bronies"}
-		# 2566: {active: true, text: "/vg/"}
-		# 2567: {active: true, text: "/vr/"}
-		# 2568: {active: true, text: "/vp/"}
-		# 2569: {active: true, text: "p2w"}
-		# 2570: {active: true, text: "the delay time of Duke Nukem Forever"}
-		# 2571: {active: true, text: "Duke Nukem"}
-		# 2572: {active: true, text: "WoW"}
-		# 2573: {active: true, text: "Worth the Weight"}
-		# 2574: {active: true, text: "anything but video games"}
-		# 2575: {active: true, text: "Tom Preston"}
-		# 2576: {active: true, text: "Andrew Dobson"}
-		# 2577: {active: true, text: "nogames"}
-		# 2578: {active: true, text: "2spooky"}
-		# 2579: {active: true, text: "599 US Dollars "}
-		# 2580: {active: true, text: "Eight Point Eight"}
-		# 2581: {active: true, text: "RAGE"}
-		# 2582: {active: true, text: "Playing TGWTG Cards Against Humanity at stupid o'clock."}
-		# 2583: {active: true, text: "Pol Pot pies."}
-		# 2584: {active: true, text: "Rachel Tietz, trying to Kill the Nostalgia Critic."}
-		# 2585: {active: true, text: "Ripping off part of your penis."}
-		# 2586: {active: true, text: "ROCKET BOOTS!"}
-		# 2587: {active: true, text: "ROCKET PUNCH!"}
-		# 2588: {active: true, text: "Sad Panda's lanky, manly chest."}
-		# 2589: {active: true, text: "Sage's 'RAPE!' face."}
-		# 2590: {active: true, text: "Sean."}
-		# 2591: {active: true, text: "Sex, violence, and Daffy Duck screaming."}
-		# 2592: {active: true, text: "Shouting 'FUS-RO-DAH!' at a puppy."}
-		# 2593: {active: true, text: "Smarty."}
-		# 2594: {active: true, text: "Smarty's special bag of AIDS."}
-		# 2595: {active: true, text: "Snowflame's cocaine flavored popsicles."}
-		# 2596: {active: true, text: "Snowflame's fuzzy slippers."}
-		# 2597: {active: true, text: "Space Core."}
-		# 2598: {active: true, text: "Stealing money off dead wolves."}
-		# 2599: {active: true, text: "Surprise blowjobs."}
-		# 2600: {active: true, text: "Tara's tramautic childhood stories."}
-		# 2601: {active: true, text: "That Dude In The Suede."}
-		# 2602: {active: true, text: "The Adventures of Horsemeat and the Placenta #1."}
-		# 2603: {active: true, text: "The Amazing Bulk."}
-		# 2604: {active: true, text: "The Channel Awesome satellite."}
-		# 2605: {active: true, text: "The Hippo Lantern Corps."}
-		# 2606: {active: true, text: "The Last Angry Geek."}
-		# 2607: {active: true, text: "The Longbox of the Damned."}
-		# 2608: {active: true, text: "The Nostalgia Ranger."}
-		# 2609: {active: true, text: "The Rap Critic."}
-		# 2610: {active: true, text: "The thick, muscular arms of ChaosD1."}
-		# 2611: {active: true, text: "The Uncanny Valley."}
-		# 2612: {active: true, text: "The Wal-Mart."}
-		# 2613: {active: true, text: "Todd in the Shadows."}
-		# 2614: {active: true, text: "Todd trolling Chris Brown on Twitter."}
-		# 2615: {active: true, text: "Tommy Wiseau."}
-		# 2616: {active: true, text: "Turtle."}
-		# 2617: {active: true, text: "Using a frontloader to steal deodorant."}
-		# 2618: {active: true, text: "Using donation money for weed."}
-		# 2619: {active: true, text: "Vangelus"}
-		# 2620: {active: true, text: "Ven's voice, a gift from the fairies."}
-		# 2621: {active: true, text: "Zeo Linkara."}
-		# 2622: {active: true, text: "A DraculaFetus animation."}
-		# 2623: {active: true, text: "A profile pic that looks like a dick and balls."}
-		# 2624: {active: true, text: "Spy Party racism."}
-		# 2625: {active: true, text: "The ghost of Ohmwrecker."}
-		# 2626: {active: true, text: "Shooting the black guy."}
-		# 2627: {active: true, text: "Ohm's mindgames."}
-		# 2628: {active: true, text: "DOTA 2."}
-		# 2629: {active: true, text: "Magic: The Gathering."}
-		# 2630: {active: true, text: "A failed challenge run."}
-		# 2631: {active: true, text: "Setting the world on fire."}
-		# 2632: {active: true, text: "Pot magic."}
-		# 2633: {active: true, text: "Josh's washing machine."}
-		# 2634: {active: true, text: "Dang it, Bobby!"}
-		# 2635: {active: true, text: "Up in the air like a George Clooney movie."}
-		# 2636: {active: true, text: "A lemon mishap."}
-		# 2637: {active: true, text: "This cat, I swear to god."}
-		# 2638: {active: true, text: "Ohmwrecker."}
-		# 2639: {active: true, text: "youtube.com/Ohmwrecker."}
-		# 2640: {active: true, text: "Drinkable fire."}
-		# 2641: {active: true, text: "Ohmsdrawings.tumblr.com."}
-		# 2642: {active: true, text: "Soul level 1 invasions."}
-		# 2643: {active: true, text: "Ryuka."}
-		# 2644: {active: true, text: "The blue candle."}
-		# 2645: {active: true, text: "JSmith's laundry."}
-		# 2646: {active: true, text: "Mount Your Friends: Docking Edition."}
-		# 2647: {active: true, text: "Childlike bukakke."}
-		# 2648: {active: true, text: "A water supply full of leeches."}
-		# 2649: {active: true, text: "Travelling by bones."}
-		# 2650: {active: true, text: "AlpacaPatrol."}
-		# 2651: {active: true, text: "Zen."}
-		# 2652: {active: true, text: "Green9090."}
-		# 2653: {active: true, text: "#MikeBithell."}
-		# 2654: {active: true, text: "RedPandaGamer."}
-		# 2655: {active: true, text: "Ohm, our god."}
-		# 2656: {active: true, text: "...Metal Gear?!"}
-		# 2657: {active: true, text: "A beautiful little moment."}
-		# 2658: {active: true, text: "A couch stinking of naked people."}
-		# 2659: {active: true, text: "A humanlike bat with tits."}
-		# 2660: {active: true, text: "A little dingle-dang."}
-		# 2661: {active: true, text: "A pretty epic poo."}
-		# 2662: {active: true, text: "A replay from Barry."}
-		# 2663: {active: true, text: "A Scottish bloke that talks too fast."}
-		# 2664: {active: true, text: "A smaller, whiter dick."}
-		# 2665: {active: true, text: "A Sonic."}
-		# 2666: {active: true, text: "A testicle examination."}
-		# 2667: {active: true, text: "A whale making a seal noise."}
-		# 2668: {active: true, text: "Accidentally resetting a video game."}
-		# 2669: {active: true, text: "An expensive rental costume."}
-		# 2670: {active: true, text: "Anne Frank doing a striptease."}
-		# 2671: {active: true, text: "Arin actually winning a Game Grumps VS."}
-		# 2672: {active: true, text: "Arin Hanson / Egoraptor."}
-		# 2673: {active: true, text: "Arin's big floppy penis."}
-		# 2674: {active: true, text: "Arin's dicksaber."}
-		# 2675: {active: true, text: "Arin's voice acting."}
-		# 2676: {active: true, text: "Barry Kramer."}
-		# 2677: {active: true, text: "Barry's censorship noises."}
-		# 2678: {active: true, text: "Becoming a vegetarian, then becoming clinically depressed."}
-		# 2679: {active: true, text: "Being forced to replay the same section of the game over and over."}
-		# 2680: {active: true, text: "Birdemic."}
-		# 2681: {active: true, text: "Borderline narcissism."}
-		# 2682: {active: true, text: "Breaking a basketball net's back board."}
-		# 2683: {active: true, text: "Breaking into song."}
-		# 2684: {active: true, text: "Brian / Frank / Steve / Willard / Jonathan / Michael IV / Michael III / Michael Jordan / Scott."}
-		# 2685: {active: true, text: "Bumping butts."}
-		# 2686: {active: true, text: "Buying chicken fingers for homeless people."}
-		# 2687: {active: true, text: "Carefully escorting Anna."}
-		# 2688: {active: true, text: "Catharsis."}
-		# 2689: {active: true, text: "Cheese pizza."}
-		# 2690: {active: true, text: "Chu Chu Rocket."}
-		# 2691: {active: true, text: "Chulip."}
-		# 2692: {active: true, text: "Comparing someone to a trainwreck."}
-		# 2693: {active: true, text: "Completely missing the tutorials and instructions."}
-		# 2694: {active: true, text: "Cumfaggots."}
-		# 2695: {active: true, text: "Dan getting some action with one of Egoraptor's action figures."}
-		# 2696: {active: true, text: "Danny Sexbang."}
-		# 2697: {active: true, text: "Danny's crippling Skittles addiction."}
-		# 2698: {active: true, text: "Dipping your balls in the sand."}
-		# 2699: {active: true, text: "Dixon."}
-		# 2700: {active: true, text: "Donkey-ass Kong."}
-		# 2701: {active: true, text: "Drakkhen's realistic fight sequences."}
-		# 2702: {active: true, text: "Drawing the line in the fucking sand."}
-		# 2703: {active: true, text: "Eating the Holocaust."}
-		# 2704: {active: true, text: "Eating your peas."}
-		# 2705: {active: true, text: "Egofaptor."}
-		# 2706: {active: true, text: "Ending an episode on 'Heil Hitler!'"}
-		# 2707: {active: true, text: "The eyeless girl demographic."}
-		# 2708: {active: true, text: "Fart science."}
-		# 2709: {active: true, text: "Fast-forwarding."}
-		# 2710: {active: true, text: "Fighting Iblis for the hundredth time."}
-		# 2711: {active: true, text: "Fooling me three times."}
-		# 2712: {active: true, text: "Fuckin' Larry."}
-		# 2713: {active: true, text: "FUCKING LEGO CARS!!?!"}
-		# 2714: {active: true, text: "Game feel."}
-		# 2715: {active: true, text: "Game Grumps remixes."}
-		# 2716: {active: true, text: "Game Grumps VS."}
-		# 2717: {active: true, text: "Game Grumps."}
-		# 2718: {active: true, text: "Garshstostoles."}
-		# 2719: {active: true, text: "GeorgLopez."}
-		# 2720: {active: true, text: "Getting censored by a stampede of elephants."}
-		# 2721: {active: true, text: "Getting diddled again."}
-		# 2722: {active: true, text: "Getting fucking ganked."}
-		# 2723: {active: true, text: "Getting horribly diarrhea'd on by an owl."}
-		# 2724: {active: true, text: "Getting killed by a motherfucking paralyzed Taillow."}
-		# 2725: {active: true, text: "Getting stuck on the ceiling for no explicable reason."}
-		# 2726: {active: true, text: "Getting violently sick at MAGfest."}
-		# 2727: {active: true, text: "Goof Troop."}
-		# 2728: {active: true, text: "Goofy masturbating in the fields."}
-		# 2729: {active: true, text: "Grade A meat."}
-		# 2730: {active: true, text: "Grant Kirkhope."}
-		# 2731: {active: true, text: "Grant Kirkhope’s knackers."}
-		# 2732: {active: true, text: "GREAT! GREAT! GREAT!"}
-		# 2733: {active: true, text: "Grep."}
-		# 2734: {active: true, text: "Grumping it."}
-		# 2735: {active: true, text: "Güf Troop."}
-		# 2736: {active: true, text: "Half the deal for twice the price!"}
-		# 2737: {active: true, text: "Having a cough that lasts forever."}
-		# 2738: {active: true, text: "Helicopter tits."}
-		# 2739: {active: true, text: "Hepatitis Sea."}
-		# 2740: {active: true, text: "Slo Mo Guys."}
-		# 2741: {active: true, text: "Hitting a Nightshade cartridge with Thor’s Hammer only to break the hammer."}
-		# 2742: {active: true, text: "Homoerotic subtext between two grown men playing video games."}
-		# 2743: {active: true, text: "Ice hair."}
-		# 2744: {active: true, text: "Incriminating footage of Jon."}
-		# 2745: {active: true, text: "Insta-killing your partner with the Select button."}
-		# 2746: {active: true, text: "It being no use."}
-		# 2747: {active: true, text: "Jacques."}
-		# 2748: {active: true, text: "JonTron."}
-		# 2749: {active: true, text: "Jon winning. AS USUAL."}
-		# 2750: {active: true, text: "Jon's soulful singing."}
-		# 2751: {active: true, text: "Jon/Arin slash fiction."}
-		# 2752: {active: true, text: "JonTron’s musical theater voice."}
-		# 2753: {active: true, text: "Js'keep goin'."}
-		# 2754: {active: true, text: "Killing zombies by typing on a keyboard-gun."}
-		# 2755: {active: true, text: "Kirby."}
-		# 2756: {active: true, text: "Kitty Cat Dance Party."}
-		# 2757: {active: true, text: "Learning that your son is dead, but not caring because you didn't want him anyway."}
-		# 2758: {active: true, text: "Lemon and Bill."}
-		# 2759: {active: true, text: "Lightsaber Fightsaber."}
-		# 2760: {active: true, text: "Literally going to Hell."}
-		# 2761: {active: true, text: "Mediocrity, as a power."}
-		# 2762: {active: true, text: "Mega Man."}
-		# 2763: {active: true, text: "Mike Tyson."}
-		# 2764: {active: true, text: "Mispronouncing Duran Duran."}
-		# 2765: {active: true, text: "Mister Mosquito."}
-		# 2766: {active: true, text: "MomTron."}
-		# 2767: {active: true, text: "Moundo."}
-		# 2768: {active: true, text: "Naughty Bear."}
-		# 2769: {active: true, text: "Nazi von Killyou."}
-		# 2770: {active: true, text: "Ninja Sex Party."}
-		# 2771: {active: true, text: "Nixon."}
-		# 2772: {active: true, text: "NO JON NO."}
-		# 2773: {active: true, text: "NOT FUCKING THIS!"}
-		# 2774: {active: true, text: "Not knowing the controls to Nickelodeon GUTS."}
-		# 2775: {active: true, text: "Not reading the game's instructions."}
-		# 2776: {active: true, text: "Obeying Protoman and burning down a forest."}
-		# 2777: {active: true, text: "Pacific Rim."}
-		# 2778: {active: true, text: "Pause balls."}
-		# 2779: {active: true, text: "Pelistorm."}
-		# 2780: {active: true, text: "Playing a terrible game for more than a hundred episodes."}
-		# 2781: {active: true, text: "Playing slaps to break a tie."}
-		# 2782: {active: true, text: "PONY.MOV."}
-		# 2783: {active: true, text: "Poopy butt."}
-		# 2784: {active: true, text: "Poppy Bros."}
-		# 2785: {active: true, text: "Princess Elise's octopus face."}
-		# 2786: {active: true, text: "Punching a hole in a gingerbread house."}
-		# 2787: {active: true, text: "Queefing bombs out of your vagina."}
-		# 2788: {active: true, text: "Racial slurs."}
-		# 2789: {active: true, text: "Reading the manual."}
-		# 2790: {active: true, text: "RIDIN’ ON CARS!!!"}
-		# 2791: {active: true, text: "Robots ordering cheese pizza."}
-		# 2792: {active: true, text: "Rocket. To the moon."}
-		# 2793: {active: true, text: "Rolling around at the speed of sound."}
-		# 2794: {active: true, text: "RubberRoss."}
-		# 2795: {active: true, text: "Rouge's gross bat face."}
-		# 2796: {active: true, text: "Screaming out Whitney Houston’s “I Will Always Love You” in primal agony."}
-		# 2797: {active: true, text: "Sequelitis."}
-		# 2798: {active: true, text: "Seven asses."}
-		# 2799: {active: true, text: "Signing and destroying a copy of Sonic '06."}
-		# 2800: {active: true, text: "Silver the Hedgehog."}
-		# 2801: {active: true, text: "Sneaking dirty British humour into an unassuming video game about a bear and a bird."}
-		# 2802: {active: true, text: "Snow white shit."}
-		# 2803: {active: true, text: "Snowboarding uphill"}
-		# 2804: {active: true, text: "Solid Snake."}
-		# 2805: {active: true, text: "Sonic '06."}
-		# 2806: {active: true, text: "Spice World."}
-		# 2807: {active: true, text: "Spraying compressed air with a bittering agent in your face, and subsequently vomiting."}
-		# 2808: {active: true, text: "Stairfax Temperatures."}
-		# 2809: {active: true, text: "Staring at a menu while Ross stuffs his disgusting face with candy."}
-		# 2810: {active: true, text: "Stasis-ing the drill."}
-		# 2811: {active: true, text: "Steam Train."}
-		# 2812: {active: true, text: "Sticky sap."}
-		# 2813: {active: true, text: "Stretch Panic."}
-		# 2814: {active: true, text: "STRGG."}
-		# 2815: {active: true, text: "Struggling to fight Silver the Hedgehog."}
-		# 2816: {active: true, text: "Sucking blood from a Japanese girl's tits."}
-		# 2817: {active: true, text: "Suzy the Goose."}
-		# 2818: {active: true, text: "TENOUTTATEN."}
-		# 2819: {active: true, text: "That guy."}
-		# 2820: {active: true, text: "The Awesome Series."}
-		# 2821: {active: true, text: "The band Egoraptor."}
-		# 2822: {active: true, text: "The Chinless Wonder."}
-		# 2823: {active: true, text: "The Goshdangodon."}
-		# 2824: {active: true, text: "The Higgs Boson."}
-		# 2825: {active: true, text: "The Knuckles wall glitch."}
-		# 2826: {active: true, text: "The rarest form of Arin having fun."}
-		# 2827: {active: true, text: "The realization that friendship is more important."}
-		# 2828: {active: true, text: "Three big feet of pleasure."}
-		# 2829: {active: true, text: "Tonguing up."}
-		# 2830: {active: true, text: "WAAAAAAAVE LAAAAZEEEEEEER."}
-		# 2831: {active: true, text: "Walking around in my banana shoes."}
-		# 2832: {active: true, text: "World Dick Barf Syndrome."}
-		# 2833: {active: true, text: "Man-Gobbler, the turkey bestiality movie."}
-		# 2834: {active: true, text: "RoosterTeeth."}
-		# 2835: {active: true, text: "Michael Jones."}
-		# 2836: {active: true, text: "Gavin Free."}
-		# 2837: {active: true, text: "Surgeon Simulator 2013."}
-		# 2838: {active: true, text: "Ray Narvaez, Jr."}
-		# 2839: {active: true, text: "Burnie Burns."}
-		# 2840: {active: true, text: "Geoff Lazer Ramsey."}
-		# 2841: {active: true, text: "Jack Pattillo."}
-		# 2842: {active: true, text: "Ryan Haywood."}
-		# 2843: {active: true, text: "Gus Sorola."}
-		# 2844: {active: true, text: "The cardboard cutout of Gus."}
-		# 2845: {active: true, text: "Joel Heyman."}
-		# 2846: {active: true, text: "Going cakeless."}
-		# 2847: {active: true, text: "Headlight fluid."}
-		# 2848: {active: true, text: "Playing Hitler twice."}
-		# 2849: {active: true, text: "Sarge."}
-		# 2850: {active: true, text: "Lopez la Pesado."}
-		# 2851: {active: true, text: "Franklin Delano Donut."}
-		# 2852: {active: true, text: "Dexter Grif."}
-		# 2853: {active: true, text: "Dick Simmons."}
-		# 2854: {active: true, text: "Agent Washington."}
-		# 2855: {active: true, text: "Andy the bomb."}
-		# 2856: {active: true, text: "Picking up chicks in a tank."}
-		# 2857: {active: true, text: "Michael J. Caboose."}
-		# 2858: {active: true, text: "Sheila the tank."}
-		# 2859: {active: true, text: "Leonard Church."}
-		# 2860: {active: true, text: "Lavernius Tucker."}
-		# 2861: {active: true, text: "Agent Texas / Allison."}
-		# 2862: {active: true, text: "Omega / O'Malley."}
-		# 2863: {active: true, text: "Agent Maine / the Meta."}
-		# 2864: {active: true, text: "Frank 'Doc' DuFresne."}
-		# 2865: {active: true, text: "Screen looking."}
-		# 2866: {active: true, text: "A wet paper towel."}
-		# 2867: {active: true, text: "Minecraft."}
-		# 2868: {active: true, text: "MOGAR!"}
-		# 2869: {active: true, text: "X-Ray and Vav."}
-		# 2870: {active: true, text: "#DantheMan."}
-		# 2871: {active: true, text: "Joe the cat."}
-		# 2872: {active: true, text: "Pongo."}
-		# 2873: {active: true, text: "Soggy bread."}
-		# 2874: {active: true, text: "Rage Quit."}
-		# 2875: {active: true, text: "Achievement Hunter."}
-		# 2876: {active: true, text: "Team-killing fucktards."}
-		# 2877: {active: true, text: "Calling dibs on a spaceship."}
-		# 2878: {active: true, text: "Sarge's funeral."}
-		# 2879: {active: true, text: "Camping, as a legitimate strategy."}
-		# 2880: {active: true, text: "Epsilon's laser face."}
-		# 2881: {active: true, text: "MOTHERFUCKING TRIPLE SPIKES!"}
-		# 2882: {active: true, text: "Because people like grapes."}
-		# 2883: {active: true, text: "Upside-down Kerry."}
-		# 2884: {active: true, text: "Ray's sombrero."}
-		# 2885: {active: true, text: "Doing a dig-down."}
-		# 2886: {active: true, text: "Mark Nutt."}
-		# 2887: {active: true, text: "AHWU."}
-		# 2888: {active: true, text: "Throwing shit at the AHWU announcer."}
-		# 2889: {active: true, text: "Red vs. Blue."}
-		# 2890: {active: true, text: "Geoff's cancer-curing laugh."}
-		# 2891: {active: true, text: "The Tower of Pimps."}
-		# 2892: {active: true, text: "The Frienderman."}
-		# 2893: {active: true, text: "Beating a man to death with his own skull."}
-		# 2894: {active: true, text: "Fighting to the death on pigback."}
-		# 2895: {active: true, text: "RWBY."}
-		# 2896: {active: true, text: "RT Shorts."}
-		# 2897: {active: true, text: "RT Animated Adventures."}
-		# 2898: {active: true, text: "Mega64."}
-		# 2899: {active: true, text: "Immersion."}
-		# 2900: {active: true, text: "Reaching a billion total views on YouTube."}
-		# 2901: {active: true, text: "Doing a double barrel roll and immediately running someone over."}
-		# 2902: {active: true, text: "A Ray-Cam masturbation moment."}
-		# 2903: {active: true, text: "Tackling Gavin to stop him from winning."}
-		# 2904: {active: true, text: "Losing an hour's worth of footage to a brief blackout."}
-		# 2905: {active: true, text: "Fails of the Weak."}
-		# 2906: {active: true, text: "Achievement HORSE."}
-		# 2907: {active: true, text: "Trials PIG."}
-		# 2908: {active: true, text: "Slapping the controller out of a competitor's hands."}
-		# 2909: {active: true, text: "Cockbites."}
-		# 2910: {active: true, text: "Achievement City."}
-		# 2911: {active: true, text: "Two bases in the middle of a box canyon. Whoop-dee-fuckin'-doo."}
-		# 2912: {active: true, text: "Blood Gulch."}
-		# 2913: {active: true, text: "Parkour."}
-		# 2914: {active: true, text: "Faffy Waffle."}
-		# 2915: {active: true, text: "Something that is top."}
-		# 2916: {active: true, text: "A plan that involves Grif dying."}
-		# 2917: {active: true, text: "Drunkenly texting an ex."}
-		# 2918: {active: true, text: "Using CPR to treat a bullet wound to the head."}
-		# 2919: {active: true, text: "Front flip for style!"}
-		# 2920: {active: true, text: "Trying to eat a five-pound gummy bear in one sitting."}
-		# 2921: {active: true, text: "RTX."}
-		# 2922: {active: true, text: "Randy Newman."}
-		# 2923: {active: true, text: "Slenderman."}
-		# 2924: {active: true, text: "The R&R Connection."}
-		# 2925: {active: true, text: "The Internet Box."}
-		# 2926: {active: true, text: "Performing surgery in space."}
-		# 2927: {active: true, text: "Jack's dick."}
-		# 2928: {active: true, text: "The Crev."}
-		# 2929: {active: true, text: "Team Nice Dynamite."}
-		# 2930: {active: true, text: "Team Lads."}
-		# 2931: {active: true, text: "Team Gents."}
-		# 2932: {active: true, text: "Plan G."}
-		# 2933: {active: true, text: "Team Neighborhood Watch."}
-		# 2934: {active: true, text: "Ray winning."}
-		# 2935: {active: true, text: "Edgar the cow."}
-		# 2936: {active: true, text: "Gavin's Trophy Room of Victory."}
-		# 2937: {active: true, text: "Jack's beard."}
-		# 2938: {active: true, text: "Being trapped in a dog cage."}
-		# 2939: {active: true, text: "Geoff's hobo beard."}
-		# 2940: {active: true, text: "Killing Gavin."}
-		# 2941: {active: true, text: "Discovering your long-lost Creeper parents."}
-		# 2942: {active: true, text: "A megalomaniac with a beard."}
-		# 2943: {active: true, text: "Ray's douche-cut."}
-		# 2944: {active: true, text: "The adventures of Batman and Randy Newman."}
-		# 2945: {active: true, text: "Because they'd like it."}
-		# 2946: {active: true, text: "Knobs."}
-		# 2947: {active: true, text: "Gubbins."}
-		# 2948: {active: true, text: "Meatspin."}
-		# 2949: {active: true, text: "Flynt Coal."}
-		# 2950: {active: true, text: "Tupperware."}
-		# 2951: {active: true, text: "A miniature Tower of Pimps."}
-		# 2952: {active: true, text: "Giving up and building a house."}
-		# 2953: {active: true, text: "Gavin's dick."}
-		# 2954: {active: true, text: "Wearing your headphones backwards during a podcast week after week."}
-		# 2955: {active: true, text: "Flicking the bean."}
-		# 2956: {active: true, text: "Getting minged up your quelch."}
-		# 2957: {active: true, text: "Grand Theft Auto IV."}
-		# 2958: {active: true, text: "Ray's wet sponge."}
-		# 2959: {active: true, text: "Bankrupting your company over a crane game."}
-		# 2960: {active: true, text: "A bag of dicks."}
-		# 2961: {active: true, text: "ENDERMAN!!!"}
-		# 2962: {active: true, text: "Lightish red."}
-		# 2963: {active: true, text: "In denial."}
-		# 2964: {active: true, text: "Enwrong."}
-		# 2965: {active: true, text: "Papa BrownMan."}
-		# 2966: {active: true, text: "Caleb's house."}
-		# 2967: {active: true, text: "Evil Ryan."}
-		# 2968: {active: true, text: "Randy Savage."}
-		# 2969: {active: true, text: "RT Confessions."}
-		# 2970: {active: true, text: "Two dumb cunts."}
-		# 2971: {active: true, text: "Smegpot."}
-		# 2972: {active: true, text: "Guffpap."}
-		# 2973: {active: true, text: "Launching dump trucks off an unfinished bridge."}
-		# 2974: {active: true, text: "Because bitches ain't shit."}
-		# 2975: {active: true, text: "Gavino."}
-		# 2976: {active: true, text: "Monoray."}
-		# 2977: {active: true, text: "Montages no one will watch."}
-		# 2978: {active: true, text: "A gay cave. A gayve."}
-		# 2979: {active: true, text: "A squid orgy."}
-		# 2980: {active: true, text: "Getting boned."}
-		# 2981: {active: true, text: "300,000 Gamerscore."}
-		# 2982: {active: true, text: "Team Magnum Dong."}
-		# 2983: {active: true, text: "Lindsay Tuggey."}
-		# 2984: {active: true, text: "Barbara Dunkelman."}
-		# 2985: {active: true, text: "Mavin slash fiction."}
-		# 2986: {active: true, text: "Caleb Denecour."}
-		# 2987: {active: true, text: "Monty Oum."}
-		# 2988: {active: true, text: "The league of being a big faggot."}
-		# 2989: {active: true, text: "GaLm's sunglasses."}
-		# 2990: {active: true, text: "The Card Czar."}
-		# 2991: {active: true, text: "Inside Shrek's asshole."}
-		# 2992: {active: true, text: "Solving a rubiks cube with your bare nipples."}
-		# 2993: {active: true, text: "A canoe with enough room for Phil."}
-		# 2994: {active: true, text: "The Black Seed."}
-		# 2995: {active: true, text: "That video of EatMyDiction1 twerking."}
-		# 2996: {active: true, text: "The Sips Co. Dirt Factory."}
-		# 2997: {active: true, text: "DarkSydePhil playing Dark Souls."}
-		# 2998: {active: true, text: "Hitler's Train!"}
-		# 2999: {active: true, text: "That time when Machinima played actual machinima videos."}
-		# 3000: {active: true, text: "Bajan Canadian's fridge."}
-		# 3001: {active: true, text: "Seananners' dolphin laugh."}
-		# 3002: {active: true, text: "Chilledchaos' homosexual tendencies."}
-		# 3003: {active: true, text: "Bolshevik the wolf."}
-		# 3004: {active: true, text: "Diction watching a burly outdoorsman skin a bear while eating honey and crying."}
-		# 3005: {active: true, text: "The Tom Shark."}
-		# 3006: {active: true, text: "#TysLeftFoot"}
-		# 3007: {active: true, text: "Seananners joyously dropping 'presents' on the African minority in GTA."}
-		# 3008: {active: true, text: "Jah be dwarfin' it up!"}
-		# 3009: {active: true, text: "Tom drunk off his ass."}
-		# 3010: {active: true, text: "Getting anally violated by a silverback gorilla."}
-		# 3011: {active: true, text: "A Big 'Ol Bowl of Fruit!"}
-		# 3012: {active: true, text: "An LP Smarty finished."}
-		# 3013: {active: true, text: "BEARS!"}
-		# 3014: {active: true, text: "The Blue Yeti microphone."}
-		# 3015: {active: true, text: "A Machinima contract."}
-		# 3016: {active: true, text: "Criken's Fun House."}
-		# 3017: {active: true, text: "A smart joke."}
-		# 3018: {active: true, text: "One of Chuggaconroy's awful puns."}
-		# 3019: {active: true, text: "The Great Youtube Unsubbing of 2012."}
-		# 3020: {active: true, text: "A robot bird."}
-		# 3021: {active: true, text: "Time to cancel Smash Fighter."}
-		# 3022: {active: true, text: "Smash Fighter."}
-		# 3023: {active: true, text: "Totalbiscuit and Angry Joe frolicking in a meadow."}
-		# 3024: {active: true, text: "Chilled and Smarty's wedding."}
-		# 3025: {active: true, text: "A box of biscuits, a box of mixed biscuits, and a biscuit mixer."}
-		# 3026: {active: true, text: "A box-shaped man."}
-		# 3027: {active: true, text: "A man-shaped box."}
-		# 3028: {active: true, text: "An alternate universe in which boxes store things inside of people."}
-		# 3029: {active: true, text: "Two midgets shitting into a box."}
-		# 3030: {active: true, text: "A falcon with a box on its head."}
-		# 3031: {active: true, text: "Being a motherfucking box."}
-		# 3032: {active: true, text: "Achieving the manual dexterity and tactical brilliance of a 12-year-old Korean boy. (6/44)"}
-		# 3033: {active: true, text: "Being an attractive elf trapped in an unattractive human's body. (9/44)"}
-		# 3034: {active: true, text: "Filling every pouch of a UtiliKilt&trade; with pizza. (12/44)"}
-		# 3035: {active: true, text: "Bowser's aching heart. (13/44)"}
-		# 3036: {active: true, text: "Turn-of-the-century sky racists. (24/44)"}
-		# 3037: {active: true, text: "The gravity gun."}
-		# 3038: {active: true, text: "Achieving the manual dexterity and tactical brilliance of a 12-year-old Korean boy."}
-		# 3039: {active: true, text: "Rolling a D20 to save a failing marriage."}
-		# 3040: {active: true, text: "A cutie mark."}
-		# 3041: {active: true, text: "Octavia."}
-		# 3042: {active: true, text: "The Moon."}
-		# 3043: {active: true, text: "Orphaned foals."}
-		# 3044: {active: true, text: "Pants."}
-		# 3045: {active: true, text: "The Great and Powerful Trixie Lulamoon."}
-		# 3046: {active: true, text: "The Grand Galloping Gala."}
-		# 3047: {active: true, text: "Pegasus wing deformities."}
-		# 3048: {active: true, text: "The Friendship Express."}
-		# 3049: {active: true, text: "Pinkamena Diane Pie."}
-		# 3050: {active: true, text: "The Chocolate Mousse Moose."}
-		# 3051: {active: true, text: "The Cakes."}
-		# 3052: {active: true, text: "Pinkamena's hacksaw."}
-		# 3053: {active: true, text: "That squee noise."}
-		# 3054: {active: true, text: "That Lyra plushie."}
-		# 3055: {active: true, text: "Sweetie Bot."}
-		# 3056: {active: true, text: "Sweetie Belle's virgin marshmallow pussy."}
-		# 3057: {active: true, text: "Sweetie Belle."}
-		# 3058: {active: true, text: "Pinkie Pie in full latex."}
-		# 3059: {active: true, text: "Surprise."}
-		# 3060: {active: true, text: "Stretching those glutes."}
-		# 3061: {active: true, text: "Pinkie Pie."}
-		# 3062: {active: true, text: "Steven Magnets."}
-		# 3063: {active: true, text: "Plot."}
-		# 3064: {active: true, text: "Spike's understanding of biology."}
-		# 3065: {active: true, text: "Speaking Fancy."}
-		# 3066: {active: true, text: "Poison Joke."}
-		# 3067: {active: true, text: "Socks."}
-		# 3068: {active: true, text: "Ponies wearing clothes."}
-		# 3069: {active: true, text: "Sloppy clop."}
-		# 3070: {active: true, text: "Shipping."}
-		# 3071: {active: true, text: "Shaking Dat Plot."}
-		# 3072: {active: true, text: "Secretly being a changeling all along."}
-		# 3073: {active: true, text: "Ponies."}
-		# 3074: {active: true, text: "Scootabuse."}
-		# 3075: {active: true, text: "Pony racism."}
-		# 3076: {active: true, text: "Scoot, Scoot-A-Loo."}
-		# 3077: {active: true, text: "Pony-Griffon marriage."}
-		# 3078: {active: true, text: "Rarity."}
-		# 3079: {active: true, text: "Rainbow Dash."}
-		# 3080: {active: true, text: "Rainbow Crash."}
-		# 3081: {active: true, text: "Ponychan."}
-		# 3082: {active: true, text: "Raging wingboners."}
-		# 3083: {active: true, text: "Queen Chrysalis."}
-		# 3084: {active: true, text: "Princess Molestia."}
-		# 3085: {active: true, text: "Princess Celestia."}
-		# 3086: {active: true, text: "Princess Mi Amore Cadenza."}
-		# 3087: {active: true, text: "Princess Luna."}
-		# 3088: {active: true, text: "Ponies with fricken' laser beams attached to their heads!"}
-		# 3089: {active: true, text: "Lara Croft."}
-		# 3090: {active: true, text: "Bowser's aching heart."}
-		# 3091: {active: true, text: "Scotsmen marrying their sheep."}
-		# 3092: {active: true, text: "Filling every pouch of a UtiliKilt&trade; with pizza."}
-		# 3093: {active: true, text: "Quiznos."}
-		# 3094: {active: true, text: "70,000 gamers sweating and farting inside an airtight steel dome."}
-		# 3095: {active: true, text: "A bunch of idiots playing a card game instead of interacting like normal humans."}
-		# 3096: {active: true, text: "A sex goblin with a carnival penis."}
-		# 3097: {active: true, text: "Lots and lots of abortions."}
-		# 3098: {active: true, text: "Injecting speed into one arm and horse tranquilizer into the other."}
-		# 3099: {active: true, text: "Sharks with legs."}
-		# 3100: {active: true, text: "A sex comet from Neptune that plunges the Earth into eternal sexiness."}
-		# 3101: {active: true, text: "How awesome I am."}
-		# 3102: {active: true, text: "Smoking crack, for instance."}
-		# 3103: {active: true, text: "A dance move that's just sex."}
-		# 3104: {active: true, text: "A hopeless amount of spiders."}
-		# 3105: {active: true, text: "Drinking responsibly."}
-		# 3106: {active: true, text: "Angelheaded hipsters burning for the ancient heavenly connection to the starry dynamo in the machinery of night."}
-		# 3107: {active: true, text: "Bouncing up and down."}
-		# 3108: {active: true, text: "A shiny rock that proves I love you."}
-		# 3109: {active: true, text: "Crazy opium eyes."}
-		# 3110: {active: true, text: "Moderate-to-severe joint pain."}
-		# 3111: {active: true, text: "Finally finishing off the Indians."}
-		# 3112: {active: true, text: "Actual mutants with medical conditions and no superpowers."}
-		# 3113: {active: true, text: "The complex geopolitical quagmire that is the Middle East."}
-		# 3114: {active: true, text: "Neil Diamond's Greatest Hits."}
-		# 3115: {active: true, text: "No clothes on, penis in vagina."}
-		# 3116: {active: true, text: "Whispering all sexy."}
-		# 3117: {active: true, text: "A horse with no legs."}
-		# 3118: {active: true, text: "Depression."}
-		# 3119: {active: true, text: "Almost giving money to a homeless person."}
-		# 3120: {active: true, text: "Interspecies marriage."}
-		# 3121: {active: true, text: "Blackula."}
-		# 3122: {active: true, text: "What Jesus would do."}
-		# 3123: {active: true, text: "A manhole."}
-		# 3124: {active: true, text: "My dad's dumb fucking face."}
-		# 3125: {active: true, text: "A Ugandan warlord."}
-		# 3126: {active: true, text: "My worthless son."}
-		# 3127: {active: true, text: "A Native American who solves crimes by going into the spirit world."}
-		# 3128: {active: true, text: "A kiss on the lips."}
-		# 3129: {active: true, text: "A fart."}
-		# 3130: {active: true, text: "The peaceful and nonthreatening rise of China."}
-		# 3131: {active: true, text: "The size of my penis."}
-		# 3132: {active: true, text: "Jizz."}
-		# 3133: {active: true, text: "10 Incredible Facts About the Anus."}
-		# 3134: {active: true, text: "The secret formula for ultimate female satisfaction."}
-		# 3135: {active: true, text: "Sugar madness."}
-		# 3136: {active: true, text: "Calculating every mannerism so as not to suggest homosexuality."}
-		# 3137: {active: true, text: "Fucking a corpse back to life."}
-		# 3138: {active: true, text: "The euphoric rush of strangling a drifter."}
-		# 3139: {active: true, text: "Snorting coke off a clown's boner."}
-		# 3140: {active: true, text: "Three consecutive seconds of happiness."}
-		# 3141: {active: true, text: "Falling into the toilet."}
-		# 3142: {active: true, text: "Ass to mouth."}
-		# 3143: {active: true, text: "Some sort of Asian."}
-		# 3144: {active: true, text: "The safe word."}
-		# 3145: {active: true, text: "Party Mexicans."}
-		# 3146: {active: true, text: "Ambiguous sarcasm."}
-		# 3147: {active: true, text: "Prince Ali,<br/>fabulous he,<br/>Ali Ababwa."}
-		# 3148: {active: true, text: "My sex dungeon."}
-		# 3149: {active: true, text: "Child Protective Services."}
-		# 3150: {active: true, text: "An interracial handshake."}
-		# 3151: {active: true, text: "All the single ladies."}
-		# 3152: {active: true, text: "Whatever a McRib&reg; is made of."}
-		# 3153: {active: true, text: "Africa."}
-		# 3154: {active: true, text: "Khakis."}
-		# 3155: {active: true, text: "A gender identity that can only be conveyed through slam poetry."}
-		# 3156: {active: true, text: "Stuff a child's face with Fun Dip&reg; until he starts having fun."}
-		# 3157: {active: true, text: "A for-real lizard that spits blood from its eyes."}
-		# 3158: {active: true, text: "The tiniest shred of evidence that God is real."}
-		# 3159: {active: true, text: "Dem titties."}
-		# 3160: {active: true, text: "Exploding pigeons."}
-		# 3161: {active: true, text: "Doo-doo."}
-		# 3162: {active: true, text: "Sports."}
-		# 3163: {active: true, text: "Unquestioning obedience."}
-		# 3164: {active: true, text: "Grammar nazis who are also regular Nazis."}
-		# 3165: {active: true, text: "Being banned from /r/pyongyang."}
-		# 3166: {active: true, text: "The lost city of Atlantis."}
-		# 3167: {active: true, text: "Giving money and personal information to strangers on the Internet."}
-		# 3168: {active: true, text: "A magical tablet containing a world of unlimited pornography."}
-		# 3169: {active: true, text: "These low, low prices!"}
-		# 3170: {active: true, text: "Piece of shit Christmas cards with no money in them."}
-		# 3171: {active: true, text: "Moses gargling Jesus's balls while Shiva and the Buddha penetrate his divine hand holes."}
-		# 3172: {active: true, text: "The Hawaiian goddess Kapo and her flying detachable vagina."}
-		# 3173: {active: true, text: "The shittier, Jewish version of Christmas."}
-		# 3174: {active: true, text: "Making up for 10 years of shitty parenting with a PlayStation."}
-		# 3175: {active: true, text: "Swapping bodies with mom for a day."}
-		# 3176: {active: true, text: "Slicing a ham in icy silence."}
-		# 3177: {active: true, text: "Finding out that Santa isn't real."}
-		# 3178: {active: true, text: "Rudolph's bright red balls."}
-		# 3179: {active: true, text: "The Grinch's musty, cum-stained pelt."}
-		# 3180: {active: true, text: "Breeding elves for their priceless semen."}
-		# 3181: {active: true, text: "Jizzing into Santa's beard."}
-		# 3182: {active: true, text: "A simultaneous nightmare and wet dream starring Sigourney Weaver."}
-		# 3183: {active: true, text: "Being blind and deaf and having no limbs."}
-		# 3184: {active: true, text: "People with cake in their mouths talking about how good cake is."}
-		# 3185: {active: true, text: "Ewoks."}
-		# 3186: {active: true, text: "OP Delivers."}
-		# 3187: {active: true, text: "#SOCKS."}
-		# 3188: {active: true, text: "Oh look! A cat!"}
-		# 3189: {active: true, text: "I am not a clever man."}
-		# 3190: {active: true, text: "Banana."}
-		# 3191: {active: true, text: "Read me 10 for all coffee."}
-		# 3192: {active: true, text: "Juan."}
-		# 3193: {active: true, text: "Sir Patrick Stewart."}
-		# 3194: {active: true, text: "Troy and Abed."}
-		# 3195: {active: true, text: "MOON MOON."}
-		# 3196: {active: true, text: "Nathan Fillion."}
-		# 3197: {active: true, text: "Felica Day."}
-		# 3198: {active: true, text: "9."}
-		# 3199: {active: true, text: "10."}
-		# 3200: {active: true, text: "11."}
-		# 3201: {active: true, text: "BOOM! Pregnant."}
-		# 3202: {active: true, text: "Tesla."}
-		# 3203: {active: true, text: "Jon Snow."}
-		# 3204: {active: true, text: "Ass."}
-		# 3205: {active: true, text: "Theon Greyjoy’s dismembered member."}
-		# 3206: {active: true, text: "Not since the accident."}
-		# 3207: {active: true, text: "Lechuga."}
-		# 3208: {active: true, text: "Edward Macaroni Fork."}
-		# 3209: {active: true, text: "Imgurgiraffe."}
-		# 3210: {active: true, text: "ANUSTART."}
-		# 3211: {active: true, text: "This was a grave mistake."}
-		# 3212: {active: true, text: "BAZINGA!"}
-		# 3213: {active: true, text: "Cousin Maeby."}
-		# 3214: {active: true, text: "STEVE HOLT."}
-		# 3215: {active: true, text: "Nevernudes."}
-		# 3216: {active: true, text: "Tard."}
-		# 3217: {active: true, text: "Potato. "}
-		# 3218: {active: true, text: "Bacon."}
-		# 3219: {active: true, text: "Erotic fiction featuring Snape and Hermione."}
-		# 3220: {active: true, text: "Sonic Screwdriver. "}
-		# 3221: {active: true, text: "Chak´s homemade maple bacon jam."}
-		# 3222: {active: true, text: "Moisturize me."}
-		# 3223: {active: true, text: "Mummy."}
-		# 3224: {active: true, text: "Expelliarmus!"}
-		# 3225: {active: true, text: "Hagrid."}
-		# 3226: {active: true, text: "Buckbeak."}
-		# 3227: {active: true, text: "Luke Skywalker making out with his sister, Leia."}
-		# 3228: {active: true, text: "NobodySaysThis."}
-		# 3229: {active: true, text: "Nargles."}
-		# 3230: {active: true, text: "Annie´s boobs."}
-		# 3231: {active: true, text: "An overpriced cup of coffee."}
-		# 3232: {active: true, text: "Demonstrating how to properly put on a condom using a cucumber as substitute for a penis."}
-		# 3233: {active: true, text: "Katie the Cock Cozy."}
-		# 3234: {active: true, text: "Going Super Saiyan."}
-		# 3235: {active: true, text: "Going Super Saiyan during orgasm."}
-		# 3236: {active: true, text: "Going Super Saiyan while taking a massive dump."}
-		# 3237: {active: true, text: "Angry naked people."}
-		# 3238: {active: true, text: "Literally spanking a monkey."}
-		# 3239: {active: true, text: "My daikon."}
-		# 3240: {active: true, text: "Alicorn OCs."}
-		# 3241: {active: true, text: "An End of Ponies update."}
-		# 3242: {active: true, text: "Another ball-greasing 502 error, for fuck's sake! Goddamnit!"}
-		# 3243: {active: true, text: "Assholes who hate foalcon."}
-		# 3244: {active: true, text: "Big Macintosh's gaping, sloppy-wet boycunt."}
-		# 3245: {active: true, text: "Blackjack."}
-		# 3246: {active: true, text: "Bronies."}
-		# 3247: {active: true, text: "Chuckward, before he was banned."}
-		# 3248: {active: true, text: "Cola's ass."}
-		# 3249: {active: true, text: "Columbine. Dear fucking Celestia, Columbine."}
-		# 3250: {active: true, text: "Crotchtits."}
-		# 3251: {active: true, text: "darf."}
-		# 3252: {active: true, text: "darf's corpse, Faust rest his soul."}
-		# 3253: {active: true, text: "Dollhouse."}
-		# 3254: {active: true, text: "Eakin."}
-		# 3255: {active: true, text: "Equestria Daily."}
-		# 3256: {active: true, text: "Fallout: Equestria: Project Horizons."}
-		# 3257: {active: true, text: "Fallout: Equestria."}
-		# 3258: {active: true, text: "FelixDawn."}
-		# 3259: {active: true, text: "Fillyfooler."}
-		# 3260: {active: true, text: "Foalcon."}
-		# 3261: {active: true, text: "Fucking 502 errors."}
-		# 3262: {active: true, text: "Fucking Anthro."}
-		# 3263: {active: true, text: "Goddamned crossover fics."}
-		# 3264: {active: true, text: "Goddamned unnecessary futa."}
-		# 3265: {active: true, text: "Horsedick."}
-		# 3266: {active: true, text: "Humancunt."}
-		# 3267: {active: true, text: "Humanized."}
-		# 3268: {active: true, text: "IJAB."}
+		1411: {active: true, text: "STEAL ALL THE FARM."}
+		1412: {active: true, text: "Norwegian Oil."}
+		1413: {active: true, text: "Grandiosa."}
+		1414: {active: true, text: "Drilling."}
+		1415: {active: true, text: "Barta's glorious hair."}
+		1416: {active: true, text: "BENCH ALL THE MOTHERS."}
+		1417: {active: true, text: "Taking the second and third blue buff."}
+		1418: {active: true, text: "Invisible stabwounds."}
+		1419: {active: true, text: "Lulu's double E."}
+		1420: {active: true, text: "A blurry picture."}
+		1421: {active: true, text: "The Merchant Navy."}
+		1422: {active: true, text: "Manny's epic laugh."}
+		1423: {active: true, text: "Clearly jealous."}
+		1424: {active: true, text: "A very tight vest from Primark."}
+		1425: {active: true, text: "Fisting a nun."}
+		1426: {active: true, text: "Teabagging a siamese midget while benchpressing a cybernetically enhanced bear."}
+		1427: {active: true, text: "From Primark."}
+		1428: {active: true, text: "smoochy moochy."}
+		1429: {active: true, text: "A Superman tattoo."}
+		1430: {active: true, text: "Gary Glitter."}
+		1431: {active: true, text: "Hestkuk."}
+		1432: {active: true, text: "A nice guy."}
+		1433: {active: true, text: "My 6.3 KDA ratio."}
+		1434: {active: true, text: "bronze scrub."}
+		1435: {active: true, text: "Get on my level."}
+		1436: {active: true, text: "Fucking tryhard."}
+		1437: {active: true, text: "Those moments when you're bored and pucker your anus to a good beat."}
+		1438: {active: true, text: "An undetermined but significant quantity of penis."}
+		1439: {active: true, text: "PEEEEEEEEEEEEEEEENIIIISSSSSSSS."}
+		1440: {active: true, text: "They're taking the hobbits to Isengard!"}
+		1441: {active: true, text: "Confounding jerry at every turn."}
+		1442: {active: true, text: "Jumanji."}
+		1443: {active: true, text: "Wards."}
+		1444: {active: true, text: "Wildturtle's vast range of emotions."}
+		1445: {active: true, text: "K-Pop."}
+		1446: {active: true, text: "Doing Gangnam Style at a funeral."}
+		1447: {active: true, text: "joseph gordon-Levitt wearing nothing but a kitten."}
+		1448: {active: true, text: "125% Reccomended Daily Allowance of cock."}
+		1449: {active: true, text: "Barta not being sarcastic."}
+		1450: {active: true, text: "Golby's itchy testicles."}
+		1451: {active: true, text: "Surgery to move the male g-spot to the naval."}
+		1452: {active: true, text: "Golby not jungling."}
+		1453: {active: true, text: "Feeling a fart pushing against your prostate."}
+		1454: {active: true, text: "I'm Batman. WHERE ARE THEY?!?"}
+		1455: {active: true, text: "Band Camp."}
+		1456: {active: true, text: "A corgi wearing a hat."}
+		1457: {active: true, text: "A corgi wearing a sailor moon outfit."}
+		1458: {active: true, text: "a corgi dressed as a viking."}
+		1459: {active: true, text: "A corgi."}
+		1460: {active: true, text: "Chak's bald spot."}
+		1461: {active: true, text: "THE HAWK!"}
+		1462: {active: true, text: "Jamiroquai."}
+		1463: {active: true, text: "BAWNJOURNO."}
+		1464: {active: true, text: "Black people's nostrils."}
+		1465: {active: true, text: "LOOK AT MY HORSE."}
+		1466: {active: true, text: "MY HORSE IS AMAZING."}
+		1467: {active: true, text: "XPEKE!"}
+		1468: {active: true, text: "CACAW!"}
+		1469: {active: true, text: "Dryhumping."}
+		1470: {active: true, text: "50 Shades of Gay."}
+		1471: {active: true, text: "Chak making a sandwich."}
+		1472: {active: true, text: "Jealous."}
+		1473: {active: true, text: "David."}
+		1474: {active: true, text: "A healthy dose of Vitamin Cock and Vitamin Dick."}
+		1475: {active: true, text: "Questioning my sexuality."}
+		1476: {active: true, text: "Tons of Damage."}
+		1477: {active: true, text: "A Godzilla attack."}
+		1478: {active: true, text: "Eating KFC on Christmas day."}
+		1479: {active: true, text: "Hello Kitty! pregnancy doujins."}
+		1480: {active: true, text: "Waving it around all willy-nilly."}
+		1481: {active: true, text: "Hot anime moms."}
+		1482: {active: true, text: "Pissing yourself."}
+		1483: {active: true, text: "GAO! GAI! GAR!!!"}
+		1484: {active: true, text: "Vocaloid death metal."}
+		1485: {active: true, text: "Yaoi paddles."}
+		1486: {active: true, text: "Mr. Satan."}
+		1487: {active: true, text: "An actual, honest-to-God black guy."}
+		1488: {active: true, text: "4,000 tacos, and one Diet Coke."}
+		1489: {active: true, text: "Sick with the cancer."}
+		1490: {active: true, text: "Black and white samurai movies."}
+		1491: {active: true, text: "A promotional crossover with Pizza Hut."}
+		1492: {active: true, text: "Transvestite police officers."}
+		1493: {active: true, text: "Con funk."}
+		1494: {active: true, text: "Star-shaped nipples."}
+		1495: {active: true, text: "A laser horse."}
+		1496: {active: true, text: "Girls with guns AND glasses."}
+		1497: {active: true, text: "Teenaged miniskirt-wearing space pirates."}
+		1498: {active: true, text: "Gas station sushi."}
+		1499: {active: true, text: "Deman making a racist pun."}
+		1500: {active: true, text: "Phreak staring at you and never blinking."}
+		1501: {active: true, text: "PENTAFAIL!"}
+		1502: {active: true, text: "I Can't Believe It's Not Butter."}
+		1503: {active: true, text: "A Wanksock."}
+		1504: {active: true, text: "An arsehole like a wellington top."}
+		1505: {active: true, text: "BORK."}
+		1506: {active: true, text: "Handicapped people on Takeshi's Castle."}
+		1507: {active: true, text: "The Chuckle Brothers at their mother's funeral."}
+		1508: {active: true, text: "A 3am phone call."}
+		1509: {active: true, text: "A cardboard cutout of Jennifer Lawrence."}
+		1510: {active: true, text: "Gotfried's voice."}
+		1511: {active: true, text: "Ezreal's hot sugary ass."}
+		1512: {active: true, text: "A Canadian penny."}
+		1513: {active: true, text: "dho's penis."}
+		1514: {active: true, text: "Griffy's tits."}
+		1515: {active: true, text: "Kyubey."}
+		1516: {active: true, text: "Weeaboos."}
+		1517: {active: true, text: "Narutards."}
+		1518: {active: true, text: "Dead catgirls."}
+		1519: {active: true, text: "Aniplex of America."}
+		1520: {active: true, text: "Steve Motherfuckin' Blum."}
+		1521: {active: true, text: "Tentacle rape."}
+		1522: {active: true, text: "Lolis."}
+		1523: {active: true, text: "Hot-blooded shonen protagonists."}
+		1524: {active: true, text: "A fuck-mothering vampire."}
+		1525: {active: true, text: "A big-breasted 14-year-old wearing a bikini and sucking on a popsicle."}
+		1526: {active: true, text: "Henry Goto being savagely raped by a bear."}
+		1527: {active: true, text: "Yet another goddamn Goku vs. Superman argument."}
+		1528: {active: true, text: "FANSERVICE!!!"}
+		1529: {active: true, text: "FUNimation."}
+		1530: {active: true, text: "Strangling hardcore otaku nerds with razor wire."}
+		1531: {active: true, text: "The female lead singer being gang-banged by her entire band."}
+		1532: {active: true, text: "Bukkake."}
+		1533: {active: true, text: "OVER 9000!!"}
+		1534: {active: true, text: "Bulma's panties."}
+		1535: {active: true, text: "Mami getting her head bitten off."}
+		1536: {active: true, text: "Onii-chan."}
+		1537: {active: true, text: "MAWNING LESCUE!!!"}
+		1538: {active: true, text: "Idiots who don't seem to realize that Avatar: The Last Airbender isn't really an anime."}
+		1539: {active: true, text: "PASTAAAAA!!!!"}
+		1540: {active: true, text: "Yu-Gi-Oh! The Abridged Series."}
+		1541: {active: true, text: "A fat middle-aged man in a Sailor Moon costume."}
+		1542: {active: true, text: "$300 anime bluray boxsets."}
+		1543: {active: true, text: "Man-Faye."}
+		1544: {active: true, text: "DAN GREEN."}
+		1545: {active: true, text: "WE UNDERSTAND ANIME FAN WANTS!!"}
+		1546: {active: true, text: "Goku."}
+		1547: {active: true, text: "Soldier A."}
+		1548: {active: true, text: "Red-headed tsunderes."}
+		1549: {active: true, text: "That sound effect in every hentai when the guy ejaculates."}
+		1550: {active: true, text: "Sarah Fuckin' Palin."}
+		1551: {active: true, text: "Bang."}
+		1552: {active: true, text: "Prof's legs."}
+		1553: {active: true, text: "Naruto."}
+		1554: {active: true, text: "Rice balls."}
+		1555: {active: true, text: "JesuOtaku's ginormous lips."}
+		1556: {active: true, text: "Fujiko's boobs."}
+		1557: {active: true, text: "Vash the Stampede."}
+		1558: {active: true, text: "Shinji being a whiny little bitch."}
+		1559: {active: true, text: "Third Impact."}
+		1560: {active: true, text: "Kenshiro."}
+		1561: {active: true, text: "Cowboy Bebop."}
+		1562: {active: true, text: "Fullmetal Alchemist."}
+		1563: {active: true, text: "Futanari."}
+		1564: {active: true, text: "Taking a potato chip... and EATING IT."}
+		1565: {active: true, text: "Unreasonably long transformation sequences."}
+		1566: {active: true, text: "Ass dance!! Ass dance!!"}
+		1567: {active: true, text: "CENTURY SOOOOUUUP!!!!!"}
+		1568: {active: true, text: "Garzey's Wing."}
+		1569: {active: true, text: "Reverse harems."}
+		1570: {active: true, text: "Mewtwo."}
+		1571: {active: true, text: "Wearing panties on the head."}
+		1572: {active: true, text: "CARD GAMES ON MOTORCYCLES."}
+		1573: {active: true, text: "Nice boat."}
+		1574: {active: true, text: "The One Piece rap."}
+		1575: {active: true, text: "Walpurgisnacht."}
+		1576: {active: true, text: "Girls with glasses."}
+		1577: {active: true, text: "Eating the wrong end of a chocolate cornet."}
+		1578: {active: true, text: "Being eaten by a titan."}
+		1579: {active: true, text: "Casca's hairy unshaven vag."}
+		1580: {active: true, text: "Tits on your hand."}
+		1581: {active: true, text: "The Death Note."}
+		1582: {active: true, text: "A 'read the manga' style ending."}
+		1583: {active: true, text: "Giant robots."}
+		1584: {active: true, text: "Masa! <3"}
+		1585: {active: true, text: "THE MAN-POLE OF <i>DOOOOOOOOOM!!!</i>"}
+		1586: {active: true, text: "Home For Infinite Losers (HFIL)."}
+		1587: {active: true, text: "Gratuitous panty shots."}
+		1588: {active: true, text: "Cartoon buttholes."}
+		1589: {active: true, text: "Muscle-bound shirtless MEN."}
+		1590: {active: true, text: "Recap episodes."}
+		1591: {active: true, text: "An overly defensive fanbase."}
+		1592: {active: true, text: "Fuckin' Bronies."}
+		1593: {active: true, text: "Groping strangers on a train."}
+		1594: {active: true, text: "My Cresta."}
+		1595: {active: true, text: "Nerdy kids in Speedos."}
+		1596: {active: true, text: "Bad K-on! fanart."}
+		1597: {active: true, text: "That stupid opening song from Steel Angel Kurumi getting stuck in your head."}
+		1598: {active: true, text: "Mamoru Miyano."}
+		1599: {active: true, text: "A Hello Kitty! vibrator."}
+		1600: {active: true, text: "TETSUOOOOOO!!!"}
+		1601: {active: true, text: "Wibble."}
+		1602: {active: true, text: "Black cosplayers."}
+		1603: {active: true, text: "Fake Nendoroids."}
+		1604: {active: true, text: "Eating ramen noodles for a month because you HAD to have that out of print Macross boxset."}
+		1605: {active: true, text: "Showing Serial Experiments Lain to toddlers."}
+		1606: {active: true, text: "A mindfuck."}
+		1607: {active: true, text: "A puppy being beaten to death with a flower pot."}
+		1608: {active: true, text: "Gantz. Just.... Gantz."}
+		1609: {active: true, text: "Snapping the nipple off of a prostitute's breast and eating it."}
+		1610: {active: true, text: "Panty &amp; Stocking with Garterbelt."}
+		1611: {active: true, text: "Punching a man so hard his clothes fly off."}
+		1612: {active: true, text: "Banana sushi."}
+		1613: {active: true, text: "Oro?"}
+		1614: {active: true, text: "Creamy Mami."}
+		1615: {active: true, text: "Whatever the hell the Utena movie was about."}
+		1616: {active: true, text: "Carl Macek."}
+		1617: {active: true, text: "The ungodly abomination that is Robotech."}
+		1618: {active: true, text: "Kira worshippers."}
+		1619: {active: true, text: "The thousands upon thousands of women that Golgo 13 has slept with."}
+		1620: {active: true, text: "Uguu..."}
+		1621: {active: true, text: "Old man dragon dick."}
+		1622: {active: true, text: "Apocalypse Zero."}
+		1623: {active: true, text: "Ikki Tousen."}
+		1624: {active: true, text: "...."}
+		1625: {active: true, text: "The inevitable beach episode."}
+		1626: {active: true, text: "A Japanese schoolgirl covered head-to-toe in semen."}
+		1627: {active: true, text: "Satoshi Kon."}
+		1628: {active: true, text: "Kigurumi."}
+		1629: {active: true, text: "Good ol' fashioned Japanese sexism."}
+		1630: {active: true, text: "Guro."}
+		1631: {active: true, text: "Dr. Who fans showing up at anime cons despite not being invited."}
+		1632: {active: true, text: "Plot armor."}
+		1633: {active: true, text: "Nekomimi."}
+		1634: {active: true, text: "Pure grade-A opium."}
+		1635: {active: true, text: "Banging 1,000 dudes."}
+		1636: {active: true, text: "A drunken Japanese businessman."}
+		1637: {active: true, text: "Maid cafes."}
+		1638: {active: true, text: "Host clubs."}
+		1639: {active: true, text: "Shooting out nearly an entire liter of cum."}
+		1640: {active: true, text: "The Hare Hare Yukai dance."}
+		1641: {active: true, text: "Shining Finger!"}
+		1642: {active: true, text: "The inkvasion."}
+		1643: {active: true, text: "School swimsuits."}
+		1644: {active: true, text: "Underpants. Underpants. Underpants. Underpants. Under-"}
+		1645: {active: true, text: "Acidic breast milk."}
+		1646: {active: true, text: "Kamen Rider."}
+		1647: {active: true, text: "The Major's hips and bust."}
+		1648: {active: true, text: "Captain Bravo."}
+		1649: {active: true, text: "Kirino's ass."}
+		1650: {active: true, text: "Crystal Boy's creepy smile."}
+		1651: {active: true, text: "Gackt."}
+		1652: {active: true, text: "Used panty vending machines."}
+		1653: {active: true, text: "Butt sniffing."}
+		1654: {active: true, text: "Vegeta's sweet goatee."}
+		1655: {active: true, text: "Sub-only releases."}
+		1656: {active: true, text: "Getting drunk on sake."}
+		1657: {active: true, text: "Flying Vortex of Fear."}
+		1658: {active: true, text: "Fishcake."}
+		1659: {active: true, text: "Go Nagai sideburns."}
+		1660: {active: true, text: "<i>CHIIIIIIIIN.</i>"}
+		1661: {active: true, text: "Getting the bad ending of a visual novel."}
+		1662: {active: true, text: "The Tsukihime anime."}
+		1663: {active: true, text: "Jacuzzi Splot."}
+		1664: {active: true, text: "Juvijuvibro."}
+		1665: {active: true, text: "Bear punching, tiger chopping, shark suplexing, &amp; helicopter bodyslamming."}
+		1666: {active: true, text: "Getting your penis cut in half."}
+		1667: {active: true, text: "Stupid sexy Johan."}
+		1668: {active: true, text: "Naoki Urasawa."}
+		1669: {active: true, text: "Tachikoma-kun."}
+		1670: {active: true, text: "Dancin' on the Planet Dance."}
+		1671: {active: true, text: "Super Milk-chan."}
+		1672: {active: true, text: "You dumbass!"}
+		1673: {active: true, text: "Being the uke."}
+		1674: {active: true, text: "The power of friendship."}
+		1675: {active: true, text: "An arm and a leg."}
+		1676: {active: true, text: "The entire cast of School Days."}
+		1677: {active: true, text: "Giant naked Rei."}
+		1678: {active: true, text: "Masturbating over Asuka's comatose body."}
+		1679: {active: true, text: "Let's Fighting Love!"}
+		1680: {active: true, text: "Cousin marriage."}
+		1681: {active: true, text: "4Kids."}
+		1682: {active: true, text: "Making someone's head explode."}
+		1683: {active: true, text: "Calling out the name of your attack."}
+		1684: {active: true, text: "Multi-episode fights."}
+		1685: {active: true, text: "M.D. Geist."}
+		1686: {active: true, text: "Blue Water Studios."}
+		1687: {active: true, text: "Darrel Guilbeau trying to act."}
+		1688: {active: true, text: "Highschool of the Dead."}
+		1689: {active: true, text: "Girls with guns."}
+		1690: {active: true, text: "The goddamn Maho."}
+		1691: {active: true, text: "Fat, sweaty otaku."}
+		1692: {active: true, text: "Ganguro girls."}
+		1693: {active: true, text: "Magical girls."}
+		1694: {active: true, text: "Hot female bass players."}
+		1695: {active: true, text: "Goku, Luffy, Toriko, and Lina Inverse in an eating contest."}
+		1696: {active: true, text: "BlackStar"}
+		1697: {active: true, text: "You cactus bastard!"}
+		1698: {active: true, text: "Underwater Ray Romano."}
+		1699: {active: true, text: "Sexy schoolteacher types."}
+		1700: {active: true, text: "Tig ol' bitties."}
+		1701: {active: true, text: "Lesbian subtext."}
+		1702: {active: true, text: "Watching FLCL while tripping on acid."}
+		1703: {active: true, text: "Inspector Zenigata."}
+		1704: {active: true, text: "Pure fighting spirit."}
+		1705: {active: true, text: "The GARtender."}
+		1706: {active: true, text: "Mad Bull 34."}
+		1707: {active: true, text: "Sticking your finger up her ass."}
+		1708: {active: true, text: "Freddie riding to school on a wild black stallion."}
+		1709: {active: true, text: "Whatever turns you on, big guy."}
+		1710: {active: true, text: "Standing outside the gates of the White House completely naked with a revolver in your hand."}
+		1711: {active: true, text: "I'LL ANSWER THE PHONE FROM NOW ON, LILY!!"}
+		1712: {active: true, text: "KITTEH. :3"}
+		1713: {active: true, text: "Manly tears of manliness."}
+		1714: {active: true, text: "Zetman."}
+		1715: {active: true, text: "Giant mutant cockroaches."}
+		1716: {active: true, text: "Bible Black."}
+		1717: {active: true, text: "Rape fantasies."}
+		1718: {active: true, text: "Keith David's voice."}
+		1719: {active: true, text: "Scott McNeil."}
+		1720: {active: true, text: "The eternal pervert, Eric Vale."}
+		1721: {active: true, text: "The Irresponsible Captain Tylor."}
+		1722: {active: true, text: "Birdy the Mighty."}
+		1723: {active: true, text: "Prying SpacemanHardy's Master Keaton boxset from his cold, dead hands."}
+		1724: {active: true, text: "Satan worshipping Christians."}
+		1725: {active: true, text: "Hunting down every single copy of Ninja Resurrection and setting them on fire."}
+		1726: {active: true, text: "R-R-R-R-R-REDLINE!!!"}
+		1727: {active: true, text: "Catholic priests who drink, smoke, and carry guns."}
+		1728: {active: true, text: "Badass 15-year-olds."}
+		1729: {active: true, text: "Losing 20 gallons of blood... and surviving."}
+		1730: {active: true, text: "One HELL of a butler."}
+		1731: {active: true, text: "Being beaten to a bloody pulp by a middle school student."}
+		1732: {active: true, text: "Anime News Network."}
+		1733: {active: true, text: "Having blackmail sex with your teacher."}
+		1734: {active: true, text: "A large paper fan."}
+		1735: {active: true, text: "The Shikon Jewel."}
+		1736: {active: true, text: "Sneaking a peek at the girls' open bath."}
+		1737: {active: true, text: "Revy Two-Hands."}
+		1738: {active: true, text: "A Claymore swimsuit issue."}
+		1739: {active: true, text: "A samurai terminator."}
+		1740: {active: true, text: "Physics."}
+		1741: {active: true, text: "Gangnam Style."}
+		1742: {active: true, text: "MUNGLE!!<br><i>*shakes fist*</i>"}
+		1743: {active: true, text: "A talking motorcycle."}
+		1744: {active: true, text: "Rie Kugimiya."}
+		1745: {active: true, text: "The Animatrix."}
+		1746: {active: true, text: "Your virgin soul."}
+		1747: {active: true, text: "Franky's awesome Speedo dance."}
+		1748: {active: true, text: "Soul traveling."}
+		1749: {active: true, text: "Production I.G."}
+		1750: {active: true, text: "GONZO."}
+		1751: {active: true, text: "Really shitty CGI effects."}
+		1752: {active: true, text: "The hot buttered sex voice of Patrick Seitz."}
+		1753: {active: true, text: "Sticking a chopstick in your pee-hole."}
+		1754: {active: true, text: "A copy of Trigun signed by Micah Solusod."}
+		1755: {active: true, text: "Gilgamesh."}
+		1756: {active: true, text: "That one guy who always dresses up as the Red Ranger."}
+		1757: {active: true, text: "Engrish."}
+		1758: {active: true, text: "A dead meme."}
+		1759: {active: true, text: "Madhouse."}
+		1760: {active: true, text: "ARMS."}
+		1761: {active: true, text: "Mr. Tadakichi."}
+		1762: {active: true, text: "Showing episodes of Toriko to starving children."}
+		1763: {active: true, text: "Governor Ishihara."}
+		1764: {active: true, text: "Shrine maidens."}
+		1765: {active: true, text: "Taking a shit in the shrine's donation box."}
+		1766: {active: true, text: "Farting... tadpoles?"}
+		1767: {active: true, text: "Heavily-tattooed yakuza henchmen."}
+		1768: {active: true, text: "The life-sized Gundam statue."}
+		1769: {active: true, text: "Forcing someone to watch every episode of Dragon Ball GT."}
+		1770: {active: true, text: "ZA WARUDO."}
+		1771: {active: true, text: "Eating a banana all sexy-like."}
+		1772: {active: true, text: "Awesome Prussia."}
+		1773: {active: true, text: "Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora! Ora!"}
+		1774: {active: true, text: "A shitload of yen."}
+		1775: {active: true, text: "Johannes Krauser II."}
+		1776: {active: true, text: "Raccoon testicles."}
+		1777: {active: true, text: "Beautiful bishonen boys."}
+		1778: {active: true, text: "Rule 63'd Death the Kid."}
+		1779: {active: true, text: "Hetalia porn."}
+		1780: {active: true, text: "1,000 years of pain."}
+		1781: {active: true, text: "Rally Vincent firing a gun in her underwear."}
+		1782: {active: true, text: "A Maka Chop."}
+		1783: {active: true, text: "Twincest."}
+		1784: {active: true, text: "Broken-ass Aizen."}
+		1785: {active: true, text: "The Garden of Sinners."}
+		1786: {active: true, text: "Romi Paku."}
+		1787: {active: true, text: "My Johnny!"}
+		1788: {active: true, text: "Petite Princess Yucie."}
+		1789: {active: true, text: "Ice cold water<br>(and it's only a dollar)."}
+		1790: {active: true, text: "Me wearing a penguin suit."}
+		1791: {active: true, text: "Farting on your cat."}
+		1792: {active: true, text: "Combat afros."}
+		1793: {active: true, text: "A brand new, mint condition copy of JoJo's Bizarre Adventure vol. 4, still in shrinkwrap."}
+		1794: {active: true, text: "Grave of the Fireflies."}
+		1795: {active: true, text: "Strapping hand grenades to your pubes."}
+		1796: {active: true, text: "Toilet worship."}
+		1797: {active: true, text: "My badass numchucks."}
+		1798: {active: true, text: "Trying to get your die-cast Gundam model through airport security."}
+		1799: {active: true, text: "Black&#x2605;Star"}
+		1800: {active: true, text: "Octopus balls."}
+		1801: {active: true, text: "Getting in a fistfight with an earthquake."}
+		1802: {active: true, text: "WcDonald's."}
+		1803: {active: true, text: "Undead body-swapping space vampire teens."}
+		1804: {active: true, text: "The alpha bitch."}
+		1805: {active: true, text: "Eating someone else's drool."}
+		1806: {active: true, text: "My hot zombie girlfriend.."}
+		1807: {active: true, text: "Puppets made from the skin of children."}
+		1808: {active: true, text: "Swallowing an entire carton of cigarettes before barfing them back up."}
+		1809: {active: true, text: "Giving a girl an orgasm using only your shoulderpads."}
+		1810: {active: true, text: "Being accidentally turned into a girl by aliens."}
+		1811: {active: true, text: "Ghosts that come out of your asscrack."}
+		1812: {active: true, text: "#DesuDes4Life."}
+		1813: {active: true, text: "Fucking a nun."}
+		1814: {active: true, text: "Raping Tokyo Tower."}
+		1815: {active: true, text: "A succubus living inside your testes."}
+		1816: {active: true, text: "Saber Starblast."}
+		1817: {active: true, text: "An argument lasting over an hour about what mo&eacute; really is."}
+		1818: {active: true, text: "Japanese Spider-Man."}
+		1819: {active: true, text: "A bass guitar straight to the face."}
+		1820: {active: true, text: "Sonny Strait's manly parts."}
+		1821: {active: true, text: "Asian cock."}
+		1822: {active: true, text: "Guts."}
+		1823: {active: true, text: "Holy dildos."}
+		1824: {active: true, text: "Finger nigiri."}
+		1825: {active: true, text: "Dragon Balls."}
+		1826: {active: true, text: "Drills for hands."}
+		1827: {active: true, text: "Suplexing your teacher."}
+		1828: {active: true, text: "A leopard print fundoshi."}
+		1829: {active: true, text: "Breast envy."}
+		1830: {active: true, text: "The entire last episode of Blood-C."}
+		1831: {active: true, text: "Origami sex toys."}
+		1832: {active: true, text: "ALL OF THE HOMO!"}
+		1833: {active: true, text: "Japanese rope bondage."}
+		1834: {active: true, text: "Griffith's mysterious disappearing penis."}
+		1835: {active: true, text: "Naughty geishas."}
+		1836: {active: true, text: "Ninjas!"}
+		1837: {active: true, text: "Pubic hair needle attack."}
+		1838: {active: true, text: "Sexy jutsu."}
+		1839: {active: true, text: "Getting your fingernails ripped out."}
+		1840: {active: true, text: "Shinichiro Watanabe single-handedly curing cancer, ending world hunger, and bringing peace to the Middle East."}
+		1841: {active: true, text: "Love Machine."}
+		1842: {active: true, text: "Rapping samurai."}
+		1843: {active: true, text: "Putting all the condiments on your steak. ALL OF THEM."}
+		1844: {active: true, text: "Naga's extremely annoying laugh."}
+		1845: {active: true, text: "A dolphin in a mech suit."}
+		1846: {active: true, text: "Flying Nimbus."}
+		1847: {active: true, text: "Strikeman and his 'Balls of Justice'."}
+		1848: {active: true, text: "A busty, blonde, blue-eyed, dumb-as-rocks American."}
+		1849: {active: true, text: "Running during the credits."}
+		1850: {active: true, text: "Red bean paste."}
+		1851: {active: true, text: "Gender-swapped Oda Nobunaga."}
+		1852: {active: true, text: "Cutting off a finger to restore your honor."}
+		1853: {active: true, text: "Robots with tits."}
+		1854: {active: true, text: "Henry Goto."}
+		1855: {active: true, text: "Henry Goto having an accident in his pants during the live Aniplex of America panel."}
+		1856: {active: true, text: "Henry Goto's massive peyote &amp; wine cooler addiction."}
+		1857: {active: true, text: "Henry Goto, John Sirabella, and Stu Levy in a three man fight to the death."}
+		1858: {active: true, text: "Henry Goto fapping to a photograph of himself."}
+		1859: {active: true, text: "Henry Goto being eaten by a group of backwoods hillbilly cannibals."}
+		1860: {active: true, text: "Henry Goto ending up homeless on the streets and sucking dick for coke."}
+		1861: {active: true, text: "Two gallons of elephant shit being dropped on Henry Goto's desk."}
+		1862: {active: true, text: "Henry Goto falling down the stairs, receiving a massive head injury, and believing he's really Sailor Moon."}
+		1863: {active: true, text: "A Henry Goto joke that no one will laugh at other than SpacemanHardy."}
+		1864: {active: true, text: "Henry Goto bleeding profusely from his groin after having his penis bitten off by a 15-year-old Vietnamese prostitute."}
+		1865: {active: true, text: "A 30-year-old man who's obsessed with K-on!"}
+		1866: {active: true, text: "LAZAR!"}
+		1867: {active: true, text: "I AM AWESOME!!"}
+		1868: {active: true, text: "Getting kicked in the nuts by a mermaid."}
+		1869: {active: true, text: "Taking a seat with Chris Hansen."}
+		1870: {active: true, text: "The Village People."}
+		1871: {active: true, text: "A Cleveland steamer."}
+		1872: {active: true, text: "A big floppy donkey dick."}
+		1873: {active: true, text: "Pooping in the bathtub."}
+		1874: {active: true, text: "Bathing the homeless."}
+		1875: {active: true, text: "An awkward sponge bath."}
+		1876: {active: true, text: "Toilet paper."}
+		1877: {active: true, text: "Getting off on anime porn."}
+		1878: {active: true, text: "Enemas."}
+		1879: {active: true, text: "The Teenage Mutant Ninja Turtles."}
+		1880: {active: true, text: "Mining for nose gold."}
+		1881: {active: true, text: "Laxatives."}
+		1882: {active: true, text: "Putting the fucking lotion in the basket."}
+		1883: {active: true, text: "The tears of a clown."}
+		1884: {active: true, text: "Gangrene."}
+		1885: {active: true, text: "Gingivitis."}
+		1886: {active: true, text: "Two dogs humping."}
+		1887: {active: true, text: "Genital warts."}
+		1888: {active: true, text: "Suppositories."}
+		1889: {active: true, text: "Face painting."}
+		1890: {active: true, text: "A prolapse."}
+		1891: {active: true, text: "Digital piracy."}
+		1892: {active: true, text: "A poop sandwich."}
+		1893: {active: true, text: "Executive parking."}
+		1894: {active: true, text: "A dead hooker."}
+		1895: {active: true, text: "A skeptical sheriff."}
+		1896: {active: true, text: "A chatroom predator."}
+		1897: {active: true, text: "A loud mouth-breather."}
+		1898: {active: true, text: "The crushed dreams of a stripper."}
+		1899: {active: true, text: "Anorexia."}
+		1900: {active: true, text: "Gobots."}
+		1901: {active: true, text: "A Motown group."}
+		1902: {active: true, text: "a classy smoking jacket."}
+		1903: {active: true, text: "Giant areolas."}
+		1904: {active: true, text: "Peanutbutter jelly time."}
+		1905: {active: true, text: "A sexy senior citizen."}
+		1906: {active: true, text: "Granny panties."}
+		1907: {active: true, text: "A stuttering auctioneer."}
+		1908: {active: true, text: "Farting into a fancy handkerchief."}
+		1909: {active: true, text: "Lot lizards."}
+		1910: {active: true, text: "A LARPing sleeper cell."}
+		1911: {active: true, text: "A Fleshlite&trade;."}
+		1912: {active: true, text: "A molotov cocktail."}
+		1913: {active: true, text: "A cockblocker."}
+		1914: {active: true, text: "Public schooling."}
+		1915: {active: true, text: "The end of the world."}
+		1916: {active: true, text: "Dickjitsu."}
+		1917: {active: true, text: "A mushy tushy."}
+		1918: {active: true, text: "Don Knotts."}
+		1919: {active: true, text: "Morbid obesity."}
+		1920: {active: true, text: "Geriatric diaper rash."}
+		1921: {active: true, text: "A MILF."}
+		1922: {active: true, text: "Bigfoot."}
+		1923: {active: true, text: "Yellow snow."}
+		1924: {active: true, text: "A limp wrist."}
+		1925: {active: true, text: "An angry leprechaun."}
+		1926: {active: true, text: "The Tin Man."}
+		1927: {active: true, text: "Giving yourself a stranger."}
+		1928: {active: true, text: "Shitting into someone's hat for revenge."}
+		1929: {active: true, text: "Learning hypnosis to get laid."}
+		1930: {active: true, text: "The War of Northern Aggression."}
+		1931: {active: true, text: "A snot rocket."}
+		1932: {active: true, text: "Miss. Piggy."}
+		1933: {active: true, text: "Sailor Moon."}
+		1934: {active: true, text: "Mass graves."}
+		1935: {active: true, text: "A victim."}
+		1936: {active: true, text: "Soiling ones self."}
+		1937: {active: true, text: "A clone army."}
+		1938: {active: true, text: "Raw sewage."}
+		1939: {active: true, text: "War crimes."}
+		1940: {active: true, text: "A collapsed lung."}
+		1941: {active: true, text: "The town drunk."}
+		1942: {active: true, text: "The face of pure evil."}
+		1943: {active: true, text: "Spontaneous pie fights."}
+		1944: {active: true, text: "The Fresh Prince of Bel-Air."}
+		1945: {active: true, text: "Being screamed at in German."}
+		1946: {active: true, text: "A lesson in pain."}
+		1947: {active: true, text: "Talking like a pirate."}
+		1948: {active: true, text: "A Facebook stalker."}
+		1949: {active: true, text: "Sausage."}
+		1950: {active: true, text: "A compound fracture."}
+		1951: {active: true, text: "The magical land of Oz."}
+		1952: {active: true, text: "Pow-Pow-PowerWheeels&reg;!"}
+		1953: {active: true, text: "Cheating death."}
+		1954: {active: true, text: "Clown Shoes."}
+		1955: {active: true, text: "Clown college."}
+		1956: {active: true, text: "A lousy comb-over."}
+		1957: {active: true, text: "Chaz Bono."}
+		1958: {active: true, text: "Hoarders."}
+		1959: {active: true, text: "Bed wetting."}
+		1960: {active: true, text: "Nuns."}
+		1961: {active: true, text: "A closed casket funeral."}
+		1962: {active: true, text: "Scotch."}
+		1963: {active: true, text: "A really ugly baby."}
+		1964: {active: true, text: "Realizing, too late, that there is no toilet paper left."}
+		1965: {active: true, text: "Illegal immigrants."}
+		1966: {active: true, text: "Elder abuse."}
+		1967: {active: true, text: "Jerry Jewell's serial killer face."}
+		1968: {active: true, text: "A FUCKING DRAGONITE, MOTHERFUCKER!!"}
+		1969: {active: true, text: "A school bus orgy."}
+		1970: {active: true, text: "Super Aryan Hitler."}
+		1971: {active: true, text: "Having sex with a dragon."}
+		1972: {active: true, text: "Manga Jesus."}
+		1973: {active: true, text: "Manly pink sparkles."}
+		1974: {active: true, text: "7 ft. tall red-headed Alexander the Great."}
+		1975: {active: true, text: "Training a dinosaur to ride a ball."}
+		1976: {active: true, text: "Samba-dancing dinosaurs."}
+		1977: {active: true, text: "An armored truck full of shit."}
+		1978: {active: true, text: "A Togepi omelet."}
+		1979: {active: true, text: "The Puchuu."}
+		1980: {active: true, text: "Dying over and over again."}
+		1981: {active: true, text: "Fuckingham Palace."}
+		1982: {active: true, text: "Epic old bald dudes."}
+		1983: {active: true, text: "A smashed-in face."}
+		1984: {active: true, text: "A Dragon Slave."}
+		1985: {active: true, text: "Zelgadis' flame-proof bikini briefs."}
+		1986: {active: true, text: "Morphin'."}
+		1987: {active: true, text: "A naughty nurse outfit."}
+		1988: {active: true, text: "A sweaty shirtless man holding a large, writhing fish against his chest."}
+		1989: {active: true, text: "Millionaire Beaver."}
+		1990: {active: true, text: "Dick Saucer."}
+		1991: {active: true, text: "A couple that spends over 30 manga volumes trying to get to first base."}
+		1992: {active: true, text: "Alice in Sexland."}
+		1993: {active: true, text: "Succubus-on-futanari action."}
+		1994: {active: true, text: "High-stakes mahjong."}
+		1995: {active: true, text: "Garbage collectors... IN SPACE!!"}
+		1996: {active: true, text: "Magical friendship lasers."}
+		1997: {active: true, text: "The War on Pants."}
+		1998: {active: true, text: "An ending where everyone dies."}
+		1999: {active: true, text: "A cyborg assassin dressed as a magical girl fighting a talking lion and a floating psychic electric jellyfish."}
+		2000: {active: true, text: "J-pop idols."}
+		2001: {active: true, text: "Chest-hair afros."}
+		2002: {active: true, text: "Cowboy Andy."}
+		2003: {active: true, text: "A chainsaw-wielding male magical girl zombie."}
+		2004: {active: true, text: "Inoue Kikoku, 17-years old."}
+		2005: {active: true, text: "Fujoshi."}
+		2006: {active: true, text: "Matrix boobs."}
+		2007: {active: true, text: "Completely losing your shit over Endless Eight."}
+		2008: {active: true, text: "Violently beating your friends to death with a baseball bat."}
+		2009: {active: true, text: "Clothing-dissolving slime."}
+		2010: {active: true, text: "Involuntary crossdressing."}
+		2011: {active: true, text: "Getting sucked into a fantasy world."}
+		2012: {active: true, text: "Hentai artists who don't change their pen name when they go legit."}
+		2013: {active: true, text: "A Masamune Shirou artbook."}
+		2014: {active: true, text: "Loli in a box."}
+		2015: {active: true, text: "Romance of the Three Kingdoms, but everyone is gender-swapped."}
+		2016: {active: true, text: "Mo&eacute; schoolgirl Hitler."}
+		2017: {active: true, text: "Franken Fran."}
+		2018: {active: true, text: "A washpan falling onto someone's head from out of nowhere."}
+		2019: {active: true, text: "SHAFT being SHAFT."}
+		2020: {active: true, text: "A third-grader seducing her 23-year-old teacher."}
+		2021: {active: true, text: "Shotas."}
+		2022: {active: true, text: "One a them bamboo things that goes 'doonk'."}
+		2023: {active: true, text: "Banging your adopted daughter."}
+		2024: {active: true, text: "Tripping, falling, and landing with your face in a girl's breasts."}
+		2025: {active: true, text: "A bunny girl having a lightsaber duel with Darth Vader."}
+		2026: {active: true, text: "A 10-year old with boobs twice the size of her head."}
+		2027: {active: true, text: "An ancient vampire who looks like she's 10."}
+		2028: {active: true, text: "Literally ripping your own heart out."}
+		2029: {active: true, text: "Japanese-style elf ears."}
+		2030: {active: true, text: "Flamboyantly gay William Shakespeare."}
+		2031: {active: true, text: "Gen 'The Uro-Butcher'."}
+		2032: {active: true, text: "Mikuru Beam!"}
+		2033: {active: true, text: "Tons and tons of close-up underaged schoolgirl ass-shots."}
+		2034: {active: true, text: "Starfish Hitler."}
+		2035: {active: true, text: "Pok&eacute;mon tears."}
+		2036: {active: true, text: "Pok&eacute;sexuality."}
+		2037: {active: true, text: "Chopstick-based martial arts."}
+		2038: {active: true, text: "All the gayness in GetBackers."}
+		2039: {active: true, text: "Naming yourself after the method of your suicide."}
+		2040: {active: true, text: "The Chupacabra."}
+		2041: {active: true, text: "Blowing a child's head off with a rocket launcher."}
+		2042: {active: true, text: "Erotic incestuous toothbrushing."}
+		2043: {active: true, text: "An artbox that feels like human skin."}
+		2044: {active: true, text: "Polygamy jokes in a kid's show."}
+		2045: {active: true, text: "Urd, Kana, and Misato in a drinking contest."}
+		2046: {active: true, text: "Cute stuff."}
+		2047: {active: true, text: "A robot having an orgasm."}
+		2048: {active: true, text: "Villagulio."}
+		2049: {active: true, text: "Dangling Pok&eacute;balls."}
+		2050: {active: true, text: "Having a giant drill for a dick."}
+		2051: {active: true, text: "An ingrown toenail on the tip of a penis."}
+		2052: {active: true, text: "Feline Leukemia."}
+		2053: {active: true, text: "Marky Mark's foam rubber penis from Boogie Nights."}
+		2054: {active: true, text: "My Spankerchief."}
+		2055: {active: true, text: "Pumping a chemical toilet."}
+		2056: {active: true, text: "The fine line between kinky and perverted."}
+		2057: {active: true, text: "A Rotisserie Chicken."}
+		2058: {active: true, text: "Vultures circling a birthday party."}
+		2059: {active: true, text: "An All White Jury."}
+		2060: {active: true, text: "Frottage."}
+		2061: {active: true, text: "Michael J. Fox trying to use a rotary phone."}
+		2062: {active: true, text: "The Five Knuckle Truffle Punch."}
+		2063: {active: true, text: "Flipper Babies."}
+		2064: {active: true, text: "Ejaculating into an insulin pump."}
+		2065: {active: true, text: "Rocky Dennis and John Merrick's lovechild."}
+		2066: {active: true, text: "The syrupy goop inside a Stretch Armstrong doll."}
+		2067: {active: true, text: "Finding an adhesive bandage at the bottom of your ice cream."}
+		2068: {active: true, text: "Life after Parole."}
+		2069: {active: true, text: "A cat's sand papery tongue bath."}
+		2070: {active: true, text: "A Pit Bull named Genghis."}
+		2071: {active: true, text: "Discovering that it's never just a big vagina."}
+		2072: {active: true, text: "Dragoneer."}
+		2073: {active: true, text: "A horny dragon."}
+		2074: {active: true, text: "A sexually frustrated griffon."}
+		2075: {active: true, text: "Species stereotypes."}
+		2076: {active: true, text: "HELLO FURRIEND, HOWL ARE YOU DOING."}
+		2077: {active: true, text: "Convention sluts."}
+		2078: {active: true, text: "Horns and hooves."}
+		2079: {active: true, text: "Being 'prison gay.'"}
+		2080: {active: true, text: "Microwaving diapers."}
+		2081: {active: true, text: "Adorable dog people."}
+		2082: {active: true, text: "Sexy the Cat."}
+		2083: {active: true, text: "That one episode of CSI."}
+		2084: {active: true, text: "SecondLife."}
+		2085: {active: true, text: "The Gay Yiffy Club."}
+		2086: {active: true, text: "Hyper-endowed squirrels."}
+		2087: {active: true, text: "A spider furry who isn't even into bondage."}
+		2088: {active: true, text: "Being really, really into monsters."}
+		2089: {active: true, text: "Sexual arousal from children's cartoons."}
+		2090: {active: true, text: "No males, no herms, no cuntboys, no shemales, no trannys, no furries, no aliens, no vampires, and no werewolves. ONLY STRAIGHT OR BI HUMAN FEMALES."}
+		2091: {active: true, text: "Overcompensating with a huge horse penis."}
+		2092: {active: true, text: "A fedora enthusiast."}
+		2093: {active: true, text: "A tongue-beast."}
+		2094: {active: true, text: "Frisky tentacles."}
+		2095: {active: true, text: "A very steampunk rat."}
+		2096: {active: true, text: "Canine superiority."}
+		2097: {active: true, text: "Oviposition."}
+		2098: {active: true, text: "Flares."}
+		2099: {active: true, text: "Dogs wearing panties."}
+		2100: {active: true, text: "Monster boys in lingerie."}
+		2101: {active: true, text: "Power bottoms."}
+		2102: {active: true, text: "Sheath licking."}
+		2103: {active: true, text: "Sex with Pok&eacute;mon."}
+		2104: {active: true, text: "Making out with dogs."}
+		2105: {active: true, text: "YouTube videos of horse breeding."}
+		2106: {active: true, text: "Pissing on your significant other to show ownership."}
+		2107: {active: true, text: "Da Magicks."}
+		2108: {active: true, text: "Being able to recognize your friends by the scent of their asses."}
+		2109: {active: true, text: "A notebook full of embarrassing niche porn sketches."}
+		2110: {active: true, text: "Cockvore."}
+		2111: {active: true, text: "A prehensile penis."}
+		2112: {active: true, text: "Puns involving the word 'knot.'"}
+		2113: {active: true, text: "Jerking off on an unconscious friend's feet."}
+		2114: {active: true, text: "CrusaderCat."}
+		2115: {active: true, text: "Your Character Here."}
+		2116: {active: true, text: "Sphincter Bleaching."}
+		2117: {active: true, text: "Bringing the Hamburglar to Justice."}
+		2118: {active: true, text: "Toilet Wine."}
+		2119: {active: true, text: "An Amputee's chapped limb nub."}
+		2120: {active: true, text: "Febreezing your Taint."}
+		2121: {active: true, text: "Leftist Propaganda."}
+		2122: {active: true, text: "Cookie Monster's substance abuse issues."}
+		2123: {active: true, text: "An outbreak of smallbox."}
+		2124: {active: true, text: "The Boxcar Children."}
+		2125: {active: true, text: "A world without boxes."}
+		2126: {active: true, text: "Boxing up my feelings."}
+		2127: {active: true, text: "Something that looks like a box but turns out to be a crate."}
+		2128: {active: true, text: "The J15 Patriot Assault Box."}
+		2129: {active: true, text: "A box without hinges, key, or lid, yet golden treasure inside is hid."}
+		2130: {active: true, text: "Former President George W. Box."}
+		2131: {active: true, text: "Pandora's vagina."}
+		2132: {active: true, text: "Offering sexual favors for an ore and a sheep. (19/44)"}
+		2133: {active: true, text: "Winning the approval of Cooking Mama that you never got from actual mama. (32/44)"}
+		2134: {active: true, text: "Reading the comments."}
+		2135: {active: true, text: "The collective wail of every Magic player suddenly realizing that they've spent hundreds of dollars on pieces of cardboard."}
+		2136: {active: true, text: "Being an attractive elf trapped in an unattractive human's body."}
+		2137: {active: true, text: "Temporary invincibility."}
+		2138: {active: true, text: "Mario Kart rage."}
+		2139: {active: true, text: "A homemade, cum-stained Star Trek uniform."}
+		2140: {active: true, text: "Never watching, discussing, or thinking about My Little Pony."}
+		2141: {active: true, text: "Turn-of-the-century sky racists."}
+		2142: {active: true, text: "A fully-dressed female videogame character."}
+		2143: {active: true, text: "Buying virtual clothes for a Sim family instead of real clothes for a real family."}
+		2144: {active: true, text: "Google Glass + e-cigarette: Ultimate Combo!"}
+		2145: {active: true, text: "A daisy sandwich."}
+		2146: {active: true, text: "A box."}
+		2147: {active: true, text: "A box within a box."}
+		2148: {active: true, text: "A boxing match with a giant box."}
+		2149: {active: true, text: "A box that is conscious and wishes it weren't a box."}
+		2150: {active: true, text: "Reading the comments. (3/44)"}
+		2151: {active: true, text: "Full HD."}
+		2152: {active: true, text: "Allowing nacho cheese to curdle in your beard while you creep in League of Legends."}
+		2153: {active: true, text: "The Sarlacc."}
+		2154: {active: true, text: "Nude-modding Super Mario World."}
+		2155: {active: true, text: "An angry stone head that stomps on the floor every three seconds."}
+		2156: {active: true, text: "Yoshi's huge egg-laying cloaca."}
+		2157: {active: true, text: "The Cock Ring of Alacrity."}
+		2158: {active: true, text: "Offering sexual favors for an ore and a sheep."}
+		2159: {active: true, text: "Unlocking a new sex position."}
+		2160: {active: true, text: "The boner hatch in the Iron Man suit."}
+		2161: {active: true, text: "The decade of legal inquests following a single hour of Grand Theft Auto."}
+		2162: {active: true, text: "Legendary Creature &ndash; Robert Khoo."}
+		2163: {active: true, text: "Winning the approval of Cooking Mama that you never got from actual mama."}
+		2164: {active: true, text: "Tapping Sara Angel."}
+		2165: {active: true, text: "Charles Barkley Shut Up and Jam!"}
+		2166: {active: true, text: "Getting into a situation with an owlbear."}
+		2167: {active: true, text: "Grand Theft Auto: Fort Lauderdale."}
+		2168: {active: true, text: "A madman who lives in a policebox and kidnaps women."}
+		2169: {active: true, text: "SNES cartridge cleaning fluid."}
+		2170: {active: true, text: "Eating a pizza that's lying on the street to gain health."}
+		2171: {active: true, text: "A decorative toaster cozy."}
+		2172: {active: true, text: "A giant horse cock."}
+		2173: {active: true, text: "A hoof in the ass."}
+		2174: {active: true, text: "A horny stallion."}
+		2175: {active: true, text: "A human fetish."}
+		2176: {active: true, text: "A juice box fetish."}
+		2177: {active: true, text: "A juice box."}
+		2178: {active: true, text: "A mare in heat."}
+		2179: {active: true, text: "A racially pure Cloudsdale."}
+		2180: {active: true, text: "A sexy saddle."}
+		2181: {active: true, text: "A sock fetish."}
+		2182: {active: true, text: "A Sonic Raingasm."}
+		2183: {active: true, text: "A tactical sonic rainnuke."}
+		2184: {active: true, text: "A tree."}
+		2185: {active: true, text: "Actually cumming inside Rainbow Dash."}
+		2186: {active: true, text: "An epic pony war in the distant future."}
+		2187: {active: true, text: "An extremely horny Granny Smith."}
+		2188: {active: true, text: "Another doughnut! With extra sprinkles!"}
+		2189: {active: true, text: "Applebucking."}
+		2190: {active: true, text: "Applejack."}
+		2191: {active: true, text: "Avasting Fluttershy's Ass."}
+		2192: {active: true, text: "Baked Bads."}
+		2193: {active: true, text: "Banned From Equestria (Daily)."}
+		2194: {active: true, text: "Being trapped on the Moon for 1000 years."}
+		2195: {active: true, text: "Best Pony."}
+		2196: {active: true, text: "Big Macintosh."}
+		2197: {active: true, text: "BonBon."}
+		2198: {active: true, text: "Books."}
+		2199: {active: true, text: "Celestia's Hoof."}
+		2200: {active: true, text: "Celestia's massive harem of foals."}
+		2201: {active: true, text: "Cider."}
+		2202: {active: true, text: "Clopfics."}
+		2203: {active: true, text: "Clopping."}
+		2204: {active: true, text: "Crippled foals."}
+		2205: {active: true, text: "Cupcakes."}
+		2206: {active: true, text: "Daring Do fanfiction."}
+		2207: {active: true, text: "Dark Magicks."}
+		2208: {active: true, text: "Derpy Hooves."}
+		2209: {active: true, text: "Diamond Dog roleplay."}
+		2210: {active: true, text: "Discord."}
+		2211: {active: true, text: "Equestria."}
+		2212: {active: true, text: "Facehoofing."}
+		2213: {active: true, text: "Fillidelphia."}
+		2214: {active: true, text: "Filly fiddling."}
+		2215: {active: true, text: "Fluffy Pony."}
+		2216: {active: true, text: "Fluttershy."}
+		2217: {active: true, text: "Fluttershy's secret stash."}
+		2218: {active: true, text: "Fluttershy's Shed."}
+		2219: {active: true, text: "Fluttertree."}
+		2220: {active: true, text: "Foal abuse."}
+		2221: {active: true, text: "Foodmanes."}
+		2222: {active: true, text: "Friendship."}
+		2223: {active: true, text: "Futaloo."}
+		2224: {active: true, text: "Gabby Gums."}
+		2225: {active: true, text: "Gently stroking the horn."}
+		2226: {active: true, text: "Getting 20% cooler!"}
+		2227: {active: true, text: "Gypsies."}
+		2228: {active: true, text: "Having hot pony sex with Bloomberg."}
+		2229: {active: true, text: "Horn Necrosis."}
+		2230: {active: true, text: "Hugging a pony non-sexually."}
+		2231: {active: true, text: "Jappleack."}
+		2232: {active: true, text: "Joe's Donut Hole."}
+		2233: {active: true, text: "John Joseco."}
+		2234: {active: true, text: "Lesbians."}
+		2235: {active: true, text: "Zecora's meth lab."}
+		2236: {active: true, text: "Lyra Heartstrings."}
+		2237: {active: true, text: "Worst pony."}
+		2238: {active: true, text: "Magic."}
+		2239: {active: true, text: "Wolfieshy."}
+		2240: {active: true, text: "Winter Wrap Up."}
+		2241: {active: true, text: "Making Magic."}
+		2242: {active: true, text: "Wincest."}
+		2243: {active: true, text: "Whipping the Earth Pony slaves."}
+		2244: {active: true, text: "Vinyl Scratch / DJ Pon-3."}
+		2245: {active: true, text: "Unicorn Privilege."}
+		2246: {active: true, text: "Man Spike."}
+		2247: {active: true, text: "Two fillies shitting into a bucket."}
+		2248: {active: true, text: "Manehatten."}
+		2249: {active: true, text: "Twist."}
+		2250: {active: true, text: "Mare Supremacy."}
+		2251: {active: true, text: "Twilight's secret clop stash."}
+		2252: {active: true, text: "Molestia's sex dungeon."}
+		2253: {active: true, text: "Twilight Sparkle."}
+		2254: {active: true, text: "THE ROYAL CANTERLOT VOICE."}
+		2255: {active: true, text: "My OC."}
+		2256: {active: true, text: "The Rainbow Factory."}
+		2257: {active: true, text: "Nightmare Moon."}
+		2258: {active: true, text: "The Pegasus Master Race."}
+		2259: {active: true, text: "____."}
+		2260: {active: true, text: "*liveshot*."}
+		2261: {active: true, text: "8-Bit Mickey on an unstoppable merry-go-round."}
+		2262: {active: true, text: "80's Dan."}
+		2263: {active: true, text: "A Blip ad for the most embarrassing reality show ever."}
+		2264: {active: true, text: "A Brad Jones impersonation."}
+		2265: {active: true, text: "A crossover."}
+		2266: {active: true, text: "A Cybermat in a bow tie."}
+		2267: {active: true, text: "A delicious fried chicken holocaust."}
+		2268: {active: true, text: "A DMCA takedown notice."}
+		2269: {active: true, text: "A fan artist."}
+		2270: {active: true, text: "A FUCKING PONCHO!"}
+		2271: {active: true, text: "A giant go-fuck-yourself spider."}
+		2272: {active: true, text: "A half naked, fencing JewWario."}
+		2273: {active: true, text: "A hand-basket of lobsters."}
+		2274: {active: true, text: "A Mr. T Trading Card."}
+		2275: {active: true, text: "A pile of skulls."}
+		2276: {active: true, text: "A pink tutu."}
+		2277: {active: true, text: "A plushie TARDIS."}
+		2278: {active: true, text: "A poorly made knockoff action figure."}
+		2279: {active: true, text: "A REALLY big hoopla about nothing."}
+		2280: {active: true, text: "A Serbian Film."}
+		2281: {active: true, text: "A smoking, muscled ice cream cone shooting guns and eye lasers."}
+		2282: {active: true, text: "A speeding NERF dart to the junk."}
+		2283: {active: true, text: "A squadron of attack Corgis."}
+		2284: {active: true, text: "A squadron of line-dancing hippos."}
+		2285: {active: true, text: "A strip-tease from the Nostalgia Critic."}
+		2286: {active: true, text: "A tauntaun puppy."}
+		2287: {active: true, text: "A very serious hat."}
+		2288: {active: true, text: "Ambiguously nude Linkara."}
+		2289: {active: true, text: "An electronic cigarette that resembles a Sonic Screwdriver."}
+		2290: {active: true, text: "An evangelizing minion."}
+		2291: {active: true, text: "An existential crisis over internet reviews."}
+		2292: {active: true, text: "An impassioned plea for understanding."}
+		2293: {active: true, text: "An unhinged Oancitizen rolling towards the sea."}
+		2294: {active: true, text: "Angry Joe dancing in a squid suit."}
+		2295: {active: true, text: "Angry Joe's raging boner."}
+		2296: {active: true, text: "Another fucking Iron Liz pun."}
+		2297: {active: true, text: "Another goddamn PhilBuni Vine."}
+		2298: {active: true, text: "Aplos, or Steve, the Wizard."}
+		2299: {active: true, text: "Arlo P. Arlo."}
+		2300: {active: true, text: "Arlo the Orc."}
+		2301: {active: true, text: "Ashens taking a blowtorch to a crappy toy."}
+		2302: {active: true, text: "Ashens."}
+		2303: {active: true, text: "Because...hippos."}
+		2304: {active: true, text: "Becoming possessed and insulting your colleague."}
+		2305: {active: true, text: "Being awkward around your favorite reviewer."}
+		2306: {active: true, text: "Bennett the Sage."}
+		2307: {active: true, text: "Big Butter Jesus."}
+		2308: {active: true, text: "Blip."}
+		2309: {active: true, text: "Brad, drinking a Turkey-flavored Jones Soda."}
+		2310: {active: true, text: "Bruno Matei."}
+		2311: {active: true, text: "Butchered Dutch."}
+		2312: {active: true, text: "Comicron One."}
+		2313: {active: true, text: "CR."}
+		2314: {active: true, text: "Cynthia Rothrock"}
+		2315: {active: true, text: "DEATH FROM ABOOOOOVE!!!"}
+		2316: {active: true, text: "Derek the Bard."}
+		2317: {active: true, text: "Derek the Bard's hat."}
+		2318: {active: true, text: "Disturbing comments in the RDA chat."}
+		2319: {active: true, text: "Dodger's ban chain."}
+		2320: {active: true, text: "Dodging blowjobs."}
+		2321: {active: true, text: "Dr. Tease & Dr. Block."}
+		2322: {active: true, text: "Dragging Oancitizen back home from a wild night of partying."}
+		2323: {active: true, text: "Dump cards."}
+		2324: {active: true, text: "E Rod's smooth, smooth dance skills."}
+		2325: {active: true, text: "Eating the flesh of your foes while howling at the moon."}
+		2326: {active: true, text: "Evilina."}
+		2327: {active: true, text: "Evilina's monstrous visage."}
+		2328: {active: true, text: "Film Brain, dressed tastefully in fashionable clothing."}
+		2329: {active: true, text: "Film Brain's hair."}
+		2330: {active: true, text: "Film Renegado creaming himself over Pacific Rim."}
+		2331: {active: true, text: "Forcing an NPC to haul your crap."}
+		2332: {active: true, text: "Fuckstick the Magic Dragon."}
+		2333: {active: true, text: "Gargoyle Cat."}
+		2334: {active: true, text: "Haganistan."}
+		2335: {active: true, text: "Harmony Korine."}
+		2336: {active: true, text: "HIPPOS!"}
+		2337: {active: true, text: "Holly."}
+		2338: {active: true, text: "Il Neige in a freakishly accurate Film Brain costume."}
+		2339: {active: true, text: "Jaeris, the Gunslinger."}
+		2340: {active: true, text: "Joe Quesada."}
+		2341: {active: true, text: "Kali."}
+		2342: {active: true, text: "Kung Tai Ted."}
+		2343: {active: true, text: "Kyle playing GTA while drunk."}
+		2344: {active: true, text: "Kyle's 'unicorns.'"}
+		2345: {active: true, text: "Laura, the Fender Stratocaster Goddess."}
+		2346: {active: true, text: "Linkara lying naked on his futon, playing with a Cybermat."}
+		2347: {active: true, text: "Linkara, dressed as the Green Ranger."}
+		2348: {active: true, text: "Linkara, dropping an F-Bomb."}
+		2349: {active: true, text: "Linkara, sexily eating a salad."}
+		2350: {active: true, text: "Linkara's massive ego."}
+		2351: {active: true, text: "Little Pluckies Ninja Protects."}
+		2352: {active: true, text: "Luke Mochrie's trust fund."}
+		2353: {active: true, text: "Maven of ze Eventide."}
+		2354: {active: true, text: "Mexican Spider-Man."}
+		2355: {active: true, text: "MikeJ."}
+		2356: {active: true, text: "Moarte."}
+		2357: {active: true, text: "Nash, dressed as The Undertaker."}
+		2358: {active: true, text: "Nash, making 'vroom vroom' noises."}
+		2359: {active: true, text: "Nash, making train sounds in a bathtub."}
+		2360: {active: true, text: "Nella."}
+		2361: {active: true, text: "Nella's cleavage Altoids."}
+		2362: {active: true, text: "Not reading the FAQ."}
+		2363: {active: true, text: "Obelisk Blue Linkara."}
+		2364: {active: true, text: "Paw."}
+		2365: {active: true, text: "Paw's soul patch."}
+		2366: {active: true, text: "Penis whiskers."}
+		2367: {active: true, text: "the 8 million jews."}
+		2368: {active: true, text: "George Costanza"}
+		2369: {active: true, text: "Honk! Honk!"}
+		2370: {active: true, text: "Hideo Kojima"}
+		2371: {active: true, text: "Alright"}
+		2372: {active: true, text: "LIQUID!"}
+		2373: {active: true, text: "BROTHER!"}
+		2374: {active: true, text: "Gaben"}
+		2375: {active: true, text: "Kirby's Air Ride"}
+		2376: {active: true, text: "Yume Nikki"}
+		2377: {active: true, text: "HL3 confirmed!"}
+		2378: {active: true, text: "That feel"}
+		2379: {active: true, text: "Tim Buckley"}
+		2380: {active: true, text: "Bum Tickley"}
+		2381: {active: true, text: "Star Wars: Battlefront"}
+		2382: {active: true, text: "The Wii U"}
+		2383: {active: true, text: "the PS4"}
+		2384: {active: true, text: "the NES"}
+		2385: {active: true, text: "the SNES"}
+		2386: {active: true, text: "the SEGA Genesis"}
+		2387: {active: true, text: "the PSX"}
+		2388: {active: true, text: "Silent Hill"}
+		2389: {active: true, text: "Harry Mason"}
+		2390: {active: true, text: "James Sunderland"}
+		2391: {active: true, text: "the plot of MGS4"}
+		2392: {active: true, text: "Kramer"}
+		2393: {active: true, text: "no games"}
+		2394: {active: true, text: "Words, Words, Words"}
+		2395: {active: true, text: "Le /v/ culture"}
+		2396: {active: true, text: "Mods"}
+		2397: {active: true, text: "Furfags"}
+		2398: {active: true, text: "HERESY!"}
+		2399: {active: true, text: "My waifu"}
+		2400: {active: true, text: "Jews"}
+		2401: {active: true, text: "the duck hunt dog"}
+		2402: {active: true, text: "Max Payne"}
+		2403: {active: true, text: "L.A. Noire"}
+		2404: {active: true, text: "Call of Duty 4"}
+		2405: {active: true, text: "Cowadooty Franchise"}
+		2406: {active: true, text: "Master Chef"}
+		2407: {active: true, text: "Samus Aran"}
+		2408: {active: true, text: "Kamiya"}
+		2409: {active: true, text: "The red ring of death"}
+		2410: {active: true, text: "Toady"}
+		2411: {active: true, text: "the mustard race"}
+		2412: {active: true, text: "Klonies"}
+		2413: {active: true, text: "Valve"}
+		2414: {active: true, text: "source engine"}
+		2415: {active: true, text: "Wii-tier graphics"}
+		2416: {active: true, text: "brown and bloom"}
+		2417: {active: true, text: "FUCKING GAMESTOP"}
+		2418: {active: true, text: "Mountain Dew"}
+		2419: {active: true, text: "Doritoes"}
+		2420: {active: true, text: "Dante, but you an call him Dante the demon killer"}
+		2421: {active: true, text: "FUCK YOU"}
+		2422: {active: true, text: "Princess Peach"}
+		2423: {active: true, text: "Ronnie"}
+		2424: {active: true, text: "Wreck-It Ralph"}
+		2425: {active: true, text: "Destroy-It Dan"}
+		2426: {active: true, text: "Rape-It Randy"}
+		2427: {active: true, text: "Bayonetta"}
+		2428: {active: true, text: "Fifa 2014"}
+		2429: {active: true, text: "Superman 64"}
+		2430: {active: true, text: "E.T. for Atari"}
+		2431: {active: true, text: "Dark Souls"}
+		2432: {active: true, text: "Devil May Cry"}
+		2433: {active: true, text: "Wubs"}
+		2434: {active: true, text: "a custom built PC"}
+		2435: {active: true, text: "making an email to gabe newell one post at a time"}
+		2436: {active: true, text: "Warioware"}
+		2437: {active: true, text: "Earthbound"}
+		2438: {active: true, text: "Pikmen"}
+		2439: {active: true, text: "Duck Hunt"}
+		2440: {active: true, text: "Egoraptor"}
+		2441: {active: true, text: "Cory in the House"}
+		2442: {active: true, text: "Katawa Shoujio"}
+		2443: {active: true, text: "Donte"}
+		2444: {active: true, text: "/sp/"}
+		2445: {active: true, text: "/pol/"}
+		2446: {active: true, text: "/a/"}
+		2447: {active: true, text: "Traps"}
+		2448: {active: true, text: "Capitan Falcon"}
+		2449: {active: true, text: "knowing that feel"}
+		2450: {active: true, text: "my sides"}
+		2451: {active: true, text: "wagglan"}
+		2452: {active: true, text: "playing vidya"}
+		2453: {active: true, text: "being a casual fuck"}
+		2454: {active: true, text: "JonTron"}
+		2455: {active: true, text: "Two Best Friends"}
+		2456: {active: true, text: "Tropes vs Women in Video Games"}
+		2457: {active: true, text: "Anita"}
+		2458: {active: true, text: "Wiimote"}
+		2459: {active: true, text: "Xbox Hueg"}
+		2460: {active: true, text: "Japan Time"}
+		2461: {active: true, text: "the orignal Xbox controller"}
+		2462: {active: true, text: "Solid Snake's Ass"}
+		2463: {active: true, text: "Big Boss"}
+		2464: {active: true, text: "Kirby"}
+		2465: {active: true, text: "Waluigi"}
+		2466: {active: true, text: "Geno"}
+		2467: {active: true, text: "Ridley"}
+		2468: {active: true, text: "GLaDOS"}
+		2469: {active: true, text: "Shigeru Miyamoto"}
+		2470: {active: true, text: "Mother 3"}
+		2471: {active: true, text: "Shigesato Itoi"}
+		2472: {active: true, text: "Alexey Pajinov"}
+		2473: {active: true, text: "Sam & Max"}
+		2474: {active: true, text: "Banjo-Kazooie"}
+		2475: {active: true, text: "Hank Hill"}
+		2476: {active: true, text: "Pheonix Wright"}
+		2477: {active: true, text: "the orange gem from Bejeweled&trade;"}
+		2478: {active: true, text: "thowing bottles of holy water in the original Castlevania"}
+		2479: {active: true, text: "using your PC as a heater in the winter"}
+		2480: {active: true, text: "Wii Fit Trainer"}
+		2481: {active: true, text: "Nanomachines, son"}
+		2482: {active: true, text: "Creating a LttP vs Majora's Mask"}
+		2483: {active: true, text: "Following the damn train"}
+		2484: {active: true, text: "Kotaku"}
+		2485: {active: true, text: "checking your privledge"}
+		2486: {active: true, text: "having fun"}
+		2487: {active: true, text: "Call of Cthulhu"}
+		2488: {active: true, text: "Corruption of Champions"}
+		2489: {active: true, text: "Sanic"}
+		2490: {active: true, text: "Sanic Adventure 2"}
+		2491: {active: true, text: "Civillization IV"}
+		2492: {active: true, text: "League of Legends"}
+		2493: {active: true, text: "DoTA 2"}
+		2494: {active: true, text: "HoN"}
+		2495: {active: true, text: "asking br? when joining a server"}
+		2496: {active: true, text: "Geralt"}
+		2497: {active: true, text: "Halo"}
+		2498: {active: true, text: "Doomguy"}
+		2499: {active: true, text: "Regginator"}
+		2500: {active: true, text: "tfw no qt gf"}
+		2501: {active: true, text: "Atelier"}
+		2502: {active: true, text: "Asura"}
+		2503: {active: true, text: "Obsidrones"}
+		2504: {active: true, text: "Nintenyearolds"}
+		2505: {active: true, text: "Xbots"}
+		2506: {active: true, text: "Sonyggers"}
+		2507: {active: true, text: "Hitscan"}
+		2508: {active: true, text: "xX420blazeitXx"}
+		2509: {active: true, text: "Sakurai"}
+		2510: {active: true, text: "blowing into a catridge"}
+		2511: {active: true, text: "Dragon Dildos"}
+		2512: {active: true, text: "Nintendo"}
+		2513: {active: true, text: "Sony"}
+		2514: {active: true, text: "Microsoft"}
+		2515: {active: true, text: "Sega"}
+		2516: {active: true, text: "Konami"}
+		2517: {active: true, text: "Game Freak"}
+		2518: {active: true, text: "Fez"}
+		2519: {active: true, text: "Cave Story"}
+		2520: {active: true, text: "Wololololololololo"}
+		2521: {active: true, text: "pirating games because you hate the government"}
+		2522: {active: true, text: "New Super Luigi Bros"}
+		2523: {active: true, text: "the Demoman (who takes skill)"}
+		2524: {active: true, text: "the Pyro (who takes skill)"}
+		2525: {active: true, text: "on disk DLC"}
+		2526: {active: true, text: "sports games the come out year after year"}
+		2527: {active: true, text: "Ass Creed"}
+		2528: {active: true, text: "playing counterstrike too seriously"}
+		2529: {active: true, text: "Minecraft"}
+		2530: {active: true, text: "Notch"}
+		2531: {active: true, text: "Buzzwords"}
+		2532: {active: true, text: "OFF by Mortis Ghost"}
+		2533: {active: true, text: "an indie dev that no one knows about"}
+		2534: {active: true, text: "the Secret of Monkey Island"}
+		2535: {active: true, text: "watching let's plays on youtube"}
+		2536: {active: true, text: "grumpy dumpies"}
+		2537: {active: true, text: "Spaghetti"}
+		2538: {active: true, text: "the best Final Fantasy game"}
+		2539: {active: true, text: "Grayson Hunt"}
+		2540: {active: true, text: "not completing all the side quests"}
+		2541: {active: true, text: "artificial difficulty"}
+		2542: {active: true, text: "padding"}
+		2543: {active: true, text: "artificial fun"}
+		2544: {active: true, text: "Matt and Pat"}
+		2545: {active: true, text: "Hamberger Helper"}
+		2546: {active: true, text: "Yahtzee"}
+		2547: {active: true, text: "iJustine"}
+		2548: {active: true, text: "Jack Thompson"}
+		2549: {active: true, text: "rebbit"}
+		2550: {active: true, text: "The /v/idya gaem awards"}
+		2551: {active: true, text: "Emi (from Katawa Shoujo)"}
+		2552: {active: true, text: "Rin (from Katawa Shuojo)"}
+		2553: {active: true, text: "Lilly (from Katawa Shuojo)"}
+		2554: {active: true, text: "Hanako (from Katawa Shuojo)"}
+		2555: {active: true, text: "Shizune (from Katawa Shuojo)"}
+		2556: {active: true, text: "Misha (from Katawa Shuojo)"}
+		2557: {active: true, text: "Kenji (from Katawa Shuojo)"}
+		2558: {active: true, text: "The Last of Us"}
+		2559: {active: true, text: "/v/"}
+		2560: {active: true, text: "Video Games"}
+		2561: {active: true, text: "NSA"}
+		2562: {active: true, text: "Christopher Robin"}
+		2563: {active: true, text: "The Master Race"}
+		2564: {active: true, text: "/mlp/"}
+		2565: {active: true, text: "Bronies"}
+		2566: {active: true, text: "/vg/"}
+		2567: {active: true, text: "/vr/"}
+		2568: {active: true, text: "/vp/"}
+		2569: {active: true, text: "p2w"}
+		2570: {active: true, text: "the delay time of Duke Nukem Forever"}
+		2571: {active: true, text: "Duke Nukem"}
+		2572: {active: true, text: "WoW"}
+		2573: {active: true, text: "Worth the Weight"}
+		2574: {active: true, text: "anything but video games"}
+		2575: {active: true, text: "Tom Preston"}
+		2576: {active: true, text: "Andrew Dobson"}
+		2577: {active: true, text: "nogames"}
+		2578: {active: true, text: "2spooky"}
+		2579: {active: true, text: "599 US Dollars "}
+		2580: {active: true, text: "Eight Point Eight"}
+		2581: {active: true, text: "RAGE"}
+		2582: {active: true, text: "Playing TGWTG Cards Against Humanity at stupid o'clock."}
+		2583: {active: true, text: "Pol Pot pies."}
+		2584: {active: true, text: "Rachel Tietz, trying to Kill the Nostalgia Critic."}
+		2585: {active: true, text: "Ripping off part of your penis."}
+		2586: {active: true, text: "ROCKET BOOTS!"}
+		2587: {active: true, text: "ROCKET PUNCH!"}
+		2588: {active: true, text: "Sad Panda's lanky, manly chest."}
+		2589: {active: true, text: "Sage's 'RAPE!' face."}
+		2590: {active: true, text: "Sean."}
+		2591: {active: true, text: "Sex, violence, and Daffy Duck screaming."}
+		2592: {active: true, text: "Shouting 'FUS-RO-DAH!' at a puppy."}
+		2593: {active: true, text: "Smarty."}
+		2594: {active: true, text: "Smarty's special bag of AIDS."}
+		2595: {active: true, text: "Snowflame's cocaine flavored popsicles."}
+		2596: {active: true, text: "Snowflame's fuzzy slippers."}
+		2597: {active: true, text: "Space Core."}
+		2598: {active: true, text: "Stealing money off dead wolves."}
+		2599: {active: true, text: "Surprise blowjobs."}
+		2600: {active: true, text: "Tara's tramautic childhood stories."}
+		2601: {active: true, text: "That Dude In The Suede."}
+		2602: {active: true, text: "The Adventures of Horsemeat and the Placenta #1."}
+		2603: {active: true, text: "The Amazing Bulk."}
+		2604: {active: true, text: "The Channel Awesome satellite."}
+		2605: {active: true, text: "The Hippo Lantern Corps."}
+		2606: {active: true, text: "The Last Angry Geek."}
+		2607: {active: true, text: "The Longbox of the Damned."}
+		2608: {active: true, text: "The Nostalgia Ranger."}
+		2609: {active: true, text: "The Rap Critic."}
+		2610: {active: true, text: "The thick, muscular arms of ChaosD1."}
+		2611: {active: true, text: "The Uncanny Valley."}
+		2612: {active: true, text: "The Wal-Mart."}
+		2613: {active: true, text: "Todd in the Shadows."}
+		2614: {active: true, text: "Todd trolling Chris Brown on Twitter."}
+		2615: {active: true, text: "Tommy Wiseau."}
+		2616: {active: true, text: "Turtle."}
+		2617: {active: true, text: "Using a frontloader to steal deodorant."}
+		2618: {active: true, text: "Using donation money for weed."}
+		2619: {active: true, text: "Vangelus"}
+		2620: {active: true, text: "Ven's voice, a gift from the fairies."}
+		2621: {active: true, text: "Zeo Linkara."}
+		2622: {active: true, text: "A DraculaFetus animation."}
+		2623: {active: true, text: "A profile pic that looks like a dick and balls."}
+		2624: {active: true, text: "Spy Party racism."}
+		2625: {active: true, text: "The ghost of Ohmwrecker."}
+		2626: {active: true, text: "Shooting the black guy."}
+		2627: {active: true, text: "Ohm's mindgames."}
+		2628: {active: true, text: "DOTA 2."}
+		2629: {active: true, text: "Magic: The Gathering."}
+		2630: {active: true, text: "A failed challenge run."}
+		2631: {active: true, text: "Setting the world on fire."}
+		2632: {active: true, text: "Pot magic."}
+		2633: {active: true, text: "Josh's washing machine."}
+		2634: {active: true, text: "Dang it, Bobby!"}
+		2635: {active: true, text: "Up in the air like a George Clooney movie."}
+		2636: {active: true, text: "A lemon mishap."}
+		2637: {active: true, text: "This cat, I swear to god."}
+		2638: {active: true, text: "Ohmwrecker."}
+		2639: {active: true, text: "youtube.com/Ohmwrecker."}
+		2640: {active: true, text: "Drinkable fire."}
+		2641: {active: true, text: "Ohmsdrawings.tumblr.com."}
+		2642: {active: true, text: "Soul level 1 invasions."}
+		2643: {active: true, text: "Ryuka."}
+		2644: {active: true, text: "The blue candle."}
+		2645: {active: true, text: "JSmith's laundry."}
+		2646: {active: true, text: "Mount Your Friends: Docking Edition."}
+		2647: {active: true, text: "Childlike bukakke."}
+		2648: {active: true, text: "A water supply full of leeches."}
+		2649: {active: true, text: "Travelling by bones."}
+		2650: {active: true, text: "AlpacaPatrol."}
+		2651: {active: true, text: "Zen."}
+		2652: {active: true, text: "Green9090."}
+		2653: {active: true, text: "#MikeBithell."}
+		2654: {active: true, text: "RedPandaGamer."}
+		2655: {active: true, text: "Ohm, our god."}
+		2656: {active: true, text: "...Metal Gear?!"}
+		2657: {active: true, text: "A beautiful little moment."}
+		2658: {active: true, text: "A couch stinking of naked people."}
+		2659: {active: true, text: "A humanlike bat with tits."}
+		2660: {active: true, text: "A little dingle-dang."}
+		2661: {active: true, text: "A pretty epic poo."}
+		2662: {active: true, text: "A replay from Barry."}
+		2663: {active: true, text: "A Scottish bloke that talks too fast."}
+		2664: {active: true, text: "A smaller, whiter dick."}
+		2665: {active: true, text: "A Sonic."}
+		2666: {active: true, text: "A testicle examination."}
+		2667: {active: true, text: "A whale making a seal noise."}
+		2668: {active: true, text: "Accidentally resetting a video game."}
+		2669: {active: true, text: "An expensive rental costume."}
+		2670: {active: true, text: "Anne Frank doing a striptease."}
+		2671: {active: true, text: "Arin actually winning a Game Grumps VS."}
+		2672: {active: true, text: "Arin Hanson / Egoraptor."}
+		2673: {active: true, text: "Arin's big floppy penis."}
+		2674: {active: true, text: "Arin's dicksaber."}
+		2675: {active: true, text: "Arin's voice acting."}
+		2676: {active: true, text: "Barry Kramer."}
+		2677: {active: true, text: "Barry's censorship noises."}
+		2678: {active: true, text: "Becoming a vegetarian, then becoming clinically depressed."}
+		2679: {active: true, text: "Being forced to replay the same section of the game over and over."}
+		2680: {active: true, text: "Birdemic."}
+		2681: {active: true, text: "Borderline narcissism."}
+		2682: {active: true, text: "Breaking a basketball net's back board."}
+		2683: {active: true, text: "Breaking into song."}
+		2684: {active: true, text: "Brian / Frank / Steve / Willard / Jonathan / Michael IV / Michael III / Michael Jordan / Scott."}
+		2685: {active: true, text: "Bumping butts."}
+		2686: {active: true, text: "Buying chicken fingers for homeless people."}
+		2687: {active: true, text: "Carefully escorting Anna."}
+		2688: {active: true, text: "Catharsis."}
+		2689: {active: true, text: "Cheese pizza."}
+		2690: {active: true, text: "Chu Chu Rocket."}
+		2691: {active: true, text: "Chulip."}
+		2692: {active: true, text: "Comparing someone to a trainwreck."}
+		2693: {active: true, text: "Completely missing the tutorials and instructions."}
+		2694: {active: true, text: "Cumfaggots."}
+		2695: {active: true, text: "Dan getting some action with one of Egoraptor's action figures."}
+		2696: {active: true, text: "Danny Sexbang."}
+		2697: {active: true, text: "Danny's crippling Skittles addiction."}
+		2698: {active: true, text: "Dipping your balls in the sand."}
+		2699: {active: true, text: "Dixon."}
+		2700: {active: true, text: "Donkey-ass Kong."}
+		2701: {active: true, text: "Drakkhen's realistic fight sequences."}
+		2702: {active: true, text: "Drawing the line in the fucking sand."}
+		2703: {active: true, text: "Eating the Holocaust."}
+		2704: {active: true, text: "Eating your peas."}
+		2705: {active: true, text: "Egofaptor."}
+		2706: {active: true, text: "Ending an episode on 'Heil Hitler!'"}
+		2707: {active: true, text: "The eyeless girl demographic."}
+		2708: {active: true, text: "Fart science."}
+		2709: {active: true, text: "Fast-forwarding."}
+		2710: {active: true, text: "Fighting Iblis for the hundredth time."}
+		2711: {active: true, text: "Fooling me three times."}
+		2712: {active: true, text: "Fuckin' Larry."}
+		2713: {active: true, text: "FUCKING LEGO CARS!!?!"}
+		2714: {active: true, text: "Game feel."}
+		2715: {active: true, text: "Game Grumps remixes."}
+		2716: {active: true, text: "Game Grumps VS."}
+		2717: {active: true, text: "Game Grumps."}
+		2718: {active: true, text: "Garshstostoles."}
+		2719: {active: true, text: "GeorgLopez."}
+		2720: {active: true, text: "Getting censored by a stampede of elephants."}
+		2721: {active: true, text: "Getting diddled again."}
+		2722: {active: true, text: "Getting fucking ganked."}
+		2723: {active: true, text: "Getting horribly diarrhea'd on by an owl."}
+		2724: {active: true, text: "Getting killed by a motherfucking paralyzed Taillow."}
+		2725: {active: true, text: "Getting stuck on the ceiling for no explicable reason."}
+		2726: {active: true, text: "Getting violently sick at MAGfest."}
+		2727: {active: true, text: "Goof Troop."}
+		2728: {active: true, text: "Goofy masturbating in the fields."}
+		2729: {active: true, text: "Grade A meat."}
+		2730: {active: true, text: "Grant Kirkhope."}
+		2731: {active: true, text: "Grant Kirkhope’s knackers."}
+		2732: {active: true, text: "GREAT! GREAT! GREAT!"}
+		2733: {active: true, text: "Grep."}
+		2734: {active: true, text: "Grumping it."}
+		2735: {active: true, text: "Güf Troop."}
+		2736: {active: true, text: "Half the deal for twice the price!"}
+		2737: {active: true, text: "Having a cough that lasts forever."}
+		2738: {active: true, text: "Helicopter tits."}
+		2739: {active: true, text: "Hepatitis Sea."}
+		2740: {active: true, text: "Slo Mo Guys."}
+		2741: {active: true, text: "Hitting a Nightshade cartridge with Thor’s Hammer only to break the hammer."}
+		2742: {active: true, text: "Homoerotic subtext between two grown men playing video games."}
+		2743: {active: true, text: "Ice hair."}
+		2744: {active: true, text: "Incriminating footage of Jon."}
+		2745: {active: true, text: "Insta-killing your partner with the Select button."}
+		2746: {active: true, text: "It being no use."}
+		2747: {active: true, text: "Jacques."}
+		2748: {active: true, text: "JonTron."}
+		2749: {active: true, text: "Jon winning. AS USUAL."}
+		2750: {active: true, text: "Jon's soulful singing."}
+		2751: {active: true, text: "Jon/Arin slash fiction."}
+		2752: {active: true, text: "JonTron’s musical theater voice."}
+		2753: {active: true, text: "Js'keep goin'."}
+		2754: {active: true, text: "Killing zombies by typing on a keyboard-gun."}
+		2755: {active: true, text: "Kirby."}
+		2756: {active: true, text: "Kitty Cat Dance Party."}
+		2757: {active: true, text: "Learning that your son is dead, but not caring because you didn't want him anyway."}
+		2758: {active: true, text: "Lemon and Bill."}
+		2759: {active: true, text: "Lightsaber Fightsaber."}
+		2760: {active: true, text: "Literally going to Hell."}
+		2761: {active: true, text: "Mediocrity, as a power."}
+		2762: {active: true, text: "Mega Man."}
+		2763: {active: true, text: "Mike Tyson."}
+		2764: {active: true, text: "Mispronouncing Duran Duran."}
+		2765: {active: true, text: "Mister Mosquito."}
+		2766: {active: true, text: "MomTron."}
+		2767: {active: true, text: "Moundo."}
+		2768: {active: true, text: "Naughty Bear."}
+		2769: {active: true, text: "Nazi von Killyou."}
+		2770: {active: true, text: "Ninja Sex Party."}
+		2771: {active: true, text: "Nixon."}
+		2772: {active: true, text: "NO JON NO."}
+		2773: {active: true, text: "NOT FUCKING THIS!"}
+		2774: {active: true, text: "Not knowing the controls to Nickelodeon GUTS."}
+		2775: {active: true, text: "Not reading the game's instructions."}
+		2776: {active: true, text: "Obeying Protoman and burning down a forest."}
+		2777: {active: true, text: "Pacific Rim."}
+		2778: {active: true, text: "Pause balls."}
+		2779: {active: true, text: "Pelistorm."}
+		2780: {active: true, text: "Playing a terrible game for more than a hundred episodes."}
+		2781: {active: true, text: "Playing slaps to break a tie."}
+		2782: {active: true, text: "PONY.MOV."}
+		2783: {active: true, text: "Poopy butt."}
+		2784: {active: true, text: "Poppy Bros."}
+		2785: {active: true, text: "Princess Elise's octopus face."}
+		2786: {active: true, text: "Punching a hole in a gingerbread house."}
+		2787: {active: true, text: "Queefing bombs out of your vagina."}
+		2788: {active: true, text: "Racial slurs."}
+		2789: {active: true, text: "Reading the manual."}
+		2790: {active: true, text: "RIDIN’ ON CARS!!!"}
+		2791: {active: true, text: "Robots ordering cheese pizza."}
+		2792: {active: true, text: "Rocket. To the moon."}
+		2793: {active: true, text: "Rolling around at the speed of sound."}
+		2794: {active: true, text: "RubberRoss."}
+		2795: {active: true, text: "Rouge's gross bat face."}
+		2796: {active: true, text: "Screaming out Whitney Houston’s “I Will Always Love You” in primal agony."}
+		2797: {active: true, text: "Sequelitis."}
+		2798: {active: true, text: "Seven asses."}
+		2799: {active: true, text: "Signing and destroying a copy of Sonic '06."}
+		2800: {active: true, text: "Silver the Hedgehog."}
+		2801: {active: true, text: "Sneaking dirty British humour into an unassuming video game about a bear and a bird."}
+		2802: {active: true, text: "Snow white shit."}
+		2803: {active: true, text: "Snowboarding uphill"}
+		2804: {active: true, text: "Solid Snake."}
+		2805: {active: true, text: "Sonic '06."}
+		2806: {active: true, text: "Spice World."}
+		2807: {active: true, text: "Spraying compressed air with a bittering agent in your face, and subsequently vomiting."}
+		2808: {active: true, text: "Stairfax Temperatures."}
+		2809: {active: true, text: "Staring at a menu while Ross stuffs his disgusting face with candy."}
+		2810: {active: true, text: "Stasis-ing the drill."}
+		2811: {active: true, text: "Steam Train."}
+		2812: {active: true, text: "Sticky sap."}
+		2813: {active: true, text: "Stretch Panic."}
+		2814: {active: true, text: "STRGG."}
+		2815: {active: true, text: "Struggling to fight Silver the Hedgehog."}
+		2816: {active: true, text: "Sucking blood from a Japanese girl's tits."}
+		2817: {active: true, text: "Suzy the Goose."}
+		2818: {active: true, text: "TENOUTTATEN."}
+		2819: {active: true, text: "That guy."}
+		2820: {active: true, text: "The Awesome Series."}
+		2821: {active: true, text: "The band Egoraptor."}
+		2822: {active: true, text: "The Chinless Wonder."}
+		2823: {active: true, text: "The Goshdangodon."}
+		2824: {active: true, text: "The Higgs Boson."}
+		2825: {active: true, text: "The Knuckles wall glitch."}
+		2826: {active: true, text: "The rarest form of Arin having fun."}
+		2827: {active: true, text: "The realization that friendship is more important."}
+		2828: {active: true, text: "Three big feet of pleasure."}
+		2829: {active: true, text: "Tonguing up."}
+		2830: {active: true, text: "WAAAAAAAVE LAAAAZEEEEEEER."}
+		2831: {active: true, text: "Walking around in my banana shoes."}
+		2832: {active: true, text: "World Dick Barf Syndrome."}
+		2833: {active: true, text: "Man-Gobbler, the turkey bestiality movie."}
+		2834: {active: true, text: "RoosterTeeth."}
+		2835: {active: true, text: "Michael Jones."}
+		2836: {active: true, text: "Gavin Free."}
+		2837: {active: true, text: "Surgeon Simulator 2013."}
+		2838: {active: true, text: "Ray Narvaez, Jr."}
+		2839: {active: true, text: "Burnie Burns."}
+		2840: {active: true, text: "Geoff Lazer Ramsey."}
+		2841: {active: true, text: "Jack Pattillo."}
+		2842: {active: true, text: "Ryan Haywood."}
+		2843: {active: true, text: "Gus Sorola."}
+		2844: {active: true, text: "The cardboard cutout of Gus."}
+		2845: {active: true, text: "Joel Heyman."}
+		2846: {active: true, text: "Going cakeless."}
+		2847: {active: true, text: "Headlight fluid."}
+		2848: {active: true, text: "Playing Hitler twice."}
+		2849: {active: true, text: "Sarge."}
+		2850: {active: true, text: "Lopez la Pesado."}
+		2851: {active: true, text: "Franklin Delano Donut."}
+		2852: {active: true, text: "Dexter Grif."}
+		2853: {active: true, text: "Dick Simmons."}
+		2854: {active: true, text: "Agent Washington."}
+		2855: {active: true, text: "Andy the bomb."}
+		2856: {active: true, text: "Picking up chicks in a tank."}
+		2857: {active: true, text: "Michael J. Caboose."}
+		2858: {active: true, text: "Sheila the tank."}
+		2859: {active: true, text: "Leonard Church."}
+		2860: {active: true, text: "Lavernius Tucker."}
+		2861: {active: true, text: "Agent Texas / Allison."}
+		2862: {active: true, text: "Omega / O'Malley."}
+		2863: {active: true, text: "Agent Maine / the Meta."}
+		2864: {active: true, text: "Frank 'Doc' DuFresne."}
+		2865: {active: true, text: "Screen looking."}
+		2866: {active: true, text: "A wet paper towel."}
+		2867: {active: true, text: "Minecraft."}
+		2868: {active: true, text: "MOGAR!"}
+		2869: {active: true, text: "X-Ray and Vav."}
+		2870: {active: true, text: "#DantheMan."}
+		2871: {active: true, text: "Joe the cat."}
+		2872: {active: true, text: "Pongo."}
+		2873: {active: true, text: "Soggy bread."}
+		2874: {active: true, text: "Rage Quit."}
+		2875: {active: true, text: "Achievement Hunter."}
+		2876: {active: true, text: "Team-killing fucktards."}
+		2877: {active: true, text: "Calling dibs on a spaceship."}
+		2878: {active: true, text: "Sarge's funeral."}
+		2879: {active: true, text: "Camping, as a legitimate strategy."}
+		2880: {active: true, text: "Epsilon's laser face."}
+		2881: {active: true, text: "MOTHERFUCKING TRIPLE SPIKES!"}
+		2882: {active: true, text: "Because people like grapes."}
+		2883: {active: true, text: "Upside-down Kerry."}
+		2884: {active: true, text: "Ray's sombrero."}
+		2885: {active: true, text: "Doing a dig-down."}
+		2886: {active: true, text: "Mark Nutt."}
+		2887: {active: true, text: "AHWU."}
+		2888: {active: true, text: "Throwing shit at the AHWU announcer."}
+		2889: {active: true, text: "Red vs. Blue."}
+		2890: {active: true, text: "Geoff's cancer-curing laugh."}
+		2891: {active: true, text: "The Tower of Pimps."}
+		2892: {active: true, text: "The Frienderman."}
+		2893: {active: true, text: "Beating a man to death with his own skull."}
+		2894: {active: true, text: "Fighting to the death on pigback."}
+		2895: {active: true, text: "RWBY."}
+		2896: {active: true, text: "RT Shorts."}
+		2897: {active: true, text: "RT Animated Adventures."}
+		2898: {active: true, text: "Mega64."}
+		2899: {active: true, text: "Immersion."}
+		2900: {active: true, text: "Reaching a billion total views on YouTube."}
+		2901: {active: true, text: "Doing a double barrel roll and immediately running someone over."}
+		2902: {active: true, text: "A Ray-Cam masturbation moment."}
+		2903: {active: true, text: "Tackling Gavin to stop him from winning."}
+		2904: {active: true, text: "Losing an hour's worth of footage to a brief blackout."}
+		2905: {active: true, text: "Fails of the Weak."}
+		2906: {active: true, text: "Achievement HORSE."}
+		2907: {active: true, text: "Trials PIG."}
+		2908: {active: true, text: "Slapping the controller out of a competitor's hands."}
+		2909: {active: true, text: "Cockbites."}
+		2910: {active: true, text: "Achievement City."}
+		2911: {active: true, text: "Two bases in the middle of a box canyon. Whoop-dee-fuckin'-doo."}
+		2912: {active: true, text: "Blood Gulch."}
+		2913: {active: true, text: "Parkour."}
+		2914: {active: true, text: "Faffy Waffle."}
+		2915: {active: true, text: "Something that is top."}
+		2916: {active: true, text: "A plan that involves Grif dying."}
+		2917: {active: true, text: "Drunkenly texting an ex."}
+		2918: {active: true, text: "Using CPR to treat a bullet wound to the head."}
+		2919: {active: true, text: "Front flip for style!"}
+		2920: {active: true, text: "Trying to eat a five-pound gummy bear in one sitting."}
+		2921: {active: true, text: "RTX."}
+		2922: {active: true, text: "Randy Newman."}
+		2923: {active: true, text: "Slenderman."}
+		2924: {active: true, text: "The R&R Connection."}
+		2925: {active: true, text: "The Internet Box."}
+		2926: {active: true, text: "Performing surgery in space."}
+		2927: {active: true, text: "Jack's dick."}
+		2928: {active: true, text: "The Crev."}
+		2929: {active: true, text: "Team Nice Dynamite."}
+		2930: {active: true, text: "Team Lads."}
+		2931: {active: true, text: "Team Gents."}
+		2932: {active: true, text: "Plan G."}
+		2933: {active: true, text: "Team Neighborhood Watch."}
+		2934: {active: true, text: "Ray winning."}
+		2935: {active: true, text: "Edgar the cow."}
+		2936: {active: true, text: "Gavin's Trophy Room of Victory."}
+		2937: {active: true, text: "Jack's beard."}
+		2938: {active: true, text: "Being trapped in a dog cage."}
+		2939: {active: true, text: "Geoff's hobo beard."}
+		2940: {active: true, text: "Killing Gavin."}
+		2941: {active: true, text: "Discovering your long-lost Creeper parents."}
+		2942: {active: true, text: "A megalomaniac with a beard."}
+		2943: {active: true, text: "Ray's douche-cut."}
+		2944: {active: true, text: "The adventures of Batman and Randy Newman."}
+		2945: {active: true, text: "Because they'd like it."}
+		2946: {active: true, text: "Knobs."}
+		2947: {active: true, text: "Gubbins."}
+		2948: {active: true, text: "Meatspin."}
+		2949: {active: true, text: "Flynt Coal."}
+		2950: {active: true, text: "Tupperware."}
+		2951: {active: true, text: "A miniature Tower of Pimps."}
+		2952: {active: true, text: "Giving up and building a house."}
+		2953: {active: true, text: "Gavin's dick."}
+		2954: {active: true, text: "Wearing your headphones backwards during a podcast week after week."}
+		2955: {active: true, text: "Flicking the bean."}
+		2956: {active: true, text: "Getting minged up your quelch."}
+		2957: {active: true, text: "Grand Theft Auto IV."}
+		2958: {active: true, text: "Ray's wet sponge."}
+		2959: {active: true, text: "Bankrupting your company over a crane game."}
+		2960: {active: true, text: "A bag of dicks."}
+		2961: {active: true, text: "ENDERMAN!!!"}
+		2962: {active: true, text: "Lightish red."}
+		2963: {active: true, text: "In denial."}
+		2964: {active: true, text: "Enwrong."}
+		2965: {active: true, text: "Papa BrownMan."}
+		2966: {active: true, text: "Caleb's house."}
+		2967: {active: true, text: "Evil Ryan."}
+		2968: {active: true, text: "Randy Savage."}
+		2969: {active: true, text: "RT Confessions."}
+		2970: {active: true, text: "Two dumb cunts."}
+		2971: {active: true, text: "Smegpot."}
+		2972: {active: true, text: "Guffpap."}
+		2973: {active: true, text: "Launching dump trucks off an unfinished bridge."}
+		2974: {active: true, text: "Because bitches ain't shit."}
+		2975: {active: true, text: "Gavino."}
+		2976: {active: true, text: "Monoray."}
+		2977: {active: true, text: "Montages no one will watch."}
+		2978: {active: true, text: "A gay cave. A gayve."}
+		2979: {active: true, text: "A squid orgy."}
+		2980: {active: true, text: "Getting boned."}
+		2981: {active: true, text: "300,000 Gamerscore."}
+		2982: {active: true, text: "Team Magnum Dong."}
+		2983: {active: true, text: "Lindsay Tuggey."}
+		2984: {active: true, text: "Barbara Dunkelman."}
+		2985: {active: true, text: "Mavin slash fiction."}
+		2986: {active: true, text: "Caleb Denecour."}
+		2987: {active: true, text: "Monty Oum."}
+		2988: {active: true, text: "The league of being a big faggot."}
+		2989: {active: true, text: "GaLm's sunglasses."}
+		2990: {active: true, text: "The Card Czar."}
+		2991: {active: true, text: "Inside Shrek's asshole."}
+		2992: {active: true, text: "Solving a rubiks cube with your bare nipples."}
+		2993: {active: true, text: "A canoe with enough room for Phil."}
+		2994: {active: true, text: "The Black Seed."}
+		2995: {active: true, text: "That video of EatMyDiction1 twerking."}
+		2996: {active: true, text: "The Sips Co. Dirt Factory."}
+		2997: {active: true, text: "DarkSydePhil playing Dark Souls."}
+		2998: {active: true, text: "Hitler's Train!"}
+		2999: {active: true, text: "That time when Machinima played actual machinima videos."}
+		3000: {active: true, text: "Bajan Canadian's fridge."}
+		3001: {active: true, text: "Seananners' dolphin laugh."}
+		3002: {active: true, text: "Chilledchaos' homosexual tendencies."}
+		3003: {active: true, text: "Bolshevik the wolf."}
+		3004: {active: true, text: "Diction watching a burly outdoorsman skin a bear while eating honey and crying."}
+		3005: {active: true, text: "The Tom Shark."}
+		3006: {active: true, text: "#TysLeftFoot"}
+		3007: {active: true, text: "Seananners joyously dropping 'presents' on the African minority in GTA."}
+		3008: {active: true, text: "Jah be dwarfin' it up!"}
+		3009: {active: true, text: "Tom drunk off his ass."}
+		3010: {active: true, text: "Getting anally violated by a silverback gorilla."}
+		3011: {active: true, text: "A Big 'Ol Bowl of Fruit!"}
+		3012: {active: true, text: "An LP Smarty finished."}
+		3013: {active: true, text: "BEARS!"}
+		3014: {active: true, text: "The Blue Yeti microphone."}
+		3015: {active: true, text: "A Machinima contract."}
+		3016: {active: true, text: "Criken's Fun House."}
+		3017: {active: true, text: "A smart joke."}
+		3018: {active: true, text: "One of Chuggaconroy's awful puns."}
+		3019: {active: true, text: "The Great Youtube Unsubbing of 2012."}
+		3020: {active: true, text: "A robot bird."}
+		3021: {active: true, text: "Time to cancel Smash Fighter."}
+		3022: {active: true, text: "Smash Fighter."}
+		3023: {active: true, text: "Totalbiscuit and Angry Joe frolicking in a meadow."}
+		3024: {active: true, text: "Chilled and Smarty's wedding."}
+		3025: {active: true, text: "A box of biscuits, a box of mixed biscuits, and a biscuit mixer."}
+		3026: {active: true, text: "A box-shaped man."}
+		3027: {active: true, text: "A man-shaped box."}
+		3028: {active: true, text: "An alternate universe in which boxes store things inside of people."}
+		3029: {active: true, text: "Two midgets shitting into a box."}
+		3030: {active: true, text: "A falcon with a box on its head."}
+		3031: {active: true, text: "Being a motherfucking box."}
+		3032: {active: true, text: "Achieving the manual dexterity and tactical brilliance of a 12-year-old Korean boy. (6/44)"}
+		3033: {active: true, text: "Being an attractive elf trapped in an unattractive human's body. (9/44)"}
+		3034: {active: true, text: "Filling every pouch of a UtiliKilt&trade; with pizza. (12/44)"}
+		3035: {active: true, text: "Bowser's aching heart. (13/44)"}
+		3036: {active: true, text: "Turn-of-the-century sky racists. (24/44)"}
+		3037: {active: true, text: "The gravity gun."}
+		3038: {active: true, text: "Achieving the manual dexterity and tactical brilliance of a 12-year-old Korean boy."}
+		3039: {active: true, text: "Rolling a D20 to save a failing marriage."}
+		3040: {active: true, text: "A cutie mark."}
+		3041: {active: true, text: "Octavia."}
+		3042: {active: true, text: "The Moon."}
+		3043: {active: true, text: "Orphaned foals."}
+		3044: {active: true, text: "Pants."}
+		3045: {active: true, text: "The Great and Powerful Trixie Lulamoon."}
+		3046: {active: true, text: "The Grand Galloping Gala."}
+		3047: {active: true, text: "Pegasus wing deformities."}
+		3048: {active: true, text: "The Friendship Express."}
+		3049: {active: true, text: "Pinkamena Diane Pie."}
+		3050: {active: true, text: "The Chocolate Mousse Moose."}
+		3051: {active: true, text: "The Cakes."}
+		3052: {active: true, text: "Pinkamena's hacksaw."}
+		3053: {active: true, text: "That squee noise."}
+		3054: {active: true, text: "That Lyra plushie."}
+		3055: {active: true, text: "Sweetie Bot."}
+		3056: {active: true, text: "Sweetie Belle's virgin marshmallow pussy."}
+		3057: {active: true, text: "Sweetie Belle."}
+		3058: {active: true, text: "Pinkie Pie in full latex."}
+		3059: {active: true, text: "Surprise."}
+		3060: {active: true, text: "Stretching those glutes."}
+		3061: {active: true, text: "Pinkie Pie."}
+		3062: {active: true, text: "Steven Magnets."}
+		3063: {active: true, text: "Plot."}
+		3064: {active: true, text: "Spike's understanding of biology."}
+		3065: {active: true, text: "Speaking Fancy."}
+		3066: {active: true, text: "Poison Joke."}
+		3067: {active: true, text: "Socks."}
+		3068: {active: true, text: "Ponies wearing clothes."}
+		3069: {active: true, text: "Sloppy clop."}
+		3070: {active: true, text: "Shipping."}
+		3071: {active: true, text: "Shaking Dat Plot."}
+		3072: {active: true, text: "Secretly being a changeling all along."}
+		3073: {active: true, text: "Ponies."}
+		3074: {active: true, text: "Scootabuse."}
+		3075: {active: true, text: "Pony racism."}
+		3076: {active: true, text: "Scoot, Scoot-A-Loo."}
+		3077: {active: true, text: "Pony-Griffon marriage."}
+		3078: {active: true, text: "Rarity."}
+		3079: {active: true, text: "Rainbow Dash."}
+		3080: {active: true, text: "Rainbow Crash."}
+		3081: {active: true, text: "Ponychan."}
+		3082: {active: true, text: "Raging wingboners."}
+		3083: {active: true, text: "Queen Chrysalis."}
+		3084: {active: true, text: "Princess Molestia."}
+		3085: {active: true, text: "Princess Celestia."}
+		3086: {active: true, text: "Princess Mi Amore Cadenza."}
+		3087: {active: true, text: "Princess Luna."}
+		3088: {active: true, text: "Ponies with fricken' laser beams attached to their heads!"}
+		3089: {active: true, text: "Lara Croft."}
+		3090: {active: true, text: "Bowser's aching heart."}
+		3091: {active: true, text: "Scotsmen marrying their sheep."}
+		3092: {active: true, text: "Filling every pouch of a UtiliKilt&trade; with pizza."}
+		3093: {active: true, text: "Quiznos."}
+		3094: {active: true, text: "70,000 gamers sweating and farting inside an airtight steel dome."}
+		3095: {active: true, text: "A bunch of idiots playing a card game instead of interacting like normal humans."}
+		3096: {active: true, text: "A sex goblin with a carnival penis."}
+		3097: {active: true, text: "Lots and lots of abortions."}
+		3098: {active: true, text: "Injecting speed into one arm and horse tranquilizer into the other."}
+		3099: {active: true, text: "Sharks with legs."}
+		3100: {active: true, text: "A sex comet from Neptune that plunges the Earth into eternal sexiness."}
+		3101: {active: true, text: "How awesome I am."}
+		3102: {active: true, text: "Smoking crack, for instance."}
+		3103: {active: true, text: "A dance move that's just sex."}
+		3104: {active: true, text: "A hopeless amount of spiders."}
+		3105: {active: true, text: "Drinking responsibly."}
+		3106: {active: true, text: "Angelheaded hipsters burning for the ancient heavenly connection to the starry dynamo in the machinery of night."}
+		3107: {active: true, text: "Bouncing up and down."}
+		3108: {active: true, text: "A shiny rock that proves I love you."}
+		3109: {active: true, text: "Crazy opium eyes."}
+		3110: {active: true, text: "Moderate-to-severe joint pain."}
+		3111: {active: true, text: "Finally finishing off the Indians."}
+		3112: {active: true, text: "Actual mutants with medical conditions and no superpowers."}
+		3113: {active: true, text: "The complex geopolitical quagmire that is the Middle East."}
+		3114: {active: true, text: "Neil Diamond's Greatest Hits."}
+		3115: {active: true, text: "No clothes on, penis in vagina."}
+		3116: {active: true, text: "Whispering all sexy."}
+		3117: {active: true, text: "A horse with no legs."}
+		3118: {active: true, text: "Depression."}
+		3119: {active: true, text: "Almost giving money to a homeless person."}
+		3120: {active: true, text: "Interspecies marriage."}
+		3121: {active: true, text: "Blackula."}
+		3122: {active: true, text: "What Jesus would do."}
+		3123: {active: true, text: "A manhole."}
+		3124: {active: true, text: "My dad's dumb fucking face."}
+		3125: {active: true, text: "A Ugandan warlord."}
+		3126: {active: true, text: "My worthless son."}
+		3127: {active: true, text: "A Native American who solves crimes by going into the spirit world."}
+		3128: {active: true, text: "A kiss on the lips."}
+		3129: {active: true, text: "A fart."}
+		3130: {active: true, text: "The peaceful and nonthreatening rise of China."}
+		3131: {active: true, text: "The size of my penis."}
+		3132: {active: true, text: "Jizz."}
+		3133: {active: true, text: "10 Incredible Facts About the Anus."}
+		3134: {active: true, text: "The secret formula for ultimate female satisfaction."}
+		3135: {active: true, text: "Sugar madness."}
+		3136: {active: true, text: "Calculating every mannerism so as not to suggest homosexuality."}
+		3137: {active: true, text: "Fucking a corpse back to life."}
+		3138: {active: true, text: "The euphoric rush of strangling a drifter."}
+		3139: {active: true, text: "Snorting coke off a clown's boner."}
+		3140: {active: true, text: "Three consecutive seconds of happiness."}
+		3141: {active: true, text: "Falling into the toilet."}
+		3142: {active: true, text: "Ass to mouth."}
+		3143: {active: true, text: "Some sort of Asian."}
+		3144: {active: true, text: "The safe word."}
+		3145: {active: true, text: "Party Mexicans."}
+		3146: {active: true, text: "Ambiguous sarcasm."}
+		3147: {active: true, text: "Prince Ali,<br/>fabulous he,<br/>Ali Ababwa."}
+		3148: {active: true, text: "My sex dungeon."}
+		3149: {active: true, text: "Child Protective Services."}
+		3150: {active: true, text: "An interracial handshake."}
+		3151: {active: true, text: "All the single ladies."}
+		3152: {active: true, text: "Whatever a McRib&reg; is made of."}
+		3153: {active: true, text: "Africa."}
+		3154: {active: true, text: "Khakis."}
+		3155: {active: true, text: "A gender identity that can only be conveyed through slam poetry."}
+		3156: {active: true, text: "Stuff a child's face with Fun Dip&reg; until he starts having fun."}
+		3157: {active: true, text: "A for-real lizard that spits blood from its eyes."}
+		3158: {active: true, text: "The tiniest shred of evidence that God is real."}
+		3159: {active: true, text: "Dem titties."}
+		3160: {active: true, text: "Exploding pigeons."}
+		3161: {active: true, text: "Doo-doo."}
+		3162: {active: true, text: "Sports."}
+		3163: {active: true, text: "Unquestioning obedience."}
+		3164: {active: true, text: "Grammar nazis who are also regular Nazis."}
+		3165: {active: true, text: "Being banned from /r/pyongyang."}
+		3166: {active: true, text: "The lost city of Atlantis."}
+		3167: {active: true, text: "Giving money and personal information to strangers on the Internet."}
+		3168: {active: true, text: "A magical tablet containing a world of unlimited pornography."}
+		3169: {active: true, text: "These low, low prices!"}
+		3170: {active: true, text: "Piece of shit Christmas cards with no money in them."}
+		3171: {active: true, text: "Moses gargling Jesus's balls while Shiva and the Buddha penetrate his divine hand holes."}
+		3172: {active: true, text: "The Hawaiian goddess Kapo and her flying detachable vagina."}
+		3173: {active: true, text: "The shittier, Jewish version of Christmas."}
+		3174: {active: true, text: "Making up for 10 years of shitty parenting with a PlayStation."}
+		3175: {active: true, text: "Swapping bodies with mom for a day."}
+		3176: {active: true, text: "Slicing a ham in icy silence."}
+		3177: {active: true, text: "Finding out that Santa isn't real."}
+		3178: {active: true, text: "Rudolph's bright red balls."}
+		3179: {active: true, text: "The Grinch's musty, cum-stained pelt."}
+		3180: {active: true, text: "Breeding elves for their priceless semen."}
+		3181: {active: true, text: "Jizzing into Santa's beard."}
+		3182: {active: true, text: "A simultaneous nightmare and wet dream starring Sigourney Weaver."}
+		3183: {active: true, text: "Being blind and deaf and having no limbs."}
+		3184: {active: true, text: "People with cake in their mouths talking about how good cake is."}
+		3185: {active: true, text: "Ewoks."}
+		3186: {active: true, text: "OP Delivers."}
+		3187: {active: true, text: "#SOCKS."}
+		3188: {active: true, text: "Oh look! A cat!"}
+		3189: {active: true, text: "I am not a clever man."}
+		3190: {active: true, text: "Banana."}
+		3191: {active: true, text: "Read me 10 for all coffee."}
+		3192: {active: true, text: "Juan."}
+		3193: {active: true, text: "Sir Patrick Stewart."}
+		3194: {active: true, text: "Troy and Abed."}
+		3195: {active: true, text: "MOON MOON."}
+		3196: {active: true, text: "Nathan Fillion."}
+		3197: {active: true, text: "Felica Day."}
+		3198: {active: true, text: "9."}
+		3199: {active: true, text: "10."}
+		3200: {active: true, text: "11."}
+		3201: {active: true, text: "BOOM! Pregnant."}
+		3202: {active: true, text: "Tesla."}
+		3203: {active: true, text: "Jon Snow."}
+		3204: {active: true, text: "Ass."}
+		3205: {active: true, text: "Theon Greyjoy’s dismembered member."}
+		3206: {active: true, text: "Not since the accident."}
+		3207: {active: true, text: "Lechuga."}
+		3208: {active: true, text: "Edward Macaroni Fork."}
+		3209: {active: true, text: "Imgurgiraffe."}
+		3210: {active: true, text: "ANUSTART."}
+		3211: {active: true, text: "This was a grave mistake."}
+		3212: {active: true, text: "BAZINGA!"}
+		3213: {active: true, text: "Cousin Maeby."}
+		3214: {active: true, text: "STEVE HOLT."}
+		3215: {active: true, text: "Nevernudes."}
+		3216: {active: true, text: "Tard."}
+		3217: {active: true, text: "Potato. "}
+		3218: {active: true, text: "Bacon."}
+		3219: {active: true, text: "Erotic fiction featuring Snape and Hermione."}
+		3220: {active: true, text: "Sonic Screwdriver. "}
+		3221: {active: true, text: "Chak´s homemade maple bacon jam."}
+		3222: {active: true, text: "Moisturize me."}
+		3223: {active: true, text: "Mummy."}
+		3224: {active: true, text: "Expelliarmus!"}
+		3225: {active: true, text: "Hagrid."}
+		3226: {active: true, text: "Buckbeak."}
+		3227: {active: true, text: "Luke Skywalker making out with his sister, Leia."}
+		3228: {active: true, text: "NobodySaysThis."}
+		3229: {active: true, text: "Nargles."}
+		3230: {active: true, text: "Annie´s boobs."}
+		3231: {active: true, text: "An overpriced cup of coffee."}
+		3232: {active: true, text: "Demonstrating how to properly put on a condom using a cucumber as substitute for a penis."}
+		3233: {active: true, text: "Katie the Cock Cozy."}
+		3234: {active: true, text: "Going Super Saiyan."}
+		3235: {active: true, text: "Going Super Saiyan during orgasm."}
+		3236: {active: true, text: "Going Super Saiyan while taking a massive dump."}
+		3237: {active: true, text: "Angry naked people."}
+		3238: {active: true, text: "Literally spanking a monkey."}
+		3239: {active: true, text: "My daikon."}
+		3240: {active: true, text: "Alicorn OCs."}
+		3241: {active: true, text: "An End of Ponies update."}
+		3242: {active: true, text: "Another ball-greasing 502 error, for fuck's sake! Goddamnit!"}
+		3243: {active: true, text: "Assholes who hate foalcon."}
+		3244: {active: true, text: "Big Macintosh's gaping, sloppy-wet boycunt."}
+		3245: {active: true, text: "Blackjack."}
+		3246: {active: true, text: "Bronies."}
+		3247: {active: true, text: "Chuckward, before he was banned."}
+		3248: {active: true, text: "Cola's ass."}
+		3249: {active: true, text: "Columbine. Dear fucking Celestia, Columbine."}
+		3250: {active: true, text: "Crotchtits."}
+		3251: {active: true, text: "darf."}
+		3252: {active: true, text: "darf's corpse, Faust rest his soul."}
+		3253: {active: true, text: "Dollhouse."}
+		3254: {active: true, text: "Eakin."}
+		3255: {active: true, text: "Equestria Daily."}
+		3256: {active: true, text: "Fallout: Equestria: Project Horizons."}
+		3257: {active: true, text: "Fallout: Equestria."}
+		3258: {active: true, text: "FelixDawn."}
+		3259: {active: true, text: "Fillyfooler."}
+		3260: {active: true, text: "Foalcon."}
+		3261: {active: true, text: "Fucking 502 errors."}
+		3262: {active: true, text: "Fucking Anthro."}
+		3263: {active: true, text: "Goddamned crossover fics."}
+		3264: {active: true, text: "Goddamned unnecessary futa."}
+		3265: {active: true, text: "Horsedick."}
+		3266: {active: true, text: "Humancunt."}
+		3267: {active: true, text: "Humanized."}
+		3268: {active: true, text: "IJAB."}
 		# 3269: {active: true, text: "Kaidan."}
 		# 3270: {active: true, text: "knighty."}
 		# 3271: {active: true, text: "knighty's dribbling dick."}

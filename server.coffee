@@ -87,7 +87,7 @@ exports.onUpgrade = !->
 	deck = Db.shared.get 'answerdeck'
 	log 'Cards in deck:', deck.length
 	if not deck.length
-		refillAnswerDeck()
+		reshuffleAnswers()
 	
 	# Add new cards to both decks
 	if (Db.shared.get 'questiondecksize') < Black.numcards()
@@ -402,10 +402,15 @@ exports.onUpgrade = !->
 # 	Timer.cancel()
 # 	Timer.set 60*5*1000, 'advanceRound'
 
-refillAnswerDeck = !->
+reshuffleAnswers = !->
 	log 'Ran out of answer cards. Reshuffling deck!'
 	Db.shared.set 'answerdeck', [0..White.numcards()-1]
 	Db.shared.set 'answerdecksize', White.numcards()
+
+reshuffleQuestions = !->
+	log 'Ran out of question cards. Reshuffling deck!'
+	Db.shared.set 'questiondeck', [0..Black.numcards()-1]
+	Db.shared.set 'questiondecksize', Black.numcards()
 
 exports.getTitle = ->
 	tr("Happening against Humanity")
@@ -868,17 +873,20 @@ drawQuestionCard = !->
 		r = Math.floor(Math.random()*deck.length)
 		cardId = deck[r]
 		card = Black.cards()[cardId]
-
-		deck.splice(r, 1)
-		if card.active
-			foundcard = true
+		if not card
+			log 'OUT OF CARDS!'
+			reshuffleQuestions()
+		else
+			deck.splice(r, 1)
+			if card.active
+				foundcard = true
 
 	Db.shared.set 'questiondeck', deck
 	return cardId
 
 drawAnswerCard = !->
 	if not (Db.shared.get 'answerdeck').length
-		refillAnswerDeck()
+		reshuffleAnswers()
 
 	deck = Db.shared.get 'answerdeck'
 
@@ -889,9 +897,12 @@ drawAnswerCard = !->
 		card = White.cards()[cardId]
 
 		if r >= 0 then deck.splice(r, 1)
-
-		if card.active
-			foundcard = true
+		if not card
+			log 'OUT OF CARDS!'
+			reshuffleAnswers()
+		else
+			if card.active
+				foundcard = true
 
 	Db.shared.set 'answerdeck', deck
 	return cardId
