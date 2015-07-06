@@ -22,7 +22,7 @@ maxtrashcards = 1
 exports.render = !->
 	if not (+(Db.personal.get 'activity')>=0)
 		renderTutorialQuestion()
-	else if Db.personal.get('hand').length < handsize and (Db.shared.get 'answerdeck').length > 0
+	else if not Db.personal.get('hand') or Db.personal.get('hand').length < handsize
 		drawNewAnswerCards()
 	else if page = Page.state.get(0)
 		if page == 'showhand'

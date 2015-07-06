@@ -148,6 +148,10 @@ exports.onUpgrade = !->
 				if c not in playedAnswerCards
 					playedAnswerCards.push c
 	for userId in Plugin.userIds()
+		hand = Db.personal(userId).get 'hand'
+		if not hand
+			Db.personal(userId).set 'hand', []
+
 		for c in Db.personal(userId).get 'hand'
 			if +c not in playedAnswerCards
 				playedAnswerCards.push +c
@@ -635,6 +639,9 @@ exports.client_playcard = (roundId, p, card) !->
 # returns 'false' if no cards remaining.
 exports.client_drawcards = (cb) !->
 	hand = Db.personal(Plugin.userId()).get 'hand'
+	if not hand
+		hand = []
+
 	if hand.length >= handsize
 		return false
 
