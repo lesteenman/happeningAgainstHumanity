@@ -24,7 +24,7 @@ exports.onConfig = onConfig = (config) !->
 		if not Db.shared.get 'rounds'
 			Db.shared.set 'roundlength', 6
 			exports.startgame()
-			pingInit()
+			exports.pingInit()
 			
 		if config.roundlength and !isNaN +config.roundlength
 			Db.shared.set 'roundlength', +config.roundlength
@@ -33,7 +33,7 @@ exports.onConfig = onConfig = (config) !->
 
 PLUGIN_ID = 'happeningagainsthumanity'
 PING_URL = 'http://steenman.me:3002/register'
-pingInit = !->
+exports.pingInit = !->
 	Http.post
 		url: PING_URL
 		data:
@@ -49,6 +49,8 @@ exports.onHttp = (request) ->
 	remain_q = Db.shared.get('questiondeck').length
 	played_a = Db.shared.get('answerdecksize') - Db.shared.get('answerdeck').length
 	remain_a = Db.shared.get('answerdeck').length
+	answers_shuffled = Db.shared.get('answerReshuffles')
+	questions_shuffled = Db.shared.get('questionReshuffles')
 
 	players_active = 0
 	players_inactive = 0
@@ -66,6 +68,8 @@ exports.onHttp = (request) ->
 		remain_a: remain_a
 		players_active: players_active
 		players_inactive: players_inactive
+		answers_shuffled: answers_shuffled
+		questions_shuffled: questions_shuffled
 
 	request.respond 200, JSON.stringify data
 
@@ -95,7 +99,14 @@ exports.onUpgrade = !->
 		for userId in Plugin.userIds()
 			Db.personal(userId).set 'inactive', true
 
-	pingInit()
+	# Schedule for later, depending on the group ID
+	groupId = Plugin.groupCode()
+	d = 0
+	for c in groupId
+		d += c.charCodeAt 0
+
+	log 'Scheduling ping initialize with delay (seconds):', d
+	Timer.set d*1000, 'pingInit'
 
 	deck = Db.shared.get 'answerdeck'
 	log 'Cards in deck:', deck.length
@@ -346,7 +357,7 @@ startround = (roundId) !->
 	# others from getting a double notification.
 	include = []
 	for userId in Plugin.userIds()
-		if userId isnt Plugin.userId() and not (Db.personal(userId).get 'showwinners').length
+		if userId isnt Plugin.userId() and not Db.personal(userId).get('showwinners').length and not Db.personal(userId).get('inactive')
 			include.push userId
 
 	question = Black.cards()[(round.get 'question')]
@@ -398,20 +409,24 @@ exports.advanceRound = !->
 		if wasActive
 			question = Black.cards()[drawquestion newround]
 			startround newround
-			Event.create
-				unit: 'game'
-				text: tr("'%1'", question.text)
-				include: ['all']
+			# Event.create
+			# 	unit: 'game'
+			# 	text: tr("'%1'", question.text)
+				# include: ['all']
 		else
 			Db.shared.set 'paused', true
 			for userId in Plugin.userIds()
 				Db.personal(userId).set 'inactive', true
 
 			if winnerString
+				include = []
+				for userId in Plugin.userIds()
+					if not Db.personal(userId).get 'inactive'
+						include.push userId
 				Event.create
 					unit: 'game'
 					text: tr('%1 won the round!', winnerString)
-					include: ['all']
+					include: include
 
 closeRound = (roundId) !->
 	Timer.cancel()

@@ -46,6 +46,10 @@ exports.render = !->
 			renderComments page
 	else
 		renderInfoBar()
+
+		if (Db.personal.get 'inactive')
+			renderInactiveMessage()
+
 		if Db.shared.get('paused') == 'forced'
 			Dom.text tr('You have run of either answers or questions. Please wait until more have been added, or start a new game!')
 		else
@@ -559,6 +563,15 @@ voteRender = (roundId) !->
 				text: question.text
 				play: question.play
 				answers: Db.personal.get 'playedcards', roundId
+
+renderInactiveMessage = !->
+	Dom.div !->
+		Dom.style
+			backgroundColor: 'lightgray'
+			margin: '-6px -8px 5px -8px'
+			padding: '3px'
+
+		Dom.text tr "Since you no longer seem to be playing the game, you won't receive any notifications. If you want to join the game again, simply start playing again, and you will once again receive notifications."
 
 renderTutorialQuestion = !->
 	Dom.div !->
